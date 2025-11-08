@@ -9,8 +9,8 @@
 
 3. Come collezionista, voglio registrare ogni prestito di libro con annessa data e nome della persona a cui lo cedo, al fine di scongiurare dimenticanze e perderlo.
 
-4. Come collezionista voglio tenere traccia del progresso di lettura di ogni mio libro, al fine di riprendere sempre dal punto giusto e valutare il mio ritmo di lettura.
-
+4. Come collezionista, voglio inserire la pagina a cui sono arrivato a leggere dei miei libri, al fine di sapere sempre da che punto devo riprendere e quanto sto leggendo complessivamente.
+   
 5. Come collezionista, voglio creare un gruppo con cui interagire con alcuni lettori a mia scelta tramite post e commenti, al fine di parlare dei nostri interessi comuni e personali preferenze di lettura.
 
 6. Come fondatore di un gruppo, voglio scegliere i lettori che partecipano al mio gruppo, al fine di interagire solo con persone fidate.
@@ -19,7 +19,7 @@
 
 8. Come collezionista, voglio leggere di un libro tutte le valutazioni fatte dai recensori, al fine di essere informato sul valore di questo ed avere spunti su cui riflettere.
 
-9. Come collezionista, voglio selezionare e gestire i recensori di cui ricevo gli aggiornamenti, al fine di essere informato sui libri reputati di valore da quelli che più si avvicinano ai miei gusti.
+9. Come collezionista, aggiungere e rimuovere i recensori da un elenco e ricevere una notifica quando uno di questi pubblica una recensione, al fine di essere informato sui libri reputati di valore dai recensori che più si avvicinano ai miei gusti.
 
 10. Come recensore, voglio selezionare uno o più libri come argomento della mia recensione, al fine di renderla visibile ai lettori interessati a tale libro o serie di libri.
 
