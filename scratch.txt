@@ -1,0 +1,28 @@
+FASE DI IDEAZIONE
+
+Devo identificare 10% dei requisiti più importanti:
+
+USER STORIES:
+US1: Come collezionista, voglio inserire tutti i miei libri cartacei e digitali nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
+
+US2: Come lettore, voglio utilizzare uno strumento di ricerca dei libri all'interno della mia libreria personale, al fine di sapere se veramente possiedo tale libro, ed ottenere informazioni sulle sue caretteristiche e posizione.
+
+US3: Come collezionista, voglio gestire una lista libri in regalo contenente alcuni miei libri che sia visibile solo ai miei amici, al fine di cedere libri che non mi servono più ad un amico interessato.
+
+US11: Come recensore, voglio selezionare uno o più libri come argomento della mia recensione, al fine di renderla visibile ai lettori interessati a tale libro
+
+US16: Come lettore, voglio cercare nel sistema il titolo di un libro, al fine di ottenere informazioni come la sua copertina o l'autore.
+
+US22: Come lettore, voglio aggiungere altri untenti registrati nel sistema alla mia lista amici, al fine di interagire con loro attraverso il sistema.
+
+FUNCTIONAL REQUIREMENTS:
+
+FR3: Il sistema, deve permettere al Lettore di gestire la propria libreria personale permettendogli di aggiungere e/o eliminando dati inerenti ai libri che la compongono.
+
+FR5: Il sistema deve rendere visibili a tutti gli utenti facenti parte della "lista amici", l'elenco di libri che il lettore segna come "in regalo", "disponibile al prestito" e "disponibile per lo scambio".
+
+FR9: Il sistema deve permettere agli utenti di recensire un libro registrato nel sistema attraverso giudizio scritto e una valutazione numerica.
+
+FR12: Il sistema deve mettere a disposizione degli utenti un database consultabile di libri completi di metadati precaricato.
+
+FR14: Il sistema deve avvisare il lettore quando un utente facente parte della sua lista amici aggiunge nella lista dei libri in regalo, in prestito o scambiabili un libro presente nella lista dei desideri.
