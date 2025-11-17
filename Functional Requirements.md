@@ -16,16 +16,18 @@
 
 8. Il sistema deve dare accesso, a tutte le recensioni pubblicate che hanno come oggetto un libro registrato nel sistema.
 
-9. Il sistema deve permettere ad un utente recensore di pubblicare un documento testuale associato ad un libro registrato nel sistema come recensione pubblica di tale libro. 
+9. Il sistema deve permettere agli utenti di recensire un libro registrato nel sistema attraverso giudizio scritto e una valutazione numerica.
 
 10. Il sistema deve inviare una notifica ad ogni lettore seguace di un recensore quando tale recensore pubblica una recensione.
 
 11. Il sistema deve permettere al lettore di creare un **Club Di Lettura ed aggiungervi lettori da lui selezionati apparteneti alla lista amici.
 
-12. Il sistema deve dare accesso a un elenco di libri completi di metadati e provenienti da servizi esterni o registrati da utenti e approvati dai moderatori.
+12. Il sistema deve mettere a disposizione degli utenti un catalogo centrale di libri, di ciascuno di essi viene riportato il titolo, il sottotitolo, l'autore, il codice ISNB, la copertina ed una breve descrizione.
 
 13. Il sistema deve permettere ad ogni utente di accedere tramite un meccanismo di autenticazione al proprio account personale.
 
 14. Il sistema deve avvisare il lettore quando un utente facente parte della sua lista amici aggiunge nella lista dei libri in regalo, in prestito o scambiabili un libro presente nella lista dei desideri.
+
+15. Selzionato un libro all'interno della librearia personale, il sistema deve permettere al Lettore di aggiungere annotazioni testuali e mostrare le annotazioni aggiunte precedentemente.
 
 *metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.

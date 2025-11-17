@@ -4,6 +4,7 @@
 **8/11/25 ore 22:27**
 
 1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
+
 2. Come lettore, voglio utilizzare uno strumento di ricerca dei libri all'interno della mia libreria personale, al fine di sapere se veramente possiedo tale libro, ed ottenere informazioni sulle sue caretteristiche e posizione.
 
 2. Come collezionista, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
@@ -12,7 +13,7 @@
 
 4. Come collezionista, voglio inserire la pagina a cui sono arrivato a leggere dei miei libri, al fine di sapere sempre da che punto devo riprendere e quanto sto leggendo complessivamente.
    
-5. Come collezionista, voglio creare un gruppo con cui interagire con alcuni lettori a mia scelta tramite post e commenti, al fine di parlare dei nostri interessi comuni e personali preferenze di lettura.
+5. Come Lettore, voglio creare un gruppo con cui interagire con alcuni lettori registrati nel sistema a mia scelta tramite post e commenti, al fine di parlare dei nostri interessi comuni e personali preferenze di lettura.
 
 6. Come fondatore di un gruppo, voglio scegliere i lettori che partecipano al mio gruppo, al fine di interagire solo con persone fidate.
 
@@ -37,7 +38,7 @@
 
 17. Come lettore voglio essere avvisato se uno dei miei amici mette in prestito, in regalo, o come oggetto di scambio, un libro contenuto nella mia lista dei desideri
 
-18. Come lettore, voglio creare delle annotazioni associate ad un libro all'interno della mia libreria personale, al fine di appuntarmi curiosità, riflessioni e fatti riguardanti una certa lettura che posso rivedere in futuro
+18. Come lettore, voglio creare delle annotazioni associate ad un libro all'interno della mia libreria personale, al fine di appuntarmi curiosità, riflessioni e fatti riguardanti una certa lettura che posso rivedere in futuro.
 
 19. Come lettore, voglio inserire la data di inzio e fine lettura associate ad un libro nella mia libreria personale, al fine di sapere sempre quanto tempo è passato dall'ultima volta in cui ho letto tale libro.
 
