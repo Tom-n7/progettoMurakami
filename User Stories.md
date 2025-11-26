@@ -3,13 +3,13 @@
 *commento:* Forse meglio sostituire Collezionista con Lettore.
 **8/11/25 ore 22:27**
 
-1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
+1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali in mio possesso nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
 
 2. Come lettore, voglio utilizzare uno strumento di ricerca dei libri all'interno della mia libreria personale, al fine di sapere se veramente possiedo tale libro, ed ottenere informazioni sulle sue caretteristiche e posizione.
 
 2. Come collezionista, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
 
-3. Come collezionista, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi a chi presto cosa e se quel libro è a mia disposizione oppure no. .
+3. Come collezionista, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi quali libri sto prestando e a chi li presto.
 
 4. Come collezionista, voglio inserire la pagina a cui sono arrivato a leggere dei miei libri, al fine di sapere sempre da che punto devo riprendere e quanto sto leggendo complessivamente.
    
@@ -27,9 +27,10 @@
 
 11. Come collezionista, voglio che il collegamento ad atri social network sia visibile ai miei amici, al fine di facilitare interazioni con loro anche attraverso altri mezzi.
 
-12. Come collezionista, voglio gestire una lista libri in regalo contenente alcuni miei libri che sia visibile solo ai miei amici, al fine di cedere libri che non mi servono più ad un amico interessato.
+12. Come collezionista, voglio regalare alcuni libri appartenenti alla mia libreria personale che non mi interessa tenere, al fine di evitare sprechi e donarlo a chi lo desidera.
 
-13. Come collezionista, voglio gestire una lista visibile ai miei amici di libri che sono disposto a prestare, al fine di condividere con un amico i contenuti di un libro che ho letto.
+13. Come collezionista, voglio prestare alcuni libri appartenenti alla mia libreria personale, al fine di condividere con altre persone i contenuti di tali libri.
+
 14. Come lettore, inserendo nel sistema un codice ISBN, voglio conoscere se il libro corrispondente è già presente nel sistema, al fine di acquisire i metadati relativi senza inserirli manualmente.
 
 15. Come lettore, voglio cercare nel sistema il titolo di un libro, al fine di ottenere informazioni come la sua copertina o l'autore.
@@ -44,4 +45,4 @@
 
 20. Come lettore, voglio create un elenco di libri che non possiedo ma che voglio comprare, al fine di avere chiaro quali sono i libri che voglio aggiungere alla collezione.
 
-21. Come lettore, voglio aggiungere altri untenti registrati nel sistema alla mia lista amici, al fine di interagire con loro attraverso il sistema.
+21. Come lettore, voglio aggiungere altri utenti registrati nel sistema alla mia lista amici, al fine di condividere libri con altri lettori.
