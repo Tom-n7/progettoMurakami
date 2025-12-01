@@ -46,3 +46,12 @@
 20. Come lettore, voglio create un elenco di libri che non possiedo ma che voglio comprare, al fine di avere chiaro quali sono i libri che voglio aggiungere alla collezione.
 
 21. Come lettore, voglio aggiungere altri utenti registrati nel sistema alla mia lista amici, al fine di condividere libri con altri lettori.
+
+22. Come Bibliotecario, voglio gestire la scheda anagrafica della mia biblioteca, contenente nome, città, indirizzo e orari di apertura e contatti, al fine di informare i lettori quando e dove possono usufruire dei servizi.
+
+23. Come bibliotecario voglio pubblicare comunicazioni riguardanti nuovi eventi ospitati, al fine di informare i lettori interessati sulle attività della biblioteca
+24. Come Bibliotecario, voglio pubblicare comunicazioni riguardanti mutamenti degli orari di apertura, al fine di avvisare i lettori riguardo chiusure inaspettate.
+25. Come lettore, voglio cercare le biblioteche per nome, per indirizzo o per città, al fine di individuare una biblioteca che posso raggiungere.
+26. Come lettore, voglio aggiungere e rimuovere biblioteche da un elenco di biblioteche seguite, al fine tenere traccia delle biblioteche di mio interesse.
+27. Come lettore, voglio ricevere una notifica nell'applicazione ogni volta che una biblioteca che seguo pubblica un aggiornamento.
+
