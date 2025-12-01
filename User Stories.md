@@ -5,8 +5,6 @@
 
 1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali in mio possesso nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
 
-2. Come lettore, voglio utilizzare uno strumento di ricerca dei libri all'interno della mia libreria personale, al fine di sapere se veramente possiedo tale libro, ed ottenere informazioni sulle sue caretteristiche e posizione.
-
 2. Come collezionista, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
 
 3. Come collezionista, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi quali libri sto prestando e a chi li presto.
@@ -54,4 +52,4 @@
 25. Come lettore, voglio cercare le biblioteche per nome, per indirizzo o per città, al fine di individuare una biblioteca che posso raggiungere.
 26. Come lettore, voglio aggiungere e rimuovere biblioteche da un elenco di biblioteche seguite, al fine tenere traccia delle biblioteche di mio interesse.
 27. Come lettore, voglio ricevere una notifica nell'applicazione ogni volta che una biblioteca che seguo pubblica un aggiornamento.
-
+28. Come lettore, voglio scambiare alcuni miei libri con libri di altri lettori, al fine di lasciare un libro già letto e ottenerne uno nuovo.

@@ -2,7 +2,7 @@ USER STORIES
 
 US1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali in mio possesso nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
 
-US2. Come lettore, voglio utilizzare uno strumento di ricerca dei libri all'interno della mia libreria personale, al fine di sapere se veramente possiedo tale libro, ed ottenere informazioni sulle sue caretteristiche e posizione.
+US2. Come collezionista, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
    
 US3. Come collezionista, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi quali libri sto prestando e a chi li presto.
 
