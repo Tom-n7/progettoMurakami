@@ -36,5 +36,29 @@ Tali libri devono essere visibili agli utenti appartenenti alla lista amici del 
 
 15. Selzionato un libro all'interno della librearia personale, il sistema deve permettere al Lettore di aggiungere annotazioni testuali e mostrare le annotazioni aggiunte precedentemente.
 
+16. Il sistema deve permettere ad un bibliotecario di registrare la propria biblioteca attraverso l'inserimento del nome del bibliotecario, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e CAP, orario settimanale ed altri contatti facoltativi.
+    
+17. Il sistema deve permettere ai lettori di ricercare le biblioteche registrate nel sistema, attraverso il nome o un indirizzo, anche parziale, mostrando una lista di biblioteche che rientrano nei criteri specificati oppure avvisando il lettore se non ne esiste nessuna.
+    
+18. Il sistema deve permettere al bibliotecario di pubblicare annunci di eventi ospitati dalla sua biblioteca, composti da:
+    -  una descrizione, 
+    -  la data o intervallo di tempo di tale evento 
+    -  l'indirizzo del luogo dove si svolge.
+  
+19. Il sistema deve permette al bibliotecario di pubblicare annunci di mutamenti dell'orario o interruzione del servizio composti da: 
+  
+    - una descrizione
+    - l'orario provvisorio 
+    - l'intervallo di tempo previsto di tale mutamento.
+
+20. Il sistema deve mostrare a ciascun lettore tutti gli annunci pubblici pubblicati dalle biblioteche che il lettore segue, organizzandoli come segue:
+    - distinzione tra annunci visualizzati e non visualizzati, dove un annuncio è considerato visualizzato dopo l’apertura da parte del lettore;
+    - raggruppamento degli annunci per biblioteca di provenienza;
+    - ordinamento cronologico per data di pubblicazione all’interno di ciascun gruppo.
+
+
+
+
 *metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
+
 
