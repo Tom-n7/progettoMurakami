@@ -56,8 +56,7 @@ Tali libri devono essere visibili agli utenti appartenenti alla lista amici del 
     - raggruppamento degli annunci per biblioteca di provenienza;
     - ordinamento cronologico per data di pubblicazione all’interno di ciascun gruppo.
 
-
-
+21. Il sistema deve permettere al lettore di contattare una biblioteca registrata per richiedere la disponibilità di un libro che sta ricercando.
 
 *metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
 
