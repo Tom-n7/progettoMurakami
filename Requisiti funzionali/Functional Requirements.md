@@ -1,10 +1,12 @@
 # Functional Requirements
 
-1. Il sistema deve mostrare la libreria personale del lettore contenente, l'immagine della copertina di ogni libro all'interno di essa, insieme ai *metadati, la posizione che il lettore gli assegna, se tale libro è in prestito e quantità di pagine lette.
+1. Il sistema deve permettere al lettore di visualizzare la libreria personale.
 
-1. (a) Il sistema deve mostrare la libreria personale del lettore contenete tutti i libri che il lettore ha inserito, completi di metadati e posizione assegnata.
+2. Il sistema deve permettere al lettore di organizzare la libreria in gruppi di libri detti scaffali.
 
-2. Il sistema, deve permettere al lettore di modificare i metadati, la posizione di ogni libro posseduto e della quantità di pagine lette di ogni libro all'internno della sua libreria personale.
+2. Il sistema, deve permettere al lettore di selezionare libri all'interno della libreria personale.
+
+3. Il sistema, quando un lettore seleziona un libro della libreria personale, deve mostrare tutte le informazioni che l'utente ha registrato su quel libro.
 
 3. Il sistema, deve permettere al lettore di aggiungere ed eliminare libri dall'elenco dei libri della libreria personale.
 
