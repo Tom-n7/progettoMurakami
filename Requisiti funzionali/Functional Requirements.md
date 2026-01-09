@@ -6,37 +6,25 @@
 
 2. Il sistema, deve permettere al lettore di selezionare libri all'interno della libreria personale.
 
-3. Il sistema, quando un lettore seleziona un libro della libreria personale, deve mostrare tutte le informazioni che l'utente ha registrato su quel libro.
+3. Il sistema, quando un lettore seleziona un libro della libreria personale, deve mostrare tutte le informazioni che ha registrato su quel libro.
 
-3. Il sistema, deve permettere al lettore di aggiungere ed eliminare libri dall'elenco dei libri della libreria personale.
+3. Il sistema, deve permettere al lettore di aggiungere ed eliminare libri nella libreria personale.
 
 4. Il sistema deve permettere al lettore di cercare e aggiungere un altro lettore registrato nel sistema alla propria lista amici.
 
-5. Il sistema permettere a ciascun lettore di creare tre elenchi con i libri appartenenti alla propria libreria personale:
-   1) Libri disponibili per il prestito
-   2) Libri in regalo
-   3) Libri disponibili per lo scambio
-Tali libri devono essere visibili agli utenti appartenenti alla lista amici del lettore.
+5. Il sistema permettere al lettore di mettere a disposizione libri della libreria personale per il prestito ad altri lettori.
 
-6. Il sistema deve permettere al lettore di cercare e aggiungere un utente recensore registrato nel sistema.
+6. Il sistema deve permettere al lettore di mettere a disposizione libri della libreria personale come regalo ad altri lettori.
 
-7. Il sistema deve mostrare in un'apposita schermata, tutte le recensioni pubblicate da un certo recensore, quando questo viene cercato da un utente del sistema.
+7. Il sistema deve permettere al lettore di mettere a disposizione libri della libreria personale per lo scambio con altri lettori.
 
-8. Il sistema deve dare accesso, a tutte le recensioni pubblicate che hanno come oggetto un libro registrato nel sistema.
-
-9.  Il sistema deve permettere agli utenti di recensire un libro registrato nel sistema attraverso giudizio scritto e una valutazione numerica.
-
-10. Il sistema deve inviare una notifica ad ogni lettore seguace di un recensore quando tale recensore pubblica una recensione.
-
-11. Il sistema deve permettere al lettore di creare un **Club Di Lettura ed aggiungervi lettori da lui selezionati apparteneti alla lista amici.
-
-12. Il sistema deve mettere a disposizione un catalogo di libri completi di metadati che l'utente può consultare tramite selettore di metadati.
+12. Il sistema deve mettere a disposizione un catalogo di libri completi di metadati che l'utente può consultare.
 
 13. Il sistema deve permettere ad ogni utente di accedere tramite un meccanismo di autenticazione al proprio account personale.
 
-14. Il sistema deve avvisare il lettore quando un utente facente parte della sua lista amici aggiunge nella lista dei libri in regalo, in prestito o scambiabili un libro presente nella lista dei desideri.
+14. Il sistema deve avvisare il lettore quando un lettore facente parte della sua lista amici mette in regalo, in prestito o scambiabile un libro presente nella propria lista dei desideri.
 
-15. Selzionato un libro all'interno della librearia personale, il sistema deve permettere al Lettore di aggiungere annotazioni testuali e mostrare le annotazioni aggiunte precedentemente.
+15. Selzionato un libro all'interno della librearia personale, il sistema deve permettere al Lettore di aggiungere annotazioni testuali e mostrare le annotazioni da lui aggiunte precedentemente.
 
 16. Il sistema deve permettere ad un bibliotecario di registrare la propria biblioteca attraverso l'inserimento del nome del bibliotecario, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e CAP, orario settimanale ed altri contatti facoltativi.
     
