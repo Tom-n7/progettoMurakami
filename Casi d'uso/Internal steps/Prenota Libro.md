@@ -31,4 +31,4 @@ estensioni:
 1. Il bibliotecario segnala al sistema che il libro non è disponibile.
 2. Il sistema marca la richiesta come completa e lo notifica al bibliotecario ed al lettore.
 
-9a) Il cliente non si reca alla biblioteca entro la data di scadenza:
+9a) Il cliente non si reca alla biblioteca entro la data di scadenza: il sistema marca la richiesta come completa e avvisa il bibliotecario.
