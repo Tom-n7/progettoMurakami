@@ -1,13 +1,13 @@
 # Prenota Libro
 
 1. Il Lettore esegue il [login](), poi esegue [cerca libro](), trova il libro che vuole chiedere in prestito e seleziona "Cerca in Biblioteca"
-2. Il Sistema registra i dati del libro selezionato e mostra lo strumento di ricerca delle biblioteche
+2. Il Sistema salva i dati del libro selezionato, carica le biblioteche registrate nel sistema e le mostra al lettore.
 3. Il Lettore seleziona la biblioteca in cui desidera recarsi per prendere in prestito il libro.
-4. Il Sistema invia alla biblioteca selezionata la richiesta del lettore.
-5. Il Bibliotecario seleziona la richiesta del Lettore
-6. Il sistema mostra la richiesta e la data in cui è stata effettuata.
+4. Il Sistema invia la prenotazione alla biblioteca selezionata e notifica il bibliotecario.
+5. Il Bibliotecario seleziona la richiesta del Lettore.
+6. Il sistema carica i dati della prenotazione e mostra i dati al bibliotecario.
 7. Il Bibliotecario verifica la disponibilità del libro e conferma al sistema che il libro è disponibile, inserisce la data a partire dal quale il Lettore può recarsi a prenderlo ed il giorno di scadenza della prenotazione.
-8. Il sistema trasferisce la richiesta nella sezione "Prenotazioni" del bibliotecario, lo fa anche per il lettore che viene notificato.
+8. Il sistema salva i dati e notifica il lettore.
 9. Il cliente si reca in biblioteca entro la data di scadenza e mostra la prenotazione al bibliotecario
 10. Il bibliotecario identifica la prenotazione, notifica il sistema dell'avvenuta consegna e presta il libro al lettore.
 11. Il sistema marca le richiesta come completa.
@@ -29,6 +29,6 @@ estensioni:
 7a) Il bibliotecario non trova il libro oggetto di prenotazione:
 
 1. Il bibliotecario segnala al sistema che il libro non è disponibile.
-2. Il sistema marca la richiesta come completa e lo notifica al bibliotecario ed al lettore.
+2. Il sistema modifica i dati della prenotazione e notifica il lettore del fallimento della richiesta.
 
-9a) Il cliente non si reca alla biblioteca entro la data di scadenza: il sistema marca la richiesta come completa e avvisa il bibliotecario.
+9a) Il cliente non si reca alla biblioteca entro la data di scadenza: avvisa il bibliotecario e modifica i dati della richiesta.
