@@ -1,16 +1,24 @@
 USER STORIES
 
-US1. Come collezionista, voglio inserire tutti i miei libri cartacei e digitali in mio possesso nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
+US1. Come lettore, voglio inserire tutti i miei libri cartacei e digitali in mio possesso nel sistema, al fine di sapere sempre quali libri ho a disposizione e quali no.
 
-US2. Come collezionista, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
+US2. Come lettore, voglio inserire e modificare l'informazione riguardante la posizione di un libro, al fine di sapere sempre dove trovarlo quando ne ho bisogno.
    
-US3. Come collezionista, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi quali libri sto prestando e a chi li presto.
+US3. Come lettore, voglio registrare il prestito di un libro nella mia libreria personale, con annessa data di inizio, uno pseudonimo della persona a cui l'ho prestato e data di fine prestito, al fine di non dimenticarmi quali libri sto prestando e a chi li presto.
 
-US12. Come collezionista, voglio regalare alcuni libri appartenenti alla mia libreria personale che non mi interessa tenere, al fine di evitare sprechi e donarlo a chi lo desidera.
+US12. Come lettore, voglio regalare alcuni libri appartenenti alla mia libreria personale che non mi interessa tenere, al fine di evitare sprechi e donarlo a chi lo desidera.
     
-US13. Come collezionista, voglio prestare alcuni libri appartenenti alla mia libreria personale, al fine di condividere con altre persone i contenuti di tali libri.
+US13. Come lettore, voglio prestare alcuni libri appartenenti alla mia libreria personale, al fine di condividere con altre persone i contenuti di tali libri.
 
 US21. Come lettore, voglio aggiungere altri utenti registrati nel sistema alla mia lista amici, al fine di condividere libri con altri lettori.
+
+
+29. Come lettore, voglio secgliere un libro e chiedere alle biblioteche se lo hanno disponibile per il prestito, al fine di non perdere tempo nel caso non ci fosse.
+
+30. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di comunicare se il libro richiesto è disponibile oppure no.
+
+31. Come bibliotecare, voglio gestire le richieste di prestito inviate dai lettori, al fine di segnalargli quando possono recarsi in biblioteca per iniziare il prestito.
+
 
 FUNCTIONAL REQUIREMENTS
 
@@ -43,3 +51,11 @@ FR 20. Il sistema deve mostrare a ciascun lettore tutti gli annunci pubblici pub
     - distinzione tra annunci visualizzati e non visualizzati, dove un annuncio è considerato visualizzato dopo l’apertura da parte del lettore;
     - raggruppamento degli annunci per biblioteca di provenienza;
     - ordinamento cronologico per data di pubblicazione all’interno di ciascun gruppo.
+    
+    
+
+21. Il sistema deve permettere al lettore di contattare una biblioteca registrata per richiedere la disponibilità di un libro che sta ricercando.
+
+22. Il sistema deve permettre al bibliotecario digestire le richieste di prestito inviate dai lettori registrati.
+
+23. Il sistema deve permettere al bibliotecario di stabilire un intervallo di tempo entro il quale è possibile prendere in prestito un libro richiesto e comunicarlo al lettore.

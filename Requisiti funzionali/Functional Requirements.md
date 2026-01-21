@@ -48,6 +48,14 @@
 
 21. Il sistema deve permettere al lettore di contattare una biblioteca registrata per richiedere la disponibilità di un libro che sta ricercando.
 
+22. Il sistema deve permettre al bibliotecario digestire le richieste di prestito inviate dai lettori registrati.
+
+23. Il sistema deve permettere al bibliotecario di stabilire un intervallo di tempo entro il quale è possibile prendere in prestito un libro richiesto e comunicarlo al lettore.
+
+24. Il sistema deve generare un appuntamento per il ritito del libro una volta che il bibliotecario stabilisce l'intervallo di tempo per il ritiro identificato da un codice univoco.
+
+25. Quando viene inserito il codice di un appuntamento, il sistema deve mostrare tutti i metadati del libro richiesto dal lettore.
+
 *metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
 
 

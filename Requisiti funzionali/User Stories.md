@@ -39,3 +39,9 @@
 
 27. Come lettore, voglio ricevere una notifica nell'applicazione ogni volta che una biblioteca che seguo pubblica un aggiornamento.
 28. Come lettore, voglio scambiare alcuni miei libri con libri di altri lettori, al fine di lasciare un libro già letto e ottenerne uno nuovo.
+
+29. Come lettore, voglio secgliere un libro e chiedere alle biblioteche se lo hanno disponibile per il prestito, al fine di non perdere tempo nel caso non ci fosse.
+
+30. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di comunicare se il libro richiesto è disponibile oppure no.
+
+31. Come bibliotecare, voglio gestire le richieste di prestito inviate dai lettori, al fine di segnalargli quando possono recarsi in biblioteca per iniziare il prestito.
