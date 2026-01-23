@@ -11,8 +11,12 @@
 
 ## Etensioni
 
-<br>2a. Il lettore vuole eliminare un libro:</br>
+<br>2a.Il lettore vuole modificare i metadati di un libro: Il lettore esegue <u>modifica metadati libro()</u></br>
+
+<br>2b. Il lettore vuole eliminare un libro:</br>
 1. Il lettore seleziona il libro che vuole eliminare.
 2. Il sistema mostra il libro nel dettaglio il libro.
 3. Il lettore richiede l'eliminazione del libro.
 4. Il sistema elimina il libro, salva le modifiche e mostra la libreria personale aggiornata.
+
+
