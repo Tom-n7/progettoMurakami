@@ -1,21 +1,23 @@
 # Gestisci Libreria Personale
 
-1. Il lettore accede alla libreria personale.
+1. Il lettore richiede la libreria personale.
 2. Il sistema mostra il contenuto al lettore.
 3. Il lettore richiede l'aggiunta di un nuovo libro.
-4. Il sistema esegue <u>importa metadati()</u>.
+4. Il sistema mostra lo strumento di aggiunta libro.
+5. Il lettore esegue <u>importa metadati()</u>.
 <br>--*Il lettore ripete i passi 3-4 per ogni libro che vuole aggiungere*--</br>
-5. Il sistema mostra il riepilogo delle modifiche.
-6. Il lettore conferma le modifiche.
-7. Il sistema salva le modifiche e mostra la libreria personale aggiornata.
+6. Il sistema mostra il riepilogo delle modifiche.
+7. Il lettore conferma le modifiche.
+8. Il sistema salva le modifiche e mostra la libreria personale aggiornata.
 
 ## Etensioni
 
-<br>2a.Il lettore vuole modificare i metadati di un libro: Il lettore esegue <u>modifica metadati libro()</u></br>
+<br>2a.Il lettore vuole prestare uno dei suoi libri: Il lettore esegue <u>presta libro()</u></br>
+
 
 <br>2b. Il lettore vuole eliminare un libro:</br>
 1. Il lettore seleziona il libro che vuole eliminare.
-2. Il sistema mostra il libro nel dettaglio il libro.
+2. Il sistema mostra il libro nel dettaglio.
 3. Il lettore richiede l'eliminazione del libro.
 4. Il sistema elimina il libro, salva le modifiche e mostra la libreria personale aggiornata.
 
