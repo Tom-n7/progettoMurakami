@@ -2,7 +2,7 @@
 
 1. Il lettore richiede la libreria personale.
 2. Il sistema mostra il contenuto al lettore.
-3. Il lettore richiede l'aggiunta di un nuovo libro.
+3. Il lettore richiede l'aggiunta di nuovi libri.
 4. Il sistema mostra lo strumento di aggiunta libro.
 5. Il lettore esegue <u>importa metadati()</u>.
 <br>--*Il lettore ripete i passi 3-4 per ogni libro che vuole aggiungere*--</br>
@@ -24,7 +24,7 @@ METADATI := Titolo, autore, lingua, codice ISNB, nome serie, numero serie, data 
 4. Il sistema elimina il libro, salva le modifiche e mostra la libreria personale aggiornata.
 
 
-<br>5a. Il lettore rileva un errore nei libri aggiunti:</br>
+<br>6a. Il lettore rileva un errore nei libri aggiunti:</br>
 1. Il lettore seleziona il libro soggetto ad errore.
 
 <br>1a. Il lettore non vuole aggiungere il libro:</br>
@@ -33,4 +33,4 @@ METADATI := Titolo, autore, lingua, codice ISNB, nome serie, numero serie, data 
 
 2. Il lettore richiede la modifica dei metadati.
 3. Il sistema esegue <u>importa metadati()</u>
-4. Il sistema mostra il rispilogo delle modifiche aggiornato
+4. Il sistema mostra il riepilogo delle modifiche aggiornato

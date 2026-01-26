@@ -1,0 +1,58 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Pagina-1" id="qzgKoS_Y5scNLX1AHnwb">
+    <mxGraphModel dx="757" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;div&gt;Lettore&lt;/div&gt;" vertex="1">
+          <mxGeometry height="890" width="100" x="30" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&lt;div&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/div&gt;DashboardLibreriaPrincipale" vertex="1">
+          <mxGeometry height="890" width="180" x="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-4" parent="MbfVDzxQ2fNCkMOBbGWp-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="120" width="10" x="85" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-6" parent="MbfVDzxQ2fNCkMOBbGWp-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="280" width="10" x="85" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-3" edge="1" parent="1" source="MbfVDzxQ2fNCkMOBbGWp-1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" target="MbfVDzxQ2fNCkMOBbGWp-4" value="Create">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="270" y="210" as="sourcePoint" />
+            <mxPoint x="210" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-5" edge="1" parent="1" source="MbfVDzxQ2fNCkMOBbGWp-1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" target="MbfVDzxQ2fNCkMOBbGWp-6" value="gestisciLibreria">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="260" y="390" as="sourcePoint" />
+            <mxPoint x="180" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;div&gt;ControllerGestisciLibreria&lt;/div&gt;" vertex="1">
+          <mxGeometry height="890" width="180" x="460" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-9" parent="MbfVDzxQ2fNCkMOBbGWp-7" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="100" width="10" x="85" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-8" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="MbfVDzxQ2fNCkMOBbGWp-9" value="Create">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="295" y="330" as="sourcePoint" />
+            <mxPoint x="540" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-16" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;div&gt;CaricaLibreriaPersonaleDAO&lt;/div&gt;" vertex="1">
+          <mxGeometry height="890" width="157" x="670" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-18" parent="MbfVDzxQ2fNCkMOBbGWp-16" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="20" width="10" x="73.5" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MbfVDzxQ2fNCkMOBbGWp-17" edge="1" parent="1" source="MbfVDzxQ2fNCkMOBbGWp-9" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" target="MbfVDzxQ2fNCkMOBbGWp-18" value="Create">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="560" y="340" as="sourcePoint" />
+            <mxPoint x="740" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
