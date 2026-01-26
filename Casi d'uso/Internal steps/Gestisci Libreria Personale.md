@@ -10,6 +10,8 @@
 7. Il lettore conferma le modifiche.
 8. Il sistema salva le modifiche e mostra la libreria personale aggiornata.
 
+METADATI := Titolo, autore, lingua, codice ISNB, nome serie, numero serie, data pubblicazione, nome editore, descrizione e formato.
+
 ## Etensioni
 
 <br>2a.Il lettore vuole prestare uno dei suoi libri: Il lettore esegue <u>presta libro()</u></br>

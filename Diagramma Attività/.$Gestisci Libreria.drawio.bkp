@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Pagina-1" id="9QG5YtX8p6PR8R00jc_q">
-    <mxGraphModel dx="2185" dy="1973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6531" dy="4545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -254,7 +254,7 @@
           <mxGeometry height="60" width="120" x="-478.5" y="1440" as="geometry" />
         </mxCell>
         <mxCell id="Vvl1_BhRkgtqRLORjlt0-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Scarica Catalogo Libri" vertex="1">
-          <mxGeometry height="60" width="139.63" x="-490" y="1600" as="geometry" />
+          <mxGeometry height="60" width="120" x="-470.37" y="1600" as="geometry" />
         </mxCell>
         <mxCell id="Vvl1_BhRkgtqRLORjlt0-10" edge="1" parent="1" style="html=1;rounded=0;endArrow=none;endFill=0;strokeWidth=5;fontSize=12;startSize=8;endSize=8;curved=1;" value="">
           <mxGeometry relative="1" width="100" as="geometry">
@@ -298,7 +298,7 @@
             <mxPoint x="-108.5" y="1470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vvl1_BhRkgtqRLORjlt0-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Mostra Risultati" vertex="1">
+        <mxCell id="Vvl1_BhRkgtqRLORjlt0-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Cerca libro in DB" vertex="1">
           <mxGeometry height="60" width="120" x="-108.5" y="1440" as="geometry" />
         </mxCell>
         <mxCell id="Vvl1_BhRkgtqRLORjlt0-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Cerca libro in libreria personale" vertex="1">
