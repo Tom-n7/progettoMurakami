@@ -1,7 +1,11 @@
 package it.tommaso.uniroma2;
 
 public class App {
-    public static void main(String... args){
-        Main.main(args);
-    }
+    */porzione di codice che lancia
+    //public static void main(String... args){Main.main(args)}
+
+
+
+
+
 }
