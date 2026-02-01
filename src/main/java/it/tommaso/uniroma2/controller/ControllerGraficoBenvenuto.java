@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ControllerGraficoBenvenuto extends Application implements ControllerGrafico {
+public class ControllerGraficoBenvenuto extends Application {
 
     Stage stage;
     @Override
@@ -28,12 +28,6 @@ public class ControllerGraficoBenvenuto extends Application implements Controlle
 
 
     }
-
-    @Override
-    public void start() {
-        Application.launch();
-    }
-
 
     public void click(ActionEvent e){
         System.out.println("click!");

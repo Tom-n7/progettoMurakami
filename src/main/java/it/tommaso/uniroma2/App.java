@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class App extends Application {
 
-
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -19,14 +18,13 @@ public class App extends Application {
         loader.setLocation(App.class.getResource("root.fxml"));
 
         try{
+
             StackPane rootPane;
             rootPane = loader.load(); //uno stack pane di base costituisce il nodo radice dell'interfaccia.
             GUIManager guiManager = GUIManager.getGUIManager();
             guiManager.setRootPane(rootPane);
             Scene scene = new Scene(rootPane);
             stage.show();
-
-
 
         }catch (IOException e){
             e.printStackTrace();

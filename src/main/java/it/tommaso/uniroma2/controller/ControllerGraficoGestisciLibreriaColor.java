@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ControllerGraficoGestisciLibreriaColor extends Application implements ControllerGrafico {
+public class ControllerGraficoGestisciLibreriaColor extends Application {
 
 
     @Override
@@ -21,13 +21,5 @@ public class ControllerGraficoGestisciLibreriaColor extends Application implemen
 
 
     }
-
-
-    @Override
-    public void start() {
-        Application.launch();
-    }
-
-
 
 }
