@@ -1,19 +1,18 @@
-package it.tommaso.uniroma2;
+package it.tommaso.uniroma2.controller;
 
 
-import it.tommaso.uniroma2.controller.ControllerGraficoGestisciLibreria;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ControllerGraficoGestisciLibreriaColor extends Application implements ControllerGraficoGestisciLibreria {
+public class ControllerGraficoGestisciLibreriaColor extends Application implements ControllerGrafico {
 
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/finestraprincipale.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/it/tommaso/uniroma2/controller/mannaggiacristo.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),1280, 720);
         stage.setScene(scene);
 
@@ -24,7 +23,7 @@ public class ControllerGraficoGestisciLibreriaColor extends Application implemen
 
 
     @Override
-    public void mostraLibreriaPrincipale() {
+    public void start() {
         Application.launch();
     }
 }
