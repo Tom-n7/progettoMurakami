@@ -1,27 +1,38 @@
 package it.tommaso.uniroma2;
 
-import it.tommaso.uniroma2.controller.ControllerGrafico;
-import it.tommaso.uniroma2.controller.ControllerGraficoBenvenuto;
-import it.tommaso.uniroma2.controller.ControllerGraficoGestisciLibreriaColor;
 
-public class App {
-    /*porzione di codice che lancia app */
-    public static void main(String... args){
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 
-        //fase inizio applicazione
+import java.io.IOException;
 
-        ControllerGrafico conotrollerBenvenuto = new ControllerGraficoBenvenuto();
-        conotrollerBenvenuto.start();
+public class App extends Application {
 
-        //mostra libreria
-        ControllerGrafico controllerGraficoGestisciLibreriaColor = new ControllerGraficoGestisciLibreriaColor();
-        controllerGraficoGestisciLibreriaColor.start();
 
+    @Override
+    public void start(Stage stage) throws Exception {
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(App.class.getResource("root.fxml"));
+
+        try{
+            StackPane rootPane;
+            rootPane = loader.load(); //uno stack pane di base costituisce il nodo radice dell'interfaccia.
+            GUIManager guiManager = GUIManager.getGUIManager();
+            guiManager.setRootPane(rootPane);
+            Scene scene = new Scene(rootPane);
+            stage.show();
+
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
 
-
-
-
-
 }
+
