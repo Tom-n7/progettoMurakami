@@ -1,0 +1,188 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Pagina-1" id="BPE7wrc8W76wf2-4fiEl">
+    <mxGraphModel dx="1426" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jTnFZ7c663tNMAQoxmt--1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" value="" vertex="1">
+          <mxGeometry height="32.5" width="32.5" x="320" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Esposizione Libreria Personale" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="406.25" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--4" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--1" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="460" as="sourcePoint" />
+            <mxPoint x="440" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--9" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="419.9999999999999" as="sourcePoint" />
+            <mxPoint x="1060" y="419.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="doppio click [bottone == aggiungiLibri] / construisci interfaccia acquisizione metadati" vertex="1">
+          <mxGeometry height="30" width="450" x="590" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Strumento di ricerca senza risultati" vertex="1">
+          <mxGeometry height="60" width="120" x="1060" y="406.25" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--12" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--2" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="472" as="sourcePoint" />
+            <mxPoint x="550" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="doppio click su libro [ button == libroN]&lt;div&gt;/ carica dettagli libro N&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="550" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Esposizione dettagli libro personale" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--16" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--15" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="550" as="sourcePoint" />
+            <mxPoint x="600" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="doppio click su croce [button == croce]&lt;div&gt;/ nacondi dettagli libro&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="280" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == ricerca &amp;amp;&amp;amp; titoloRicerca != null] / scarica dati catalogo libro &amp;amp;&amp;amp; mostra libri associati" vertex="1">
+          <mxGeometry height="70" width="440" x="1200" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Esposizione riepilogo aggiornamento" vertex="1">
+          <mxGeometry height="60" width="120" x="1060" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--24" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--23" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1030" y="260" as="sourcePoint" />
+            <mxPoint x="1080" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == aggiungiAltroLibro] / costruisci interfaccia acquisizione metdati" vertex="1">
+          <mxGeometry height="30" width="240" x="840" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--26" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--23" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="150" />
+            </Array>
+            <mxPoint x="860" y="240" as="sourcePoint" />
+            <mxPoint x="910" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == conferma] / aggiorna libreria personale" vertex="1">
+          <mxGeometry height="30" width="530" x="520" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--28" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="jTnFZ7c663tNMAQoxmt--2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="730" />
+              <mxPoint x="900" y="451" />
+            </Array>
+            <mxPoint x="580" y="730" as="sourcePoint" />
+            <mxPoint x="830" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [ bottone == eliminaLibro] / aggiorna libreria personale&amp;nbsp;" vertex="1">
+          <mxGeometry height="75" width="130" x="900" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--33" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1180" y="415.96" as="sourcePoint" />
+            <mxPoint x="1640" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Strumento di ricerca con risultati" vertex="1">
+          <mxGeometry height="60" width="120" x="1640" y="392.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--35" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=0.883;entryY=0.979;entryDx=0;entryDy=0;entryPerimeter=0;" target="jTnFZ7c663tNMAQoxmt--11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="510" />
+              <mxPoint x="1166" y="510" />
+            </Array>
+            <mxPoint x="1080" y="466.25" as="sourcePoint" />
+            <mxPoint x="1080" y="555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == ricerca &amp;amp;&amp;amp; titoloRicerca == null] / notifica il lettore su errore ricerca" vertex="1">
+          <mxGeometry height="30" width="350" x="960" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--39" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=0.883;entryY=0.979;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1657" y="497.5" />
+              <mxPoint x="1743" y="497.5" />
+            </Array>
+            <mxPoint x="1657" y="453.75" as="sourcePoint" />
+            <mxPoint x="1743" y="452.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == ricerca &amp;amp;&amp;amp; titoloRicerca != null] / mostra libri associati" vertex="1">
+          <mxGeometry height="35" width="440" x="1480" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--41" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=1.001;entryY=0.149;entryDx=0;entryDy=0;entryPerimeter=0;" target="jTnFZ7c663tNMAQoxmt--34" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1800" y="443" />
+              <mxPoint x="1800" y="400" />
+            </Array>
+            <mxPoint x="1760" y="443" as="sourcePoint" />
+            <mxPoint x="1906" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == ricerca &amp;amp;&amp;amp; titoloRicerca == null] / notifica il lettore su errore ricerca" vertex="1">
+          <mxGeometry height="35" width="380" x="1800" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--43" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--34" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.113;exitY=0.008;exitDx=0;exitDy=0;exitPerimeter=0;" target="jTnFZ7c663tNMAQoxmt--23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1655" y="150" />
+            </Array>
+            <mxPoint x="1655" y="390" as="sourcePoint" />
+            <mxPoint x="1700" y="189.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == risultatoLibro] / salva dati libro selezionato&amp;nbsp;" vertex="1">
+          <mxGeometry height="35" width="380" x="1210" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Strumento inserimento manuale&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="1640" y="-95" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--49" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--47" style="endArrow=none;html=1;rounded=0;endFill=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=block;startFill=1;" target="jTnFZ7c663tNMAQoxmt--34" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1720" y="30" as="sourcePoint" />
+            <mxPoint x="1740" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--50" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--34" style="endArrow=none;html=1;rounded=0;endFill=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;startArrow=block;startFill=1;" target="jTnFZ7c663tNMAQoxmt--47" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1750" y="300" as="sourcePoint" />
+            <mxPoint x="1800" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--51" edge="1" parent="1" source="jTnFZ7c663tNMAQoxmt--47" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="-65" />
+            </Array>
+            <mxPoint x="1370" y="170" as="sourcePoint" />
+            <mxPoint x="1159" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == conferma] / salva dati libro inserito" vertex="1">
+          <mxGeometry height="35" width="380" x="1210" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [ bottone == esci ] / torna a ricerca precedente" vertex="1">
+          <mxGeometry height="30" width="350" x="1320" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="jTnFZ7c663tNMAQoxmt--54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="click [bottone == inserisciManualmente] \ carica interfaccia inserimento manuale&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="270" x="1730" y="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

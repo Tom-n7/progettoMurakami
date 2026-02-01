@@ -1,0 +1,58 @@
+<mxlibrary>[
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" edge=\"1\" parent=\"1\" style=\"html=1;rounded=0;endArrow=none;endFill=0;strokeWidth=5;\" value=\"\"&gt;&lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;&lt;mxPoint as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"100\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 100,
+    "h": 0.5714285714285714,
+    "aspect": "fixed",
+    "title": "join/fork"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"ellipse;whiteSpace=wrap;html=1;aspect=fixed;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"45\" width=\"45\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" parent=\"1\" style=\"ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"32.5\" width=\"32.5\" x=\"6.25\" y=\"6.25\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 45,
+    "h": 45,
+    "aspect": "fixed",
+    "title": "nodo finale"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"32.5\" width=\"32.5\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 32.5,
+    "h": 32.5,
+    "aspect": "fixed",
+    "title": "nodo iniziale"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"triangle;whiteSpace=wrap;html=1;rotation=-90;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"20\" width=\"20\" y=\"20\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" parent=\"1\" style=\"triangle;whiteSpace=wrap;html=1;rotation=90;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"20\" width=\"20\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 20,
+    "h": 40,
+    "aspect": "fixed",
+    "title": "time event"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rounded=1;whiteSpace=wrap;html=1;\" value=\"(Nome Azione)\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"120\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 120,
+    "h": 60,
+    "aspect": "fixed",
+    "title": "azione"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" edge=\"1\" parent=\"1\" style=\"endArrow=open;html=1;rounded=0;endFill=0;\" value=\"\"&gt;&lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;&lt;mxPoint y=\"50\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"50\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 50,
+    "h": 50,
+    "aspect": "fixed",
+    "title": "arco attività"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" connectable=\"0\" parent=\"1\" style=\"group\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"120\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" parent=\"2\" style=\"rounded=1;whiteSpace=wrap;html=1;\" value=\"(Nome Attività)\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"120\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"4\" parent=\"2\" style=\"shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+oBCBIMIAumi8EAAAFbSURBVHja7dwxSsNgGMbxNyJtsoTkGoUWiscQXQLJCQrZC07RAxRyhkI2BRfF1aK4VNCAvUJpt0q2tsvrIFQsaguSpDT/BzIkBJ4vP/JleyNCdi/9JNGXNFUkRKTRbKlpWWo7rvbiuNoonTBU07JWh+24pYMclFk+m71/O18u5lJpkF0MIIAAAggggAACCCCAAAIIIIAAAggggBBAAAEEEEAAKSbG+gXPD/Tu9mbvH7xWNyU6j+Ss2zV+BenFsV5EUWXehlrdlMHgXo7abePHLTMcPldqeywXc3kbjfiG/JXDTTccn5zmVp6mrzIZjwvry7JMnh4f/gdyfXVp5LVAzw90HSTPvn6S6CYQtgwggAACCCCAAAIIIIAAAggggAACCCAEEEAAAQQQQAApP5PpVG3HXU1ae36g+9Qn8jVab1qWNpot3WqRnh8UNodfdJ/I54h9Jwz5+cI2+QCvNHWZW4si1QAAAABJRU5ErkJggg==;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"18.82\" width=\"20\" x=\"100\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 120,
+    "h": 60,
+    "aspect": "fixed",
+    "title": "chiamata attività"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rhombus;whiteSpace=wrap;html=1;\" value=\"\" vertex=\"1\"&gt;&lt;mxGeometry height=\"40\" width=\"30\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 30,
+    "h": 40,
+    "aspect": "fixed",
+    "title": "decision/merge"
+  }
+]</mxlibrary>
