@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.controller.ControllerGraficoBenvenuto">
+<AnchorPane fx:id="sfondo" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../controller/benvenuto.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.view.color.ControllerGraficoBenvenuto">
    <children>
       <Label fx:id="titolo" alignment="CENTER" layoutY="42.0" prefHeight="18.0" prefWidth="600.0" text="Shelf Buddy" textAlignment="CENTER" />
       <Label fx:id="sottotitolo" alignment="CENTER" contentDisplay="CENTER" layoutY="360.0" prefHeight="18.0" prefWidth="600.0" text="I tuoi libri, la tua community, in un unico posto" textAlignment="CENTER" />

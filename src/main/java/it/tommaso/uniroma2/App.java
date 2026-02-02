@@ -1,6 +1,8 @@
 package it.tommaso.uniroma2;
 
 
+
+import it.tommaso.uniroma2.view.GUIManager;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -20,11 +22,15 @@ public class App extends Application {
         try{
 
             StackPane rootPane;
-            rootPane = loader.load(); //uno stack pane di base costituisce il nodo radice dell'interfaccia.
-            GUIManager guiManager = GUIManager.getGUIManager();
-            guiManager.setRootPane(rootPane);
+            rootPane = loader.load();//uno stack pane di base costituisce il nodo radice dell'interfaccia.
+
+            GUIManager GuiManager = GUIManager.getGUIManager();
+
             Scene scene = new Scene(rootPane);
+            GuiManager.setRootPane(rootPane);
+            stage.setScene(scene);
             stage.show();
+            GuiManager.cambiaFinestra("color/schermatabenvenuto.fxml");
 
         }catch (IOException e){
             e.printStackTrace();

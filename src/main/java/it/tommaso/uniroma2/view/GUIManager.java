@@ -1,14 +1,14 @@
-package it.tommaso.uniroma2;
+package it.tommaso.uniroma2.view;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-import java.awt.*;
 import java.io.IOException;
 
 /*
@@ -19,9 +19,6 @@ public class GUIManager {
 
     private static GUIManager istanza;
     private StackPane rootPane;
-
-
-
 
 
     //metodo per ottenere reference del GUI manager.
