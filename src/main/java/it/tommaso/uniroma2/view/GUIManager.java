@@ -1,5 +1,6 @@
 package it.tommaso.uniroma2.view;
 
+import it.tommaso.uniroma2.Modalita;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,6 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import jexer.TWindow;
 
 import java.io.IOException;
 
@@ -19,6 +21,8 @@ public class GUIManager {
 
     private static GUIManager istanza;
     private StackPane rootPane;
+    private Modalita mod;
+
 
 
     //metodo per ottenere reference del GUI manager.
@@ -64,11 +68,18 @@ public class GUIManager {
     public void setRootPane(StackPane pane){
         rootPane = pane;
     }
+    public void setMod(Modalita mod){this.mod = mod;}
 
     private static void removeAllIncludedChildren(ObservableList<Node> childrenList) {
         for (int childIndex = 0; childIndex < childrenList.size(); childIndex++) {
             childrenList.remove(childIndex);
         }
     }
+
+
+    //GUI BW
+    public void setRootWindow(TWindow window) {rootWindow = window;}
+
+
 
 }
