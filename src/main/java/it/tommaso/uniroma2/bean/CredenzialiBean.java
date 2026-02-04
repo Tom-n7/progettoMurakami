@@ -1,10 +1,13 @@
 package it.tommaso.uniroma2.bean;
 
+import it.tommaso.uniroma2.model.Ruolo;
+
 public class CredenzialiBean {
 
     private String username;
     private String password;
     private boolean verificate;
+    private Ruolo ruolo;
 
     public String getPassword() {
         return password;
@@ -18,6 +21,8 @@ public class CredenzialiBean {
         return verificate;
     }
 
+    public Ruolo getRuolo(){return  ruolo;}
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -29,4 +34,6 @@ public class CredenzialiBean {
     public void setVerificate(boolean verificate) {
         this.verificate = verificate;
     }
+
+    public void setRuolo(Ruolo ruolo){this.ruolo = ruolo;}
 }

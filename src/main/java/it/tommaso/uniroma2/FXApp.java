@@ -1,10 +1,10 @@
 package it.tommaso.uniroma2;
 
 
-import it.tommaso.uniroma2.view.FX.LoginGraphicalControllerJavaFX;
+import it.tommaso.uniroma2.view.FX.LoginControllerGraficoJavaFX;
 import it.tommaso.uniroma2.view.FX.RootPane;
-import it.tommaso.uniroma2.view.LoginGraphicalController;
-import it.tommaso.uniroma2.view.terminal.LoginGraphicalControllerTerminale;
+import it.tommaso.uniroma2.view.LoginControllerGrafico;
+import it.tommaso.uniroma2.view.terminal.LoginControllerGraficoTerminale;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,6 +16,14 @@ import java.util.Scanner;
 
 import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
+
+
+/*
+Classe controller del sistema; lancia l'applicazione in modalità GUI o CLI a seconda dell'impostazione
+fornita.
+ */
+
+
 class Main{
 
     public static void main(String[] args) {startLogin(leggiImpostazioneGrafica());}
@@ -25,12 +33,12 @@ class Main{
         if (tipoGUI == GUIType.JAVAFX) {
             FXApp.main(args);
         } else {
-            LoginGraphicalController logContr = new LoginGraphicalControllerTerminale();
+            LoginControllerGrafico logContr = new LoginControllerGraficoTerminale();
             logContr.vistaLogin();
         }
     }
 
-    //simula una lettura di un file di impostazioni.
+    //simula una lettura di un file di impostazioni, PROVVISORIA.
     private static GUIType leggiImpostazioneGrafica(){
 
         System.out.println("Scegli impostazione grafica");
@@ -79,7 +87,7 @@ public class FXApp extends Application {
             e.printStackTrace();
         }
 
-        LoginGraphicalController controller = new LoginGraphicalControllerJavaFX();
+        LoginControllerGrafico controller = new LoginControllerGraficoJavaFX();
         controller.vistaLogin();
 
 
