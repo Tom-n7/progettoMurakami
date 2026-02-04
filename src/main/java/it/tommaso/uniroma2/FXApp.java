@@ -4,7 +4,7 @@ package it.tommaso.uniroma2;
 import it.tommaso.uniroma2.view.FX.LoginGraphicalControllerJavaFX;
 import it.tommaso.uniroma2.view.FX.RootPane;
 import it.tommaso.uniroma2.view.LoginGraphicalController;
-import it.tommaso.uniroma2.view.terminal.LoginGraphicalControllerTerminal;
+import it.tommaso.uniroma2.view.terminal.LoginGraphicalControllerTerminale;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -25,7 +25,7 @@ class Main{
         if (tipoGUI == GUIType.JAVAFX) {
             FXApp.main(args);
         } else {
-            LoginGraphicalController logContr = new LoginGraphicalControllerTerminal();
+            LoginGraphicalController logContr = new LoginGraphicalControllerTerminale();
             logContr.vistaLogin();
         }
     }

@@ -12,7 +12,7 @@ import it.tommaso.uniroma2.view.LoginGraphicalController;
 
 import java.util.Scanner;
 
-public class LoginGraphicalControllerTerminal implements LoginGraphicalController {
+public class LoginGraphicalControllerTerminale implements LoginGraphicalController {
 
     private final LoginAppController controllerApplicativo = new LoginAppController();
 
