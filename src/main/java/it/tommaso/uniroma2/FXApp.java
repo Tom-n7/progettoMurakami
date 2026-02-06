@@ -2,7 +2,7 @@ package it.tommaso.uniroma2;
 
 
 import it.tommaso.uniroma2.view.FX.LoginControllerGraficoJavaFX;
-import it.tommaso.uniroma2.view.FX.RootPane;
+import it.tommaso.uniroma2.view.FX.ControllerGrafico;
 import it.tommaso.uniroma2.view.LoginControllerGrafico;
 import it.tommaso.uniroma2.view.terminal.LoginControllerGraficoTerminale;
 import javafx.application.Application;
@@ -79,7 +79,7 @@ public class FXApp extends Application {
         loader.setLocation(getResource("/root.fxml"));
         try {
             StackPane rootPane = loader.load();//uno stack pane di base costituisce il nodo radice dell'interfaccia.
-            RootPane.setRootPane(rootPane);
+            ControllerGrafico.setRootPane(rootPane);
             Scene scene = new Scene(rootPane);
             stage.setScene(scene);
             stage.show();

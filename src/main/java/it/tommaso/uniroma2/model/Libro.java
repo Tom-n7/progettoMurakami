@@ -4,6 +4,7 @@ package it.tommaso.uniroma2.model;
 Classe la cui responsabilità è rappresentare all'interno del sistema un libro all'interno del sistema.
  */
 
+import javax.swing.*;
 import java.util.Date;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class Libro {
    private String pubblicazione;
    private String editore;
    private String descrizione;
+
 
 
    private void setTitolo(String titolo) {

@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="2">
   <diagram id="b7ybL53w8HOHVrGn9dkZ" name="UC Diagram Attuale">
-    <mxGraphModel dx="1426" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1057" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="Ymba0Br48lqEopuBE4xo-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;div&gt;Lettore&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="30" x="110" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="Ymba0Br48lqEopuBE4xo-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Catalogo Centrale Libri" vertex="1">
+        <mxCell id="Ymba0Br48lqEopuBE4xo-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Open Library" vertex="1">
           <mxGeometry height="60" width="30" x="1170" y="320" as="geometry" />
         </mxCell>
         <mxCell id="Ymba0Br48lqEopuBE4xo-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Biblioteca" vertex="1">
@@ -25,7 +25,7 @@
             <mxPoint x="620" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="90U2rpkedkFSrkG-BSvt-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Segui Aggiornamenti Biblioteca" vertex="1">
+        <mxCell id="90U2rpkedkFSrkG-BSvt-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestisci Aggiornamenti Biblioteche" vertex="1">
           <mxGeometry height="50" width="90" x="565" y="140" as="geometry" />
         </mxCell>
         <mxCell id="90U2rpkedkFSrkG-BSvt-2" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-1" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="90U2rpkedkFSrkG-BSvt-1" value="">
@@ -34,8 +34,8 @@
             <mxPoint x="630" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tcXEmlysK9RKUZG1VwtV-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Aggiungi Amico" vertex="1">
-          <mxGeometry height="50" width="100" x="560" y="40" as="geometry" />
+        <mxCell id="tcXEmlysK9RKUZG1VwtV-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestisci Amici" vertex="1">
+          <mxGeometry height="50" width="100" x="447.5" y="65" as="geometry" />
         </mxCell>
         <mxCell id="zVUDx0nOxND6bW6XtaTi-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Importa Metadati Libro" vertex="1">
           <mxGeometry height="60" width="120" x="880" y="-90" as="geometry" />
@@ -49,17 +49,11 @@
             <mxPoint x="590" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="A7GfVMq0iM2RNMKsR8jB-3" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-3" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="A7GfVMq0iM2RNMKsR8jB-1" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="540" y="360" as="sourcePoint" />
-            <mxPoint x="590" y="310" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="A7GfVMq0iM2RNMKsR8jB-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Fissa Appuntamento" vertex="1">
-          <mxGeometry height="60" width="100" x="630" y="410" as="geometry" />
+        <mxCell id="A7GfVMq0iM2RNMKsR8jB-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestisci Appuntamenti" vertex="1">
+          <mxGeometry height="60" width="100" x="562.5" y="490" as="geometry" />
         </mxCell>
         <mxCell id="A7GfVMq0iM2RNMKsR8jB-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Valida Prenotazione" vertex="1">
-          <mxGeometry height="50" width="90" x="635" y="500" as="geometry" />
+          <mxGeometry height="50" width="90" x="590" y="400" as="geometry" />
         </mxCell>
         <mxCell id="ZmgqD9GL9jsGwAu_NL4b-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Pubblica Annuncio" vertex="1">
           <mxGeometry height="50" width="80" x="540" y="575" as="geometry" />
@@ -145,13 +139,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="fTdaTWweowltfKTn_wg0-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=19;" value="&lt;b&gt;#&lt;/b&gt;" vertex="1">
-          <mxGeometry height="20" width="65" x="647.5" y="390" as="geometry" />
-        </mxCell>
-        <mxCell id="fTdaTWweowltfKTn_wg0-8" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="A7GfVMq0iM2RNMKsR8jB-7" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="330" y="520" as="sourcePoint" />
-            <mxPoint x="380" y="470" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry height="20" width="65" x="602.5" y="380" as="geometry" />
         </mxCell>
         <mxCell id="fTdaTWweowltfKTn_wg0-9" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-1" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tcXEmlysK9RKUZG1VwtV-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -166,7 +154,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=19;" value="&lt;b&gt;#&lt;/b&gt;" vertex="1">
-          <mxGeometry height="10" width="65" x="647.5" y="490" as="geometry" />
+          <mxGeometry height="10" width="65" x="580" y="480" as="geometry" />
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-5" edge="1" parent="1" source="zVUDx0nOxND6bW6XtaTi-3" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endFill=0;" target="A7GfVMq0iM2RNMKsR8jB-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -194,7 +182,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Presta Libro" vertex="1">
-          <mxGeometry height="60" width="107" x="712.5" y="-170" as="geometry" />
+          <mxGeometry height="60" width="107" x="750" y="-150" as="geometry" />
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-10" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Servizio Email" vertex="1">
           <mxGeometry height="60" width="30" x="1170" y="570" as="geometry" />
@@ -206,7 +194,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;#&lt;/font&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="10" width="65" x="577.5" y="30" as="geometry" />
+          <mxGeometry height="10" width="65" x="465" y="55" as="geometry" />
         </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-16" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-3" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="A7GfVMq0iM2RNMKsR8jB-11" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -225,6 +213,34 @@
             <mxPoint x="600" y="410" as="sourcePoint" />
             <mxPoint x="650" y="360" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="gJdpU8wNhNAHIlzkmg70-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Segui Biblioteca" vertex="1">
+          <mxGeometry height="40" width="117" x="710" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gJdpU8wNhNAHIlzkmg70-2" edge="1" parent="1" source="gJdpU8wNhNAHIlzkmg70-1" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="90U2rpkedkFSrkG-BSvt-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="100" as="sourcePoint" />
+            <mxPoint x="740" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJdpU8wNhNAHIlzkmg70-3" connectable="0" parent="gJdpU8wNhNAHIlzkmg70-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="0.022" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-2" edge="1" parent="1" source="Dvi5XP5np1EcpQLllc7y-4" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.341;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="wiJd47UuE8YBNYFI3hnh-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="536" y="20" as="sourcePoint" />
+            <mxPoint x="560" y="-127" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-3" connectable="0" parent="Dvi5XP5np1EcpQLllc7y-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.043" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Annota Libro" vertex="1">
+          <mxGeometry height="60" width="107" x="736" y="-230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

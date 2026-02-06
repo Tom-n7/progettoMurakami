@@ -2,7 +2,6 @@ package it.tommaso.uniroma2.view.FX;
 
 import it.tommaso.uniroma2.bean.CredenzialiBean;
 import it.tommaso.uniroma2.controller.LoginAppController;
-import it.tommaso.uniroma2.view.DashboardBibliotecaControllerGrafico;
 import it.tommaso.uniroma2.view.LoginControllerGrafico;
 import javafx.event.ActionEvent;
 
@@ -10,12 +9,12 @@ import javafx.event.ActionEvent;
 /*
 Oggetto con la responsabilità di gestire l'aspetto grafico della procedura di login.
  */
-public class LoginControllerGraficoJavaFX extends RootPane implements LoginControllerGrafico {
+public class LoginControllerGraficoJavaFX extends ControllerGrafico implements LoginControllerGrafico {
 
     private final LoginAppController controllerApplicativo = new LoginAppController();
 
     public void vistaLogin(){
-        cambiaFinestra("/it.tommaso.uniroma2/view/FX/login.fxml");
+        disegnaFinestra("/it.tommaso.uniroma2/view/FX/login.fxml");
     }
 
 

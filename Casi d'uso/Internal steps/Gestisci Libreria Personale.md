@@ -14,8 +14,13 @@ METADATI := Titolo, autore, lingua, codice ISNB, nome serie, numero serie, data 
 
 ## Etensioni
 
-<br>2a.Il lettore vuole prestare uno dei suoi libri: Il lettore esegue <u>presta libro()</u></br>
-
+<br>2a.Il lettore vuole annotare uno dei suoi libri: 
+1. Il lettore seleziona il libro desiderato
+2. Il sistema mostra i dettagli del libro 
+3. Il lettore seleziona annota libro
+4. Il sistema mostra le annotazioni
+5. Il lettore inserisce la nuova annotazione
+6. Il sistema aggiunge le annotazioni al libro.
 
 <br>2b. Il lettore vuole eliminare un libro:</br>
 1. Il lettore seleziona il libro che vuole eliminare.

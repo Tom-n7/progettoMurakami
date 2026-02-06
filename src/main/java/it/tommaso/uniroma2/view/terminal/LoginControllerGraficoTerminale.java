@@ -23,14 +23,9 @@ public class LoginControllerGraficoTerminale implements LoginControllerGrafico {
         catturaCredenziali();
         selettoreAzione();
 
-
-
-
-
     }
 
     private void selettoreAzione(){
-
 
         switch (credenzialiBean.getRuolo()){
 
@@ -45,34 +40,22 @@ public class LoginControllerGraficoTerminale implements LoginControllerGrafico {
 
     private void selettoreBibliotecario(){
 
-        int choice;
+        System.out.println("----------DASHBOARD BIBLIOTECARIO------------");
+        System.out.println("1. Pubblica Annuncio");
+        System.out.println("2. Gestisci Appuntamenti");
+        System.out.println("3. Valida Prenotazione");
+        System.out.println("Inserici scelta:");
+
         Scanner input = new Scanner(System.in);
-
-        do {
-            System.out.println("----------DASHBOARD BIBLIOTECARIO------------");
-            System.out.println("1. Pubblica Annuncio");
-            System.out.println("2. Gestisci Appuntamenti");
-            System.out.println("3. Valida Prenotazione");
-            System.out.println("4. Prenota Libro");
-            System.out.println("5. Valida Richiesta");
-
+        int choice = 0;
+        while (true) {
+            System.out.print("Please enter your choice: ");
             choice = input.nextInt();
-
-            switch (choice){
-                case 1: new LibreriaPersonaleControllerGraficoTerminal().vistaLibreria();
-                default:
-                    if (choice > 5){
-                        System.out.println("Scelta non valida");
-                    }else{
-                        System.out.println("Non ancora implementato");
-                    }
+            if (choice >= 1 && choice <= 3) {
+                break;
             }
-
-
-
-        }while(true);
-
-
+            System.out.println("Invalid option");
+        }
 
     }
 
@@ -80,33 +63,33 @@ public class LoginControllerGraficoTerminale implements LoginControllerGrafico {
 
     private void selettoreLettore(){
 
-        int choice;
+        System.out.println("-----------DASHBOARD LETTORE--------------");
+        System.out.println("1. Gestisci Libreria Personale");
+        System.out.println("2. Gestisci Amici");
+        System.out.println("3. Gestisci Aggiornamenti Biblioteche");
+        System.out.println("4. Prenota Libro");
+        System.out.println("5. Valida Prenotazione");
+        System.out.println("6. Esci");
+
+
         Scanner input = new Scanner(System.in);
-
-        do {
-            System.out.println("-----------DASHBOARD LETTORE--------------");
-            System.out.println("1. Gestisci Libreria Personale");
-            System.out.println("2. Gestisci Amici");
-            System.out.println("3. Gestisci Aggiornamenti Biblioteche");
-            System.out.println("4. Prenota Libro");
-            System.out.println("5. Valida Richiesta");
-
+        int choice = 0;
+        while (true) {
+            System.out.println("Inserisci scelta:");
             choice = input.nextInt();
-
-            switch (choice){
-                case 1: new LibreriaPersonaleControllerGraficoTerminal().vistaLibreria();
-                default:
-                    if (choice > 5){
-                        System.out.println("Scelta non valida");
-                    }else{
-                        System.out.println("Non ancora implementato");
-                    }
+            if (choice >= 1 && choice <= 6) {
+                break;
             }
+            System.out.println("Scelta non valida");
+        }
 
+        switch (choice){
 
+            case 1 -> new LibreriaPersonaleControllerGraficoTerminal().vistaLibreria();
+            case 6 -> System.exit(0);
+            default -> System.out.println("Non ancora implementato");
 
-        }while(true);
-
+        }
 
 
     }

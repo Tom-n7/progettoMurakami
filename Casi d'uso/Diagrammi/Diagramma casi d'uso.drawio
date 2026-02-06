@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="2">
   <diagram id="b7ybL53w8HOHVrGn9dkZ" name="UC Diagram Attuale">
-    <mxGraphModel dx="1034" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1057" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="Ymba0Br48lqEopuBE4xo-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;div&gt;Lettore&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="30" x="110" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="Ymba0Br48lqEopuBE4xo-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Catalogo Centrale Libri" vertex="1">
+        <mxCell id="Ymba0Br48lqEopuBE4xo-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Open Library" vertex="1">
           <mxGeometry height="60" width="30" x="1170" y="320" as="geometry" />
         </mxCell>
         <mxCell id="Ymba0Br48lqEopuBE4xo-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Biblioteca" vertex="1">
@@ -44,12 +44,6 @@
           <mxGeometry height="45" width="90" x="635" y="330" as="geometry" />
         </mxCell>
         <mxCell id="A7GfVMq0iM2RNMKsR8jB-2" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="A7GfVMq0iM2RNMKsR8jB-1" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="540" y="360" as="sourcePoint" />
-            <mxPoint x="590" y="310" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="A7GfVMq0iM2RNMKsR8jB-3" edge="1" parent="1" source="Ymba0Br48lqEopuBE4xo-3" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="A7GfVMq0iM2RNMKsR8jB-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="540" y="360" as="sourcePoint" />
             <mxPoint x="590" y="310" as="targetPoint" />
@@ -176,20 +170,6 @@
         <mxCell id="j-N4COFcYahWsdULXgLw-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=19;" value="&lt;b&gt;#&lt;/b&gt;" vertex="1">
           <mxGeometry height="10" width="65" x="647.5" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="bmKx2RdsAiVp5P1r1JxA-7" edge="1" parent="1" source="bmKx2RdsAiVp5P1r1JxA-8" style="endArrow=classic;html=1;rounded=0;entryX=0.65;entryY=0.066;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="wiJd47UuE8YBNYFI3hnh-1" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="550" y="100" as="sourcePoint" />
-            <mxPoint x="600" y="50" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bmKx2RdsAiVp5P1r1JxA-9" connectable="0" parent="bmKx2RdsAiVp5P1r1JxA-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
-          <mxGeometry relative="1" x="-0.043" y="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bmKx2RdsAiVp5P1r1JxA-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Presta Libro" vertex="1">
-          <mxGeometry height="60" width="107" x="712.5" y="-170" as="geometry" />
-        </mxCell>
         <mxCell id="bmKx2RdsAiVp5P1r1JxA-10" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Servizio Email" vertex="1">
           <mxGeometry height="60" width="30" x="1170" y="570" as="geometry" />
         </mxCell>
@@ -233,6 +213,20 @@
           <mxGeometry relative="1" x="0.022" y="-2" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-2" edge="1" parent="1" source="Dvi5XP5np1EcpQLllc7y-4" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.341;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="wiJd47UuE8YBNYFI3hnh-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="536" y="20" as="sourcePoint" />
+            <mxPoint x="560" y="-127" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-3" connectable="0" parent="Dvi5XP5np1EcpQLllc7y-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.043" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dvi5XP5np1EcpQLllc7y-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Annota Libro" vertex="1">
+          <mxGeometry height="60" width="107" x="736" y="-230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
