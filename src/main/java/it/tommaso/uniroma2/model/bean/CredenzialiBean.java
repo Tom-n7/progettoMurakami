@@ -1,4 +1,4 @@
-package it.tommaso.uniroma2.bean;
+package it.tommaso.uniroma2.model.bean;
 
 import it.tommaso.uniroma2.model.Ruolo;
 

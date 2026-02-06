@@ -6,9 +6,8 @@ il login, in modalità TERMINALE
  */
 
 
-import it.tommaso.uniroma2.bean.CredenzialiBean;
+import it.tommaso.uniroma2.model.bean.CredenzialiBean;
 import it.tommaso.uniroma2.controller.LoginAppController;
-import it.tommaso.uniroma2.view.FX.LibreriaPersonaleControllerGraficoJAvaFX;
 import it.tommaso.uniroma2.view.LoginControllerGrafico;
 
 import java.util.Scanner;

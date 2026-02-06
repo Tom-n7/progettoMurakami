@@ -1,6 +1,6 @@
 package it.tommaso.uniroma2.controller;
 
-import it.tommaso.uniroma2.bean.CredenzialiBean;
+import it.tommaso.uniroma2.model.bean.CredenzialiBean;
 import it.tommaso.uniroma2.model.Ruolo;
 
 public class LoginAppController {

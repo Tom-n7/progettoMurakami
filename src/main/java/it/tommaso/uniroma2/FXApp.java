@@ -1,8 +1,11 @@
 package it.tommaso.uniroma2;
 
 
+import it.tommaso.uniroma2.model.Sessione;
+import it.tommaso.uniroma2.model.dao.Modalita;
 import it.tommaso.uniroma2.view.FX.LoginControllerGraficoJavaFX;
 import it.tommaso.uniroma2.view.FX.ControllerGrafico;
+import it.tommaso.uniroma2.view.GUIType;
 import it.tommaso.uniroma2.view.LoginControllerGrafico;
 import it.tommaso.uniroma2.view.terminal.LoginControllerGraficoTerminale;
 import javafx.application.Application;
@@ -26,7 +29,7 @@ fornita.
 
 class Main{
 
-    public static void main(String[] args) {startLogin(leggiImpostazioneGrafica());}
+    public static void main(String[] args) {startLogin(leggiImpostazione());}
 
 
     private static void startLogin(GUIType tipoGUI, String... args)  {
@@ -39,7 +42,7 @@ class Main{
     }
 
     //simula una lettura di un file di impostazioni, PROVVISORIA.
-    private static GUIType leggiImpostazioneGrafica(){
+    private static GUIType leggiImpostazione(){
 
         System.out.println("Scegli impostazione grafica");
         System.out.println("1. JAVAFX");
@@ -69,11 +72,43 @@ class Main{
 
 public class FXApp extends Application {
 
+    Modalita persistenza;
+
     public static void main(String... args) {
         launch(args);
     }
     @Override
     public void start(Stage stage) {
+
+
+
+
+        System.out.println("Scegli impostazione grafica");
+        System.out.println("1. FILESYSTEM");
+        System.out.println("2. DATABASE");
+
+        Scanner input = new Scanner(System.in);
+        int choice = 0;
+        while (true) {
+            System.out.print("Please enter your choice: ");
+            choice = input.nextInt();
+            if (choice >= 1 && choice <= 2) {
+                break;
+            }
+            System.out.println("scelta non valida");
+        }
+
+        if (choice == 1) {
+            this.persistenza = Modalita.FILESYSTEM;
+        }else{
+            this.persistenza = Modalita.DATABASE;
+        }
+
+        Sessione sessione = Sessione.getSessione();
+        sessione.setModGrafica(GUIType.JAVAFX);
+        sessione.setModPersistenza(persistenza);
+
+
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getResource("/root.fxml"));
@@ -90,8 +125,7 @@ public class FXApp extends Application {
         LoginControllerGrafico controller = new LoginControllerGraficoJavaFX();
         controller.vistaLogin();
 
-
     }
-
+    public   Modalita getPersistenza(){return this.persistenza;}
 
 }

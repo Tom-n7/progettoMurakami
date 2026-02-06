@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/DB/libri/carica_libreria_personale.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/collocazione.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/copertina.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/inserisci_libro.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/libro.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/prestito.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/scaffale.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/libri/scrittore.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/utenti/amicizie.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/utenti/annunci.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/utenti/biblioteca.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/utenti/lettore.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/DB/utenti/utente.sql" dialect="MariaDB" />
+  </component>
+</project>

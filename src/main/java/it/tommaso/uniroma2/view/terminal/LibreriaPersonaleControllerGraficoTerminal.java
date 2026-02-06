@@ -1,18 +1,18 @@
 package it.tommaso.uniroma2.view.terminal;
 
-import it.tommaso.uniroma2.controller.LibreriaAppController;
+import it.tommaso.uniroma2.controller.LibreriaPersonaleAppController;
 
 import java.util.Scanner;
 
 public class LibreriaPersonaleControllerGraficoTerminal  {
 
-    LibreriaAppController appController;
+    LibreriaPersonaleAppController appController;
 
 
 
 
     public void vistaLibreria() {
-        appController = new LibreriaAppController();
+        appController = new LibreriaPersonaleAppController();
 
         System.out.println("---------LIBRERIA PERSONALE-------");
 
