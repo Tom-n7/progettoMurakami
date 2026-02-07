@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6" pages="3">
   <diagram name="Design" id="yW4ERnyX1hGmIJgrSsyV">
-    <mxGraphModel dx="996" dy="1975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1269" dy="2070" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -130,13 +130,13 @@
             <mxPoint x="2590" y="1320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fLPZ_0MVcrwPfV6m84w_-8" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DBLibreriaPersonaleDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="fLPZ_0MVcrwPfV6m84w_-8" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DBCaricaLibreriaPersonaleDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="3140" y="880" as="geometry" />
         </mxCell>
         <mxCell id="fLPZ_0MVcrwPfV6m84w_-9" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProceduraGenericaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;P&amp;gt;&lt;/i&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="200" x="2520" y="1169" as="geometry" />
         </mxCell>
-        <mxCell id="fLPZ_0MVcrwPfV6m84w_-10" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FSLibreriaPersonaleDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="fLPZ_0MVcrwPfV6m84w_-10" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FSCaricaLibreriaPersonaleDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="3440" y="980" as="geometry" />
         </mxCell>
         <mxCell id="fLPZ_0MVcrwPfV6m84w_-14" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;CaricaLibreriaDAOFactoryBD&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field: Type&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ method(): Type&lt;/p&gt;" vertex="1">
@@ -161,7 +161,7 @@
             <mxPoint x="2120" y="1110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;CaricaLibreriaDAO&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;CaricaLibreriaPersonaleDAO&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;LibreriaPersonale&amp;gt;&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="280" x="2840" y="1100" as="geometry" />
         </mxCell>
         <mxCell id="xVLT-A6zMANhkvd2wUCq-3" edge="1" parent="1" source="xVLT-A6zMANhkvd2wUCq-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="fLPZ_0MVcrwPfV6m84w_-9" value="">
@@ -170,28 +170,22 @@
             <mxPoint x="2780" y="1295" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-5" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;b&gt;&lt;i&gt;CaricaLibreriaDAOFactory&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;- modalita: Modalita&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createCaricaLibreriaDAO: CaricaLibreriaDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+createAggiornaLibreriaDAO: AggiornaLibreriaDAO&lt;/p&gt;" vertex="1">
-          <mxGeometry height="170" width="160" x="2830" y="1390" as="geometry" />
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-5" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;b&gt;&lt;i&gt;CaricaLibreriaPersonaleDAOFactory&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;- modalita: Modalita&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createCaricaLibreriaDAO: CaricaLibreriaDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+createAggiornaLibreriaDAO: AggiornaLibreriaDAO&lt;/p&gt;" vertex="1">
+          <mxGeometry height="170" width="260" x="2760" y="1390" as="geometry" />
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-8" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-10" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-1" value="">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-8" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-10" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-1" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="3320" y="1000" as="sourcePoint" />
             <mxPoint x="3200" y="1000" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-9" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-8" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-1" value="">
-          <mxGeometry relative="1" width="160" as="geometry">
-            <mxPoint x="3360" y="1120" as="sourcePoint" />
-            <mxPoint x="3240" y="1120" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-10" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-14" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-5" value="">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-10" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-14" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-5" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="3150" y="1300" as="sourcePoint" />
             <mxPoint x="3030" y="1300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-11" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-15" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-5" value="">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-11" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-15" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-5" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="3150" y="1420" as="sourcePoint" />
             <mxPoint x="3030" y="1420" as="targetPoint" />
@@ -224,13 +218,13 @@
         <mxCell id="xVLT-A6zMANhkvd2wUCq-17" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DBAggiornaLibreriaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute(Object... params):&amp;nbsp; &amp;lt;int&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="140" width="190" x="3240" y="1150" as="geometry" />
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-19" edge="1" parent="1" source="xVLT-A6zMANhkvd2wUCq-16" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="xVLT-A6zMANhkvd2wUCq-14" value="">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-19" edge="1" parent="1" source="xVLT-A6zMANhkvd2wUCq-16" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="xVLT-A6zMANhkvd2wUCq-14" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="3740" y="1300" as="sourcePoint" />
             <mxPoint x="3370" y="1370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xVLT-A6zMANhkvd2wUCq-20" edge="1" parent="1" source="xVLT-A6zMANhkvd2wUCq-17" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-14" value="">
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-20" edge="1" parent="1" source="xVLT-A6zMANhkvd2wUCq-17" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-14" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="3740" y="1300" as="sourcePoint" />
             <mxPoint x="3370" y="1370" as="targetPoint" />
@@ -260,6 +254,12 @@
             <Array as="points" />
             <mxPoint x="2490" y="1427" as="sourcePoint" />
             <mxPoint x="2941" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xVLT-A6zMANhkvd2wUCq-25" edge="1" parent="1" source="fLPZ_0MVcrwPfV6m84w_-8" style="endArrow=block;endSize=12;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="xVLT-A6zMANhkvd2wUCq-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2890" y="1180" as="sourcePoint" />
+            <mxPoint x="3050" y="1180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

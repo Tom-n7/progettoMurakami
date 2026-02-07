@@ -5,6 +5,7 @@ Classe la cui responsabilità è rappresentare all'interno del sistema un libro 
  */
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -12,49 +13,56 @@ public class Libro {
 
     //metadati del libro.
     private String titolo;
-   private List<String> autori;
+   private List<String> autori = new ArrayList<>();
    private String lingua;
    private String codiceISNB;
    private String nomeSerie;
-   private int numeroSerie;
-   private String pubblicazione;
+   private String numeroSerie;
+   private Date pubblicazione;
    private String editore;
    private String descrizione;
 
 
 
-   private void setTitolo(String titolo) {
+   public void setTitolo(String titolo) {
        this.titolo = titolo;
 
    }
 
-   private void setAutori(List<String> autori){
+   public void setAutori(List<String> autori){
        this.autori = autori;
    }
 
-   private void setLingua(String lingua){
+   public void aggiungiAutore(String autore){this.autori.add(autore);}
+
+
+   public void setLingua(String lingua){
        this.lingua = lingua;
    }
 
-   private  void setCodiceISNB(String codiceISNB){
+   public  void setCodiceISNB(String codiceISNB){
        this.codiceISNB = codiceISNB;
    }
 
-   private void setNomeSerie(String nomeSerie){
+   public void setNomeSerie(String nomeSerie){
        this.nomeSerie = nomeSerie;
    }
 
-   private void setNumeroSerie(int numeroSerie){
+   public void setNumeroSerie(String numeroSerie){
        this.numeroSerie = numeroSerie;
    }
 
-   private void setPubblicazione(String pubblicazione){
+   public void setPubblicazione(Date pubblicazione){
        this.pubblicazione = pubblicazione;
    }
 
+    public void setEditore(String editore) {
+        this.editore = editore;
+    }
 
-
-
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
 }
 
 
