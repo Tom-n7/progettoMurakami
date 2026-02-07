@@ -1,7 +1,8 @@
-package it.tommaso.uniroma2.model.dao;
+package it.tommaso.uniroma2.model.dao.base;
 
 import it.tommaso.uniroma2.exeption.DAOException;
 import it.tommaso.uniroma2.model.LibreriaPersonale;
+import it.tommaso.uniroma2.model.dao.ProceduraGenericaDAO;
 
 import java.sql.SQLException;
 

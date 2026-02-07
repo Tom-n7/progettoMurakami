@@ -1,9 +1,10 @@
-package it.tommaso.uniroma2.model.dao;
+package it.tommaso.uniroma2.model.dao.db;
 
 import it.tommaso.uniroma2.exeption.DAOException;
 import it.tommaso.uniroma2.model.LibreriaPersonale;
 import it.tommaso.uniroma2.model.Libro;
 import it.tommaso.uniroma2.model.Scaffale;
+import it.tommaso.uniroma2.model.dao.base.CaricaLibreriaPersonaleDAO;
 import it.tommaso.uniroma2.model.dao.dbconnect.ConnectionFactory;
 
 import java.sql.*;

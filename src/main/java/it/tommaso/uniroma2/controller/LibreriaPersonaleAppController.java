@@ -1,9 +1,7 @@
 package it.tommaso.uniroma2.controller;
 
 import it.tommaso.uniroma2.model.LibreriaPersonale;
-import it.tommaso.uniroma2.model.bean.LibreriaPersonaleBean;
-import it.tommaso.uniroma2.model.dao.AggiornaLibreriaDAO;
-import it.tommaso.uniroma2.model.dao.CaricaLibreriaPersonaleDAO;
+import it.tommaso.uniroma2.model.dao.base.CaricaLibreriaPersonaleDAO;
 import it.tommaso.uniroma2.model.dao.factories.DAOFactory;
 
 public class LibreriaPersonaleAppController {

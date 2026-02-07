@@ -1,9 +1,11 @@
 package it.tommaso.uniroma2.model.dao.factories;
 
-import it.tommaso.uniroma2.model.dao.AggiornaLibreriaDAO;
-import it.tommaso.uniroma2.model.dao.CaricaLibreriaPersonaleDAO;
-import it.tommaso.uniroma2.model.dao.DBAggiornaLibreriaDAO;
-import it.tommaso.uniroma2.model.dao.DBCaricaLibreriaPersonaleDAO;
+import it.tommaso.uniroma2.model.dao.base.AggiornaLibreriaDAO;
+import it.tommaso.uniroma2.model.dao.base.CaricaDettagliLibroDAO;
+import it.tommaso.uniroma2.model.dao.base.CaricaLibreriaPersonaleDAO;
+import it.tommaso.uniroma2.model.dao.db.DBAggiornaLibreriaDAO;
+import it.tommaso.uniroma2.model.dao.db.DBCaricaDettagliLibroDAO;
+import it.tommaso.uniroma2.model.dao.db.DBCaricaLibreriaPersonaleDAO;
 
 public class DAOFactoryDB extends DAOFactory {
 
@@ -15,5 +17,10 @@ public class DAOFactoryDB extends DAOFactory {
     @Override
     public CaricaLibreriaPersonaleDAO getCaricaLibreriaPersonaleDAO() {
         return new DBCaricaLibreriaPersonaleDAO();
+    }
+
+    @Override
+    public CaricaDettagliLibroDAO getCaricaDettagliLibroDAO() {
+        return new DBCaricaDettagliLibroDAO();
     }
 }
