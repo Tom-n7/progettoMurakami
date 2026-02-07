@@ -1,10 +1,16 @@
 package it.tommaso.uniroma2.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LibreriaPersonale {
 
     private List<Scaffale> scaffaliLibreria;
+
+    LibreriaPersonale(){
+        scaffaliLibreria = new ArrayList<>();
+    }
+
 
     public List<Scaffale> getScaffaliLibreria() {
         return scaffaliLibreria;
