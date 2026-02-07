@@ -1,5 +1,6 @@
 package it.tommaso.uniroma2.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -8,6 +9,11 @@ Classe deputata al mantenimento di un gruppo di libri a cui il lettore ha dato u
  */
 
 public class Scaffale {
+
+    public Scaffale(){
+        libriContenuti = new ArrayList<>();
+    }
+
 
     private String nomeScaffale;
     //meglio usare una struttura dati che supporti l'ordinamento in modo più agevole

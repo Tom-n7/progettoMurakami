@@ -1,16 +1,29 @@
 package it.tommaso.uniroma2.controller;
 
+import it.tommaso.uniroma2.model.LibreriaPersonale;
 import it.tommaso.uniroma2.model.bean.LibreriaPersonaleBean;
-import it.tommaso.uniroma2.model.dao.factories.CaricaLibreriaPersonaleDAOFactory;
+import it.tommaso.uniroma2.model.dao.AggiornaLibreriaDAO;
+import it.tommaso.uniroma2.model.dao.CaricaLibreriaPersonaleDAO;
+import it.tommaso.uniroma2.model.dao.factories.DAOFactory;
 
 public class LibreriaPersonaleAppController {
 
 
-    public LibreriaPersonaleBean caricaLibreriaPersonale(){
+    public LibreriaPersonale caricaLibreriaPersonale() {
 
-        CaricaLibreriaPersonaleDAOFactory factory = CaricaLibreriaPersonaleDAOFactory.getFactory();
-        return null;
+        LibreriaPersonale libreriaPersonale = null;
 
+        DAOFactory factory = DAOFactory.getFactory();
+        CaricaLibreriaPersonaleDAO caricaLibreriaPersonaleDAO = factory.getCaricaLibreriaPersonaleDAO();
+
+        try {
+            libreriaPersonale = caricaLibreriaPersonaleDAO.execute();
+        } catch (Exception e) {
+            System.out.println("errore!");
+        }
+
+
+        return libreriaPersonale;
     }
 
 

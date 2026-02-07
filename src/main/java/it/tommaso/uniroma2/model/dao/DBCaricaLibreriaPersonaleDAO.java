@@ -63,37 +63,15 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
                 nuovoLibro.setDescrizione(rs.getString(9));
 
                 scaffaleNuovoLibro = libreria.trovaScaffale(rs.getString(10));
+
+
                 scaffaleNuovoLibro.inserisciLibro(nuovoLibro);
 
             }
 
-            status = cs.getMoreResults();
-            rs = cs.getResultSet();
-
-            while(rs.next()){
-
-
-
-
-
-
-
-
-            }
-
-
-
-
-
-
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-
 
         return libreria;
 
