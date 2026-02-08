@@ -6,7 +6,7 @@ import java.util.List;
 
 public class LibroBean {
 
-    LibroBean(String titolo, List<String> autori, String lingua, String codiceISNB,
+    public LibroBean(String titolo, List<String> autori, String lingua, String codiceISNB,
               String nomeSerie, String numeroSerie, Date pubblicazione, String editore, String descrizione){
 
         this.autori = autori;

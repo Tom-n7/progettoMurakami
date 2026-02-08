@@ -4,6 +4,7 @@ import it.tommaso.uniroma2.model.LibreriaPersonale;
 import it.tommaso.uniroma2.model.Libro;
 import it.tommaso.uniroma2.model.Scaffale;
 import it.tommaso.uniroma2.model.bean.LibreriaPersonaleBean;
+import it.tommaso.uniroma2.model.bean.LibroBean;
 import it.tommaso.uniroma2.model.bean.ScaffaleBean;
 import it.tommaso.uniroma2.model.dao.base.CaricaLibreriaPersonaleDAO;
 import it.tommaso.uniroma2.model.dao.factories.DAOFactory;
@@ -18,6 +19,7 @@ public class LibreriaPersonaleAppController {
     public LibreriaPersonaleBean caricaLibreriaPersonale() {
 
         LibreriaPersonale libreriaPersonale = null;
+        LibreriaPersonaleBean libreriaPersonaleBean;
         List<ScaffaleBean> scaffaliLibreriaBean = new ArrayList<>();
 
 
@@ -32,7 +34,7 @@ public class LibreriaPersonaleAppController {
 
         List<Scaffale> scaffaliEntity;
         try {
-            scaffaliEntity = Objects.requireNonNull(libreriaPersonale).getScaffaliLibreria()
+            scaffaliEntity = Objects.requireNonNull(libreriaPersonale).getScaffaliLibreria();
 
 
             //bisogna incapsulare ogni scaffale nella sua bean
@@ -40,15 +42,16 @@ public class LibreriaPersonaleAppController {
 
                 String nomeScaffale = scaffale.getNomeScaffale();
                 List<Libro> libriScaffale = scaffale.getLibriContenuti();
+                List<LibroBean> libriBeanScaffale = new ArrayList<>();
 
-                //bisogna incapuslare ogni libro nella sua bean
+                //bisogna incapsulare ogni libro nella sua bean
                 for (Libro libro : libriScaffale){
-
-
+                    libriBeanScaffale.add(new LibroBean(libro.getTitolo(), libro.getAutori(), libro.getLingua(),
+                            libro.getCodiceISNB(), libro.getNomeSerie(), libro.getNumeroSerie(), libro.getPubblicazione(),
+                            libro.getEditore(),libro.getDescrizione()) );
                 }
 
-
-                scaffaliLibreriaBean.add(new ScaffaleBean(nomeScaffale, libriScaffale));
+                scaffaliLibreriaBean.add(new ScaffaleBean(nomeScaffale, libriBeanScaffale));
 
             }
 
@@ -56,11 +59,9 @@ public class LibreriaPersonaleAppController {
             System.out.println("Errore!");
         }
 
-        scaffaliLibreria = new
+        libreriaPersonaleBean = new LibreriaPersonaleBean(scaffaliLibreriaBean);
 
-
-
-        return libreriaPersonale;
+        return libreriaPersonaleBean;
     }
 
 

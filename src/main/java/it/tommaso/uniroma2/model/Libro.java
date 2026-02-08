@@ -63,6 +63,42 @@ public class Libro {
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public String getNomeSerie() {
+        return nomeSerie;
+    }
+
+    public String getLingua() {
+        return lingua;
+    }
+
+    public String getEditore() {
+        return editore;
+    }
+
+    public String getCodiceISNB() {
+        return codiceISNB;
+    }
+
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public List<String> getAutori() {
+        return autori;
+    }
+
+    public Date getPubblicazione() {
+        return pubblicazione;
+    }
+
+    public String getNumeroSerie() {
+        return numeroSerie;
+    }
 }
 
 

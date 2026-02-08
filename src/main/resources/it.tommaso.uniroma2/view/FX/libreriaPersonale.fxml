@@ -27,13 +27,14 @@
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="881.0" GridPane.columnIndex="1">
                <children>
-                  <GridPane prefHeight="722.0" prefWidth="881.0">
+                  <GridPane layoutX="-2.0" prefHeight="720.0" prefWidth="883.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints maxHeight="-Infinity" minHeight="54.0" prefHeight="54.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="665.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="657.8994140625" minHeight="-Infinity" prefHeight="580.029541015625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="54.0" minHeight="54.0" prefHeight="54.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <AnchorPane style="-fx-background-color: GREEN;">
@@ -53,7 +54,12 @@
                         </AnchorPane>
                         <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="665.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
-                              <ListView fx:id="elencoLibri" prefHeight="300.0" prefWidth="314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="vistaLibri" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.rowIndex="2">
+                           <children>
+                              <ListView fx:id="vistaScaffali" layoutX="-7.0" orientation="HORIZONTAL" prefHeight="54.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>

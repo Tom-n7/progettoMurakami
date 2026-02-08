@@ -7,7 +7,7 @@ public class LibreriaPersonale {
 
     private List<Scaffale> scaffaliLibreria;
 
-    LibreriaPersonale(){
+    public LibreriaPersonale(){
         scaffaliLibreria = new ArrayList<>();
     }
 
