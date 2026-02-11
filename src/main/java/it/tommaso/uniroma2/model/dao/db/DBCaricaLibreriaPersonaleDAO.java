@@ -22,7 +22,6 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
     @Override
     public LibreriaPersonale execute(Object... params) throws DAOException, SQLException {
 
-
         try{
 
             //tenta connessione a DB locale contenente la libreria personale.

@@ -30,34 +30,39 @@ import java.util.ResourceBundle;
 public class LibreriaPersonaleControllerGraficoJAvaFX extends ControllerGrafico implements Initializable {
 
     public void vistaLibreria() {
-
         disegnaFinestra("/it.tommaso.uniroma2/view/FX/libreriaPersonale.fxml");
-        libreriaPersonale = new LibreriaPersonaleAppController().caricaLibreriaPersonale();
-        //disegno la finestra dopo che compongo le lista con i contenuti.
-
     }
 
     private final LibreriaPersonaleAppController appController = new LibreriaPersonaleAppController();
 
-    @FXML
-    private ListView<String> vistaLibri;
+    private List<LibroBean> contenutoScaffaleSelezionato;
 
+    @FXML
+    private ListView<String> vistaLibri = new ListView<>();
     @FXML
     private ListView<String> vistaScaffali = new ListView<>();
 
-    LibreriaPersonaleBean libreriaPersonale;
-    private ObservableList<String> obsListScaffali;
-    private List<ScaffaleBean> scaffaliLibreria;
-    private List<LibroBean> contenutoScaffaleSelezionato;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        libreriaPersonale = new LibreriaPersonaleAppController().caricaLibreriaPersonale();
+
+        LibreriaPersonaleBean libreriaPersonale = appController.caricaLibreriaPersonale();
+        List<ScaffaleBean> scaffaliLibreria = libreriaPersonale.getScaffaliLibreria();
         List<String> nomiScaffali = libreriaPersonale.getNomiScaffaliLibreria();
+
+        ScaffaleBean scaffaleIniziale;
+
+
+        nomiScaffali = libreriaPersonale.getNomiScaffaliLibreria();
         vistaScaffali.getItems().addAll(nomiScaffali);
+        scaffaleIniziale = scaffaliLibreria.getFirst();
 
-
-
+        mostraLibri(scaffaleIniziale);
 
     }
+
+    private void mostraLibri(ScaffaleBean scaffale){
+        vistaLibri.getItems().setAll(scaffale.getTitoliLibriScaffale());
+    }
+
+
 }

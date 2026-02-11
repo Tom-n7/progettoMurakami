@@ -11,7 +11,7 @@ public class LibreriaPersonaleBean {
         this.scaffaliLibreria = scaffaliLibreria;
     }
 
-    private List<ScaffaleBean> scaffaliLibreria;
+    private final List<ScaffaleBean> scaffaliLibreria;
 
     public List<ScaffaleBean> getScaffaliLibreria() {
         return scaffaliLibreria;
@@ -22,11 +22,8 @@ public class LibreriaPersonaleBean {
      */
     public List<String> getNomiScaffaliLibreria(){
         List<String> nomi = new ArrayList<>();
-
         for(ScaffaleBean scaffale: scaffaliLibreria ){
-
             nomi.add(scaffale.getNomeScaffale());
-
         }
         return nomi;
     }

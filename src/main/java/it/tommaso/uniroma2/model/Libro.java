@@ -21,6 +21,8 @@ public class Libro {
    private Date pubblicazione;
    private String editore;
    private String descrizione;
+   private String nomeFileCopertina;
+   private int idUnivoco;
 
 
 
@@ -34,7 +36,6 @@ public class Libro {
    }
 
    public void aggiungiAutore(String autore){this.autori.add(autore);}
-
 
    public void setLingua(String lingua){
        this.lingua = lingua;
@@ -63,6 +64,10 @@ public class Libro {
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
+
+    public void setNomeFileCopertina(String nomeFileCopertina) {this.nomeFileCopertina = nomeFileCopertina;}
+
+    public void setIdUnivoco(int idUnivoco){this.idUnivoco = idUnivoco;}
 
     public String getTitolo() {
         return titolo;
@@ -98,6 +103,14 @@ public class Libro {
 
     public String getNumeroSerie() {
         return numeroSerie;
+    }
+
+    public String getNomeFileCopertina() {
+        return nomeFileCopertina;
+    }
+
+    public int getIdUnivoco() {
+        return idUnivoco;
     }
 }
 
