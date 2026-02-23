@@ -26,7 +26,7 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
 
             //tenta connessione a DB locale contenente la libreria personale.
             Connection conn = ConnectionFactory.getLibriConnection();
-            CallableStatement cs = conn.prepareCall("{call carica_libreria_personale()}");
+            CallableStatement cs = conn.prepareCall("{call get_scaffali_libreria_personale()}");
             boolean status = cs.execute();
 
             //il primo set è costituito dagli scaffali
@@ -39,34 +39,44 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
 
                 scaffali.add(nuovoScaffale);
             }
+
             libreria.setScaffaliLibreria(scaffali);
 
+            //carico i libri del primo scaffale che possono essere mostrati subito.
+            Scaffale primoScaffale = scaffali.getFirst();
 
-            status = cs.getMoreResults();
-            rs = cs.getResultSet();
+            //se non ci sono ancora scaffali, non c'è bisogno di caricare i libri
+            if(primoScaffale != null) {
+                //carico contenuto libri primo scaffale
+                cs = conn.prepareCall("{call get_libri_scaffale()}");
+
+                //inserisco nome primo scaffale nella query sql
+                cs.setString(1, primoScaffale.getNomeScaffale());
+                status = cs.execute();
+                rs = cs.getResultSet();
+
+                while (rs.next()) {
+
+                    List<Integer> idLibriContenuti = new ArrayList<>();
+
+                    idLibriContenuti.add(rs.getInt(1));
+
+                    nuovoLibro.setTitolo(rs.getString(1));
+                    nuovoLibro.aggiungiAutore(rs.getString(2));
+                    nuovoLibro.setPubblicazione(rs.getDate(3));
+                    nuovoLibro.setEditore(rs.getString(4));
+                    nuovoLibro.setLingua(rs.getString(5));
+                    nuovoLibro.setCodiceISNB(rs.getString(6));
+                    nuovoLibro.setNomeSerie(rs.getString(7));
+                    nuovoLibro.setNumeroSerie(rs.getString(8));
+                    nuovoLibro.setDescrizione(rs.getString(9));
+
+                    scaffaleNuovoLibro = libreria.trovaScaffale(rs.getString(10));
 
 
-            //prima versione, i libri con più di un autore appariranno duplicati.
-            while(rs.next()){
+                    scaffaleNuovoLibro.inserisciLibro(nuovoLibro);
 
-                Libro nuovoLibro = new Libro();
-                Scaffale scaffaleNuovoLibro;
-
-                nuovoLibro.setTitolo(rs.getString(1));
-                nuovoLibro.aggiungiAutore(rs.getString(2));
-                nuovoLibro.setPubblicazione(rs.getDate(3));
-                nuovoLibro.setEditore(rs.getString(4));
-                nuovoLibro.setLingua(rs.getString(5));
-                nuovoLibro.setCodiceISNB(rs.getString(6));
-                nuovoLibro.setNomeSerie(rs.getString(7));
-                nuovoLibro.setNumeroSerie(rs.getString(8));
-                nuovoLibro.setDescrizione(rs.getString(9));
-
-                scaffaleNuovoLibro = libreria.trovaScaffale(rs.getString(10));
-
-
-                scaffaleNuovoLibro.inserisciLibro(nuovoLibro);
-
+                }
             }
 
         } catch (SQLException e) {
