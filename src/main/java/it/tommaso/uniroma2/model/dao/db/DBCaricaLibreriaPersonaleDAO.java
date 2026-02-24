@@ -18,6 +18,7 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
 
     LibreriaPersonale libreria = new LibreriaPersonale();
     List<Scaffale> scaffali = new ArrayList<>();
+    List<Libro> lirbriScaffale = new ArrayList<>()
 
     @Override
     public LibreriaPersonale execute(Object... params) throws DAOException, SQLException {
@@ -54,32 +55,27 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
                 cs.setString(1, primoScaffale.getNomeScaffale());
                 status = cs.execute();
                 rs = cs.getResultSet();
+                List<Integer> idLibriContenuti = new ArrayList<>();
 
                 while (rs.next()) {
-
-                    List<Integer> idLibriContenuti = new ArrayList<>();
-
                     idLibriContenuti.add(rs.getInt(1));
+                }
 
-                    nuovoLibro.setTitolo(rs.getString(1));
-                    nuovoLibro.aggiungiAutore(rs.getString(2));
-                    nuovoLibro.setPubblicazione(rs.getDate(3));
-                    nuovoLibro.setEditore(rs.getString(4));
-                    nuovoLibro.setLingua(rs.getString(5));
-                    nuovoLibro.setCodiceISNB(rs.getString(6));
-                    nuovoLibro.setNomeSerie(rs.getString(7));
-                    nuovoLibro.setNumeroSerie(rs.getString(8));
-                    nuovoLibro.setDescrizione(rs.getString(9));
+                for(Integer idLibro: idLibriContenuti){
 
-                    scaffaleNuovoLibro = libreria.trovaScaffale(rs.getString(10));
+                    //di ogni libro importo i dettagli, esclusi copertina ed autore.
+                    cs = conn.prepareCall("{call get_dettagli_libro()}");
+                    cs.setInt(1, idLibro );
+                    cs.setString(2, primoScaffale.getNomeScaffale());
+                    cs.execute();
 
-
-                    scaffaleNuovoLibro.inserisciLibro(nuovoLibro);
+                    rs = cs.getResultSet();
 
                 }
-            }
 
-        } catch (SQLException e) {
+
+            }
+            } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
