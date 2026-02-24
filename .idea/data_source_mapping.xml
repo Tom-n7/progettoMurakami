@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/DB/libri/carica_libreria_personale.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/collocazione.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/copertina.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/inserisci_libro.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/libro.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/prestito.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/scaffale.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
-    <file url="file://$PROJECT_DIR$/DB/libri/scrittore.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
     <file url="file://$PROJECT_DIR$/DB/utenti/amicizie.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
     <file url="file://$PROJECT_DIR$/DB/utenti/annunci.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />
     <file url="file://$PROJECT_DIR$/DB/utenti/biblioteca.sql" value="42dae9d7-a087-41cc-9370-6584a8bd0721" />

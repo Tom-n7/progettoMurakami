@@ -1,4 +1,4 @@
-create or replace table prestito
+create table prestito
 (
     libro int                           not null,
     id    int auto_increment

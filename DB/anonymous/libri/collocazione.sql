@@ -1,4 +1,4 @@
-create or replace table collocazione
+create table collocazione
 (
     libro    int         not null,
     scaffale varchar(64) not null,
