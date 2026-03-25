@@ -1,13 +1,13 @@
 package it.tommaso.uniroma2;
 
 
-import it.tommaso.uniroma2.model.Sessione;
-import it.tommaso.uniroma2.model.dao.Modalita;
-import it.tommaso.uniroma2.view.FX.LoginControllerGraficoJavaFX;
-import it.tommaso.uniroma2.view.FX.ControllerGrafico;
-import it.tommaso.uniroma2.view.GUIType;
-import it.tommaso.uniroma2.view.LoginControllerGrafico;
-import it.tommaso.uniroma2.view.terminal.LoginControllerGraficoTerminale;
+import it.tommaso.uniroma2.gestiscilp.model.Sessione;
+import it.tommaso.uniroma2.gestiscilp.model.dao.Modalita;
+import it.tommaso.uniroma2.gestiscilp.view.FX.LoginControllerGraficoJavaFX;
+import it.tommaso.uniroma2.gestiscilp.view.FX.ControllerGrafico;
+import it.tommaso.uniroma2.gestiscilp.view.GUIType;
+import it.tommaso.uniroma2.gestiscilp.view.LoginControllerGrafico;
+import it.tommaso.uniroma2.gestiscilp.view.terminal.LoginControllerGraficoTerminale;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

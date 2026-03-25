@@ -2,6 +2,29 @@
         
 1. Il lettore mostra il codice  della prenotazione al bibliotecario.
 2. Il bibliotecario inserisce il codice nel sistema.
-3. Il sistema mostra i dettagli della prenotazione.
-4. Il bibliotecario consulta i dettagli e chiude la prenotazione.
-5. Il sistema marca la prenotazione come "completa".
+3. Il sistema verifica la presenza di una prenotazione accettata e non scaduta presso la biblioteca associata al codice.
+4. Il sistema mostra i dettagli del libro oggetto della prenotazione e i dati dell'account associati al lettore richiedente.
+5. Il bibliotecario consulta i dettagli e della prenotazione e li comunica al lettore. 
+6. Il bibliotecario conferma al sistema l'avvenuto prestito. 
+7. Il sistema cambia lo stato della prenotazione in "completata con successo". 
+8. Il sistema salva le modifiche.
+
+## EXTENDS
+
+3a. Non esistono prenotazioni accattate e non scadute presso la biblioteca:
+1. Il sistema segnala il fatto al bibliotecario.
+2. Il bibliotecario richiede al sistema lo strumento di ricerca prenotazione tramite username.
+3. Il bibliotecario chiede al lettore lo username con cui è registrato nel sistema e lo inserisce.
+4. Il sistema mostra tutte le prenotazione associate all'utente presso la biblioteca in ordine cronologico. 
+5. Il bibliotecario richiede i dettagli del libro al lettore e individua la prenotazione associata.
+Il caso d'uso riprende dal passo 4.
+
+3b. La prenotazione associata al codice è scaduta:
+1. Il sistema rileva che la prenotazione è scaduta.
+2. Il sistema segnala il fatto al bibliotecario.
+Il caso d'uso termina.
+
+5a. Il libro riservato non è quello che il lettore cerca: 
+1. Il bibliotecario segnala al sistema che il prestito non è avvenuto
+2. Il sistema cambia lo stato della prenotazione in "fallita".
+Il caso d'uso riprende dal passo 8.
