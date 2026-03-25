@@ -18,7 +18,7 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
 
     LibreriaPersonale libreria = new LibreriaPersonale();
     List<Scaffale> scaffali = new ArrayList<>();
-    List<Libro> lirbriScaffale = new ArrayList<>()
+    List<Libro> lirbriScaffale = new ArrayList<>();
 
     @Override
     public LibreriaPersonale execute(Object... params) throws DAOException, SQLException {
@@ -75,8 +75,7 @@ public class DBCaricaLibreriaPersonaleDAO extends CaricaLibreriaPersonaleDAO {
                     cs.execute();
 
                     rs = cs.getResultSet();
-
-                    rs.
+                    //qui stavo facendo cose ma mi sono interrotto
 
                 }
 
