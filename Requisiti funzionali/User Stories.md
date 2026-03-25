@@ -11,8 +11,6 @@
 
 4. Come lettore, voglio inserire la pagina a cui sono arrivato a leggere dei miei libri, al fine di sapere sempre da che punto devo riprendere e quanto sto leggendo complessivamente.
 
-11. Come lettore, voglio che il collegamento ad atri social network sia visibile ai miei amici, al fine di facilitare interazioni con loro anche attraverso altri mezzi.
-
 12. Come lettore, voglio regalare alcuni libri appartenenti alla mia libreria personale che non mi interessa tenere, al fine di evitare sprechi e donarlo a chi lo desidera.
 
 13. Come lettore, voglio prestare alcuni libri appartenenti alla mia libreria personale, al fine di condividere con altre persone i contenuti di tali libri.
@@ -27,7 +25,7 @@
 
 21. Come lettore, voglio aggiungere altri utenti registrati nel sistema alla mia lista amici, al fine di condividere libri con altri lettori.
 
-22. Come Bibliotecario, voglio gestire la scheda anagrafica della mia biblioteca, contenente nome, città, indirizzo e orari di apertura e contatti, al fine di informare i lettori quando e dove possono usufruire dei servizi.
+22. Come Bibliotecario, voglio gestire la pagina informativa della mia biblioteca, contenente nome, città, indirizzo e orari di apertura e contatti, al fine di informare i lettori quando e dove possono usufruire dei servizi.
 
 23. Come bibliotecario voglio pubblicare comunicazioni riguardanti nuovi eventi ospitati, al fine di informare i lettori interessati sulle attività della biblioteca.
 
@@ -35,13 +33,18 @@
 
 25. Come lettore, voglio cercare le biblioteche per nome, per indirizzo o per città, al fine di individuare una biblioteca che posso raggiungere.
 
-26. Come lettore, voglio aggiungere e rimuovere biblioteche da un elenco di biblioteche seguite, al fine di ricevere aggironamenti dalle biblioteche di mio interesse.
+26. Come lettore, voglio aggiungere e rimuovere biblioteche da un elenco di biblioteche seguite, al fine di ricevere aggiornamenti dalle biblioteche di mio interesse.
 
 27. Come lettore, voglio ricevere una notifica nell'applicazione ogni volta che una biblioteca che seguo pubblica un aggiornamento.
+
 28. Come lettore, voglio scambiare alcuni miei libri con libri di altri lettori, al fine di lasciare un libro già letto e ottenerne uno nuovo.
 
-29. Come lettore, voglio secgliere un libro e chiedere alle biblioteche se lo hanno disponibile per il prestito, al fine di non perdere tempo nel caso non ci fosse.
+## Selezionate
+
+29. Come lettore che cerca un libro specifico, voglio scegliere una biblioteca e richiedere se fosse possibile averlo in prestito, al fine di non perdere tempo recandomi di persona nel caso non ci fosse.
 
 30. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di comunicare se il libro richiesto è disponibile oppure no.
 
-31. Come bibliotecare, voglio gestire le richieste di prestito inviate dai lettori, al fine di segnalargli quando possono recarsi in biblioteca per iniziare il prestito.
+31. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di segnalargli quando possono recarsi in biblioteca per iniziare il prestito.
+
+32. Come bibliotecario, voglio validare le prenotazioni dei lettori, al fine di distinguere le prenotazioni che danno inizio ad un prestito da quelle che non lo fanno
