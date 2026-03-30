@@ -40,3 +40,6 @@ FR 20. Il sistema deve mostrare a ciascun lettore tutti gli annunci pubblici pub
 23. Il sistema deve permettere al bibliotecario di stabilire un intervallo di tempo entro il quale è possibile prendere in prestito un libro richiesto e comunicarlo al lettore.
 
 24. Il sistema deve permettere al bibliotecario di chiudere le prenotazioni dei lettori 
+25. Il sistema deve permettere al lettore di inserire i *metadati del libro che vuole prenotare.
+
+*metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.

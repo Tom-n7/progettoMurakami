@@ -39,12 +39,21 @@
 
 28. Come lettore, voglio scambiare alcuni miei libri con libri di altri lettori, al fine di lasciare un libro già letto e ottenerne uno nuovo.
 
+32. Come bibliotecario, voglio validare le prenotazioni dei lettori, al fine di distinguere le prenotazioni che danno inizio ad un prestito da quelle che non lo fanno.
+
+
+33. Come bibliotecario, voglio impostare un numero limite di prenotazioni contemporanee per singolo lettore, in modo da scoraggiare i lettori dal fare un uso malevolo dello strumento.
+
+34. Come bibliotecario, voglio impostare un limite ai libri per singola prenotazione, al fine di evitare che i lettori facciano prenotazioni di volumi per me ingestibili.
+
+35. Come bibliotecario, voglio impostare una data di scadenza quando accetto una prenotazione, al fine di segnalare al lettore entro quando deve iniziare il prestito.
+
 ## Selezionate
 
 29. Come lettore che cerca un libro specifico, voglio scegliere una biblioteca e richiedere se fosse possibile averlo in prestito, al fine di non perdere tempo recandomi di persona nel caso non ci fosse.
 
-30. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di comunicare se il libro richiesto è disponibile oppure no.
+33. Come bibliotecario, voglio impostare un numero limite di prenotazioni attive per singolo lettore, in modo da scoraggiare i lettori dal fare un uso malevolo dello strumento.
 
-31. Come bibliotecario, voglio gestire le richieste di prestito inviate dai lettori, al fine di segnalargli quando possono recarsi in biblioteca per iniziare il prestito.
+34. Come bibliotecario, voglio impostare un limite ai libri per singola prenotazione, al fine di evitare che i lettori facciano prenotazioni di volumi per me ingestibili.
 
-32. Come bibliotecario, voglio validare le prenotazioni dei lettori, al fine di distinguere le prenotazioni che danno inizio ad un prestito da quelle che non lo fanno
+
