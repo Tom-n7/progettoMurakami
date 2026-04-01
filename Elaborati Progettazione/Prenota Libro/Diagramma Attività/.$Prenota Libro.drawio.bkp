@@ -85,7 +85,7 @@
             <mxPoint x="356" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3Ak3GGC9I692qNu_MVII-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Caricamento dati biblioteca" vertex="1">
+        <mxCell id="3Ak3GGC9I692qNu_MVII-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Caricamento vincoli biblioteca" vertex="1">
           <mxGeometry height="60" width="120" x="380" y="390" as="geometry" />
         </mxCell>
         <mxCell id="3Ak3GGC9I692qNu_MVII-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Creazione bozza prenotazione" vertex="1">
