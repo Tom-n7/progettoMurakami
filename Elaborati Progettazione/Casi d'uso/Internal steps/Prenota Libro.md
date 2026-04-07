@@ -29,7 +29,7 @@ Il caso d'uso riprende dal passo 8.
 Il caso d'uso riprende dal passo 8.
 
 9a. La prenotazione non contiene libri: Il sistema impedisce la conferma della prenotazione.
-Il caso d'uso riprende dal passo 9.
+Il caso d'uso riprende dal passo 8.
 
 9b. Errore invio prenotazione:
 1. Il sistema tenta nuovamente l'invio.
