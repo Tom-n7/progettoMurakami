@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
-  <diagram id="b7ybL53w8HOHVrGn9dkZ" name="UC Diagram Attuale">
-    <mxGraphModel dx="1261" dy="2190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="UC Diagram Attuale" id="mIp0gckqF6aCo8TiUs7O">
+    <mxGraphModel dx="946" dy="1935" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -222,10 +222,16 @@
             <mxPoint x="1477" y="598" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="6NZ_BgLnyk0TGG8iQz79-1" edge="1" parent="1" source="A7GfVMq0iM2RNMKsR8jB-1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="bmKx2RdsAiVp5P1r1JxA-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="910" y="480" as="sourcePoint" />
+            <mxPoint x="960" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="Edizione Vecchia" id="suRU4nKlhYXpx_LUWHnf">
+  <diagram name="Edizione Vecchia" id="YeS6LzkzTfml0us1mp1T">
     <mxGraphModel dx="1426" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />

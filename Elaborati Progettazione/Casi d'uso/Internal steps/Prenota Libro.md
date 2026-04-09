@@ -31,11 +31,9 @@ Il caso d'uso riprende dal passo 8.
 9a. La prenotazione non contiene libri: Il sistema impedisce la conferma della prenotazione.
 Il caso d'uso riprende dal passo 8.
 
-9b. Errore invio prenotazione:
-1. Il sistema tenta nuovamente l'invio.
-    1a. Il sistema fallisce nuovamente.
-        1. Il sistema segnala l'errore al lettore.
-        2. Il sistema salva la bozza.
+10a. Errore invio prenotazione:
+1. Il sistema notifica il lettore del fallimento
+    1a. Il lettore richiede un nuovo tentativo.
+        Il caso d'uso riprende dal passo 9.
+    1b. Il lettore rinuncia a prenotare: 
         Il caso d'uso termina.
-    1b. Il sistema riesce ad inviare la prenotazione: 
-        Il caso d'uso riprende dal passo 12.
