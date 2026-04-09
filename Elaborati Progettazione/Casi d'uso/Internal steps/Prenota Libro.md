@@ -6,12 +6,12 @@
 4. Il sistema crea una bozza di prenotazione associata al lettore verso la biblioteca selezionata.
 5. Il sistema recupera il numero massimo per singola prenotazione impostato dalla biblioteca.
 6. Il lettore avvia <u>importa metadati libro()</u>.
-7. Il sistema aggiunge il libro importato alla prenotazione.
+7. Il sistema aggiorna la prenotazione.
 8. Il sistema mostra la prenotazione aggiornata. <n>
  --si ripetono i passi 6,7 e 8 per ogni libro che il lettore desidera prenotare--  
 9. Il lettore conferma i libri inseriti.
-10. Il sistema invia la prenotazione al bibliotecario. 
-11. Il sistema invia una email di riepilogo contenente i dettagli della prenotazione al lettore.
+10. Il sistema finalizza e salva la prenotazione. 
+11. Il sistema richiede invio email di riepilogo contenente i dettagli della prenotazione al lettore.
 
 ## Estensioni
 
@@ -28,12 +28,10 @@ Il caso d'uso riprende dal passo 8.
 2. Il sistema elimina il libro dalla prenotazione.
 Il caso d'uso riprende dal passo 8.
 
-9a. La prenotazione non contiene libri: Il sistema impedisce la conferma della prenotazione.
+9a. La prenotazione non contiene libri: Il sistema impedisce l'operazione al lettore.
 Il caso d'uso riprende dal passo 8.
 
-10a. Errore invio prenotazione:
+10a. Errore persistenza:
 1. Il sistema notifica il lettore del fallimento
-    1a. Il lettore richiede un nuovo tentativo.
-        Il caso d'uso riprende dal passo 9.
-    1b. Il lettore rinuncia a prenotare: 
-        Il caso d'uso termina.
+    1a. Il lettore richiede un nuovo tentativo: Il caso d'uso riprende dal passo 9.
+    1b. Il lettore rinuncia a prenotare: Il sistema elimina la bozza e termina il caso d'uso.
