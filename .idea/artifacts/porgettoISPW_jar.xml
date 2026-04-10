@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="porgettoISPW:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/porgettoISPW_jar</output-path>
+    <root id="archive" name="porgettoISPW.jar">
+      <element id="module-output" name="porgettoISPW" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/9.6.0/mysql-connector-j-9.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/25/javafx-controls-25-linux.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/25/javafx-base-25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/25/javafx-fxml-25-linux.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/25/javafx-graphics-25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/25/javafx-base-25-linux.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/25/javafx-fxml-25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/25/javafx-controls-25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/4.31.1/protobuf-java-4.31.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/25/javafx-graphics-25-linux.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

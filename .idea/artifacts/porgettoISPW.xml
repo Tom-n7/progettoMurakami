@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="porgettoISPW">
+    <output-path>$PROJECT_DIR$/out/artifacts/porgettoISPW</output-path>
+    <root id="root">
+      <element id="archive" name="porgettoISPW.jar">
+        <element id="module-output" name="porgettoISPW" />
+      </element>
+    </root>
+  </artifact>
+</component>
