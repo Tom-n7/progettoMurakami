@@ -4,12 +4,12 @@
 2. Il sistema carica le biblioteche registrate e le mostra.
 3. Il lettore seleziona la biblioteca che desidera.
 4. Il sistema crea una bozza di prenotazione associata al lettore verso la biblioteca selezionata.
-5. Il sistema recupera il numero massimo per singola prenotazione impostato dalla biblioteca.
-6. Il lettore avvia <u>importa metadati libro()</u>.
-7. Il sistema aggiorna la prenotazione.
-8. Il sistema mostra la prenotazione aggiornata. <n>
- --si ripetono i passi 6,7 e 8 per ogni libro che il lettore desidera prenotare--  
-9. Il lettore conferma i libri inseriti.
+5. Il sistema recupera il limite di libri per singola prenotazione impostato dalla biblioteca.
+6. Il lettore richiede l'aggiunta di un libro alla prenotazione.
+7. Il sistema avvia <u>importa metadati libro()</u>.
+8. Il sistema aggiunge il libro e mostra la prenotazione aggiornata. <n>
+ --si ripetono i passi 6,7 e 8 per ogni libro che il lettore desidera prenotare--
+9. Il lettore segnala di non voler aggiungere ulteriori libri.
 10. Il sistema finalizza e salva la prenotazione. 
 11. Il sistema richiede invio email di riepilogo contenente i dettagli della prenotazione al lettore.
 
