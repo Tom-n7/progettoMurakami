@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" modified="2026-04-10T09:20:10.135Z" etag="-7EeyRi02XN4Mk0k3aEb" version="22.1.22" type="embed">
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" modified="2026-04-14T17:22:18.445Z" etag="dAwR0W0sCF2p3x7UxVJD" version="22.1.22" type="embed">
   <diagram name="Pagina-1" id="aoclt5tPZyfIf4yVrjY2">
-    <mxGraphModel dx="3642" dy="1512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4567" dy="1947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -360,6 +360,105 @@
             <Array as="points">
               <mxPoint x="455" y="540" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" value="Importa metadati libro" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=170;height=30;" vertex="1" parent="1">
+          <mxGeometry x="-1400" y="1640" width="1740" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-1344.25" y="1880" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="endArrow=open;html=1;rounded=0;endFill=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" target="36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1304.25" y="1900" as="sourcePoint" />
+            <mxPoint x="-1204.25" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="Inserimento titolo libro" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1200" y="1870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=open;html=1;rounded=0;endFill=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-844.25" y="1910" as="sourcePoint" />
+            <mxPoint x="-1010" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="" style="endArrow=open;html=1;rounded=0;endFill=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="72" target="47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-514.25" y="1900" as="sourcePoint" />
+            <mxPoint x="-404.25" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="Salva dati libro&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="1885" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="81">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-735" y="1830" />
+            </Array>
+            <mxPoint x="-375.75" y="1880" as="sourcePoint" />
+            <mxPoint x="-105" y="1830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-735" y="2000" />
+            </Array>
+            <mxPoint x="-335.75" y="2055" as="sourcePoint" />
+            <mxPoint x="-340" y="2000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="[Il lettore non trova il libro che desidera]" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="2000" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="Inserimento manuale dei dati" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-430" y="1970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="68" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1897.5" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="69" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="256.25" y="1903.75" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="72" value="Invio richiesta ad Open Library" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1010" y="1870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="75" value="[Il lettore trova il libro che desidera]" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-777.5" y="1795" width="355" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="78" value="" style="rhombus;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="1900" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="80" value="" style="endArrow=open;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="51" target="78">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-450" y="2060" as="sourcePoint" />
+            <mxPoint x="-400" y="2010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81" value="Selezione libro" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-430" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="82" value="" style="endArrow=open;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="81" target="78">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-235" y="2010" as="sourcePoint" />
+            <mxPoint x="-95" y="1945" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="83" value="" style="endArrow=open;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="46" target="68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-300" y="2010" as="sourcePoint" />
+            <mxPoint x="-95" y="1945" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="84" value="" style="endArrow=open;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="78" target="46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-290" y="2020" as="sourcePoint" />
+            <mxPoint x="-85" y="1955" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
