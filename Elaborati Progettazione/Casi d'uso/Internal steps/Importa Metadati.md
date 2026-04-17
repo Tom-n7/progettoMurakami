@@ -3,8 +3,9 @@
 1. Il lettore fornisce il titolo del libro in forma parziale o completa.
 2. Il sistema richiede ad Open Library i libri associati al titolo fornito.
 3. Open Library risponde con l'elenco dei libri associati al titolo fornito.
-4. Il lettore seleziona il libro che desidera.
-5. Il sistema salva il libro selezionato.
+4. Il lettore seleziona il libro che desidera. 
+5. I lettore conferma i dati inseriti. 
+6. Il sistema salva il libro.
 
 ## Estensioni
 

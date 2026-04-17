@@ -13,5 +13,5 @@
 
 25. Il sistema deve permettere al lettore di inserire i *metadati del libro che vuole prenotare.
 
-*metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
+*metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, lingua, autore, editore, immagine di copertina, edizione e codice ISBN.
 

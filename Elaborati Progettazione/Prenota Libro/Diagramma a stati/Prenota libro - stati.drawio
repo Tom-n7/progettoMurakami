@@ -1,0 +1,74 @@
+<mxfile host="drawio-plugin" modified="2026-04-17T16:39:10.674Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="22.1.22" etag="EX3rRRT2Svt51sOEqh8P" type="embed">
+  <diagram id="HijBBxNlxFCtpiYPns3Y" name="Page-1">
+    <mxGraphModel dx="1165" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="340" as="sourcePoint" />
+            <mxPoint x="200" y="316" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" value="Su Lista Biblioteche" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="286.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="103" y="326" as="sourcePoint" />
+            <mxPoint x="730" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="click [clickSuSelezioneBiblioteca == true] /&amp;nbsp; caricamento dati biblioteca" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="286.25" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Su riepilogo prenotazione" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="click [clickSuAggiungiLibro == true ] / importaMetadatiLibro()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="220" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="400" as="sourcePoint" />
+            <mxPoint x="820" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="950" y="305" />
+              <mxPoint x="950" y="260" />
+              <mxPoint x="820" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="490" as="sourcePoint" />
+            <mxPoint x="840" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="950" y="335" />
+              <mxPoint x="950" y="380" />
+              <mxPoint x="820" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="click [clickSuConfermaLibri == true AND ( # libri prenotazione == 0 OR # libri prenotazione &amp;gt; MAX libri prenotazione] / mostra messaggio errore" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="770" y="400" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="480" as="sourcePoint" />
+            <mxPoint x="760" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;lt;= MAX libri prenotazione /&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="460" width="480" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
