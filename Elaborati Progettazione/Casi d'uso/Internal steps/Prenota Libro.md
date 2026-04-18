@@ -19,14 +19,18 @@
 Il caso d'uso termina.
 
 5b. La prenotazione contiene almeno un libro ed il lettore vuole eliminarne uno:
-1. Il lettore seleziona il libro e ne richiede l'eliminazione.
-2. Il sistema elimina il libro dalla prenotazione.
+1. Il lettore richiede di eliminare un libro.
+2. Il sistema mostra lo strumento di selezione dei libri della prenotazione.
+3. Il lettore seleziona il libro che desidera eliminare.
+4. Il sistema mostra i dettagli del libro.
+5. Il lettore conferma la scelta.
+6. Il sistema elimina il libro dalla prenotazione.
 Il caso d'uso riprende dal passo 7.
 
 5c. La prenotazione contiene almeno un libro ed il lettore vuole modificare i dati di uno dei libri:
 1. Il lettore seleziona il libro
 2. Il sistema mostra i dettagli del libro selezionato.
-3. Il lettore modifica i dati che desidera del libro.
+3. Il sistema avvia <u>importa metadati libro</u>.
 4. Il lettore conferma le modifiche.
 5. Il sistema aggiorna la prenotazione
 Il caso d'uso riprende dal passo 5
