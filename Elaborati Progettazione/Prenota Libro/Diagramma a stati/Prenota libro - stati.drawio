@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" modified="2026-04-21T16:39:17.062Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="yykfNWb7vruk2afp-jQx" version="22.1.22" type="embed" pages="3">
+<mxfile host="drawio-plugin" modified="2026-04-22T10:23:30.260Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="oZNqv5syfyHE_Pc3II-F" version="22.1.22" type="embed" pages="4">
   <diagram id="HijBBxNlxFCtpiYPns3Y" name="Page-1">
-    <mxGraphModel dx="924" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1410" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -173,117 +173,107 @@
     </mxGraphModel>
   </diagram>
   <diagram name="seconda versione" id="13-bnA59qs8fH7NxJOEl">
-    <mxGraphModel dx="3130" dy="3153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2136" dy="1896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="IObMyLzIfSPIDc4NX2mK-0" />
         <mxCell id="IObMyLzIfSPIDc4NX2mK-1" parent="IObMyLzIfSPIDc4NX2mK-0" />
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="-140" y="323.75" width="32.5" height="32.5" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-2" target="IObMyLzIfSPIDc4NX2mK-4">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-2" target="IObMyLzIfSPIDc4NX2mK-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-60" y="333.75" as="sourcePoint" />
             <mxPoint x="10" y="309.75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-4" value="Su ricerca biblioteca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-4" value="Su ricerca biblioteca" style="rounded=1;whiteSpace=wrap;html=1;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="-30" y="310" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-5" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-4" target="nIEzml9__wk-B0qPCxCq-0">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-5" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-4" target="nIEzml9__wk-B0qPCxCq-0" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-87" y="319.75" as="sourcePoint" />
             <mxPoint x="540" y="314" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-6" value="click [clickSuCercaBiblioteca == true] /&amp;nbsp; caricamento biblioteche&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-6" value="click [clickSuCercaBiblioteca == true] /&amp;nbsp; caricamento biblioteche&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="110" y="310" width="380" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-7" value="Vista libri prenotazione" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-7" value="Vista libri prenotazione" style="rounded=1;whiteSpace=wrap;html=1;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="1150" y="278.75" width="160" height="121.25" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-8" value="click [clickAggiungiLibro == true ] / carica strumento importazione libro" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="1250" y="220" width="326.25" height="30" as="geometry" />
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-8" value="click [clickAggiungiLibro == true ] / importaMetadatiLibro() AND salvataggio libro" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
+          <mxGeometry x="1261.88" y="120" width="326.25" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="nIEzml9__wk-B0qPCxCq-8">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1219" y="290" as="sourcePoint" />
-            <mxPoint x="1240" y="210" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-11" value="click [clickSuConfermaLibri == true AND # libri == 0] / mostra messaggio errore" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-11" value="click [clickSuConfermaLibri == true AND # libri == 0] / mostra messaggio errore" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="910" y="450" width="290" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-12" value="In selezione libro&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-12" value="In selezione libro&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="1170" y="700" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-13" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;lt;= MAX libri prenotazione] / invio prenotazione AND notifica bibliotecario AND invio email" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-13" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;lt;= MAX libri prenotazione] / invio prenotazione AND notifica bibliotecario AND invio email" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="1590" y="310" width="680" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" target="IObMyLzIfSPIDc4NX2mK-16">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" target="IObMyLzIfSPIDc4NX2mK-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1178" y="280" as="sourcePoint" />
             <mxPoint x="1180" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-15" value="click [clickSelezionaBiblioteca == true AND bibliotecaSelezionata != null] / creazione bozza prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-15" value="click [clickSelezionaBiblioteca == true AND bibliotecaSelezionata != null] / creazione bozza prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="640" y="310" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="1150" y="-350" width="45" height="45" as="geometry" />
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
+          <mxGeometry x="1155" y="-10" width="45" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="1156.25" y="-343.75" width="32.5" height="32.5" as="geometry" />
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
+          <mxGeometry x="1161.25" y="-3.75" width="32.5" height="32.5" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-19" value="click [clickEliminaLibro == true] \ mostra strumenti selezione&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-19" value="click [clickEliminaLibro == true] \ mostra strumenti selezione&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="1240" y="580" width="248" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-12" target="IObMyLzIfSPIDc4NX2mK-7">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-12" target="IObMyLzIfSPIDc4NX2mK-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1510" y="680" as="sourcePoint" />
             <mxPoint x="1300" y="810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-24" value="click [ clickSelezioneLibro == true] \ eliminazione libro da prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-24" value="click [ clickSelezioneLibro == true] \ eliminazione libro da prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="900" y="580" width="320" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.67;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" target="IObMyLzIfSPIDc4NX2mK-12">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.67;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" parent="IObMyLzIfSPIDc4NX2mK-1" target="IObMyLzIfSPIDc4NX2mK-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1250" y="400" as="sourcePoint" />
             <mxPoint x="1250" y="580" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-30" value="click [clickConfermaDati == true] / aggiungi libro alla prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="1363" y="120" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-34" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;gt; MAX libri prenotazione] / allerta libri in eccesso" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-34" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;gt; MAX libri prenotazione] / allerta libri in eccesso" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="1250" y="430" width="350" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-36" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-36" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="2360" y="316.88" width="45" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="IObMyLzIfSPIDc4NX2mK-37" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="IObMyLzIfSPIDc4NX2mK-37" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="2366.25" y="323.13" width="32.5" height="32.5" as="geometry" />
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-0" value="Vista biblioteche caricate" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-0" value="Vista biblioteche caricate" style="rounded=1;whiteSpace=wrap;html=1;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
           <mxGeometry x="510" y="310" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="nIEzml9__wk-B0qPCxCq-0" target="IObMyLzIfSPIDc4NX2mK-7">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="nIEzml9__wk-B0qPCxCq-0" target="IObMyLzIfSPIDc4NX2mK-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="830" y="300" as="sourcePoint" />
             <mxPoint x="830" y="135" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-4" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="950" y="-130" width="220" height="30" as="geometry" />
+        <mxCell id="nIEzml9__wk-B0qPCxCq-4" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
+          <mxGeometry x="960" y="160" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-36">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-36" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1290" y="321.91" as="sourcePoint" />
             <mxPoint x="1810" y="321.91" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-7">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1140" y="450" as="sourcePoint" />
             <mxPoint x="1050" y="380" as="targetPoint" />
@@ -294,20 +284,18 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-8" value="Importa metadati libro" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="1240" y="130" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="nIEzml9__wk-B0qPCxCq-8" target="IObMyLzIfSPIDc4NX2mK-7">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1240" y="289" as="sourcePoint" />
+            <mxPoint x="1260" y="160" as="sourcePoint" />
             <mxPoint x="1240" y="200" as="targetPoint" />
             <Array as="points">
+              <mxPoint x="1270" y="160" />
               <mxPoint x="1560" y="160" />
               <mxPoint x="1560" y="309" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-7">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="IObMyLzIfSPIDc4NX2mK-7" target="IObMyLzIfSPIDc4NX2mK-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1160" y="380" as="sourcePoint" />
             <mxPoint x="1200" y="410" as="targetPoint" />
@@ -318,17 +306,198 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="IObMyLzIfSPIDc4NX2mK-1" source="nIEzml9__wk-B0qPCxCq-0" target="IObMyLzIfSPIDc4NX2mK-16">
+        <mxCell id="nIEzml9__wk-B0qPCxCq-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="IObMyLzIfSPIDc4NX2mK-1" source="nIEzml9__wk-B0qPCxCq-0" target="IObMyLzIfSPIDc4NX2mK-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1188" y="290" as="sourcePoint" />
             <mxPoint x="1183" y="-295" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="570" y="-330" />
+              <mxPoint x="570" y="10" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nIEzml9__wk-B0qPCxCq-15" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IObMyLzIfSPIDc4NX2mK-1">
-          <mxGeometry x="330" y="-130" width="220" height="30" as="geometry" />
+        <mxCell id="nIEzml9__wk-B0qPCxCq-15" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="IObMyLzIfSPIDc4NX2mK-1" vertex="1">
+          <mxGeometry x="610" y="-30" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="terza versione" id="s57inLSrtgfkudZgboap">
+    <mxGraphModel dx="857" dy="1631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="4dZG7TiDeRjNFcaC2ka5-0" />
+        <mxCell id="4dZG7TiDeRjNFcaC2ka5-1" parent="4dZG7TiDeRjNFcaC2ka5-0" />
+        <mxCell id="7dlMZum4kKYU03MMohzn-0" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="110" y="320" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7dlMZum4kKYU03MMohzn-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="TZ1AyBkE7dRX20_PIZ01-0" target="860cNvMeIiNZQNbXpRQ8-0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="260" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TZ1AyBkE7dRX20_PIZ01-0" value="Nessuna Prenotazione" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="280" y="306" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TZ1AyBkE7dRX20_PIZ01-1" value="Bozza prenotazione vuota" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1400" y="294" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="S21WE0QXuOWHBKGxg4e5-0" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="7dlMZum4kKYU03MMohzn-0" target="TZ1AyBkE7dRX20_PIZ01-0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="153" y="346" as="sourcePoint" />
+            <mxPoint x="290" y="346" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S21WE0QXuOWHBKGxg4e5-1" value="click [ clickSuRicercaBiblioteca == true] / caricamento biblioteche&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="390" y="306" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="860cNvMeIiNZQNbXpRQ8-0" value="Biblioteche caricate" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="820" y="306.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="860cNvMeIiNZQNbXpRQ8-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="860cNvMeIiNZQNbXpRQ8-0" target="TZ1AyBkE7dRX20_PIZ01-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1040" y="330" as="sourcePoint" />
+            <mxPoint x="1410" y="336" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="860cNvMeIiNZQNbXpRQ8-2" value="click [clickSuSelezionaBiblioteca == true] \ creazione bozza prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="950" y="306" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N-FGCwY0T5-A0MGQNTZw-0" value="click [clickAggiungiLibro == true ] / importaMetadatiLibro() AND salvataggio libro" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1610" y="366" width="326.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-0" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" target="NYauLYnzppxguJN_mOpG-1" source="TZ1AyBkE7dRX20_PIZ01-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1458" y="306.25" as="sourcePoint" />
+            <mxPoint x="1460" y="116.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1500" y="660" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1506.25" y="666.25" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-3" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="880" y="500" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="860cNvMeIiNZQNbXpRQ8-0" target="NYauLYnzppxguJN_mOpG-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="880" y="300" as="sourcePoint" />
+            <mxPoint x="970" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="880" y="683" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NYauLYnzppxguJN_mOpG-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="TZ1AyBkE7dRX20_PIZ01-0" target="NYauLYnzppxguJN_mOpG-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="280" as="sourcePoint" />
+            <mxPoint x="500" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hliHwclHausgRM7nuch7-0" value="click [clickSuConfermaLibri == true ] / allerta prenotazione vuota" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1160" y="430" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hliHwclHausgRM7nuch7-1" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="TZ1AyBkE7dRX20_PIZ01-1" target="TZ1AyBkE7dRX20_PIZ01-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1400" y="350" as="sourcePoint" />
+            <mxPoint x="1440" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1260" y="357" />
+              <mxPoint x="1260" y="420" />
+              <mxPoint x="1440" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HXYDijRmnsic8qxB8ztd-0" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;gt; MAX libri prenotazione] / valdiazione prenotazione AND allerta eccesso libri" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="2020" y="423" width="350" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="HXYDijRmnsic8qxB8ztd-1" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="HXYDijRmnsic8qxB8ztd-3" target="HXYDijRmnsic8qxB8ztd-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2100" y="349.9999999999999" as="sourcePoint" />
+            <mxPoint x="2060" y="370.9999999999999" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2270" y="353" />
+              <mxPoint x="2270" y="413" />
+              <mxPoint x="2100" y="413" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HXYDijRmnsic8qxB8ztd-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="TZ1AyBkE7dRX20_PIZ01-1" target="HXYDijRmnsic8qxB8ztd-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1730" y="390" as="sourcePoint" />
+            <mxPoint x="1970" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HXYDijRmnsic8qxB8ztd-3" value="Bozza prenotazione&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1980" y="290" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="HXYDijRmnsic8qxB8ztd-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="HXYDijRmnsic8qxB8ztd-3" target="VINHWQvWjtPix9q0QRZg-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1570" y="367" as="sourcePoint" />
+            <mxPoint x="2020" y="10" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2350" y="311" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VINHWQvWjtPix9q0QRZg-2" value="In selezione libro&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="2320" y="-40" width="120" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-0" value="click [clickSuEliminaLibro == true] / predisposizione selezione libri" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="2360" y="160" width="276" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-1" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" target="HXYDijRmnsic8qxB8ztd-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2320" y="14" as="sourcePoint" />
+            <mxPoint x="1740" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2060" y="14" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-3" value="click [clickSuConferma == true AND libroSelezionato != null AND # libri prenotazione &amp;gt; 0] \ eliminazione libro da prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1960" y="-20" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="HXYDijRmnsic8qxB8ztd-3" target="NYauLYnzppxguJN_mOpG-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1970" y="220" as="sourcePoint" />
+            <mxPoint x="2010" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2020" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-5" value="click [clickSuEsci == true] / eliminazione dati prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="350" y="500" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="HXYDijRmnsic8qxB8ztd-3" target="TZ1AyBkE7dRX20_PIZ01-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1710" y="350" as="sourcePoint" />
+            <mxPoint x="1760" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-7" value="click [clickSuConferma == true AND libroSelezionato != null AND # libri prenotazione == 0] \ eliminazione libro da prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="1600" y="276.25" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="4dZG7TiDeRjNFcaC2ka5-1" source="HXYDijRmnsic8qxB8ztd-3" target="dg6T7-PyZU-Xz150ZWtU-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2440" y="430" as="sourcePoint" />
+            <mxPoint x="2770" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="3370" y="313.75" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dg6T7-PyZU-Xz150ZWtU-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="3376.25" y="320" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZiVEecwbBAhNVWfRLkay-0" value="click [clickSuConfermaLibri == true AND # libri prenotazione &amp;lt;= MAX libri prenotazione] / invio prenotazione AND notifica bibliotecario AND invio email" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4dZG7TiDeRjNFcaC2ka5-1">
+          <mxGeometry x="2610" y="306" width="680" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
