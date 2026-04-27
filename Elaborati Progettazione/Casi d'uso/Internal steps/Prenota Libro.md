@@ -1,19 +1,20 @@
 # Prenota Libro
 
-1. Il sistema permette la ricerca di biblioteche.
-2. Il lettore inserisce i criteri di ricerca.
-3. Il sistema carica le biblioteche conformi ai criteri.
-4. Il lettore seleziona la biblioteca che desidera. 
-5. Il sistema crea una bozza di prenotazione associata al lettore verso la biblioteca. 
-6. Il lettore richiede l'aggiunta di un libro. 
-7. Il sistema avvia <u>importa metadati libro()</u>. 
-8. Il sistema aggiunge il libro alla prenotazione. <n>
+
+
+1. Il lettore inserisce i criteri di ricerca. 
+2. Il sistema carica le biblioteche conformi ai criteri. 
+3. Il lettore seleziona la biblioteca che desidera. 
+4. Il sistema crea una bozza di prenotazione associata al lettore verso la biblioteca. 
+5. Il lettore richiede l'aggiunta di un libro. 
+6. Il sistema avvia <u>importa metadati libro()</u>. 
+7. Il sistema aggiunge il libro alla prenotazione. <n>
  --si ripetono i passi 6, 7 e 8 per ogni libro che il lettore desidera prenotare-- 
-9. Il lettore conferma i libri inseriti. 
-10. Il sistema valida la prenotazione. 
-11. Il sistema salva la prenotazione. 
-12. Il sistema notifica il bibliotecario. 
-13. Il sistema richiede al servizio mail l'invio di un messaggio di riepilogo contenente i dettagli della prenotazione al lettore.
+8. Il lettore conferma i libri inseriti. 
+9. Il sistema valida la prenotazione. 
+10. Il sistema salva la prenotazione. 
+11. Il sistema notifica il bibliotecario. 
+12. Il sistema richiede al servizio mail l'invio di un messaggio di riepilogo contenente i dettagli della prenotazione al lettore.
 
 ## Estensioni
 
