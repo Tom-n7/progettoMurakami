@@ -31,12 +31,12 @@ Il caso d'uso termina.
 9a. La prenotazione non contiene libri: Il sistema impedisce la conferma.
    Il caso d’uso riprende dal passo 6.
 
-10a. La prenotazione contiene un numero di libri superiore al limite stabilito dalla biblioteca per singola prenotazione: 
+9b. La prenotazione contiene un numero di libri superiore al limite stabilito dalla biblioteca per singola prenotazione: 
 1. Il sistema comunica il numero di libri in eccesso.
 2. Il sistema impedisce la conferma.
    Il caso d'uso riprende dal passo 6.
 
-11a. Errore persistenza:
+10a. Errore persistenza:
 1. Il sistema notifica il lettore del fallimento
     1a. Il lettore richiede un nuovo tentativo: Il caso d'uso riprende dal passo 11.
     1b. Il lettore rinuncia a prenotare: Il sistema elimina la bozza e termina il caso d'uso.
