@@ -9,7 +9,7 @@
 7. Il sistema aggiunge il libro alla prenotazione. <n>
  --si ripetono i passi 5,6 e 7 per ogni libro che il lettore desidera prenotare-- 
 8. Il lettore conferma i libri inseriti. 
-9. Il sistema valida la prenotazione. 
+9. Il sistema verifica che la bozza rispetti le regole della biblioteca. 
 10. Il sistema salva la prenotazione.
 11. Il sistema crea un riepilogo della prenotazione per il lettore ed uno per il bibliotecario.
 12. Il sistema richiede al servizio mail l'invio tramite messaggio del riepilogo di prenotazione all'indirizzo del bibliotecario e uno all'indirizzo del lettore.
