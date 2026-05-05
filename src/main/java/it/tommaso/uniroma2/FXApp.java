@@ -22,17 +22,25 @@ import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 
 
+
+
+
+
 /*
 Classe controller del sistema; lancia l'applicazione in modalità GUI o CLI a seconda dell'impostazione
 fornita.
  */
+
+class Main{
+    public static void main(String... args){
+        FXApp.main(args);
+    }
+}
 public class FXApp extends Application {
 
     Modalita persistenza;
 
-    public static void main(String... args) {
-        launch(args);
-    }
+
     @Override
     public void start(Stage stage) {
 
@@ -68,4 +76,9 @@ public class FXApp extends Application {
     }
     public   Modalita getPersistenza(){return this.persistenza;}
 
+    //devo fare così sennò errore JavaFX runtime
+    public static void main(String... args) {
+            launch(args);
+        }
 }
+
