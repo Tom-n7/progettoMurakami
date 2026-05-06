@@ -1,6 +1,6 @@
 package it.tommaso.uniroma2.gestiscilp.model.dao.factories;
 
-import it.tommaso.uniroma2.gestiscilp.model.Sessione;
+import it.tommaso.uniroma2.supporto.Sessione;
 import it.tommaso.uniroma2.gestiscilp.model.dao.base.AggiornaLibreriaDAO;
 import it.tommaso.uniroma2.gestiscilp.model.dao.base.CaricaDettagliLibroDAO;
 import it.tommaso.uniroma2.gestiscilp.model.dao.base.CaricaLibreriaPersonaleDAO;

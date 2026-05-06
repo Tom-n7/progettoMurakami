@@ -1,4 +1,4 @@
-package it.tommaso.uniroma2.gestiscilp.view.FX;
+package it.tommaso.uniroma2.view;
 
 
 import javafx.collections.ObservableList;
@@ -11,7 +11,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public abstract class ControllerGrafico {
+public abstract class CGFX {
 
     private static StackPane rootPane ;
 

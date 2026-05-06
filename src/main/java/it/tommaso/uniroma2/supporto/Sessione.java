@@ -1,4 +1,4 @@
-package it.tommaso.uniroma2.gestiscilp.model;
+package it.tommaso.uniroma2.supporto;
 
 import it.tommaso.uniroma2.gestiscilp.model.dao.Modalita;
 import it.tommaso.uniroma2.gestiscilp.view.GUIType;

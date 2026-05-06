@@ -3,13 +3,14 @@ package it.tommaso.uniroma2.gestiscilp.view.FX;
 import it.tommaso.uniroma2.gestiscilp.model.bean.CredenzialiBean;
 import it.tommaso.uniroma2.gestiscilp.controller.LoginAppController;
 import it.tommaso.uniroma2.gestiscilp.view.LoginControllerGrafico;
+import it.tommaso.uniroma2.view.CGFX;
 import javafx.event.ActionEvent;
 
 
 /*
 Oggetto con la responsabilità di gestire l'aspetto grafico della procedura di login.
  */
-public class LoginControllerGraficoJavaFX extends ControllerGrafico implements LoginControllerGrafico {
+public class LoginControllerGraficoJavaFX extends CGFX implements LoginControllerGrafico {
 
     private final LoginAppController controllerApplicativo = new LoginAppController();
 

@@ -10,6 +10,7 @@ import it.tommaso.uniroma2.gestiscilp.controller.LibreriaPersonaleAppController;
 import it.tommaso.uniroma2.gestiscilp.model.bean.LibreriaPersonaleBean;
 import it.tommaso.uniroma2.gestiscilp.model.bean.LibroBean;
 import it.tommaso.uniroma2.gestiscilp.model.bean.ScaffaleBean;
+import it.tommaso.uniroma2.view.CGFX;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -18,7 +19,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class LibreriaPersonaleControllerGraficoJAvaFX extends ControllerGrafico implements Initializable {
+public class LibreriaPersonaleControllerGraficoJAvaFX extends CGFX implements Initializable {
 
     public void vistaLibreria() {
         disegnaFinestra("/it.tommaso.uniroma2/view/FX/libreriaPersonale.fxml");
