@@ -8,6 +8,8 @@ import it.tommaso.uniroma2.view.CGFX;
 import it.tommaso.uniroma2.gestiscilp.view.GUIType;
 import it.tommaso.uniroma2.gestiscilp.view.LoginControllerGrafico;
 import it.tommaso.uniroma2.supporto.SelettoreTerminale;
+import it.tommaso.uniroma2.view.ControllerGrafico;
+import it.tommaso.uniroma2.view.PLLettoreCGFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -56,29 +58,24 @@ public class FXApp extends Application {
 
     Modalita persistenza;
 
+    @Override
+    public void init(){
+        Sessione sessione = Sessione.getSessione();
+        sessione.setModPersistenza(persistenza);
+    }
+
 
     @Override
     public void start(Stage stage) {
 
+        /*
+        Creazione scene su finestra nativa, il nodo radice della scene sarà un StackPane, sulla quale verranno
+        costruite tutte le interfaccie successive.
+        */
+        CGFX.setRootPane(stage);
 
-
-        Sessione sessione = Sessione.getSessione();
-        sessione.setModPersistenza(persistenza);
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getResource("/root.fxml"));
-        try {
-            StackPane rootPane = loader.load();//uno stack pane di base costituisce il nodo radice dell'interfaccia.
-            CGFX.setRootPane(rootPane);
-            Scene scene = new Scene(rootPane);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        LoginControllerGrafico controller = new LoginControllerGraficoJavaFX();
-        controller.vistaLogin();
+        ControllerGrafico prenotaLibroCG = new PLLettoreCGFX();
+        prenotaLibroCG.lanciaVista();
 
     }
     public   Modalita getPersistenza(){return this.persistenza;}

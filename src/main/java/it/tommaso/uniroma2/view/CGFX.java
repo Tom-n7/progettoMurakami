@@ -4,12 +4,15 @@ package it.tommaso.uniroma2.view;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.IOException;
+
+import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public abstract class CGFX {
 
@@ -56,18 +59,25 @@ public abstract class CGFX {
         }
     }
 
-
-
-
-
-
     private static void removeAllIncludedChildren(ObservableList<Node> childrenList) {
         for (int childIndex = 0; childIndex < childrenList.size(); childIndex++) {
             childrenList.remove(childIndex);
         }
     }
 
-    public static void setRootPane (StackPane pane){rootPane = pane;}
+    public static void setRootPane (Stage stage){
+        FXMLLoader loader = new FXMLLoader();
+        java.net.URL pippo = getResource("/it.tommaso.uniroma2/root.fxml");
+         loader.setLocation(pippo);
+        try {
+            CGFX.rootPane = loader.load();//uno stack pane di base costituisce il nodo radice dell'interfaccia.
+            Scene scene = new Scene(rootPane);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 
