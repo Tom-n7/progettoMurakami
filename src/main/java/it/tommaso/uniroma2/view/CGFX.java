@@ -16,7 +16,7 @@ import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public abstract class CGFX {
 
-    private static StackPane rootPane ;
+    protected static StackPane rootPane ;
 
 
     protected void disegnaFinestra(String path) {
@@ -67,7 +67,7 @@ public abstract class CGFX {
 
     public static void setRootPane (Stage stage){
         FXMLLoader loader = new FXMLLoader();
-        java.net.URL pippo = getResource("/it.tommaso.uniroma2/root.fxml");
+        java.net.URL pippo = getResource("/root.fxml");
          loader.setLocation(pippo);
         try {
             CGFX.rootPane = loader.load();//uno stack pane di base costituisce il nodo radice dell'interfaccia.
