@@ -2,6 +2,7 @@ package it.tommaso.uniroma2.view;
 
 
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -16,20 +17,26 @@ import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public abstract class CGFX {
 
-    protected static StackPane rootPane ;
+    private static StackPane rootPane ;
 
 
-    protected void disegnaFinestra(String path) {
+    protected void disegnaFinestra(String path, EventHandler<EventoCambioUseCase>... gestoriEventi) {
         Window window = rootPane.getScene().getWindow();
         double x = window.getX();
         double y = window.getY();
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path));
 
-        ObservableList<Node> childrenList = rootPane.getChildren();
-        removeAllIncludedChildren(childrenList);
+        ObservableList<Node> newChildrenList;
+
+
+        ObservableList<Node> oldChildrenList = rootPane.getChildren();
+        removeAllIncludedChildren(oldChildrenList);
+
+        //aggiungere eliminazione tutti i gestori eventi e inserimento gestori eventi nuova pagina.
 
         try{
-            rootPane.getChildren().add(loader.load());
+            newChildrenList = rootPane.getChildren();
+            newChildrenList.add(loader.load());
             Stage stage = (Stage) window;
             stage.setMinHeight(0);
             stage.setMinWidth(0);
@@ -38,9 +45,14 @@ public abstract class CGFX {
             stage.setY(y);
             stage.setMinHeight(window.getHeight());
             stage.setMinWidth(window.getWidth());
+
+
         }catch (IOException e){
             e.printStackTrace();
         }
+
+
+
 
     }
 

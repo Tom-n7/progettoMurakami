@@ -13,7 +13,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -24,6 +23,7 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
 
     @FXML
     private StackPane popupSocket;
+
     @FXML
     private Button bottoneCentral;
 
@@ -32,9 +32,9 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
     @FXML
     private ListView listaBiblioteche;
 
-    private  EventHandler<EnventoCambioUseCase> eventHandler = new EventHandler<>() {
+    private final EventHandler<EventoCambioUseCase> generaleHandler = new EventHandler<>() {
         @Override
-        public void handle(EnventoCambioUseCase event) {
+        public void handle(EventoCambioUseCase event) {
 
             /*
             PROVA: voglio che i cambi di use case siano eventi, devo approfondire meglio quali nodi devono gestire tali eventi,
@@ -47,14 +47,11 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
 
 
 
-
-
-
-
     public void lanciaVista() {
 
 
-        disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml");
+        disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml", generaleHandler);
+
 
 
 
@@ -64,8 +61,7 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
 
     public void click(ActionEvent actionEvent) {
         titolo.setText("Ecco i risultati!");
-        popupSocket.addEventHandler(EnventoCambioUseCase.ANY,eventHandler);
-        popupSocket.fireEvent(new EnventoCambioUseCase(EnventoCambioUseCase.ANY));
+        popupSocket.fireEvent(new EventoCambioUseCase(EventoCambioUseCase.ANY));
     }
 
 
