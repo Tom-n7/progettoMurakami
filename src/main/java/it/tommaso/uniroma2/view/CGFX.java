@@ -35,8 +35,6 @@ public abstract class CGFX extends StackPane {
         try{
             loader.load();
 
-
-
         }catch (IOException e){
             e.printStackTrace();
         }
