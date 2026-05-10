@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.StackPane;
@@ -32,6 +33,7 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
     @FXML
     private ListView listaBiblioteche;
 
+    @FXML
     private final EventHandler<EventoCambioUseCase> generaleHandler = new EventHandler<>() {
         @Override
         public void handle(EventoCambioUseCase event) {
@@ -42,19 +44,16 @@ public class PLLettoreCGFX  extends CGFX implements ControllerGrafico  {
              */
             ObservableList<Node> childrenList = popupSocket.getChildren();
             childrenList.add(new Rectangle(50,50, Color.GREENYELLOW));
+
+
+
         }
     };
 
 
+    public Scene lanciaVista() {
 
-    public void lanciaVista() {
-
-
-        disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml", generaleHandler);
-
-
-
-
+        return disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml");
 
 
     }

@@ -68,14 +68,11 @@ public class FXApp extends Application {
     @Override
     public void start(Stage stage) {
 
-        /*
-        Creazione scene su finestra nativa, il nodo radice della scene sarà un StackPane, sulla quale verranno
-        costruite tutte le interfaccie successive.
-        */
-        CGFX.setRootPane(stage);
-
         ControllerGrafico prenotaLibroCG = new PLLettoreCGFX();
-        prenotaLibroCG.lanciaVista();
+        Scene finestra = prenotaLibroCG.lanciaVista();
+        stage.setScene(finestra);
+        stage.show();
+
 
     }
     public   Modalita getPersistenza(){return this.persistenza;}
