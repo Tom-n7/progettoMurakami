@@ -13,7 +13,7 @@ import java.io.IOException;
 
 import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
-public abstract class CGFX extends StackPane {
+public abstract class CGFX extends StackPane implements ControllerGrafico {
 
     private final double DEFAULT_X = 1024.0;
     private final double DEFAULT_Y = 720.0;
@@ -25,13 +25,7 @@ public abstract class CGFX extends StackPane {
         double y = DEFAULT_Y;
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path));
         loader.setRoot(this);
-        loader.setController(this);
 
-        /*
-        ObservableList<Node> newChildrenList;
-        ObservableList<Node> oldChildrenList = this.getChildren();
-        removeAllIncludedChildren(oldChildrenList);
-         */
         try{
             loader.load();
 

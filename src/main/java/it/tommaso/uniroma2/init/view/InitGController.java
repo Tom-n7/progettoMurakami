@@ -1,6 +1,8 @@
 package it.tommaso.uniroma2.init.view;
 
-import it.tommaso.uniroma2.supporto.CGFX;
+
+import it.tommaso.uniroma2.FXApp;
+import it.tommaso.uniroma2.view.CGFX;
 import it.tommaso.uniroma2.view.ControllerGrafico;
 import it.tommaso.uniroma2.view.EventoCambioUseCase;
 import it.tommaso.uniroma2.view.PLLettoreCGFX;
@@ -8,18 +10,22 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class InitGController extends CGFX implements ControllerGrafico {
+public class InitGController extends CGFX {
 
 
     @FXML
-    private Text headLabel;
+    private Text c;
 
     @FXML
-    private Button bottonePrenotazione;
+    private  Button bottonePrenotazione;
 
     @FXML
     private Button bottoneLibreria;
@@ -27,44 +33,47 @@ public class InitGController extends CGFX implements ControllerGrafico {
 
     @FXML
     public void clickNuovaPrenotazione(ActionEvent e ){
-        fireEvent(new Event(EventoCambioUseCase.GESTISCI_LIBRERIA));
+        ((Node) e.getSource()).fireEvent(new EventoCambioUseCase(EventoCambioUseCase.PRENOTA_LIBRO));
     }
 
     @FXML
     public void clickGestisciLibreria(ActionEvent e){
-        fireEvent(new Event(EventoCambioUseCase.GESTISCI_LIBRERIA));
+        ((Node) e.getSource()).fireEvent(new EventoCambioUseCase(EventoCambioUseCase.GESTISCI_LIBRERIA));
     }
 
 
     private final EventHandler<EventoCambioUseCase> casoNonImplementatoHandler = new EventHandler<>(){
         @Override
         public void handle(EventoCambioUseCase event) {
-            headLabel.setText("Non implementato!");
+            c.setText("Non implementato!");
         }
     };
-
 
     private final EventHandler<EventoCambioUseCase> prenotaLibroHandler = new EventHandler<EventoCambioUseCase>() {
         @Override
         public void handle(EventoCambioUseCase event) {
-            new PLLettoreCGFX(stage);
+
         }
     };
 
-
-
-    public InitGController(Stage stage) {
-
-        super(stage);
-
-    }
-
-
     @Override
     public void lanciaVista() {
-        this.addEventHandler(EventoCambioUseCase.ANY, casoNonImplementatoHandler);
-        this.addEventHandler(EventoCambioUseCase.PRENOTA_LIBRO, prenotaLibroHandler);
 
-        disegnaFinestra("/it.tommaso.uniroma2/init/view/init_layout.fxml");
+        Scene layoutProdotto  = disegnaFinestra("/it.tommaso.uniroma2/init/view/init_layout.fxml");
+
+        addEventHandler(EventoCambioUseCase.PRENOTA_LIBRO,
+                event -> {
+                    (new PLLettoreCGFX()).lanciaVista();
+                    ((Stage) getScene().getWindow()).close();
+                    event.consume();
+                });
+        addEventHandler(EventoCambioUseCase.ANY,
+                event -> {
+            if(!event.isConsumed()){
+
+            }
+        });
+
+        FXApp.mostraNuovoStage(layoutProdotto);
     }
 }
