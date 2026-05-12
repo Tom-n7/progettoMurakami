@@ -8,8 +8,20 @@ public class PrenotaLibroController {
 
 
     /*
-
+    Questo metodo realizza il primo step del caso d'uso: caricare li biblioteche registrate nel sistema.
      */
+    public void caricaBibliotecheRegistrate(){
+
+
+
+
+
+    }
+
+
+
+
+
     public void cercaBiblioteca(String nome){
 
     }

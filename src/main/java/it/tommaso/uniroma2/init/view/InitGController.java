@@ -31,6 +31,7 @@ public class InitGController extends CGFX {
     private Button bottoneLibreria;
 
 
+    //Gestori evento iaterazione con bottoni.
     @FXML
     public void clickNuovaPrenotazione(ActionEvent e ){
         ((Node) e.getSource()).fireEvent(new EventoCambioUseCase(EventoCambioUseCase.PRENOTA_LIBRO));
@@ -40,21 +41,6 @@ public class InitGController extends CGFX {
     public void clickGestisciLibreria(ActionEvent e){
         ((Node) e.getSource()).fireEvent(new EventoCambioUseCase(EventoCambioUseCase.GESTISCI_LIBRERIA));
     }
-
-
-    private final EventHandler<EventoCambioUseCase> casoNonImplementatoHandler = new EventHandler<>(){
-        @Override
-        public void handle(EventoCambioUseCase event) {
-            c.setText("Non implementato!");
-        }
-    };
-
-    private final EventHandler<EventoCambioUseCase> prenotaLibroHandler = new EventHandler<EventoCambioUseCase>() {
-        @Override
-        public void handle(EventoCambioUseCase event) {
-
-        }
-    };
 
     @Override
     public void lanciaVista() {

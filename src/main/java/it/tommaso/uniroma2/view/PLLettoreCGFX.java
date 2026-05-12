@@ -7,6 +7,7 @@ Controller grafico interfaccia lettore del caso d'uso "prenota libro" in modalit
 
 
 import it.tommaso.uniroma2.FXApp;
+import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,7 +29,7 @@ public class PLLettoreCGFX  extends CGFX {
     @FXML
     private Text titolo;
     @FXML
-    private ListView listaBiblioteche;
+    ReadOnlyObjectProperty<ObservableList>
 
     @FXML
     private final EventHandler<EventoCambioUseCase> generaleHandler = new EventHandler<>() {
@@ -44,6 +45,11 @@ public class PLLettoreCGFX  extends CGFX {
 
         }
     };
+
+
+
+
+
 
 
     public void lanciaVista() {
