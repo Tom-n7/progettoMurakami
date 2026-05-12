@@ -7,7 +7,11 @@ Controller grafico interfaccia lettore del caso d'uso "prenota libro" in modalit
 
 
 import it.tommaso.uniroma2.FXApp;
+import it.tommaso.uniroma2.bean.BibliotecaBean;
+import it.tommaso.uniroma2.control.PrenotaLibroController;
 import javafx.beans.property.ReadOnlyObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,6 +25,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PLLettoreCGFX  extends CGFX {
 
     @FXML
@@ -28,10 +35,14 @@ public class PLLettoreCGFX  extends CGFX {
 
     @FXML
     private Text titolo;
-    @FXML
-    ReadOnlyObjectProperty<ObservableList>
 
     @FXML
+    private ListView listaBiblioteche;
+
+    private ReadOnlyObjectProperty<ObservableList<BibliotecaBean>> bibliotecheProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
+
+    private PrenotaLibroController appController;
+
     private final EventHandler<EventoCambioUseCase> generaleHandler = new EventHandler<>() {
         @Override
         public void handle(EventoCambioUseCase event) {
@@ -47,15 +58,23 @@ public class PLLettoreCGFX  extends CGFX {
     };
 
 
-
-
-
-
-
     public void lanciaVista() {
 
         this.addEventHandler(EventoCambioUseCase.ANY, generaleHandler);
         //return disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml");
+
+
+        /*
+        Caricamento dati biblioteche che la vista deve mostrare.
+         */
+        appController = new PrenotaLibroController();
+        List<BibliotecaBean> listaBiblioteche = new ArrayList<>();
+        appController.caricaBibliotecheRegistrate(listaBiblioteche);
+
+        bibliotecheProperty.get().addAll(listaBiblioteche);
+
+
+
 
 
         FXApp.mostraNuovoStage(disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml"));

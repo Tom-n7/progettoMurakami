@@ -26,9 +26,11 @@ public class BibliotecaBean {
          collegamentoAnteprima = null;
          regolePrenotazione = biblioteca.getRegolePrenotazione().toString();
 
-         for(EnumMap<DayOfWeek,)
-
-
+         for (DayOfWeek day: DayOfWeek.values()){
+             if( !biblioteca.getOrarioSettimanale().get(day).toString().isBlank()) {
+                 orarioSettimanale.put(day.toString(), biblioteca.getOrarioSettimanale().get(day).toString());
+             }
+         }
 
     }
 

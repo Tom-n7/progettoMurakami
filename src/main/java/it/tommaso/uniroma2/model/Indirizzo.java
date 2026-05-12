@@ -6,6 +6,12 @@ public class Indirizzo {
     private String citta;
     private String CAP;
 
+    public Indirizzo(String via, String citta, String CAP) {
+        this.via = via;
+        this.citta = citta;
+        this.CAP = CAP;
+    }
+
     @Override
     public String toString() {
         return via + ", " + citta + ", " + CAP;
