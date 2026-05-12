@@ -2,6 +2,8 @@ package it.tommaso.uniroma2.bean;
 
 import it.tommaso.uniroma2.model.Biblioteca;
 
+import java.time.DayOfWeek;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,7 +14,7 @@ public class BibliotecaBean {
     private String nome;
     private String indirizzo;
     private String collegamentoAnteprima;
-    private List<String> regolePrenotazione;
+    private String regolePrenotazione;
     private Map<String, String> orarioSettimanale;
 
 
@@ -21,9 +23,10 @@ public class BibliotecaBean {
          id = biblioteca.getId();
          nome = biblioteca.getNome();
          indirizzo = biblioteca.getIndirizzo().toString();
-         collegamentoAnteprima;
-         regolePrenotazione;
-         orarioSettimanale;
+         collegamentoAnteprima = null;
+         regolePrenotazione = biblioteca.getRegolePrenotazione().toString();
+
+         for(EnumMap<DayOfWeek,)
 
 
 
