@@ -47,11 +47,6 @@ public class PLLettoreCGFX  extends CGFX {
     @FXML
     private void clickSuCerca(ActionEvent e){
 
-        /*
-        Qui la lista filtrata viene aggiornata, a partire dalla lista delle biblioteche registrate, a cui viene
-        applicato il filtro immesso dal lettore sul criterio selezionato.
-        */
-
     }
 
     @FXML
@@ -110,20 +105,21 @@ public class PLLettoreCGFX  extends CGFX {
 
 
 
+        //questa parte aggiunge i bottoni per selezionare il criterio ricerca biblioteche.
+        //NOTA: potrebbe diventare un metodo privato del controller.
         for(String s : tipiFiltroProperty.get()){
             Button bottoneCriterio = new Button(s);
             bottoneCriterio.setPrefHeight(26);
 
             bottoneCriterio.setOnAction( event -> {
-                criterioRicercaTextField.setText("Cerca per: " + s);
-
+                criterioRicercaTextField.setPromptText("Cerca per: " + s);
                 }
             );
-
-
-
             criteriRicercaHBox.getChildren().add(bottoneCriterio);
         }
+
+
+
 
 
     }
