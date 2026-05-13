@@ -1,7 +1,8 @@
 # Prenota Libro
 
-1. Il sistema carica le biblioteche registrate.
-2. Il lettore inserisce i criteri di selezione biblioteca.
+
+1. Il lettore sceglie il criterio ricerca delle biblioteche ed inserisce il valore che desidera.
+2. Il sistema carica le biblioteche registrate conformi.
 3. Il lettore seleziona la biblioteca che desidera. 
 4. Il sistema crea una bozza di prenotazione associata al lettore verso la biblioteca. 
 5. Il lettore richiede l'aggiunta di un libro. 

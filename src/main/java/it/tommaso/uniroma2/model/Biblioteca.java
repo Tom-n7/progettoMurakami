@@ -70,4 +70,10 @@ public class Biblioteca {
     public void setOrarioSettimanale(EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.orarioSettimanale = orarioSettimanale;
     }
+
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

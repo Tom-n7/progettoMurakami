@@ -1,19 +1,19 @@
-<mxfile host="drawio-plugin" modified="2026-05-02T13:55:49.945Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="3RI8qejWIMggF-EmvUGI" version="22.1.22" type="embed" pages="4">
+<mxfile host="drawio-plugin" modified="2026-05-13T13:08:31.609Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="Xuz6qDmsL7VNehrLPOfd" version="22.1.22" type="embed" pages="4">
   <diagram id="HijBBxNlxFCtpiYPns3Y" name="Page-1">
-    <mxGraphModel dx="988" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2099" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="60" y="300" width="32.5" height="32.5" as="geometry" />
+          <mxGeometry x="-670" y="300" width="32.5" height="32.5" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+        <mxCell id="3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="47" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="130" y="340" as="sourcePoint" />
-            <mxPoint x="200" y="316" as="targetPoint" />
+            <mxPoint x="10" y="340" as="sourcePoint" />
+            <mxPoint x="-340" y="316" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4" value="Su Lista Biblioteche" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="4" value="Su ricerca biblioteca" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="200" y="286.25" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="4" target="7" edge="1">
@@ -22,8 +22,8 @@
             <mxPoint x="730" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6" value="click [clickSuSelezioneBiblioteca == true] /&amp;nbsp; caricamento dati biblioteca" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="330" y="286.25" width="380" height="30" as="geometry" />
+        <mxCell id="6" value="click [clickSuSelezioneBiblioteca == true] /&amp;nbsp; creazione bozza prenotazione" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="286.25" width="470" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7" value="Su dettagli prenotazione vuota" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="760" y="290" width="120" height="60" as="geometry" />
@@ -168,6 +168,33 @@
         </mxCell>
         <mxCell id="46" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="2046.25" y="306.25" width="32.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="Su ricerca biblioteca vuoto" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="285" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-298" y="326" as="sourcePoint" />
+            <mxPoint x="170" y="300" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;click [clickSuCerca == true AND criterioTextField.getText() != null] /&amp;nbsp; caricamento biblioteche conformi&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="263.75" width="560" height="26.25" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-440" y="325" as="sourcePoint" />
+            <mxPoint x="210" y="326" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="390" />
+              <mxPoint x="160" y="390" />
+              <mxPoint x="160" y="346" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;click [clickSuCerca == true AND criterioTextField.getText() != null] /&amp;nbsp; caricamento biblioteche conformi&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="393.75" width="560" height="26.25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

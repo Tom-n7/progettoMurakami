@@ -36,7 +36,8 @@ public class BibliotecaBean {
 
 
     public String toString(){
-        return "Prova!";
+        return "Nome: " + nome + "\n"
+                + "Indirizzo: " + indirizzo + "\n";
     }
 
 }
