@@ -54,20 +54,6 @@ public class FXApp extends Application {
 
     }
 
-    /*
-    Solo il thread Application può eseguire "Stage.show()", pertanto tutti i controller grafici si avvalgono
-    di questa operazione per mostrare la scena che hanno costruito.
-     */
-    public static void mostraNuovoStage(Scene nuovaScene){
-
-        Stage stage = new Stage();
-        stage.setTitle("BiblioBuddy");
-        stage.setScene(nuovaScene);
-        stage.show();
-
-    }
-
-
     //devo fare così sennò errore JavaFX runtime
     public static void main(String... args) {
             launch(args);

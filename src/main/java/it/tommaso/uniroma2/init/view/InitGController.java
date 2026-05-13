@@ -60,6 +60,6 @@ public class InitGController extends CGFX {
             }
         });
 
-        FXApp.mostraNuovoStage(layoutProdotto);
+        mostraNuovoStage(layoutProdotto);
     }
 }

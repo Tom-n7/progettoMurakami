@@ -1,19 +1,17 @@
 package it.tommaso.uniroma2.view;
 
 
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-import static com.sun.javafx.scene.control.skin.Utils.getResource;
-
-public abstract class CGFX extends StackPane implements ControllerGrafico {
+public abstract class CGFX extends StackPane implements ControllerGrafico, Initializable {
 
     private final double DEFAULT_X = 1024.0;
     private final double DEFAULT_Y = 720.0;
@@ -39,24 +37,19 @@ public abstract class CGFX extends StackPane implements ControllerGrafico {
     }
 
 
-    protected void decoraPane(String path, AnchorPane pane){
+    public static void mostraNuovoStage(Scene nuovaScene){
 
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path));
+        Stage stage = new Stage();
+        stage.setTitle("BiblioBuddy");
+        stage.setScene(nuovaScene);
+        stage.show();
 
-        ObservableList<Node> childrenList = pane.getChildren();
-        removeAllIncludedChildren(childrenList);
-
-        try{
-            pane.getChildren().add(loader.load());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
-    private static void removeAllIncludedChildren(ObservableList<Node> childrenList) {
-        for (int childIndex = 0; childIndex < childrenList.size(); childIndex++) {
-            childrenList.remove(childIndex);
-        }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+
     }
 
 }
