@@ -9,6 +9,8 @@ Controller grafico interfaccia lettore del caso d'uso "prenota libro" in modalit
 import it.tommaso.uniroma2.bean.BibliotecaBean;
 import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.control.PrenotaLibroController;
+import it.tommaso.uniroma2.model.TipoFiltroBiblioteca;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -30,12 +32,13 @@ import java.util.ResourceBundle;
 
 public class PLLettoreCGFX  extends CGFX {
 
+
     //Bottone "cerca", textfield con input del lettore e relativo controller per OnAction
-
-
-
     @FXML
-    private Button ricercaButton;
+    private Button bottoneRicerca;
+
+
+
 
     @FXML
     private TextField criterioRicercaTextField;
@@ -61,6 +64,10 @@ public class PLLettoreCGFX  extends CGFX {
 
     private ReadOnlyObjectProperty<List<String>> tipiFiltroProperty;
     private ReadOnlyObjectProperty<ObservableList<BibliotecaBean>> bibliotecheProperty;
+    //l'inserimento di una lista filtrata è da valutare, perchè le biblioteche arrivano già filtrate dai criteri inseriti dal lettore.
+    //scelto una prorpietà NON readonly così che il bottone criterio e bottone ricerca lo modifichibo in due momenti diversi, da valutare.
+    private ObjectProperty<FiltroBibliotecaBean> filtroBibliotecaBeanProperty;
+
     private PrenotaLibroController appController;
 
 
@@ -97,13 +104,14 @@ public class PLLettoreCGFX  extends CGFX {
 
 
 
-        //creo proprietà contenente tutte le biblioteche registrate nel sistema.
+        //creo proprietà contenente le biblioteche ottenute dalla view quando invia la richiesta al controller.
         bibliotecheProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
 
+        //init di vettore contenete tutti i criteri selezionabili dal lettore per cercare la biblioteca.
         tipiFiltroProperty = new SimpleObjectProperty<>(new ArrayList<String>());
         tipiFiltroProperty.get().addAll(FiltroBibliotecaBean.getTuttiTipi());
-
-
+        //il filtro viene costruito senza specificare valore dei campi, se rimangono immutati, l'app richiede tutte le biblioteche (opportuno inserire un limite?)
+        filtroBibliotecaBeanProperty = new SimpleObjectProperty<>(new FiltroBibliotecaBean());
 
         //questa parte aggiunge i bottoni per selezionare il criterio ricerca biblioteche.
         //NOTA: potrebbe diventare un metodo privato del controller.
@@ -111,12 +119,28 @@ public class PLLettoreCGFX  extends CGFX {
             Button bottoneCriterio = new Button(s);
             bottoneCriterio.setPrefHeight(26);
 
+
+            //assegno handler bottone criterio
             bottoneCriterio.setOnAction( event -> {
                 criterioRicercaTextField.setPromptText("Cerca per: " + s);
+                filtroBibliotecaBeanProperty.get().setTipo(s);
                 }
             );
-            criteriRicercaHBox.getChildren().add(bottoneCriterio);
         }
+        //di default la ricerca è per nome.
+        filtroBibliotecaBeanProperty.get().setTipo(TipoFiltroBiblioteca.NOME.toString());
+        criterioRicercaTextField.setPromptText("Cerca per: " + TipoFiltroBiblioteca.NOME);
+
+        bottoneRicerca.setOnAction(event -> {
+
+            String queryLettore = criterioRicercaTextField.getText();
+            if(!queryLettore.isBlank()){
+                filtroBibliotecaBeanProperty.get().setContenuto(queryLettore);
+            }
+
+            appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get());
+
+        });
 
 
 

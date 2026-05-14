@@ -2,6 +2,10 @@ package it.tommaso.uniroma2.control;
 
 
 import it.tommaso.uniroma2.bean.BibliotecaBean;
+import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
+import it.tommaso.uniroma2.exception.CriterioIllegaleException;
+import it.tommaso.uniroma2.exception.MaxCaratteriException;
+import it.tommaso.uniroma2.exception.QueryRicercaException;
 import it.tommaso.uniroma2.model.*;
 
 import java.util.ArrayList;
@@ -32,11 +36,19 @@ public class PrenotaLibroController {
     }
 
 
-    public List<BibliotecaBean> caricaBibliotecheRegistrate(){
+    public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean){
 
 
         List<BibliotecaBean> lista = new ArrayList<>();
-        //
+        try {
+            FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
+        }catch (CriterioIllegaleException e){
+            e.printStackTrace();
+        }catch (MaxCaratteriException e ){
+            e.printStackTrace();
+        }catch (QueryRicercaException e){
+            e.printStackTrace();
+        }
 
         for(Biblioteca b : dummyGenerazioneDatiBiblioteche() ){
             lista.add(new BibliotecaBean(b));
@@ -44,14 +56,6 @@ public class PrenotaLibroController {
         return lista;
 
     }
-
-
-
-
-    public void cercaBiblioteca(String nome){
-
-    }
-
 
     private Collection<Biblioteca> dummyGenerazioneDatiBiblioteche(){
 

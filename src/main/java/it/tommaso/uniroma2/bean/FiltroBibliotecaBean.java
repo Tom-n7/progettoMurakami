@@ -15,6 +15,16 @@ public class FiltroBibliotecaBean {
         this.contenuto = contenuto;
     }
 
+    public FiltroBibliotecaBean(String tipo) {
+        this.tipo = tipo;
+        contenuto = "";
+    }
+
+    public FiltroBibliotecaBean() {
+        tipo = "";
+        contenuto = "";
+    }
+
     public String getContenuto() {
         return contenuto;
     }

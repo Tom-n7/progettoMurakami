@@ -28,7 +28,7 @@
          <children>
             <HBox alignment="CENTER" spacing="10.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="ricercaButton" alignment="CENTER" mnemonicParsing="false" onAction="#clickSuCerca" prefHeight="26.0" prefWidth="26.0">
+                  <Button fx:id="bottoneRicerca" alignment="CENTER" mnemonicParsing="false" onAction="#clickSuCerca" prefHeight="26.0" prefWidth="26.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
