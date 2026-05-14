@@ -37,9 +37,6 @@ public class PLLettoreCGFX  extends CGFX {
     @FXML
     private Button bottoneRicerca;
 
-
-
-
     @FXML
     private TextField criterioRicercaTextField;
 
@@ -49,7 +46,12 @@ public class PLLettoreCGFX  extends CGFX {
     */
     @FXML
     private void clickSuCerca(ActionEvent e){
+        String queryLettore = criterioRicercaTextField.getText();
+        if(!queryLettore.isBlank()){
+            filtroBibliotecaBeanProperty.get().setContenuto(queryLettore);
+        }
 
+        bibliotecheProperty.get().addAll(appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
     }
 
     @FXML
@@ -76,18 +78,13 @@ public class PLLettoreCGFX  extends CGFX {
 
         Scene layoutProdotto = disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml");
 
-
-
         //((HBox) layoutProdotto.lookup("#criteriRicercaHBox")).getChildren().add(new Rectangle(10,10, Color.GOLD));
 
         /*
         Caricamento dati biblioteche che la vista deve mostrare.
          */
 
-
         mostraNuovoStage(layoutProdotto);
-
-
 
     }
 
@@ -103,13 +100,17 @@ public class PLLettoreCGFX  extends CGFX {
         super.initialize(location, resources);
 
 
+        this.appController = new PrenotaLibroController();
 
         //creo proprietà contenente le biblioteche ottenute dalla view quando invia la richiesta al controller.
         bibliotecheProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
+        //faccio bind della lista delle biblioteche con la ListView.
+        listaBibliotecheVisibile.itemsProperty().bind(bibliotecheProperty);
 
         //init di vettore contenete tutti i criteri selezionabili dal lettore per cercare la biblioteca.
         tipiFiltroProperty = new SimpleObjectProperty<>(new ArrayList<String>());
         tipiFiltroProperty.get().addAll(FiltroBibliotecaBean.getTuttiTipi());
+
         //il filtro viene costruito senza specificare valore dei campi, se rimangono immutati, l'app richiede tutte le biblioteche (opportuno inserire un limite?)
         filtroBibliotecaBeanProperty = new SimpleObjectProperty<>(new FiltroBibliotecaBean());
 
@@ -118,6 +119,7 @@ public class PLLettoreCGFX  extends CGFX {
         for(String s : tipiFiltroProperty.get()){
             Button bottoneCriterio = new Button(s);
             bottoneCriterio.setPrefHeight(26);
+            criteriRicercaHBox.getChildren().add(bottoneCriterio);
 
 
             //assegno handler bottone criterio
@@ -130,21 +132,6 @@ public class PLLettoreCGFX  extends CGFX {
         //di default la ricerca è per nome.
         filtroBibliotecaBeanProperty.get().setTipo(TipoFiltroBiblioteca.NOME.toString());
         criterioRicercaTextField.setPromptText("Cerca per: " + TipoFiltroBiblioteca.NOME);
-
-        bottoneRicerca.setOnAction(event -> {
-
-            String queryLettore = criterioRicercaTextField.getText();
-            if(!queryLettore.isBlank()){
-                filtroBibliotecaBeanProperty.get().setContenuto(queryLettore);
-            }
-
-            appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get());
-
-        });
-
-
-
-
 
     }
 
