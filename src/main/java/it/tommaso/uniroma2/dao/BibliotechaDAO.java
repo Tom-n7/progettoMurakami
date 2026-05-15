@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 public class BibliotechaDAO implements IDAO<Biblioteca> {
     @Override
     public Biblioteca get(int id) throws DAOException {
@@ -30,14 +32,37 @@ public class BibliotechaDAO implements IDAO<Biblioteca> {
     @Override
     public List<Biblioteca> getFiltered(Object filtro) throws DAOException {
 
-        //per ora non fa filtro
+        List<Biblioteca> listaBiblioteche = new ArrayList<>();
 
-        return dummyGenerazioneDatiBiblioteche().stream().toList();
+        if(filtro.getClass() != FiltroBiblioteca.class){
+            throw new DAOException("Filtro fornito non valido");
+        }
 
+        for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
+            switch (((FiltroBiblioteca) filtro).getTipo()){
+                case NOME : {
+                    if(b.getNome().contains(((FiltroBiblioteca) filtro).getContenuto())){
+                        listaBiblioteche.add(b);
+                    }
+                }; break;
 
+                case CITTA: {
+                    if(b.getIndirizzo().getCitta().contains(((FiltroBiblioteca) filtro).getContenuto())){
+                        listaBiblioteche.add(b);
+                    }; break;
+                }
+                case INDIRIZZO: {
+                    if(b.getIndirizzo().toString().contains(((FiltroBiblioteca) filtro).getContenuto())){
+                        listaBiblioteche.add(b);
+                    }; break;
+                }
+            }
+        };
 
+        return listaBiblioteche;
     }
 
+    //provvisorio.
     private Collection<Biblioteca> dummyGenerazioneDatiBiblioteche(){
 
 
@@ -46,7 +71,13 @@ public class BibliotechaDAO implements IDAO<Biblioteca> {
                 new Biblioteca("2", "Biblioteca Casa delle Letterature", new Indirizzo("Piazza dell'Orologio,3", "Roma", "00186"),
                         null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null),
                 new Biblioteca("3", "Biblioteca Casa delle Traduzioni", new Indirizzo("Via degli Avignonesi,32", "Roma", "00187"),
-                        null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null)}).toList());
+                        null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null),
+                new Biblioteca("4", "Biblioteca Nazionale Centrale di Firenze", new Indirizzo("Piazza dei Cavalleggeri, 1","Firenze", "50122"),
+                        null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null),
+                new Biblioteca("5", "Biblioteca Nazionale Centrale di Roma", new Indirizzo("Via Castro Pretorio, 105", "Roma", "00185"),
+                        null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null)
+
+        }).toList());
 
         return bibliotecheRegistrate;
 

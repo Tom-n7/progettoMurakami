@@ -12,6 +12,30 @@ public class Indirizzo {
         this.CAP = CAP;
     }
 
+    public String getVia() {
+        return via;
+    }
+
+    public void setVia(String via) {
+        this.via = via;
+    }
+
+    public String getCitta() {
+        return citta;
+    }
+
+    public void setCitta(String citta) {
+        this.citta = citta;
+    }
+
+    public String getCAP() {
+        return CAP;
+    }
+
+    public void setCAP(String CAP) {
+        this.CAP = CAP;
+    }
+
     @Override
     public String toString() {
         return via + ", " + citta + ", " + CAP;

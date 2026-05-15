@@ -51,7 +51,7 @@ public class PLLettoreCGFX  extends CGFX {
             filtroBibliotecaBeanProperty.get().setContenuto(queryLettore);
         }
 
-        bibliotecheProperty.get().addAll(appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
+        bibliotecheProperty.get().setAll(appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
     }
 
     @FXML

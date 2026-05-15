@@ -5,6 +5,7 @@ import it.tommaso.uniroma2.bean.BibliotecaBean;
 import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.dao.BibliotechaDAO;
 import it.tommaso.uniroma2.exception.CriterioIllegaleException;
+import it.tommaso.uniroma2.exception.DAOException;
 import it.tommaso.uniroma2.exception.MaxCaratteriException;
 import it.tommaso.uniroma2.exception.QueryRicercaException;
 import it.tommaso.uniroma2.model.*;
@@ -33,9 +34,18 @@ public class PrenotaLibroController {
         }
 
         //rivedere meglio a partire da blocco try.
-        for(Biblioteca b : (new BibliotechaDAO()).getFiltered(filtro) ){
-            lista.add(new BibliotecaBean(b));
+
+        try{
+            assert filtro != null;
+            List<Biblioteca> listaBiblioteche = new BibliotechaDAO().getFiltered(filtro);
+            for(Biblioteca b : listaBiblioteche){
+                lista.add(new BibliotecaBean(b));
+            }
+        } catch (DAOException e) {
+            e.printStackTrace();
         }
+
+
         return lista;
 
     }
