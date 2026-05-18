@@ -80,7 +80,51 @@ public class BibliotechaDAO implements IDAO<Biblioteca> {
         }).toList());
 
         return bibliotecheRegistrate;
+    }
 
+    @Override
+    public List<Biblioteca> ottieniTutti() throws DAOException {
+        return dummyGenerazioneDatiBiblioteche().stream().toList();
+    }
+
+    @Override
+    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) {
+
+        List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
+
+
+        String tipoFiltro = filtro.ottieniNomeTipoFiltro();
+        for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
+            switch (TipoFiltroBiblioteca.valueOf(tipoFiltro)){
+                case NOME: {
+                    if(b.getNome().contains(filtro.ottieniTestoRicerca())){
+                        listaBibliotecheFiltrata.add(b);
+                    }
+                }; break;
+
+                case CITTA: {
+                    if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
+                        listaBibliotecheFiltrata.add(b);
+                    }; break;
+                }
+                case INDIRIZZO: {
+                    if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
+                        listaBibliotecheFiltrata.add(b);
+                    }; break;
+                }
+            }
+        };
+
+        return listaBibliotecheFiltrata;
+    }
+
+    @Override
+    public void salva(Biblioteca oggetto) throws DAOException {
+
+    }
+
+    @Override
+    public void salvaTutti(List<Biblioteca> listaOggetti) throws DAOException {
 
     }
 }

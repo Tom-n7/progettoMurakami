@@ -3,11 +3,11 @@ package it.tommaso.uniroma2.control;
 
 import it.tommaso.uniroma2.bean.BibliotecaBean;
 import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
-import it.tommaso.uniroma2.dao.BibliotechaDAO;
+import it.tommaso.uniroma2.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.exception.CriterioIllegaleException;
 import it.tommaso.uniroma2.exception.DAOException;
 import it.tommaso.uniroma2.exception.MaxCaratteriException;
-import it.tommaso.uniroma2.exception.QueryRicercaException;
+import it.tommaso.uniroma2.exception.RicercaException;
 import it.tommaso.uniroma2.model.*;
 
 import java.util.ArrayList;
@@ -22,30 +22,17 @@ public class PrenotaLibroController {
 
 
         List<BibliotecaBean> lista = new ArrayList<>();
-        FiltroBiblioteca filtro = null;
+
         try {
-            filtro = new FiltroBiblioteca(filtroBean);
-        }catch (CriterioIllegaleException e){
-            e.printStackTrace();
-        }catch (MaxCaratteriException e ){
-            e.printStackTrace();
-        }catch (QueryRicercaException e){
-            e.printStackTrace();
-        }
+            FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
 
-        //rivedere meglio a partire da blocco try.
-
-        try{
-            assert filtro != null;
-            List<Biblioteca> listaBiblioteche = new BibliotechaDAO().getFiltered(filtro);
+            List<Biblioteca> listaBiblioteche = new BibliotecaDAO().ottieniListaFiltrata(filtro);
             for(Biblioteca b : listaBiblioteche){
                 lista.add(new BibliotecaBean(b));
             }
-        } catch (DAOException e) {
-            e.printStackTrace();
+        } catch (DAOException | RicercaException e){
+            System.out.println(e.getMessage());
         }
-
-
         return lista;
 
     }

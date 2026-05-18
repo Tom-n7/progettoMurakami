@@ -48,10 +48,10 @@ public class PLLettoreCGFX  extends CGFX {
     private void clickSuCerca(ActionEvent e){
         String queryLettore = criterioRicercaTextField.getText();
         if(!queryLettore.isBlank()){
-            filtroBibliotecaBeanProperty.get().setContenuto(queryLettore);
+            filtroBibliotecaBeanProperty.get().setTestoRicerca(queryLettore);
         }
 
-        bibliotecheProperty.get().setAll(appController.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
+        bibliotecheProperty.get().setAll(plc.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
     }
 
     @FXML
@@ -70,7 +70,7 @@ public class PLLettoreCGFX  extends CGFX {
     //scelto una prorpietà NON readonly così che il bottone criterio e bottone ricerca lo modifichibo in due momenti diversi, da valutare.
     private ObjectProperty<FiltroBibliotecaBean> filtroBibliotecaBeanProperty;
 
-    private PrenotaLibroController appController;
+    private PrenotaLibroController plc;
 
 
 
@@ -100,7 +100,7 @@ public class PLLettoreCGFX  extends CGFX {
         super.initialize(location, resources);
 
 
-        this.appController = new PrenotaLibroController();
+        this.plc = new PrenotaLibroController();
 
         //creo proprietà contenente le biblioteche ottenute dalla view quando invia la richiesta al controller.
         bibliotecheProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
@@ -125,12 +125,12 @@ public class PLLettoreCGFX  extends CGFX {
             //assegno handler bottone criterio
             bottoneCriterio.setOnAction( event -> {
                 criterioRicercaTextField.setPromptText("Cerca per: " + s);
-                filtroBibliotecaBeanProperty.get().setTipo(s);
+                filtroBibliotecaBeanProperty.get().setTipoSelezionato(s);
                 }
             );
         }
         //di default la ricerca è per nome.
-        filtroBibliotecaBeanProperty.get().setTipo(TipoFiltroBiblioteca.NOME.toString());
+        filtroBibliotecaBeanProperty.get().setTipoSelezionato(TipoFiltroBiblioteca.NOME.toString());
         criterioRicercaTextField.setPromptText("Cerca per: " + TipoFiltroBiblioteca.NOME);
 
     }
