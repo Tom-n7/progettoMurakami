@@ -6,42 +6,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FiltroBibliotecaBean {
-    private String tipo;
-    private String contenuto;
+    private String tipoSelezionato;
+    private String testoRicerca;
 
 
-    public FiltroBibliotecaBean(String tipo, String contenuto) {
-        this.tipo = tipo;
-        this.contenuto = contenuto;
+
+    public FiltroBibliotecaBean(String tipoSelezionato, String testoRicerca) {
+        this.tipoSelezionato = tipoSelezionato;
+        this.testoRicerca = testoRicerca;
     }
 
-    public FiltroBibliotecaBean(String tipo) {
-        this.tipo = tipo;
-        contenuto = "";
+    public FiltroBibliotecaBean(String tipoSelezionato) {
+        this.tipoSelezionato = tipoSelezionato;
+        testoRicerca = "";
     }
 
     public FiltroBibliotecaBean() {
-        tipo = "";
-        contenuto = "";
+        tipoSelezionato = "";
+        testoRicerca = "";
     }
 
-    public String getContenuto() {
-        return contenuto;
+    public String getTestoRicerca() {
+        return testoRicerca;
     }
 
-    public void setContenuto(String contenuto) {
-        this.contenuto = contenuto;
+    public void setTestoRicerca(String testoRicerca) {
+        this.testoRicerca = testoRicerca;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoSelezionato() {
+        return tipoSelezionato;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoSelezionato(String tipoSelezionato) {
+        this.tipoSelezionato = tipoSelezionato;
     }
 
     //La view lo utilizza per conoscere tutti i tipi di filtri esistenti.
+    //PROVVISORIO
     public static List<String> getTuttiTipi(){
 
         List<String> tuttiTipi = new ArrayList<>();

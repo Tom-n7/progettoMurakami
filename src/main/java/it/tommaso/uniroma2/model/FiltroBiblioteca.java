@@ -3,55 +3,76 @@ package it.tommaso.uniroma2.model;
 import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.exception.CriterioIllegaleException;
 import it.tommaso.uniroma2.exception.MaxCaratteriException;
-import it.tommaso.uniroma2.exception.QueryRicercaException;
+import it.tommaso.uniroma2.exception.RicercaException;
 
-public class FiltroBiblioteca {
+import java.util.ArrayList;
+import java.util.List;
+
+public class FiltroBiblioteca implements IFiltroTestuale<Biblioteca>{
 
     private final int MAX_LUNGHEZZA_FILTRO = 100;
 
     private TipoFiltroBiblioteca tipo;
-    private String contenuto;
+    private String testoRicerca;
 
-    public FiltroBiblioteca(TipoFiltroBiblioteca tipo, String contenuto) {
+    public FiltroBiblioteca(TipoFiltroBiblioteca tipo, String testoRicerca) {
         this.tipo = tipo;
-        this.contenuto = contenuto;
+        this.testoRicerca = testoRicerca;
     }
 
-    public FiltroBiblioteca(FiltroBibliotecaBean filtroBibliotecaBean) throws QueryRicercaException {
+    public FiltroBiblioteca(FiltroBibliotecaBean filtroBibliotecaBean) throws RicercaException {
 
-        String campoRicerca = filtroBibliotecaBean.getContenuto();
-
-        for(TipoFiltroBiblioteca tf: TipoFiltroBiblioteca.values()){
-            if(tf.toString().equals(filtroBibliotecaBean.getTipo())){
-                this.tipo = tf;
-                break;
-            }
+        try{
+            impostaTipo(filtroBibliotecaBean.getTipoSelezionato());
+            impostaTestoRicerca(filtroBibliotecaBean.getTestoRicerca());
+        } catch (CriterioIllegaleException e) {
+            throw new RicercaException("Errore criterio nella creazione del filtro",e);
+        }catch (MaxCaratteriException e){
+            throw new RicercaException("Errore testo ricerca nella creazione del fitro",e);
         }
 
-        if(this.tipo == null){
-            throw new CriterioIllegaleException(filtroBibliotecaBean.getTipo() + " non è un criterio valido" );
-        }
+    }
 
-        if(campoRicerca.length() > MAX_LUNGHEZZA_FILTRO) {
+    @Override
+    public void impostaTestoRicerca(String testoRicerca) throws MaxCaratteriException{
+        if(testoRicerca.length() > MAX_LUNGHEZZA_FILTRO) {
             throw new MaxCaratteriException("Il campo di ricerca inserito è troppo lungo.");
         }else {
-            this.contenuto = filtroBibliotecaBean.getContenuto();
+            this.testoRicerca = testoRicerca;
+        }
+    }
+
+    @Override
+    public void impostaTipo(String nomeTipo) throws CriterioIllegaleException{
+
+        try {
+            this.tipo = TipoFiltroBiblioteca.valueOf(nomeTipo);
+        } catch (IllegalArgumentException e) {
+            throw new CriterioIllegaleException("Nome tipo filtro per le biblioteche errato!");
         }
 
     }
-    public TipoFiltroBiblioteca getTipo() {
-        return tipo;
+
+    @Override
+    public List<String> ottieniTuttiNomiTipi() {
+        List<String> listaTipi;
+        listaTipi = new ArrayList<>();
+        for(TipoFiltroBiblioteca tf: TipoFiltroBiblioteca.values()){
+            listaTipi.add(tf.toString());
+        }
+        return listaTipi;
     }
 
-    public void setTipo(TipoFiltroBiblioteca tipo) {
-        this.tipo = tipo;
+
+    @Override
+    public String ottieniNomeTipoFiltro() {
+
+        return this.tipo.toString();
+
     }
 
-    public String getContenuto() {
-        return contenuto;
-    }
-
-    public void setContenuto(String contenuto) {
-        this.contenuto = contenuto;
+    @Override
+    public String ottieniTestoRicerca() {
+        return this.testoRicerca;
     }
 }
