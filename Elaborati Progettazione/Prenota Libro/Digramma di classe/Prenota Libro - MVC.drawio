@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
   <diagram id="HG0kQiJx9ibGKO0AsbR5" name="Page-1">
-    <mxGraphModel dx="2018" dy="3115" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1819" dy="3072" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -194,19 +194,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ab_kNuct4X_h0G1jIZLj-53" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;IRicercabiliDAO&amp;lt;T&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;+ ottieniTutti(): List&amp;lt;T&amp;gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;T&amp;gt;): List&amp;lt;T&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;T&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;T&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="140" width="310" x="50" y="887.5" as="geometry" />
+          <mxGeometry height="140" width="310" x="785" y="590" as="geometry" />
         </mxCell>
         <mxCell id="ab_kNuct4X_h0G1jIZLj-54" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;IFiltroTestuale&amp;lt;T&amp;gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;i&gt;&amp;nbsp;+ impostaTestoRicerca(testoRicerca: String): void&lt;/i&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ impostaTipo(nomeTipo: String): void&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniTuttiNomiTipi(): List&amp;lt;String&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniTestoFormattato(): String&lt;/i&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="360" x="760" y="380" as="geometry" />
         </mxCell>
         <mxCell id="ab_kNuct4X_h0G1jIZLj-56" edge="1" parent="1" source="ab_kNuct4X_h0G1jIZLj-57" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="ab_kNuct4X_h0G1jIZLj-53" value="">
           <mxGeometry relative="1" width="160" as="geometry">
-            <mxPoint x="535" y="957.5" as="sourcePoint" />
-            <mxPoint x="405" y="1092.5" as="targetPoint" />
+            <mxPoint x="1235" y="677.5" as="sourcePoint" />
+            <mxPoint x="1105" y="812.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ab_kNuct4X_h0G1jIZLj-57" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Bibliotece&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="175" width="360" x="650" y="870" as="geometry" />
+          <mxGeometry height="175" width="360" x="1260" y="572.5" as="geometry" />
         </mxCell>
         <mxCell id="ab_kNuct4X_h0G1jIZLj-60" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FiltroBiblioteca&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- MAX_LUNGHEZZA_TESTO: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- tipo: TipoFiltroBiblioteca&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ impostaTestoRicerca(testoRicerca: String): void&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ impostaTipo(nomeTipo: String): void&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ ottieniTuttiNomiTipi(): List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ ottieniTestoFormattato(): String&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="310" x="1275" y="380" as="geometry" />
@@ -231,6 +231,12 @@
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="720" y="630" as="sourcePoint" />
             <mxPoint x="880" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rbh7AXGwzj9t7hEPuujV-54" edge="1" parent="1" source="2" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.992;exitY=0.838;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitPerimeter=0;" target="ab_kNuct4X_h0G1jIZLj-53" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="550" y="710" as="sourcePoint" />
+            <mxPoint x="740" y="670" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

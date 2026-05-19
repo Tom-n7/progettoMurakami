@@ -1,10 +1,7 @@
 package it.tommaso.uniroma2.dao;
 
 import it.tommaso.uniroma2.exception.DAOException;
-import it.tommaso.uniroma2.model.Biblioteca;
-import it.tommaso.uniroma2.model.FiltroBiblioteca;
-import it.tommaso.uniroma2.model.Indirizzo;
-import it.tommaso.uniroma2.model.RegolaPrenotazione;
+import it.tommaso.uniroma2.model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,54 +10,7 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class BibliotechaDAO implements IDAO<Biblioteca> {
-    @Override
-    public Biblioteca get(int id) throws DAOException {
-        return null;
-    }
-
-    @Override
-    public void set() throws DAOException {
-
-    }
-
-    @Override
-    public List<Biblioteca> getAll() throws DAOException {
-        return dummyGenerazioneDatiBiblioteche().stream().toList();
-    }
-
-    @Override
-    public List<Biblioteca> getFiltered(Object filtro) throws DAOException {
-
-        List<Biblioteca> listaBiblioteche = new ArrayList<>();
-
-        if(filtro.getClass() != FiltroBiblioteca.class){
-            throw new DAOException("Filtro fornito non valido");
-        }
-
-        for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
-            switch (((FiltroBiblioteca) filtro).getTipo()){
-                case NOME : {
-                    if(b.getNome().contains(((FiltroBiblioteca) filtro).getContenuto())){
-                        listaBiblioteche.add(b);
-                    }
-                }; break;
-
-                case CITTA: {
-                    if(b.getIndirizzo().getCitta().contains(((FiltroBiblioteca) filtro).getContenuto())){
-                        listaBiblioteche.add(b);
-                    }; break;
-                }
-                case INDIRIZZO: {
-                    if(b.getIndirizzo().toString().contains(((FiltroBiblioteca) filtro).getContenuto())){
-                        listaBiblioteche.add(b);
-                    }; break;
-                }
-            }
-        };
-
-        return listaBiblioteche;
-    }
+public class BibliotecaDAO implements IRicercabiliDAO<Biblioteca> {
 
     //provvisorio.
     private Collection<Biblioteca> dummyGenerazioneDatiBiblioteche(){
@@ -78,7 +28,6 @@ public class BibliotechaDAO implements IDAO<Biblioteca> {
                         null, List.of(new RegolaPrenotazione[]{(new RegolaPrenotazione(5))}), null)
 
         }).toList());
-
         return bibliotecheRegistrate;
     }
 
@@ -88,7 +37,7 @@ public class BibliotechaDAO implements IDAO<Biblioteca> {
     }
 
     @Override
-    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) {
+    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
 
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
