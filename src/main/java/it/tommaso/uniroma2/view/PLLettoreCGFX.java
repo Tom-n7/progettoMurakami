@@ -10,9 +10,13 @@ import it.tommaso.uniroma2.bean.BibliotecaBean;
 import it.tommaso.uniroma2.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.control.PrenotaLibroController;
 import it.tommaso.uniroma2.model.TipoFiltroBiblioteca;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -33,6 +37,8 @@ import java.util.ResourceBundle;
 public class PLLettoreCGFX  extends CGFX {
 
 
+    public Button bottoneConfermaBiblioteca;
+    public Button BottoneEsci;
     //Bottone "cerca", textfield con input del lettore e relativo controller per OnAction
     @FXML
     private Button bottoneRicerca;
@@ -41,7 +47,7 @@ public class PLLettoreCGFX  extends CGFX {
     private TextField criterioRicercaTextField;
 
     /*
-    Viene impostato come filtro l'input del lettore, che influisce sulle biblioteche visibili seconda del
+    definisce come filtro l'input del lettore, che influisce sulle biblioteche visibili seconda del
     criterio selezionato e del testo immesso.
     */
     @FXML
@@ -52,6 +58,31 @@ public class PLLettoreCGFX  extends CGFX {
         }
 
         bibliotecheProperty.get().setAll(plc.caricaBibliotecheRegistrate(filtroBibliotecaBeanProperty.get()));
+    }
+
+    /*
+    Handler cambiamento oggetto selezionato nella ListView.
+    Nello specifico la biblioteca selezionata dal lettore viene salvata e utilizzata quando il lettore conferma la scelta.
+     */
+    private ChangeListener<BibliotecaBean> handlerSelezioneBiblioteca = new ChangeListener<BibliotecaBean>() {
+        @Override
+        public void changed(ObservableValue<? extends BibliotecaBean> observable, BibliotecaBean oldValue, BibliotecaBean newValue) {
+            bibliotecaScelta = listaBibliotecheVisibile.getSelectionModel().getSelectedItem();
+        }
+    };
+
+    @FXML
+    private void clickSuConfermaBiblioteca(ActionEvent e){
+
+
+        (new FinestraProvvisoriaSceltaBiblioteca(bibliotecaScelta)).lanciaVista();
+
+
+    }
+
+    @FXML
+    private void clickSuEsci(ActionEvent e){
+
     }
 
     @FXML
@@ -72,28 +103,16 @@ public class PLLettoreCGFX  extends CGFX {
 
     private PrenotaLibroController plc;
 
+    private BibliotecaBean bibliotecaScelta;
+
 
 
     public void lanciaVista() {
 
         Scene layoutProdotto = disegnaFinestra("/it.tommaso.uniroma2/plibFXML/ricerca_biblioteca.fxml");
-
-        //((HBox) layoutProdotto.lookup("#criteriRicercaHBox")).getChildren().add(new Rectangle(10,10, Color.GOLD));
-
-        /*
-        Caricamento dati biblioteche che la vista deve mostrare.
-         */
-
         mostraNuovoStage(layoutProdotto);
 
     }
-
-    public void click(ActionEvent actionEvent) {
-        titolo.setText("Ecco i risultati!");
-        ((Node) actionEvent.getSource()).fireEvent(new EventoCambioUseCase(EventoCambioUseCase.PRENOTA_LIBRO));
-    }
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -132,6 +151,21 @@ public class PLLettoreCGFX  extends CGFX {
         //di default la ricerca è per nome.
         filtroBibliotecaBeanProperty.get().setTipoSelezionato(TipoFiltroBiblioteca.NOME.toString());
         criterioRicercaTextField.setPromptText("Cerca per: " + TipoFiltroBiblioteca.NOME);
+
+        //assegno comportamento a seguito di selezione della biblioteca.
+        /*
+        Selection model mantiene la reference dell'oggetto selezionato nella lista, che otteniamo come ObservableProperty
+        tramite il metodo ".selectedItemProperty.
+
+        Essendo quindi l'ogetto selezionato una implementazione di Observable, è possibile a segnare a questo un InvalidationListener,
+        ovvero un metodo che viene chiamato ogni qual volta il valore dell'oggetto cambia, ovvero quando il lettore seleziona un elemento
+        della ListView.
+
+         */
+        listaBibliotecheVisibile.getSelectionModel().selectedItemProperty().addListener(handlerSelezioneBiblioteca);
+
+
+
 
     }
 

@@ -1,11 +1,12 @@
 package it.tommaso.uniroma2.bean;
 
+import it.tommaso.uniroma2.model.FiltroBiblioteca;
 import it.tommaso.uniroma2.model.TipoFiltroBiblioteca;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FiltroBibliotecaBean {
+public class FiltroBibliotecaBean implements IBean<FiltroBiblioteca> {
     private String tipoSelezionato;
     private String testoRicerca;
 

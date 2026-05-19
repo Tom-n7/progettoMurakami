@@ -1,5 +1,7 @@
 package it.tommaso.uniroma2.dao;
 
+import it.tommaso.uniroma2.bean.BibliotecaBean;
+import it.tommaso.uniroma2.bean.IBean;
 import it.tommaso.uniroma2.exception.DAOException;
 import it.tommaso.uniroma2.model.*;
 
@@ -75,5 +77,11 @@ public class BibliotecaDAO implements IRicercabiliDAO<Biblioteca> {
     @Override
     public void salvaTutti(List<Biblioteca> listaOggetti) throws DAOException {
 
+    }
+
+    @Override
+    public Biblioteca ottieni(int id) throws DAOException {
+
+        return null;
     }
 }

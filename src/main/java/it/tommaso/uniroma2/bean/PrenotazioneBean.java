@@ -1,4 +1,6 @@
 package it.tommaso.uniroma2.bean;
 
-public class PrenotazioneBean {
+import it.tommaso.uniroma2.model.Prenotazione;
+
+public class PrenotazioneBean implements IBean<Prenotazione>{
 }

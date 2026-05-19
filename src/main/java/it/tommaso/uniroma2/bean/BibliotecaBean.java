@@ -7,7 +7,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-public class BibliotecaBean {
+public class BibliotecaBean implements IBean<Biblioteca>{
 
 
     private String id;
@@ -34,6 +34,53 @@ public class BibliotecaBean {
 
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getIndirizzo() {
+        return indirizzo;
+    }
+
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
+    }
+
+    public String getRegolePrenotazione() {
+        return regolePrenotazione;
+    }
+
+    public void setRegolePrenotazione(String regolePrenotazione) {
+        this.regolePrenotazione = regolePrenotazione;
+    }
+
+    public Map<String, String> getOrarioSettimanale() {
+        return orarioSettimanale;
+    }
+
+    public void setOrarioSettimanale(Map<String, String> orarioSettimanale) {
+        this.orarioSettimanale = orarioSettimanale;
+    }
+
+    public String getCollegamentoAnteprima() {
+        return collegamentoAnteprima;
+    }
+
+    public void setCollegamentoAnteprima(String collegamentoAnteprima) {
+        this.collegamentoAnteprima = collegamentoAnteprima;
+    }
 
     public String toString(){
         return "Nome: " + nome + "\n"

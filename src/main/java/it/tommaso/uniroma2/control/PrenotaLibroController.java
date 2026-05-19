@@ -39,16 +39,7 @@ public class PrenotaLibroController {
 
     }
 
-    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaScelta){
 
-
-
-
-
-
-
-
-    }
 
 
 }
