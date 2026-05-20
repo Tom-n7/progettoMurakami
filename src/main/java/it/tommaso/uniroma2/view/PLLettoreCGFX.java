@@ -74,9 +74,7 @@ public class PLLettoreCGFX  extends CGFX {
     @FXML
     private void clickSuConfermaBiblioteca(ActionEvent e){
 
-
-        (new FinestraProvvisoriaSceltaBiblioteca(bibliotecaScelta)).lanciaVista();
-
+        new FinestraProva();
 
     }
 
