@@ -1,6 +1,7 @@
 package it.tommaso.uniroma2.progettoISPW.init;
 
 
+import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,6 +13,7 @@ import java.util.ResourceBundle;
 
 public class VistaMenuPrincipale implements Initializable {
 
+    private final ControllerGrafico CONTROLLER;
 
     @FXML
     private Text c;
@@ -22,17 +24,14 @@ public class VistaMenuPrincipale implements Initializable {
     @FXML
     private Button bottoneLibreria;
 
-
-    public final  int ESEMPIOINT;
-
-    public VistaMenuPrincipale(int esempioint) {
-        ESEMPIOINT = esempioint;
+    public VistaMenuPrincipale(ControllerGrafico controller) {
+        CONTROLLER = controller;
     }
 
     //Gestori evento iaterazione con bottoni.
     @FXML
     public void clickNuovaPrenotazione(ActionEvent e ){
-
+        CONTROLLER.lanciaVista("ricerca_biblioteca");
     }
 
     @FXML
