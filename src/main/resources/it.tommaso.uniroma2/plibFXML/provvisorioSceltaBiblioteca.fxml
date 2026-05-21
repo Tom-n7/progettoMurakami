@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.view.FinestraProvvisoriaSceltaBiblioteca">
+<StackPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.progettoISPW.view.FinestraProvvisoriaSceltaBiblioteca">
    <children>
       <VBox prefHeight="300.0" prefWidth="500.0" spacing="10.0">
          <children>
