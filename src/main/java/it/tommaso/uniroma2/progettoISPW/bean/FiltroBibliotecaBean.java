@@ -44,8 +44,8 @@ public class FiltroBibliotecaBean implements IBean<FiltroBiblioteca> {
     }
 
     //La view lo utilizza per conoscere tutti i tipi di filtri esistenti.
-    //PROVVISORIO
-    public static List<String> getTuttiTipi(){
+
+    public List<String> getTuttiTipi(){
 
         List<String> tuttiTipi = new ArrayList<>();
 

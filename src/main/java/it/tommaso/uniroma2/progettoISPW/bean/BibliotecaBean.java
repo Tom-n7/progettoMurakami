@@ -5,7 +5,7 @@ import it.tommaso.uniroma2.progettoISPW.model.Biblioteca;
 import java.time.DayOfWeek;
 import java.util.Map;
 
-public class BibliotecaBean implements IBean<Biblioteca>{
+public class BibliotecaBean implements IBean<Biblioteca> {
 
 
     private String id;

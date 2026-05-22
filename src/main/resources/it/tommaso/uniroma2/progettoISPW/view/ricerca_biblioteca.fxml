@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" prefHeight="720.0" prefWidth="640.0"  xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.progettoISPW.view.VistaCercaBiblioteca">
+<fx:root fx:id="root" prefHeight="720.0" prefWidth="640.0" type="StackPane" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.progettoISPW.view.VistaCercaBiblioteca">
    <children>
       <GridPane prefHeight="400.0" prefWidth="600.0">
         <columnConstraints>
@@ -70,4 +70,4 @@
          </children>
       </GridPane>
    </children>
-</StackPane>
+</fx:root>
