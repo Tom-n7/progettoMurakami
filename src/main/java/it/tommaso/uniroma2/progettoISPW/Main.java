@@ -2,15 +2,8 @@ package it.tommaso.uniroma2.progettoISPW;
 
 
 
-import it.tommaso.uniroma2.progettoISPW.init.VistaMenuPrincipale;
-
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 
 /*
 Classe controller del sistema; lancia l'applicazione in modalità GUI o CLI a seconda dell'impostazione
@@ -33,7 +26,9 @@ public class Main{
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
 
-        Application.launch(ControllerGrafico.class,args);
+        ControllerGrafico controllerGrafico = new DesktopController();
+        controllerGrafico.iniziaSessioneGrafica();
+
     }
 }
 
