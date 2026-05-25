@@ -7,10 +7,11 @@ import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBibliot
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class DesktopController extends Application implements ControllerGrafico,
 
 
     private Stage primaryStage;
-    private Pane radice;
+    private Pane radicePrimaryStage;
 
     public DesktopController(){
 
@@ -54,7 +55,6 @@ public class DesktopController extends Application implements ControllerGrafico,
     public void lanciaVistaPopup(String nomeVista){
 
 
-
         FXMLLoader loader = new FXMLLoader(VistaPopup.class.getResource(nomeVista+ ".fxml"));
         try{
             VistaPopup controllerVista =
@@ -75,19 +75,34 @@ public class DesktopController extends Application implements ControllerGrafico,
         }
 
         try {
-            StackPane socketPopup = new StackPane();
-            socketPopup.setBackground(Background.fill(Color.GREY));
-            socketPopup.setOpacity(.40);
-            socketPopup.setId("socket_popup");
 
-            radice.getChildren().add(socketPopup);
+            Pane mascheraPopup = new Pane();
+            mascheraPopup.setId("maschera_popup");
+            mascheraPopup.setBackground(Background.fill(Color.GREY));
+            mascheraPopup.setOpacity(.40);
 
+            radicePrimaryStage.getChildren().add(mascheraPopup);
 
             StackPane radicePopup = loader.load();
-            socketPopup.getChildren().add(radicePopup);
+            Popup pop = (new Popup());
+            pop.getScene().setRoot(radicePopup);
+            pop.show(primaryStage);
+
+
         }catch (IOException e){
             throw new RuntimeException(e);
         }
+
+    }
+
+    @Override
+    public void chiudiFinestraPopup(VistaPopup vistaPopup) {
+
+        Node mascheraPopup = primaryStage.getScene().lookup("maschera_popup");
+        if(mascheraPopup != null){
+            radicePrimaryStage.getChildren()
+        }
+
 
     }
 
@@ -115,12 +130,12 @@ public class DesktopController extends Application implements ControllerGrafico,
         }
 
         try {
-            //ogni vista completa ha come radice uno StackPane
-            radice = loader.load();
+            //ogni vista completa ha come radicePrimaryStage uno StackPane
+            radicePrimaryStage = loader.load();
 
             //ogni vista completa uno stackpane "sopra" i figli che ospitano finestre.
 
-            Scene scene = new Scene(radice);
+            Scene scene = new Scene(radicePrimaryStage);
 
             primaryStage.setScene(scene);
             primaryStage.show();
