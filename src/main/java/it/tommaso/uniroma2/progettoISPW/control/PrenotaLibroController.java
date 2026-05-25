@@ -18,25 +18,26 @@ public class PrenotaLibroController {
 
     public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean) throws RuntimeException {
 
-
-        List<BibliotecaBean> lista = new ArrayList<>();
-
+        //lista di bean biblioteche da inviare allo strato view.
+        List<BibliotecaBean> listaBeanBiblioteche = new ArrayList<>();
+        //lista di biblioteche così come viene generata dal DAO.
+        List<Biblioteca> listaBibliotecheOttenute = new ArrayList<>();
+        //filtro che viene valutato ed eventualmente usato per ottenere una lista di biblioteche filtrata
+        //secondo i criteri scelti.
+        FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
         try {
-            FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
 
-            List<Biblioteca> listaBiblioteche = new BibliotecaDAO().ottieniListaFiltrata(filtro);
-            for(Biblioteca b : listaBiblioteche){
-                lista.add(new BibliotecaBean(b));
+            listaBibliotecheOttenute.addAll(new BibliotecaDAO().ottieniListaFiltrata(filtro));
+            for (Biblioteca b : listaBibliotecheOttenute) {
+                listaBeanBiblioteche.add(new BibliotecaBean(b));
             }
+
         } catch (DAOException | RicercaException e){
             System.out.println(e.getMessage());
             throw new RuntimeException(e);
         }
-        return lista;
-
+        return listaBeanBiblioteche;
     }
-
-
 
 
 }

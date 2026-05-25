@@ -23,7 +23,7 @@ public class FiltroBiblioteca implements IFiltroTestuale<Biblioteca>{
     public FiltroBiblioteca(FiltroBibliotecaBean filtroBibliotecaBean) throws RicercaException {
 
         try{
-            impostaTipo(filtroBibliotecaBean.getTipoSelezionato());
+            this.impostaTipoDaNome(filtroBibliotecaBean.getTipoSelezionato());
             impostaTestoRicerca(filtroBibliotecaBean.getTestoRicerca());
         } catch (CriterioIllegaleException e) {
             throw new RicercaException("Errore criterio nella creazione del filtro",e);
@@ -43,12 +43,17 @@ public class FiltroBiblioteca implements IFiltroTestuale<Biblioteca>{
     }
 
     @Override
-    public void impostaTipo(String nomeTipo) throws CriterioIllegaleException{
+    public void impostaTipoDaNome(String nomeTipo) throws CriterioIllegaleException{
 
         try {
             this.tipo = TipoFiltroBiblioteca.valueOf(nomeTipo);
         } catch (IllegalArgumentException e) {
-            throw new CriterioIllegaleException("Nome tipo filtro per le biblioteche errato!");
+            //se il nome tipo non coincide con uno dei tipi consentiti, o è vuoto, oppure un nome non vialido.
+            if(nomeTipo.isEmpty()){
+                this.tipo = TipoFiltroBiblioteca.NESSUNO;
+            }else {
+                throw new CriterioIllegaleException("Nome tipo filtro per le biblioteche errato!");
+            }
         }
 
     }

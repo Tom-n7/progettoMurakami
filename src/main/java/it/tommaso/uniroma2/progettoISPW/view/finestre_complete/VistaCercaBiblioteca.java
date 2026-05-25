@@ -2,11 +2,16 @@ package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
+import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.model.TipoFiltroBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,16 +52,34 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
     }
 
 
+    //handler tasto ricerca usato dal lettore previo inserimento criterio.
     public void clickSuCerca(ActionEvent actionEvent) {
 
+        String testoInserito = criterioRicercaTextField.getText();
+
+        propertyFiltroBiblioteca.get().setTestoRicerca(testoInserito);
+        //elimino eventuali biblioteche precendentemente caricate.
+        propertyBibliotecheCaricate.get().clear();
+
+        propertyBibliotecheCaricate.get().addAll(
+                (new PrenotaLibroController()).caricaBibliotecheRegistrate(propertyFiltroBiblioteca.get()));
     }
 
     public void clickSuConfermaBiblioteca(ActionEvent actionEvent) {
+
+        controller.lanciaVistaPopup("dettagli_biblioteca");
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {
-
+        controller.lanciaVistaCompleta("menu_principale");
     }
+
+    private final ChangeListener<BibliotecaBean> handlerSelezioneBiblioteca = new ChangeListener<BibliotecaBean>() {
+        @Override
+        public void changed(ObservableValue<? extends BibliotecaBean> observable, BibliotecaBean oldValue, BibliotecaBean newValue) {
+           propertyBibliotecaScelta.setValue((BibliotecaBean) listaBibliotecheVisibile.getSelectionModel().getSelectedItem());
+        }
+    };
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -66,6 +89,10 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
         propertyFiltroBiblioteca = new SimpleObjectProperty<>(new FiltroBibliotecaBean());
         propertyBibliotecaScelta = new SimpleObjectProperty<>();
 
+        //faccio bind della lista delle biblioteche con la ListView.
+        listaBibliotecheVisibile.itemsProperty().bind(propertyBibliotecheCaricate);
+
+        listaBibliotecheVisibile.getSelectionModel().selectedItemProperty().addListener(handlerSelezioneBiblioteca);
 
 
         //costruzione strumento selezione criterio ricerca.
@@ -80,10 +107,14 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
                         propertyFiltroBiblioteca.get().setTipoSelezionato(n);
                     }
             );
-            criteriRicercaHBox.getChildren().add(bottoneCriterio);
+            // Non voglio che il tipo "NESSUNO" sia mostrato come selezionabile.
+            if(!n.equals("NESSUNO")) {
+                criteriRicercaHBox.getChildren().add(bottoneCriterio);
+            }
         }
         //di default la ricerca è per nome.
         propertyFiltroBiblioteca.get().setTipoSelezionato(TipoFiltroBiblioteca.NOME.toString());
         criterioRicercaTextField.setPromptText("Cerca per: " + TipoFiltroBiblioteca.NOME);
+
     }
 }

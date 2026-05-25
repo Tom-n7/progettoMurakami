@@ -4,5 +4,6 @@ public enum TipoFiltroBiblioteca {
 
     NOME,
     CITTA,
-    INDIRIZZO
+    INDIRIZZO,
+    NESSUNO
 }

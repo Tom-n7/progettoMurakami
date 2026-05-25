@@ -7,7 +7,7 @@ public interface IFiltroTestuale <T>{
 
     public void impostaTestoRicerca(String testoRicerca);
 
-    public void impostaTipo(String nomeTipo);
+    public void impostaTipoDaNome(String nomeTipo);
 
     public List<String> ottieniTuttiNomiTipi();
 
