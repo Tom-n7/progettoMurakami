@@ -6,6 +6,7 @@ import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaMenuPrincipa
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -19,6 +20,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static javafx.event.Event.fireEvent;
+
 public class DesktopController extends Application implements ControllerGrafico, OrchestratoreFinestre{
 
     private final String NOME_VISTA_DI_ENTRATA = "menu_principale";
@@ -27,8 +30,13 @@ public class DesktopController extends Application implements ControllerGrafico,
     private final Map<String, Class> NOMI_VISTE_CONTROLLER = new HashMap<>();
 
 
+    //elementi finestra vista completa attiva
     private Stage primaryStage;
     private Pane radicePrimaryStage;
+
+    //popup attivo
+    private Popup stagePopup;
+
 
     public DesktopController(){
 
@@ -84,9 +92,9 @@ public class DesktopController extends Application implements ControllerGrafico,
             radicePrimaryStage.getChildren().add(mascheraPopup);
 
             StackPane radicePopup = loader.load();
-            Popup pop = (new Popup());
-            pop.getScene().setRoot(radicePopup);
-            pop.show(primaryStage);
+            stagePopup = (new Popup());
+            stagePopup.getScene().setRoot(radicePopup);
+            stagePopup.show(primaryStage);
 
 
         }catch (IOException e){
@@ -98,10 +106,9 @@ public class DesktopController extends Application implements ControllerGrafico,
     @Override
     public void chiudiFinestraPopup(VistaPopup vistaPopup) {
 
-        Node mascheraPopup = primaryStage.getScene().lookup("maschera_popup");
-        if(mascheraPopup != null){
-            radicePrimaryStage.getChildren()
-        }
+        stagePopup.hide();
+        radicePrimaryStage.getChildren().remove(radicePrimaryStage.lookup("#maschera_popup"));
+
 
 
     }
