@@ -1,6 +1,7 @@
 package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 
 
+import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
 import javafx.event.ActionEvent;
@@ -19,7 +20,7 @@ public class VistaMenuPrincipale implements VistaCompleta {
     @FXML
     private Button bottoneLibreria;
 
-    public VistaMenuPrincipale(OrchestratoreFinestre controller) {
+    public VistaMenuPrincipale(OrchestratoreFinestre controller, IBean... beans) {
         CONTROLLER = controller;
     }
 

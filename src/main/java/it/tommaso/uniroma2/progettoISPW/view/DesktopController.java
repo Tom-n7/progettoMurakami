@@ -5,6 +5,7 @@ import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCercaBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCompleta;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaMenuPrincipale;
+import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaPrenotazione;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
@@ -44,6 +45,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         NOMI_VISTE_CONTROLLER.put("menu_principale", VistaMenuPrincipale.class);
         NOMI_VISTE_CONTROLLER.put("ricerca_biblioteca", VistaCercaBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_biblioteca", VistaDettagliBiblioteca.class);
+        NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaPrenotazione.class);
 
     }
 
@@ -67,7 +69,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         FXMLLoader loader = new FXMLLoader(VistaPopup.class.getResource(nomeVista+ ".fxml"));
         try{
             VistaPopup controllerVista =
-                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, IBean.class).newInstance(this, args[0]);
+                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, IBean[].class).newInstance(this, args);
             loader.setControllerFactory(c->
             {
                 return controllerVista;
@@ -105,6 +107,11 @@ public class DesktopController extends Application implements ControllerGrafico,
     }
 
     @Override
+    public void ricaricaVista() {
+        primaryStage.show();
+    }
+
+    @Override
     public void chiudiFinestraPopup(VistaPopup vistaPopup) {
 
         stagePopup.hide();
@@ -113,7 +120,7 @@ public class DesktopController extends Application implements ControllerGrafico,
     }
 
 
-    public void lanciaVistaCompleta(String nomeVista){
+    public void lanciaVistaCompleta(String nomeVista, IBean... beans){
 
         //Il loader costruisce ricostruisce la posizione della risorsa a partire dal suo nome e dalla posizione del
         //pacchetto dell'inerfaccia, tutte le finestre che chiamano questo metodo si trovano nello stesso pacchetto
@@ -121,7 +128,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         FXMLLoader loader = new FXMLLoader(VistaCompleta.class.getResource(nomeVista + ".fxml"));
         try {
             VistaCompleta controllerVista =
-                    (VistaCompleta) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class).newInstance(this);
+                    (VistaCompleta) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, IBean[].class).newInstance(this, beans);
             loader.setControllerFactory(c->{
                 return controllerVista;
             });

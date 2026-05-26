@@ -46,7 +46,7 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
     private SimpleObjectProperty<ObservableList<BibliotecaBean>> propertyBibliotecheCaricate;
     private SimpleObjectProperty<BibliotecaBean> propertyBibliotecaScelta;
 
-    public VistaCercaBiblioteca(OrchestratoreFinestre controller) {
+    public VistaCercaBiblioteca(OrchestratoreFinestre controller, IBean... beans) {
         this.controller = controller;
     }
 
@@ -66,7 +66,7 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
 
     public void clickSuConfermaBiblioteca(ActionEvent actionEvent) {
 
-        controller.lanciaVistaPopup("dettagli_biblioteca", propertyBibliotecaScelta.get());
+        controller.lanciaVistaCompleta("dettagli_prenotazione", propertyBibliotecaScelta.get());
 
     }
 

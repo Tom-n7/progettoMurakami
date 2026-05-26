@@ -33,12 +33,12 @@ public class VistaDettagliBiblioteca implements VistaPopup, Initializable {
     @FXML
     private Label orarioBiblioteca;
 
-    public VistaDettagliBiblioteca (OrchestratoreFinestre controller, IBean biblioteca){
+    public VistaDettagliBiblioteca (OrchestratoreFinestre controller, IBean... biblioteca){
         this.controller = controller;
         this.popertyBiblioteca = new SimpleObjectProperty<>();
 
 
-        popertyBiblioteca.set((BibliotecaBean) biblioteca);
+        popertyBiblioteca.set((BibliotecaBean) biblioteca[0]);
 
     }
 

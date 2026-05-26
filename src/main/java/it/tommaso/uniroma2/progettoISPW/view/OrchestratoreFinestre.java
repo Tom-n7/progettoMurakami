@@ -7,9 +7,10 @@ import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import java.util.List;
 
 public interface OrchestratoreFinestre {
-    public void lanciaVistaCompleta(String nomeVista);
+    public void lanciaVistaCompleta(String nomeVista, IBean... beans);
     public void lanciaVistaPopup(String nomeVista, IBean... beans);
 
+    public void ricaricaVista();
 
-    void chiudiFinestraPopup(VistaPopup vistaPopup);
+    public void chiudiFinestraPopup(VistaPopup vistaPopup);
 }
