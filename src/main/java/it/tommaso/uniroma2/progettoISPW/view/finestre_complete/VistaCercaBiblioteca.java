@@ -2,11 +2,12 @@ package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
+import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.model.TipoFiltroBiblioteca;
-import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
 
+import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -14,13 +15,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -40,11 +39,11 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
     @FXML
     private Button BottoneEsci;
     @FXML
-    private ListView listaBibliotecheVisibile;
+    private ListView<BibliotecaBean> listaBibliotecheVisibile;
 
     private final OrchestratoreFinestre controller;
     private SimpleObjectProperty<FiltroBibliotecaBean> propertyFiltroBiblioteca;
-    private SimpleObjectProperty<List<BibliotecaBean>> propertyBibliotecheCaricate;
+    private SimpleObjectProperty<ObservableList<BibliotecaBean>> propertyBibliotecheCaricate;
     private SimpleObjectProperty<BibliotecaBean> propertyBibliotecaScelta;
 
     public VistaCercaBiblioteca(OrchestratoreFinestre controller) {
@@ -67,7 +66,8 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
 
     public void clickSuConfermaBiblioteca(ActionEvent actionEvent) {
 
-        controller.lanciaVistaPopup("dettagli_biblioteca");
+        controller.lanciaVistaPopup("dettagli_biblioteca", propertyBibliotecaScelta.get());
+
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {
@@ -77,7 +77,7 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
     private final ChangeListener<BibliotecaBean> handlerSelezioneBiblioteca = new ChangeListener<BibliotecaBean>() {
         @Override
         public void changed(ObservableValue<? extends BibliotecaBean> observable, BibliotecaBean oldValue, BibliotecaBean newValue) {
-           propertyBibliotecaScelta.setValue((BibliotecaBean) listaBibliotecheVisibile.getSelectionModel().getSelectedItem());
+           propertyBibliotecaScelta.setValue(listaBibliotecheVisibile.getSelectionModel().getSelectedItem());
         }
     };
 

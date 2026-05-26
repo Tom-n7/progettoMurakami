@@ -1,26 +1,27 @@
 package it.tommaso.uniroma2.progettoISPW.view;
 
+import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
+import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCercaBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCompleta;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaMenuPrincipale;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
-import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import static javafx.event.Event.fireEvent;
 
 public class DesktopController extends Application implements ControllerGrafico, OrchestratoreFinestre{
 
@@ -60,13 +61,13 @@ public class DesktopController extends Application implements ControllerGrafico,
         launch(args);
     }
 
-    public void lanciaVistaPopup(String nomeVista){
+    public void lanciaVistaPopup(String nomeVista, IBean... args){
 
 
         FXMLLoader loader = new FXMLLoader(VistaPopup.class.getResource(nomeVista+ ".fxml"));
         try{
             VistaPopup controllerVista =
-                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class).newInstance(this);
+                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, IBean.class).newInstance(this, args[0]);
             loader.setControllerFactory(c->
             {
                 return controllerVista;
@@ -109,8 +110,6 @@ public class DesktopController extends Application implements ControllerGrafico,
         stagePopup.hide();
         radicePrimaryStage.getChildren().remove(radicePrimaryStage.lookup("#maschera_popup"));
 
-
-
     }
 
 
@@ -151,4 +150,5 @@ public class DesktopController extends Application implements ControllerGrafico,
         }
 
     }
+
 }

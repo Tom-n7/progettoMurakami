@@ -38,6 +38,18 @@ public class Indirizzo {
 
     @Override
     public String toString() {
-        return via + ", " + citta + ", " + CAP;
+        String indirizzoString = "";
+
+        if(!via.isEmpty()){
+            indirizzoString = indirizzoString + via + ", ";
+        }
+        if(!citta.isEmpty()){
+            indirizzoString = indirizzoString + citta + ", ";
+        }
+        if(!CAP.isEmpty()){
+            indirizzoString = indirizzoString + CAP;
+        }
+
+        return indirizzoString;
     }
 }
