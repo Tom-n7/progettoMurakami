@@ -3,6 +3,7 @@ package it.tommaso.uniroma2.progettoISPW.control;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
+import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
@@ -32,6 +33,7 @@ public class PrenotaLibroController {
                 listaBeanBiblioteche.add(new BibliotecaBean(b));
             }
 
+
         } catch (DAOException | RicercaException e){
             System.out.println(e.getMessage());
             throw new RuntimeException(e);
@@ -40,5 +42,68 @@ public class PrenotaLibroController {
     }
 
 
+    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) {
+
+        RecuperoBibliotecaThread t1 = new RecuperoBibliotecaThread(bibliotecaSelezionata);
+        RecuperoLettoreThread t2 = new RecuperoLettoreThread();
+
+        Biblioteca biblioteca;
+        Prenotazione bozzaPrenotazione;
+
+        t1.start();
+        t2.start();
+
+        try{
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        biblioteca = t1.getBibliotecaOttenuta();
+
+        bozzaPrenotazione = new Prenotazione();
+
+
+
+
+        return new PrenotazioneBean();
+    }
+
+
+
+
+
 }
 
+
+class RecuperoLettoreThread extends Thread{
+    String df = "Questo è il thread che recupera info lettore!";
+    public void run(){
+        System.out.println(df);
+    }
+
+}
+
+class RecuperoBibliotecaThread extends Thread{
+
+    BibliotecaBean bibliotecaRichiesta;
+    Biblioteca bibliotecaOttenuta;
+
+    RecuperoBibliotecaThread(BibliotecaBean bibliotecaBean){
+
+        this.bibliotecaRichiesta = bibliotecaBean;
+
+    }
+
+
+    public void run(){
+
+        BibliotecaDAO bdao = new BibliotecaDAO();
+        bibliotecaOttenuta = bdao.ottieni(bibliotecaRichiesta.getId());
+
+    }
+
+    public Biblioteca getBibliotecaOttenuta(){
+        return this.bibliotecaOttenuta;
+    }
+}

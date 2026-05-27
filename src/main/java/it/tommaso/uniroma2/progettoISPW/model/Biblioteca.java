@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Biblioteca {
 
-    private String id;
+    private int id;
     private String nome;
     private Indirizzo indirizzo;
     private String collegamentoAnteprima;
@@ -14,7 +14,7 @@ public class Biblioteca {
     private EnumMap<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
 
 
-    public Biblioteca(String id, String nome, Indirizzo indirizzo, String collegamentoAnteprima, List<RegolaPrenotazione> regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public Biblioteca(int id, String nome, Indirizzo indirizzo, String collegamentoAnteprima, List<RegolaPrenotazione> regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
@@ -23,11 +23,11 @@ public class Biblioteca {
         this.orarioSettimanale = orarioSettimanale;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

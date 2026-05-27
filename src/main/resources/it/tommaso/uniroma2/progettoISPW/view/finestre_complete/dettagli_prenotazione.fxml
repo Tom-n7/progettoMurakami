@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaPrenotazione">
    <children>
@@ -22,7 +23,34 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="RIepilogo Prenotazione" />
+            <GridPane>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="infoBibliotecaVBox" alignment="TOP_CENTER">
+                     <children>
+                        <Label fx:id="labelNomeBiblioteca" alignment="TOP_CENTER" text="Nome:" />
+                        <Label fx:id="labelIndirizzoBiblioteca" text="Indirizzo" />
+                        <Label fx:id="labelMaxLibriBiblioteca" text="Numero max libri biblioteca" />
+                        <Label fx:id="labelOrarioSettimanaleBiblioteca" text="Orario settimanale" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="infoLettoreVBox" alignment="TOP_CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="labelNomeLettore" text="Nome lettore" />
+                        <Label fx:id="labelEmailLettore" text="Email Lettore" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
             <HBox spacing="10.0" style="-fx-background-color: LIGHTGREY;" GridPane.rowIndex="1">
                <children>
                   <StackPane fx:id="schedaAggiuntaLibro" prefHeight="272.0" prefWidth="159.0" style="-fx-background-color: GREY;">
@@ -33,7 +61,7 @@
                         <Button fx:id="bottoneAggiungiLibro" mnemonicParsing="false" onAction="#clickSuAggiungi" text="Aggiungi" />
                      </children>
                   </StackPane>
-                  <ListView fx:id="listaLibri" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="280.0" prefWidth="751.0">
+                  <ListView fx:id="listaLibri" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="280.0" prefWidth="751.0" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>

@@ -8,7 +8,7 @@ import java.util.Map;
 public class BibliotecaBean implements IBean<Biblioteca> {
 
 
-    private String id;
+    private int id;
     private String nome;
     private String indirizzo;
     private String collegamentoAnteprima;
@@ -32,11 +32,11 @@ public class BibliotecaBean implements IBean<Biblioteca> {
 
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
