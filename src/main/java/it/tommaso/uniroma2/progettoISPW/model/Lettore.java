@@ -19,7 +19,7 @@ public class Lettore {
 
     public Lettore(LettoreBean lettoreBean){
 
-        this.nome =
+
 
 
     }

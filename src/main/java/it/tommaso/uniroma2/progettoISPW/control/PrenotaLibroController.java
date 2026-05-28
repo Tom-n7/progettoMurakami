@@ -10,6 +10,7 @@ import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,16 +62,22 @@ public class PrenotaLibroController {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        biblioteca = t1.getBibliotecaOttenuta();
-        lettore = t2.getLettore();
-
 
         bozzaPrenotazione = new Prenotazione();
+        bozzaPrenotazione.setBiblioteca(biblioteca = t1.getBibliotecaOttenuta());
+        bozzaPrenotazione.setLettore(lettore = t2.getLettore());
+        bozzaPrenotazione.setGiornoPrenotazione(LocalTime.now());
+        bozzaPrenotazione.setStato(FaseDiPrenotazione.BOZZA);
 
 
 
 
-        return new PrenotazioneBean();
+
+
+
+
+
+        return  null;
     }
 
 

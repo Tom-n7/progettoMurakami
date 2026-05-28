@@ -3,6 +3,7 @@ package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
+import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.model.TipoFiltroBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
@@ -41,13 +42,15 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
     @FXML
     private ListView<BibliotecaBean> listaBibliotecheVisibile;
 
-    private final OrchestratoreFinestre controller;
+    private final OrchestratoreFinestre controllerGrafico;
+    private final PrenotaLibroController controllerApplicativo;
     private SimpleObjectProperty<FiltroBibliotecaBean> propertyFiltroBiblioteca;
     private SimpleObjectProperty<ObservableList<BibliotecaBean>> propertyBibliotecheCaricate;
     private SimpleObjectProperty<BibliotecaBean> propertyBibliotecaScelta;
 
     public VistaCercaBiblioteca(OrchestratoreFinestre controller, IBean... beans) {
-        this.controller = controller;
+        this.controllerGrafico = controller;
+        this.controllerApplicativo = new PrenotaLibroController();
     }
 
 
@@ -61,17 +64,22 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
         propertyBibliotecheCaricate.get().clear();
 
         propertyBibliotecheCaricate.get().addAll(
-                (new PrenotaLibroController()).caricaBibliotecheRegistrate(propertyFiltroBiblioteca.get()));
+                controllerApplicativo.caricaBibliotecheRegistrate(propertyFiltroBiblioteca.get()));
     }
 
     public void clickSuConfermaBiblioteca(ActionEvent actionEvent) {
 
-        controller.lanciaVistaCompleta("dettagli_prenotazione", propertyBibliotecaScelta.get());
+        /*
+        A seguito della scelta del lettore, il sistema crea una bozza della prenotazione, che restituisce in
+        forma di bean alla vista, la vista quindi fornisce il bean della nuova prenotazione.
+         */
+        PrenotazioneBean bozzaPrenotazione = controllerApplicativo.bozzaPrenotazione(propertyBibliotecaScelta.get());
+        this.controllerGrafico.lanciaVistaCompleta("dettagli_prenotazione", bozzaPrenotazione);
 
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {
-        controller.lanciaVistaCompleta("menu_principale");
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
     }
 
     private final ChangeListener<BibliotecaBean> handlerSelezioneBiblioteca = new ChangeListener<BibliotecaBean>() {

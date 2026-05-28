@@ -31,8 +31,8 @@ public class LettoreDAO implements IRicercabiliDAO<Lettore> {
     }
 
     @Override
-    public void salva(Lettore oggetto) throws DAOException {
-
+    public int salva(Lettore oggetto) throws DAOException {
+        return 0;
     }
 
     @Override

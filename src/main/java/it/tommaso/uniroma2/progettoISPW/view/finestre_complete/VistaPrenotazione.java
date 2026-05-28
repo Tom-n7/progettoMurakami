@@ -76,6 +76,9 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
         listaLibriPrenotazioneProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
         bozzaPrenotazioneProperty = new SimpleObjectProperty<>();
 
+
+
+        //per funzionare, la vista ha bisogno inn
         bozzaPrenotazioneProperty.setValue((new PrenotaLibroController()).bozzaPrenotazione(bibliotecaSelezionata));
 
 

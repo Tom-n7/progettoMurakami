@@ -66,8 +66,8 @@ public class BibliotecaDAO implements IRicercabiliDAO<Biblioteca> {
     }
 
     @Override
-    public void salva(Biblioteca oggetto) throws DAOException {
-
+    public int salva(Biblioteca oggetto) throws DAOException {
+        return 0;
     }
 
     @Override

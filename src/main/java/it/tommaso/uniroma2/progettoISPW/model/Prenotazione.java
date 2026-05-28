@@ -7,27 +7,63 @@ import java.util.List;
 
 public class Prenotazione {
 
-    private final int id;
-    private final Lettore lettore;
-    private final Biblioteca biblioteca;
+    private  int id;
+    private  Lettore lettore;
+    private  Biblioteca biblioteca;
 
     private LocalTime giornoPrenotazione;
     private FaseDiPrenotazione stato;
     private List<Libro> libri;
 
-    public Prenotazione(int id, Lettore lettore, Biblioteca biblioteca) {
+    public Prenotazione() {
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public Lettore getLettore() {
+        return lettore;
+    }
+
+    public void setLettore(Lettore lettore) {
         this.lettore = lettore;
+    }
+
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(Biblioteca biblioteca) {
         this.biblioteca = biblioteca;
     }
 
-    public Prenotazione(PrenotazioneBean prenotazioneBean){
+    public LocalTime getGiornoPrenotazione() {
+        return giornoPrenotazione;
+    }
 
-        this.id = prenotazioneBean.getId();
-        this.lettore = new Lettore(prenotazioneBean.getLettore());
+    public void setGiornoPrenotazione(LocalTime giornoPrenotazione) {
+        this.giornoPrenotazione = giornoPrenotazione;
+    }
 
+    public List<Libro> getLibri() {
+        return libri;
+    }
 
+    public void setLibri(List<Libro> libri) {
+        this.libri = libri;
+    }
 
+    public FaseDiPrenotazione getStato() {
+        return stato;
+    }
 
+    public void setStato(FaseDiPrenotazione stato) {
+        this.stato = stato;
     }
 }
