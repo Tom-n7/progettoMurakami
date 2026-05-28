@@ -5,6 +5,7 @@ import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
@@ -48,6 +49,7 @@ public class PrenotaLibroController {
         RecuperoLettoreThread t2 = new RecuperoLettoreThread();
 
         Biblioteca biblioteca;
+        Lettore lettore;
         Prenotazione bozzaPrenotazione;
 
         t1.start();
@@ -60,6 +62,8 @@ public class PrenotaLibroController {
             throw new RuntimeException(e);
         }
         biblioteca = t1.getBibliotecaOttenuta();
+        lettore = t2.getLettore();
+
 
         bozzaPrenotazione = new Prenotazione();
 
@@ -77,11 +81,18 @@ public class PrenotaLibroController {
 
 
 class RecuperoLettoreThread extends Thread{
-    String df = "Questo è il thread che recupera info lettore!";
+
+    Lettore lettore;
+
     public void run(){
-        System.out.println(df);
+
+        //provvisorio, deve usare interfaccia.
+        this.lettore = (new LettoreDAO()).ottieniLettore();
     }
 
+    public Lettore getLettore() {
+        return lettore;
+    }
 }
 
 class RecuperoBibliotecaThread extends Thread{
@@ -98,6 +109,7 @@ class RecuperoBibliotecaThread extends Thread{
 
     public void run(){
 
+        //provvisorio, deve usare interfaccia
         BibliotecaDAO bdao = new BibliotecaDAO();
         bibliotecaOttenuta = bdao.ottieni(bibliotecaRichiesta.getId());
 

@@ -1,8 +1,8 @@
-package it.tommaso.uniroma2.progettoISPW.bean;
+package it.tommaso.uniroma2.progettoISPW.model;
 
 import java.util.Set;
 
-public class LibroBean {
+public class Libro {
 
     private int id;
     private String titolo;
@@ -13,13 +13,11 @@ public class LibroBean {
     private String edizione;
     private String codiceISNB;
 
-    public LibroBean(){}
-
-    public LibroBean(int id, String titolo, Set<String> autori, String lingua, String editore, String urlAnteprima, String edizione, String codiceISNB) {
+    public Libro(int id, String lingua, Set<String> autori, String titolo, String editore, String urlAnteprima, String edizione, String codiceISNB) {
         this.id = id;
-        this.titolo = titolo;
-        this.autori = autori;
         this.lingua = lingua;
+        this.autori = autori;
+        this.titolo = titolo;
         this.editore = editore;
         this.urlAnteprima = urlAnteprima;
         this.edizione = edizione;

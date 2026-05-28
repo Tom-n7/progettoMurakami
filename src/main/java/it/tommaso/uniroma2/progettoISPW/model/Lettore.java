@@ -1,5 +1,7 @@
 package it.tommaso.uniroma2.progettoISPW.model;
 
+import it.tommaso.uniroma2.progettoISPW.bean.LettoreBean;
+
 public class Lettore {
 
     private String nome;
@@ -13,6 +15,13 @@ public class Lettore {
         this.cognome = cognome;
         this.indirizzoEmail = indirizzoEmail;
         this.username = username;
+    }
+
+    public Lettore(LettoreBean lettoreBean){
+
+        this.nome =
+
+
     }
 
     public String getNome() {

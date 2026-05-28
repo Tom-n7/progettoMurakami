@@ -45,9 +45,6 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     public Label labelNomeLettore;
     public Label labelEmailLettore;
 
-    private double altezzaScheda;
-    private double larghezzaScheda;
-
     @FXML
     private HBox listaLibriPrenotazione;
     @FXML
