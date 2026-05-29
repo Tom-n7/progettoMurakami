@@ -1,5 +1,7 @@
 package it.tommaso.uniroma2.progettoISPW.bean;
 
+import it.tommaso.uniroma2.progettoISPW.model.Libro;
+
 import java.util.Set;
 
 public class LibroBean {
@@ -24,6 +26,19 @@ public class LibroBean {
         this.urlAnteprima = urlAnteprima;
         this.edizione = edizione;
         this.codiceISNB = codiceISNB;
+    }
+
+    public LibroBean(Libro libro){
+
+        this.id = libro.getId();
+        this.titolo = libro.getTitolo();
+        this.autori = libro.getAutori();
+        this.lingua = libro.getLingua();
+        this.editore = libro.getEditore();
+        this.urlAnteprima = libro.getUrlAnteprima();
+        this.edizione = libro.getEdizione();
+        this.codiceISNB = libro.getCodiceISNB();
+
     }
 
     public int getId() {

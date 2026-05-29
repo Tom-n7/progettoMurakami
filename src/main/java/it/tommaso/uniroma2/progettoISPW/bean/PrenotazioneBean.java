@@ -1,8 +1,10 @@
 package it.tommaso.uniroma2.progettoISPW.bean;
 
 import it.tommaso.uniroma2.progettoISPW.model.Biblioteca;
+import it.tommaso.uniroma2.progettoISPW.model.Libro;
 import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PrenotazioneBean implements IBean<Prenotazione>{
@@ -21,6 +23,18 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
     }
 
     public  PrenotazioneBean(Prenotazione prenotazione){
+
+        BibliotecaBean bibliotecaBean = new BibliotecaBean(prenotazione.getBiblioteca());
+        LettoreBean lettoreBean = new LettoreBean(prenotazione.getLettore());
+        List<LibroBean> libriBean = new ArrayList<>();
+        for(Libro l : prenotazione.getLibri()){
+            libriBean.add(new LibroBean(l));
+        }
+
+        this.biblioteca = bibliotecaBean;
+        this.lettore = lettoreBean;
+        this.id = prenotazione.getId();
+        this.libri = libriBean;
 
     }
 

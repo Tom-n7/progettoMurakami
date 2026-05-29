@@ -13,7 +13,7 @@ public class LettoreDAO implements IRicercabiliDAO<Lettore> {
 
 
         //provvisorio
-        return new Lettore("Tommaso", "Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
+        return new Lettore("Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
 
 
 

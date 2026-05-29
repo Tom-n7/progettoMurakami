@@ -5,23 +5,18 @@ import it.tommaso.uniroma2.progettoISPW.bean.LettoreBean;
 public class Lettore {
 
     private String nome;
-    private String cognome;
+    private int id;
     private String indirizzoEmail;
     private String username;
 
 
-    public Lettore(String nome, String cognome, String indirizzoEmail, String username) {
+    public Lettore(String nome, String indirizzoEmail, String username) {
         this.nome = nome;
-        this.cognome = cognome;
         this.indirizzoEmail = indirizzoEmail;
         this.username = username;
     }
 
-    public Lettore(LettoreBean lettoreBean){
-
-
-
-
+    public Lettore(){
     }
 
     public String getNome() {
@@ -32,12 +27,12 @@ public class Lettore {
         this.nome = nome;
     }
 
-    public String getCognome() {
-        return cognome;
+    public int getId() {
+        return id;
     }
 
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getIndirizzoEmail() {

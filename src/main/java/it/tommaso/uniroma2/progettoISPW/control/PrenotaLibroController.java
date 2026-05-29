@@ -5,7 +5,9 @@ import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
@@ -52,6 +54,7 @@ public class PrenotaLibroController {
         Biblioteca biblioteca;
         Lettore lettore;
         Prenotazione bozzaPrenotazione;
+        IRicercabiliDAO<Prenotazione> pdao = new PrenotazioneDAO();
 
         t1.start();
         t2.start();
@@ -68,6 +71,10 @@ public class PrenotaLibroController {
         bozzaPrenotazione.setLettore(lettore = t2.getLettore());
         bozzaPrenotazione.setGiornoPrenotazione(LocalTime.now());
         bozzaPrenotazione.setStato(FaseDiPrenotazione.BOZZA);
+        /*
+        Quando salvo la prenotazione, viene restituito l'id univoco valido che assegno all'istanza.
+         */
+        bozzaPrenotazione.setId(pdao.salva(bozzaPrenotazione));
 
 
 
@@ -77,7 +84,8 @@ public class PrenotaLibroController {
 
 
 
-        return  null;
+
+        return  new PrenotazioneBean(bozzaPrenotazione);
     }
 
 
