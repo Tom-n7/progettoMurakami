@@ -70,7 +70,7 @@ public class PrenotaLibroController {
         bozzaPrenotazione.setBiblioteca(biblioteca = t1.getBibliotecaOttenuta());
         bozzaPrenotazione.setLettore(lettore = t2.getLettore());
         bozzaPrenotazione.setGiornoPrenotazione(LocalTime.now());
-        bozzaPrenotazione.setStato(FaseDiPrenotazione.BOZZA);
+        bozzaPrenotazione.setStatoPrenotazione(FaseDiPrenotazione.BOZZA);
         /*
         Quando salvo la prenotazione, viene restituito l'id univoco valido che assegno all'istanza.
          */

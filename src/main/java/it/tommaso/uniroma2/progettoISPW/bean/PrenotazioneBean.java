@@ -10,32 +10,51 @@ import java.util.List;
 public class PrenotazioneBean implements IBean<Prenotazione>{
 
 
+    private String faseDiPrenotazione;
     private BibliotecaBean biblioteca;
     private LettoreBean lettore;
     private List<LibroBean> libri;
     private int id;
 
-    public PrenotazioneBean(BibliotecaBean biblioteca, LettoreBean lettore, int id, List<LibroBean> libri) {
+    public PrenotazioneBean(BibliotecaBean biblioteca, LettoreBean lettore, int id, List<LibroBean> libri, String faseDiPrenotazione) {
         this.biblioteca = biblioteca;
         this.lettore = lettore;
         this.id = id;
         this.libri = libri;
+        this.faseDiPrenotazione = faseDiPrenotazione;
     }
+
+
+
+
+
+
 
     public  PrenotazioneBean(Prenotazione prenotazione){
 
         BibliotecaBean bibliotecaBean = new BibliotecaBean(prenotazione.getBiblioteca());
         LettoreBean lettoreBean = new LettoreBean(prenotazione.getLettore());
         List<LibroBean> libriBean = new ArrayList<>();
-        for(Libro l : prenotazione.getLibri()){
-            libriBean.add(new LibroBean(l));
+        if(!prenotazione.isBozza()) {
+            for (Libro l : prenotazione.getLibri()) {
+                libriBean.add(new LibroBean(l));
+            }
         }
 
+        this.faseDiPrenotazione = prenotazione.getStatoPrenotazione().toString();
         this.biblioteca = bibliotecaBean;
         this.lettore = lettoreBean;
         this.id = prenotazione.getId();
         this.libri = libriBean;
 
+    }
+
+    public String getFaseDiPrenotazione() {
+        return faseDiPrenotazione;
+    }
+
+    public void setFaseDiPrenotazione(String faseDiPrenotazione) {
+        this.faseDiPrenotazione = faseDiPrenotazione;
     }
 
     public BibliotecaBean getBiblioteca() {

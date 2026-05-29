@@ -1,7 +1,5 @@
 package it.tommaso.uniroma2.progettoISPW.model;
 
-import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
-
 import java.time.LocalTime;
 import java.util.List;
 
@@ -22,6 +20,7 @@ public class Prenotazione {
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
@@ -59,11 +58,18 @@ public class Prenotazione {
         this.libri = libri;
     }
 
-    public FaseDiPrenotazione getStato() {
+    public FaseDiPrenotazione getStatoPrenotazione() {
         return stato;
     }
 
-    public void setStato(FaseDiPrenotazione stato) {
+    public void setStatoPrenotazione(FaseDiPrenotazione stato) {
         this.stato = stato;
+    }
+
+    public boolean isBozza(){
+        if(stato == FaseDiPrenotazione.BOZZA){
+            return true;
+        }
+        return false;
     }
 }

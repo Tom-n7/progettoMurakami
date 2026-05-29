@@ -2,9 +2,6 @@ package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.*;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
-import it.tommaso.uniroma2.progettoISPW.model.Lettore;
-import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
-import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -15,24 +12,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class VistaPrenotazione implements VistaCompleta, Initializable {
 
-    private final OrchestratoreFinestre controller;
-    private final BibliotecaBean bibliotecaSelezionata;
+    private final OrchestratoreFinestre controllerGrafico;
+    private final PrenotaLibroController controllerApplicativo;
 
-
-    private final SimpleObjectProperty<BibliotecaBean> bibliotecaSceltaProperty;
-    private final SimpleObjectProperty<LettoreBean> lettoreProperty;
     private final SimpleObjectProperty<ObservableList<LibroBean>> listaLibriPrenotazioneProperty;
     private SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
 
@@ -56,30 +47,28 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     @FXML
     private Button bottoneEsci;
 
-    public VistaPrenotazione(OrchestratoreFinestre controller, IBean... beans)throws IllegalArgumentException{
+    public VistaPrenotazione(OrchestratoreFinestre controller, IBean... beans)throws IllegalArgumentException {
 
         //🥸
-        this.controller = controller;
-
+        this.controllerGrafico = controller;
+        controllerApplicativo = new PrenotaLibroController();
         /*
         Tutte le viste hanno la responsabilità di controllare che i dati necessari alla loro creazione siano forniti
         nel formato corretto.
          */
+        PrenotazioneBean prenotazione;
         try {
-            this.bibliotecaSelezionata = (BibliotecaBean) beans[0];
-        }catch (ClassCastException e){
-            throw new IllegalArgumentException("La vista necessita di un'istanza di BibliotecaBean");
+            prenotazione = (PrenotazioneBean) beans[0];
+        } catch (ClassCastException e) {
+            String nomeClasseSbagliata = beans[0].getClass().toString();
+            throw new IllegalArgumentException("La vista necessita di un'istanza di BibliotecaBean, invece viene fornita classe " + nomeClasseSbagliata);
         }
 
-        lettoreProperty = new SimpleObjectProperty<>();
-        bibliotecaSceltaProperty = new SimpleObjectProperty<>();
-        listaLibriPrenotazioneProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
         bozzaPrenotazioneProperty = new SimpleObjectProperty<>();
+        bozzaPrenotazioneProperty.setValue(prenotazione);
 
+        listaLibriPrenotazioneProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
 
-
-        //per funzionare, la vista ha bisogno inn
-        bozzaPrenotazioneProperty.setValue((new PrenotaLibroController()).bozzaPrenotazione(bibliotecaSelezionata));
 
 
 
@@ -96,7 +85,7 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
     public void clickSuEsci(ActionEvent actionEvent) {
 
-        controller.lanciaVistaCompleta("ricerca_biblioteca");
+        controllerGrafico.lanciaVistaCompleta("ricerca_biblioteca");
 
     }
 
@@ -104,6 +93,10 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         listaLibri.itemsProperty().bind(listaLibriPrenotazioneProperty);
+
+        labelEmailLettore.setText(bozzaPrenotazioneProperty.get().getLettore().getEmail());
+
+
 
     }
 }
