@@ -87,4 +87,9 @@ public class BibliotecaDAO implements IRicercabiliDAO<Biblioteca> {
         }
         return null;
     }
+
+    @Override
+    public void elimina(int id) throws DAOException {
+
+    }
 }

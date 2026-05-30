@@ -16,6 +16,7 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
     private List<LibroBean> libri;
     private int id;
 
+
     public PrenotazioneBean(BibliotecaBean biblioteca, LettoreBean lettore, int id, List<LibroBean> libri, String faseDiPrenotazione) {
         this.biblioteca = biblioteca;
         this.lettore = lettore;

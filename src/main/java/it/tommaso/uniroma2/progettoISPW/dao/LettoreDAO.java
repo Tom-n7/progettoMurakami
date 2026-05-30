@@ -44,4 +44,9 @@ public class LettoreDAO implements IRicercabiliDAO<Lettore> {
     public Lettore ottieni(int id) throws DAOException {
         return null;
     }
+
+    @Override
+    public void elimina(int id) throws DAOException {
+
+    }
 }

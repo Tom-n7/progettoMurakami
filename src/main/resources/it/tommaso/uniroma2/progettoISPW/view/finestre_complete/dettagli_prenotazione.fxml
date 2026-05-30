@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaPrenotazione">
    <children>
@@ -37,6 +38,11 @@
                <children>
                   <VBox fx:id="infoBibliotecaVBox" alignment="TOP_CENTER">
                      <children>
+                        <Label text="Dettagli Biblioteca">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
                         <Label fx:id="labelNomeBiblioteca" alignment="TOP_CENTER" text="Nome:" />
                         <Label fx:id="labelIndirizzoBiblioteca" text="Indirizzo" />
                         <Label fx:id="labelMaxLibriBiblioteca" text="Numero max libri biblioteca" />
@@ -45,6 +51,11 @@
                   </VBox>
                   <VBox fx:id="infoLettoreVBox" alignment="TOP_CENTER" GridPane.columnIndex="1">
                      <children>
+                        <Label text="Il mio profilo">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
                         <Label fx:id="labelNomeLettore" text="Nome lettore" />
                         <Label fx:id="labelEmailLettore" text="Email Lettore" />
                      </children>

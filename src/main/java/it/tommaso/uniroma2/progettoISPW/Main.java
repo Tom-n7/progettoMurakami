@@ -2,6 +2,8 @@ package it.tommaso.uniroma2.progettoISPW;
 
 
 
+import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
+import it.tommaso.uniroma2.progettoISPW.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
 import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 
@@ -25,6 +27,10 @@ public class Main{
         System.out.println("Scegli impostazione persistenza");
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
+        DAOFactory.setTipoPersistenza(TipoPersistenzaSistema.DATABASE);
+
+
+
 
         ControllerGrafico controllerGrafico = new DesktopController();
         controllerGrafico.iniziaSessioneGrafica();

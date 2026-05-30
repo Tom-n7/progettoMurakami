@@ -28,11 +28,15 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     private SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
 
     public ListView<LibroBean> listaLibri;
+
+    //dettagli biblioteca
     public VBox infoBibliotecaVBox;
     public Label labelNomeBiblioteca;
     public Label labelIndirizzoBiblioteca;
     public Label labelMaxLibriBiblioteca;
     public Label labelOrarioSettimanaleBiblioteca;
+
+    //avatar
     public Label labelNomeLettore;
     public Label labelEmailLettore;
 
@@ -69,9 +73,6 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
         listaLibriPrenotazioneProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
 
-
-
-
     }
 
 
@@ -85,7 +86,8 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
     public void clickSuEsci(ActionEvent actionEvent) {
 
-        controllerGrafico.lanciaVistaCompleta("ricerca_biblioteca");
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
+        controllerApplicativo.eliminaPrenotazione(bozzaPrenotazioneProperty.get());
 
     }
 
@@ -94,9 +96,14 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
         listaLibri.itemsProperty().bind(listaLibriPrenotazioneProperty);
 
-        labelEmailLettore.setText(bozzaPrenotazioneProperty.get().getLettore().getEmail());
+        //inizializzazione avatar
+        labelEmailLettore.setText("Email: " + bozzaPrenotazioneProperty.get().getLettore().getEmail());
+        labelNomeLettore.setText(("Nome: "+ bozzaPrenotazioneProperty.get().getLettore().getNome()));
 
-
+        //inizializzazione dettagli biblioteca
+        labelNomeBiblioteca.setText("Nome: " + bozzaPrenotazioneProperty.get().getBiblioteca().getNome());
+        labelIndirizzoBiblioteca.setText("Indirizzo: " + bozzaPrenotazioneProperty.get().getBiblioteca().getIndirizzo());
+        labelMaxLibriBiblioteca.setText("Max libri prenotazione: " + bozzaPrenotazioneProperty.get().getBiblioteca().getRegolePrenotazione());
 
     }
 }

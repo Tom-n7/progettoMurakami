@@ -12,4 +12,5 @@ public interface IRicercabiliDAO<T>{
     public int salva(T oggetto) throws DAOException;
     public void salvaTutti(List<T> listaOggetti) throws DAOException;
     public T ottieni(int id) throws DAOException;
+    public void elimina(int id) throws DAOException;
 }

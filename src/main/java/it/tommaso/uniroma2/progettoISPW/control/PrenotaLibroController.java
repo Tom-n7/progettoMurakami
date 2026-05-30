@@ -46,6 +46,14 @@ public class PrenotaLibroController {
     }
 
 
+    public void eliminaPrenotazione(PrenotazioneBean prenotazioneBean){
+
+        try {
+            (new PrenotazioneDAO()).elimina(prenotazioneBean.getId());
+        } catch (DAOException e) {
+            throw new RuntimeException("Impossibile eliminare la prenotazione!",e);
+        }
+    }
     public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) {
 
         RecuperoBibliotecaThread t1 = new RecuperoBibliotecaThread(bibliotecaSelezionata);
@@ -74,23 +82,14 @@ public class PrenotaLibroController {
         /*
         Quando salvo la prenotazione, viene restituito l'id univoco valido che assegno all'istanza.
          */
-        bozzaPrenotazione.setId(pdao.salva(bozzaPrenotazione));
-
-
-
-
-
-
-
-
-
+        try {
+            bozzaPrenotazione.setId(pdao.salva(bozzaPrenotazione));
+        } catch (DAOException e) {
+            throw new RuntimeException("Impossibile salvare la prenotazione!",e);
+        }
 
         return  new PrenotazioneBean(bozzaPrenotazione);
     }
-
-
-
-
 
 }
 

@@ -32,4 +32,9 @@ public class PrenotazioneDAO implements IRicercabiliDAO<Prenotazione> {
     public Prenotazione ottieni(int id) throws DAOException {
         return null;
     }
+
+    @Override
+    public void elimina(int id) throws DAOException {
+
+    }
 }
