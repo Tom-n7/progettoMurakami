@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
   <diagram name="Reworked" id="HpcST7cxe0CbLEaDxYW5">
-    <mxGraphModel dx="2683" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3302" dy="1876" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="12Po7Ogk2M_zQcJ2BFea-0" />
         <mxCell id="12Po7Ogk2M_zQcJ2BFea-1" parent="12Po7Ogk2M_zQcJ2BFea-0" />
@@ -46,21 +46,17 @@
             <mxPoint x="365" y="139" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="12Po7Ogk2M_zQcJ2BFea-38" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;IRicercabiliDAO&amp;lt;T&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;+ ottieniTutti(): List&amp;lt;T&amp;gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;T&amp;gt;): List&amp;lt;T&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;T&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;T&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="140" width="310" x="1740" y="1497.5" as="geometry" />
+        <mxCell id="12Po7Ogk2M_zQcJ2BFea-38" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;IRicercabiliDAO&amp;lt;T&amp;gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;i&gt;&amp;nbsp;+ ottieniTutti(): List&amp;lt;T&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;T&amp;gt;): List&amp;lt;T&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;T&amp;gt;): int&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;T&amp;gt;): void&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;br&gt;&lt;/i&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="310" x="760" y="682.5" as="geometry" />
         </mxCell>
         <mxCell id="12Po7Ogk2M_zQcJ2BFea-39" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;IFiltroTestuale&amp;lt;T&amp;gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;i&gt;&amp;nbsp;+ impostaTestoRicerca(testoRicerca: String): void&lt;/i&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ impostaTipo(nomeTipo: String): void&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniTuttiNomiTipi(): List&amp;lt;String&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniTestoFormattato(): String&lt;/i&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="120" width="280" x="860" y="135" as="geometry" />
         </mxCell>
-        <mxCell id="12Po7Ogk2M_zQcJ2BFea-40" edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="12Po7Ogk2M_zQcJ2BFea-41" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="12Po7Ogk2M_zQcJ2BFea-38" value="">
-          <mxGeometry relative="1" width="160" as="geometry">
-            <mxPoint x="2190" y="1585" as="sourcePoint" />
-            <mxPoint x="2060" y="1720" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="12Po7Ogk2M_zQcJ2BFea-41" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="175" width="360" x="2215" y="1480" as="geometry" />
-        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FileBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;/i&gt;&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="12Po7Ogk2M_zQcJ2BFea-41">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="175" width="250" x="1820" y="1850" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="12Po7Ogk2M_zQcJ2BFea-42" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FiltroBiblioteca&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- MAX_LUNGHEZZA_TESTO: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- tipo: TipoFiltroBiblioteca&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ impostaTestoRicerca(testoRicerca: String): void&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ impostaTipo(nomeTipo: String): void&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ ottieniTuttiNomiTipi(): List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ ottieniTestoFormattato(): String&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="310" x="1300" y="125" as="geometry" />
         </mxCell>
@@ -233,15 +229,6 @@
             <mxPoint x="-640" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="glQTt9AzMfVtJwid7Bvi-3" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;LettoreDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Lettore&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Lettore&amp;gt;): List&amp;lt;Lettore&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Lettore&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Lettore&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="175" width="360" x="2215" y="1697.5" as="geometry" />
-        </mxCell>
-        <mxCell id="glQTt9AzMfVtJwid7Bvi-4" edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="glQTt9AzMfVtJwid7Bvi-3" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="12Po7Ogk2M_zQcJ2BFea-38" value="">
-          <mxGeometry relative="1" width="160" as="geometry">
-            <mxPoint x="2330" y="1557.5" as="sourcePoint" />
-            <mxPoint x="2165" y="1557.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="glQTt9AzMfVtJwid7Bvi-5" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Prenotazione&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id: int&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- lettore: Lettore&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- biblioteca: Biblioteca&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- giornoPrenotazione: LocalDate&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- stato: FaseDiPrenotazione&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- libri: List&amp;lt;Libro&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getLibri(): List&amp;lt;Libro&amp;gt;&lt;br&gt;&amp;nbsp;+ aggiungiLibri(libro: Libro)&lt;br&gt;&amp;nbsp;+ verifica()&lt;/p&gt;" vertex="1">
           <mxGeometry height="192.5" width="160" x="230" y="740" as="geometry" />
         </mxCell>
@@ -313,18 +300,326 @@
             <mxPoint x="990" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7qzw33WPkvIpcpD8b8-g-1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;DAOFactory&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - tipoPersistenza: TipoPersistenzaSistema&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniLettoreDAO(): LettoreDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniPrenotazioneDAO(): PrenotazioneDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniBibliotecaDAO(): BibliotecaDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="192.5" width="190" x="1090" y="490" as="geometry" />
-        </mxCell>
-        <mxCell id="7qzw33WPkvIpcpD8b8-g-2" parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TipoPersistenzaSistema&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;INDEFINITA,&lt;/span&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;DEMO,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;FILESYSTEM,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;DATABASE&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="110" width="160" x="1105" y="320" as="geometry" />
-        </mxCell>
-        <mxCell id="7qzw33WPkvIpcpD8b8-g-3" edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="7qzw33WPkvIpcpD8b8-g-2" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="7qzw33WPkvIpcpD8b8-g-1" value="">
-          <mxGeometry relative="1" x="-1" y="3" as="geometry">
-            <mxPoint x="1010" y="460" as="sourcePoint" />
-            <mxPoint x="1110" y="460" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;DAOFactory&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - tipoPersistenza: TipoPersistenzaSistema&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&lt;i&gt;+ ottieniLettoreDAO(): LettoreDAO&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;&amp;nbsp;+ ottieniPrenotazioneDAO(): PrenotazioneDAO&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;&amp;nbsp;+ ottieniBibliotecaDAO(): BibliotecaDAO&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" tags="abstractFactory" id="7qzw33WPkvIpcpD8b8-g-1">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="192.5" width="190" x="1090" y="490" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TipoPersistenzaSistema&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; DEMO,&lt;/span&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;FILESYSTEM,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;DATABASE&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;" tags="abstractFactory" id="7qzw33WPkvIpcpD8b8-g-2">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+            <mxGeometry height="110" width="160" x="1105" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="7qzw33WPkvIpcpD8b8-g-3">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="7qzw33WPkvIpcpD8b8-g-2" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="7qzw33WPkvIpcpD8b8-g-1">
+            <mxGeometry relative="1" x="-1" y="3" as="geometry">
+              <mxPoint x="1010" y="460" as="sourcePoint" />
+              <mxPoint x="1110" y="460" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FileDAOFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniLettoreDAO(): LettoreDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniPrenotazioneDAO(): PrenotazioneDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniBibliotecaDAO(): BibliotecaDAO&lt;/p&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-0">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="150" width="190" x="2160" y="580" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DemoDAOFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniLettoreDAO(): LettoreDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniPrenotazioneDAO(): PrenotazioneDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniBibliotecaDAO(): BibliotecaDAO&lt;/p&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-1">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="150" width="190" x="3210" y="580" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseDAOFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniLettoreDAO(): LettoreDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniPrenotazioneDAO(): PrenotazioneDAO&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ ottieniBibliotecaDAO(): BibliotecaDAO&lt;/p&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-2">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="150" width="190" x="2640" y="580" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-3">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-1" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="7qzw33WPkvIpcpD8b8-g-1">
+            <mxGeometry relative="1" width="160" as="geometry">
+              <Array as="points">
+                <mxPoint x="3305" y="538" />
+              </Array>
+              <mxPoint x="1980" y="530" as="sourcePoint" />
+              <mxPoint x="1520" y="480" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label=" " tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-4">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-0" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <mxPoint x="2230" y="610" as="sourcePoint" />
+              <mxPoint x="2255" y="540" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label=" " tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-5">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-2" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <mxPoint x="2700" y="590" as="sourcePoint" />
+              <mxPoint x="2735" y="540" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;LettoreDAO&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniTutti(): List&amp;lt;Lettore&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Lettore&amp;gt;): List&amp;lt;Lettore&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Lettore&amp;gt;): int&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Lettore&amp;gt;): void&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-6">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="150" width="320" x="990" y="1027.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;BibliotecaDAO&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; white-space: nowrap;&quot;&gt;&amp;nbsp;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22verticalAlign%3Dtop%3Balign%3Dleft%3Boverflow%3Dfill%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3BfillColor%3D%23d5e8d4%3BstrokeColor%3D%2382b366%3B%22%20value%3D%22%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3Bb%26gt%3B%26lt%3Bi%26gt%3BIRicercabiliDAO%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20ottieniTutti()%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20ottieniFiltrato(filtro%3A%20IFiltroTestuale%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20salva(oggetto%3A%20%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20int%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20salvaTutti(oggetti%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20void%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20elimina(id%3A%20int)%3A%20void%26lt%3Bbr%26gt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22140%22%20width%3D%22310%22%20x%3D%22760%22%20y%3D%22682.5%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3Esdfdsds +&amp;nbsp; &amp;nbsp; &amp;nbsp;hyszetgyhsretdyhszrtdf&lt;/span&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): int&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-7">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="150" width="350" x="990" y="1657.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;PrenotazioneDAO&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;i&gt;+ ottieniTutti(): List&amp;lt;Prenotazione&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Prenotazione&amp;gt;): List&amp;lt;Prenotazione&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Prenotazione&amp;gt;): int&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Prenotazione&amp;gt;): void&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; white-space: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22verticalAlign%3Dtop%3Balign%3Dleft%3Boverflow%3Dfill%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3BfillColor%3D%23d5e8d4%3BstrokeColor%3D%2382b366%3B%22%20value%3D%22%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-top%3A4px%3Btext-align%3Acenter%3B%26quot%3B%26gt%3B%26lt%3Bb%26gt%3B%26lt%3Bi%26gt%3BIRicercabiliDAO%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bhr%20size%3D%26quot%3B1%26quot%3B%20style%3D%26quot%3Bborder-style%3Asolid%3B%26quot%3B%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20ottieniTutti()%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20ottieniFiltrato(filtro%3A%20IFiltroTestuale%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20salva(oggetto%3A%20%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20int%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20salvaTutti(oggetti%3A%20List%26amp%3Blt%3BT%26amp%3Bgt%3B)%3A%20void%26lt%3B%2Fi%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bi%26gt%3B%26amp%3Bnbsp%3B%2B%20elimina(id%3A%20int)%3A%20void%26lt%3Bbr%26gt%3B%26lt%3B%2Fi%26gt%3B%26lt%3Bp%20style%3D%26quot%3Bmargin%3A0px%3Bmargin-left%3A4px%3B%26quot%3B%26gt%3B%26lt%3B%2Fp%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22140%22%20width%3D%22310%22%20x%3D%22760%22%20y%3D%22682.5%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-9">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="152.5" width="310" x="1010" y="2360" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-10">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-9" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="12Po7Ogk2M_zQcJ2BFea-38">
+            <mxGeometry relative="1" width="160" as="geometry">
+              <Array as="points">
+                <mxPoint x="915" y="2436" />
+              </Array>
+              <mxPoint x="790" y="2020" as="sourcePoint" />
+              <mxPoint x="610" y="1330" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-11">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="KR4Ycb47ZPhteNFjyp50-6">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <mxPoint x="910" y="1103" as="sourcePoint" />
+              <mxPoint x="960" y="1140" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="KR4Ycb47ZPhteNFjyp50-12">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="KR4Ycb47ZPhteNFjyp50-7">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <mxPoint x="910" y="1733" as="sourcePoint" />
+              <mxPoint x="970" y="1700" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;+ elimina(id: int): void&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-0">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1820" y="1470" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DemoBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ elimina(id: int): void&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-1">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1820" y="1650" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-3">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="MUq3LAH785cQXnvcGdlk-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KR4Ycb47ZPhteNFjyp50-7">
+            <mxGeometry relative="1" width="160" as="geometry">
+              <mxPoint x="1740" y="1730" as="sourcePoint" />
+              <mxPoint x="1550" y="1870" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-4">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;anchorPointDirection=0;orthogonal=1;" target="MUq3LAH785cQXnvcGdlk-0">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1740" y="1553" />
+              </Array>
+              <mxPoint x="1740" y="1700" as="sourcePoint" />
+              <mxPoint x="1400" y="1510" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-6">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="12Po7Ogk2M_zQcJ2BFea-41" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1740" y="1938" />
+              </Array>
+              <mxPoint x="1740" y="1970" as="sourcePoint" />
+              <mxPoint x="1740" y="1700" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseLettoreDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Lettore&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Lettore&amp;gt;): List&amp;lt;Lettore&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Lettore&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Lettore&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-7">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1820" y="2120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseLettoreDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Lettore&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Lettore&amp;gt;): List&amp;lt;Lettore&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Lettore&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Lettore&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-9">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1820" y="2353.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseLettoreDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Lettore&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Lettore&amp;gt;): List&amp;lt;Lettore&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Lettore&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Lettore&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-10">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1820" y="2585" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-11">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="MUq3LAH785cQXnvcGdlk-9" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KR4Ycb47ZPhteNFjyp50-9">
+            <mxGeometry relative="1" width="160" as="geometry">
+              <mxPoint x="1805" y="2450.5" as="sourcePoint" />
+              <mxPoint x="1325" y="2450.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-12">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;anchorPointDirection=0;orthogonal=1;" target="MUq3LAH785cQXnvcGdlk-7">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1725" y="2203" />
+              </Array>
+              <mxPoint x="1725" y="2417.5" as="sourcePoint" />
+              <mxPoint x="1805" y="2269.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-13">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="MUq3LAH785cQXnvcGdlk-10" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=-0.009;exitY=0.423;exitDx=0;exitDy=0;exitPerimeter=0;">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1725" y="2655.5" />
+              </Array>
+              <mxPoint x="1805" y="2655.5" as="sourcePoint" />
+              <mxPoint x="1725" y="2417.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FileBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+ elimina(id: int): void&lt;/i&gt;&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-14">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="175" width="250" x="1800" y="1220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DatabaseBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;+ elimina(id: int): void&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-15">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1800" y="840" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DemoBibliotecaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ottieniTutti(): List&amp;lt;Biblioteca&amp;gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ ottieniFiltrato(filtro: IFiltroTestuale&amp;lt;Biblioteca&amp;gt;): List&amp;lt;Biblioteca&amp;gt;&lt;div&gt;&amp;nbsp;+ salva(oggetto: &amp;lt;Biblioteca&amp;gt;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ salvaTutti(oggetti: List&amp;lt;Biblioteca&amp;gt;): void&lt;br&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ elimina(id: int): void&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-16">
+          <mxCell parent="12Po7Ogk2M_zQcJ2BFea-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+            <mxGeometry height="165" width="250" x="1800" y="1020" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-17">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="MUq3LAH785cQXnvcGdlk-16" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KR4Ycb47ZPhteNFjyp50-6">
+            <mxGeometry relative="1" width="160" as="geometry">
+              <mxPoint x="1720" y="1100" as="sourcePoint" />
+              <mxPoint x="1320" y="1103" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-18">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;anchorPointDirection=0;orthogonal=1;" target="MUq3LAH785cQXnvcGdlk-15">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1720" y="923" />
+              </Array>
+              <mxPoint x="1720" y="1070" as="sourcePoint" />
+              <mxPoint x="1380" y="880" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-19">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="MUq3LAH785cQXnvcGdlk-14" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="1720" y="1308" />
+              </Array>
+              <mxPoint x="1720" y="1340" as="sourcePoint" />
+              <mxPoint x="1720" y="1070" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-20">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-0" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-14">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="2260" y="1308" />
+              </Array>
+              <mxPoint x="2200" y="990" as="sourcePoint" />
+              <mxPoint x="2250" y="1343.3333333333333" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-22">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="12Po7Ogk2M_zQcJ2BFea-41">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="2260" y="1938" />
+              </Array>
+              <mxPoint x="2260" y="1310" as="sourcePoint" />
+              <mxPoint x="2260" y="1770" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-23">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-2" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-15">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="2735" y="923" />
+              </Array>
+              <mxPoint x="2560" y="980" as="sourcePoint" />
+              <mxPoint x="2670" y="920" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label=" " tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-24">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-2" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-0">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="2735" y="1553" />
+              </Array>
+              <mxPoint x="2730" y="810" as="sourcePoint" />
+              <mxPoint x="2620" y="1260" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-25">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-2" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-7">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="2735" y="2203" />
+              </Array>
+              <mxPoint x="2300" y="1260" as="sourcePoint" />
+              <mxPoint x="2410" y="1200" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-26">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-1" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-16">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="3305" y="1103" />
+              </Array>
+              <mxPoint x="2960" y="920" as="sourcePoint" />
+              <mxPoint x="3160" y="1090" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-27">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-1" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MUq3LAH785cQXnvcGdlk-1">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="3305" y="1730" />
+              </Array>
+              <mxPoint x="2890" y="1480" as="sourcePoint" />
+              <mxPoint x="3000" y="1420" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tags="abstractFactory" id="MUq3LAH785cQXnvcGdlk-28">
+          <mxCell edge="1" parent="12Po7Ogk2M_zQcJ2BFea-1" source="KR4Ycb47ZPhteNFjyp50-1" style="endArrow=open;dashed=1;html=1;rounded=0;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1.005;entryY=0.564;entryDx=0;entryDy=0;entryPerimeter=0;" target="MUq3LAH785cQXnvcGdlk-9">
+            <mxGeometry height="50" relative="1" width="50" as="geometry">
+              <Array as="points">
+                <mxPoint x="3305" y="2447" />
+              </Array>
+              <mxPoint x="3070" y="1350" as="sourcePoint" />
+              <mxPoint x="3180" y="1290" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>

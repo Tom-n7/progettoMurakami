@@ -27,7 +27,8 @@ public class Main{
         System.out.println("Scegli impostazione persistenza");
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
-        DAOFactory.setTipoPersistenza(TipoPersistenzaSistema.DATABASE);
+
+        DAOFactory factory = new
 
 
 

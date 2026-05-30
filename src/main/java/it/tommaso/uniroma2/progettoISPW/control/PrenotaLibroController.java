@@ -4,10 +4,10 @@ package it.tommaso.uniroma2.progettoISPW.control;
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
-import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.demo.DemoBibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.demo.DemoLettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.demo.DemoPrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
@@ -32,7 +32,7 @@ public class PrenotaLibroController {
         FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
         try {
 
-            listaBibliotecheOttenute.addAll(new BibliotecaDAO().ottieniListaFiltrata(filtro));
+            listaBibliotecheOttenute.addAll(new DemoBibliotecaDAO().ottieniListaFiltrata(filtro));
             for (Biblioteca b : listaBibliotecheOttenute) {
                 listaBeanBiblioteche.add(new BibliotecaBean(b));
             }
@@ -49,7 +49,7 @@ public class PrenotaLibroController {
     public void eliminaPrenotazione(PrenotazioneBean prenotazioneBean){
 
         try {
-            (new PrenotazioneDAO()).elimina(prenotazioneBean.getId());
+            (new DemoPrenotazioneDAO()).elimina(prenotazioneBean.getId());
         } catch (DAOException e) {
             throw new RuntimeException("Impossibile eliminare la prenotazione!",e);
         }
@@ -62,7 +62,7 @@ public class PrenotaLibroController {
         Biblioteca biblioteca;
         Lettore lettore;
         Prenotazione bozzaPrenotazione;
-        IRicercabiliDAO<Prenotazione> pdao = new PrenotazioneDAO();
+        IRicercabiliDAO<Prenotazione> pdao = new DemoPrenotazioneDAO();
 
         t1.start();
         t2.start();
@@ -101,7 +101,7 @@ class RecuperoLettoreThread extends Thread{
     public void run(){
 
         //provvisorio, deve usare interfaccia.
-        this.lettore = (new LettoreDAO()).ottieniLettore();
+        this.lettore = (new DemoLettoreDAO()).ottieniLettore();
     }
 
     public Lettore getLettore() {
@@ -124,7 +124,7 @@ class RecuperoBibliotecaThread extends Thread{
     public void run(){
 
         //provvisorio, deve usare interfaccia
-        BibliotecaDAO bdao = new BibliotecaDAO();
+        DemoBibliotecaDAO bdao = new DemoBibliotecaDAO();
         bibliotecaOttenuta = bdao.ottieni(bibliotecaRichiesta.getId());
 
     }
