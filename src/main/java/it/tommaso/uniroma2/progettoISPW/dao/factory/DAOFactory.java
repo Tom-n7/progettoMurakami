@@ -10,15 +10,44 @@ Nello specifico viene implementato come singleton polimorfico, in questa maniera
 per tutto la durata dell'esecuzione.
  */
 
-import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
-import it.tommaso.uniroma2.progettoISPW.model.Biblioteca;
-import it.tommaso.uniroma2.progettoISPW.model.Lettore;
+import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 
 public abstract class DAOFactory {
 
-    public abstract IRicercabiliDAO<Biblioteca> creaBibliotecaDAO();
-    public abstract IRicercabiliDAO<Lettore> creaLettoreDAO();
-    public abstract IRicercabiliDAO<>
+    //é possibile ottenere ogni tipo di DAO esclusivamente attraverso la factory.
+    public abstract BibliotecaDAO creaBibliotecaDAO();
+    public abstract LettoreDAO creaLettoreDAO();
+    public abstract PrenotazioneDAO creaPrenotazioneDAO();
 
+    /*
+    Utilizza il principio secondo cui la JVM, garantisce che una classe interna statica venga inizializzata solo una volta,
+     anche nel caso di chiamate simultanee.
+     Ciò rende l'implementazione del sigleton thread-safe.
+     */
+    private static class ContenitoreFactory{
+        private static  DAOFactory ISTANZA;
+    }
 
+    public static DAOFactory inizializzaDAOFactory(TipoPersistenzaSistema tipoPersistenzaScelto){
+
+        if(ContenitoreFactory.ISTANZA == null){
+
+            switch (tipoPersistenzaScelto){
+
+                case DEMO : ContenitoreFactory.ISTANZA = new DemoDAOFactory();
+                break;
+                case DATABASE : ContenitoreFactory.ISTANZA = new DatabaseDAOFactory();
+                break;
+                case FILESYSTEM : ContenitoreFactory.ISTANZA = new FileDAOFactory();
+                break;
+                case null, default : throw new RuntimeException();
+
+            }
+
+        }
+
+        return ContenitoreFactory.ISTANZA;
+    }
 }

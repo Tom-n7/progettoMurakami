@@ -28,6 +28,12 @@ public class Main{
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
 
+
+        //PROVVISORIAMENTE la factory è init. per restituire la versione "database" dei DAO
+        DAOFactory.inizializzaDAOFactory(TipoPersistenzaSistema.DATABASE);
+
+
+
         ControllerGrafico controllerGrafico = new DesktopController();
         controllerGrafico.iniziaSessioneGrafica();
 

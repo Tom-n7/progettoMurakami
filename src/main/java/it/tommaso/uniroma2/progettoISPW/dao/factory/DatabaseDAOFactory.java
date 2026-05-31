@@ -3,24 +3,23 @@ package it.tommaso.uniroma2.progettoISPW.dao.factory;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.file.FileBibliotecaDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.file.FileLettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.file.FilePrenotazioneDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.database.DatabaseBibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.database.DatabaseLettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.database.DatabasePrenotazioneDAO;
 
-public class FileDAOFactory extends DAOFactory{
-
+public class DatabaseDAOFactory extends DAOFactory{
     @Override
     public BibliotecaDAO creaBibliotecaDAO() {
-        return new FileBibliotecaDAO();
+        return new DatabaseBibliotecaDAO();
     }
 
     @Override
     public LettoreDAO creaLettoreDAO() {
-        return new FileLettoreDAO();
+        return new DatabaseLettoreDAO();
     }
 
     @Override
     public PrenotazioneDAO creaPrenotazioneDAO() {
-        return new FilePrenotazioneDAO();
+        return new DatabasePrenotazioneDAO();
     }
 }
