@@ -28,11 +28,6 @@ public class Main{
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
 
-        DAOFactory factory = new
-
-
-
-
         ControllerGrafico controllerGrafico = new DesktopController();
         controllerGrafico.iniziaSessioneGrafica();
 
