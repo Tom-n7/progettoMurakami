@@ -10,9 +10,12 @@ Nello specifico viene implementato come singleton polimorfico, in questa maniera
 per tutto la durata dell'esecuzione.
  */
 
-import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.PrenotazioneDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.DatabaseDAOFactory;
+import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.DemoDAOFactory;
+import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.FileDAOFactory;
 
 public abstract class DAOFactory {
 

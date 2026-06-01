@@ -37,6 +37,7 @@ public class Main{
         ControllerGrafico controllerGrafico = new DesktopController();
         controllerGrafico.iniziaSessioneGrafica();
 
+
     }
 }
 

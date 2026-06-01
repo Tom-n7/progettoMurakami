@@ -1,13 +1,13 @@
-package it.tommaso.uniroma2.progettoISPW.dao.database;
+package it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.file;
 
-import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.Biblioteca;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
 
 import java.util.List;
 
-public class DatabaseBibliotecaDAO implements BibliotecaDAO {
+public class FileBibliotecaDAO implements BibliotecaDAO {
     @Override
     public List<Biblioteca> ottieniTutti() throws DAOException {
         return List.of();

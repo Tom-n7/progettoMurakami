@@ -87,6 +87,8 @@ public class DesktopController extends Application implements ControllerGrafico,
 
         try {
 
+
+
             Pane mascheraPopup = new Pane();
             mascheraPopup.setId("maschera_popup");
             mascheraPopup.setBackground(Background.fill(Color.GREY));

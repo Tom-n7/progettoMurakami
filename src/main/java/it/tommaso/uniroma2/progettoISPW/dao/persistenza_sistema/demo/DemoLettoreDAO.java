@@ -1,13 +1,26 @@
-package it.tommaso.uniroma2.progettoISPW.dao.file;
+package it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.demo;
 
-import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoISPW.model.Lettore;
 
 import java.util.List;
 
-public class FileLettoreDAO implements LettoreDAO {
+public class DemoLettoreDAO implements LettoreDAO {
+
+    //provvisorio
+    public Lettore  ottieniLettore() {
+
+
+        //provvisorio
+        return new Lettore("Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
+
+
+
+    }
+
+
     @Override
     public List<Lettore> ottieniTutti() throws DAOException {
         return List.of();

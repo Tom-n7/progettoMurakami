@@ -1,7 +1,6 @@
-package it.tommaso.uniroma2.progettoISPW.dao.demo;
+package it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.demo;
 
-import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 
