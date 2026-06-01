@@ -10,11 +10,11 @@ public class Biblioteca {
     private String nome;
     private Indirizzo indirizzo;
     private String collegamentoAnteprima;
-    private List<RegolaPrenotazione> regolePrenotazione;
+    private RegolaPrenotazione regolePrenotazione;
     private EnumMap<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
 
 
-    public Biblioteca(int id, String nome, Indirizzo indirizzo, String collegamentoAnteprima, List<RegolaPrenotazione> regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public Biblioteca(int id, String nome, Indirizzo indirizzo, String collegamentoAnteprima, RegolaPrenotazione regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
@@ -55,11 +55,11 @@ public class Biblioteca {
         this.indirizzo = indirizzo;
     }
 
-    public List<RegolaPrenotazione> getRegolePrenotazione() {
+    public RegolaPrenotazione getRegolePrenotazione() {
         return regolePrenotazione;
     }
 
-    public void setRegolePrenotazione(List<RegolaPrenotazione> regolePrenotazione) {
+    public void setRegolePrenotazione(RegolaPrenotazione regolaPrenotazione) {
         this.regolePrenotazione = regolePrenotazione;
     }
 

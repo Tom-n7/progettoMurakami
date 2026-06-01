@@ -4,6 +4,7 @@ package it.tommaso.uniroma2.progettoISPW;
 
 import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.TipoPersistenzaSistema;
+import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
 import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
 
@@ -27,6 +28,10 @@ public class Main{
         System.out.println("Scegli impostazione persistenza");
         System.out.println("1. FILESYSTEM");
         System.out.println("2. DATABASE");
+
+
+        //poiché il login non è implementato.
+        Sessione.inizializzaSessione(1);
 
 
         //PROVVISORIAMENTE la factory è init. per restituire la versione "database" dei DAO

@@ -10,12 +10,9 @@ Nello specifico viene implementato come singleton polimorfico, in questa maniera
 per tutto la durata dell'esecuzione.
  */
 
-import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.BibliotecaDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.LettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.PrenotazioneDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.DatabaseDAOFactory;
-import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.DemoDAOFactory;
-import it.tommaso.uniroma2.progettoISPW.dao.factory.persistenza_sistema.FileDAOFactory;
+import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 
 public abstract class DAOFactory {
 
@@ -24,6 +21,8 @@ public abstract class DAOFactory {
     public abstract LettoreDAO creaLettoreDAO();
     public abstract PrenotazioneDAO creaPrenotazioneDAO();
 
+    //costruttore privato
+    protected DAOFactory(){}
     /*
     Utilizza il principio secondo cui la JVM, garantisce che una classe interna statica venga inizializzata solo una volta,
      anche nel caso di chiamate simultanee.

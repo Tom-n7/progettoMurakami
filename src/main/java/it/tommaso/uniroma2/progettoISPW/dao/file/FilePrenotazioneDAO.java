@@ -1,13 +1,13 @@
-package it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.demo;
+package it.tommaso.uniroma2.progettoISPW.dao.file;
 
-import it.tommaso.uniroma2.progettoISPW.dao.persistenza_sistema.PrenotazioneDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
 
 import java.util.List;
 
-public class DemoPrenotazioneDAO implements PrenotazioneDAO {
+public class FilePrenotazioneDAO implements PrenotazioneDAO {
     @Override
     public List<Prenotazione> ottieniTutti() throws DAOException {
         return List.of();
