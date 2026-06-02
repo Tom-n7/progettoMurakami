@@ -3,12 +3,11 @@ package it.tommaso.uniroma2.progettoISPW.control;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
+import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.demo.DemoLettoreDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.demo.DemoPrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
@@ -16,7 +15,6 @@ import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
 
 import java.time.Instant;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -51,11 +49,11 @@ public class PrenotaLibroController {
         return listaBeanBiblioteche;
     }
 
-
+    //ATTENZIONE,  operazione non ancora implementata!
     public void eliminaPrenotazione(PrenotazioneBean prenotazioneBean){
 
         try {
-            (new DemoPrenotazioneDAO()).elimina(prenotazioneBean.getId());
+            DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().elimina(prenotazioneBean.getId());
         } catch (DAOException e) {
             throw new RuntimeException("Impossibile eliminare la prenotazione!",e);
         }
@@ -96,6 +94,8 @@ public class PrenotaLibroController {
 
         return  new PrenotazioneBean(bozzaPrenotazione);
     }
+
+
 
 }
 

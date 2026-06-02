@@ -7,6 +7,7 @@ import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCompleta;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaMenuPrincipale;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaPrenotazione;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
+import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaImportaMetadatiLibro;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -46,6 +47,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         NOMI_VISTE_CONTROLLER.put("ricerca_biblioteca", VistaCercaBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_biblioteca", VistaDettagliBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaPrenotazione.class);
+        NOMI_VISTE_CONTROLLER.put("importa_metadati_libro", VistaImportaMetadatiLibro.class);
 
     }
 
@@ -87,8 +89,6 @@ public class DesktopController extends Application implements ControllerGrafico,
 
         try {
 
-
-
             Pane mascheraPopup = new Pane();
             mascheraPopup.setId("maschera_popup");
             mascheraPopup.setBackground(Background.fill(Color.GREY));
@@ -100,7 +100,6 @@ public class DesktopController extends Application implements ControllerGrafico,
             stagePopup = (new Popup());
             stagePopup.getScene().setRoot(radicePopup);
             stagePopup.show(primaryStage);
-
 
         }catch (IOException e){
             throw new RuntimeException(e);

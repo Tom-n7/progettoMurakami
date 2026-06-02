@@ -25,7 +25,7 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     private final PrenotaLibroController controllerApplicativo;
 
     private final SimpleObjectProperty<ObservableList<LibroBean>> listaLibriPrenotazioneProperty;
-    private SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
+    private final SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
 
     public ListView<LibroBean> listaLibri;
 
@@ -78,7 +78,11 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     }
 
 
+    /*
+    Quando l'utente clicca su
+     */
     public void clickSuAggiungi(ActionEvent actionEvent) {
+        this.controllerGrafico.lanciaVistaPopup("importa_metadati_libro", bozzaPrenotazioneProperty.get());
 
 
 
