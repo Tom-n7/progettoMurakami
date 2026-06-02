@@ -10,7 +10,8 @@ public class Lettore {
     private String username;
 
 
-    public Lettore(String nome, String indirizzoEmail, String username) {
+    public Lettore(int id, String nome, String indirizzoEmail, String username) {
+        this.id = id;
         this.nome = nome;
         this.indirizzoEmail = indirizzoEmail;
         this.username = username;

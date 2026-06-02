@@ -12,6 +12,7 @@ public class Indirizzo {
         this.CAP = CAP;
     }
 
+    public Indirizzo(){}
     public String getVia() {
         return via;
     }
@@ -36,20 +37,4 @@ public class Indirizzo {
         this.CAP = CAP;
     }
 
-    @Override
-    public String toString() {
-        String indirizzoString = "";
-
-        if(!via.isEmpty()){
-            indirizzoString = indirizzoString + via + ", ";
-        }
-        if(!citta.isEmpty()){
-            indirizzoString = indirizzoString + citta + ", ";
-        }
-        if(!CAP.isEmpty()){
-            indirizzoString = indirizzoString + CAP;
-        }
-
-        return indirizzoString;
-    }
 }

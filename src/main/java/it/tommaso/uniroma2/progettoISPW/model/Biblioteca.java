@@ -1,5 +1,8 @@
 package it.tommaso.uniroma2.progettoISPW.model;
 
+
+
+import java.sql.Blob;
 import java.time.DayOfWeek;
 import java.util.EnumMap;
 import java.util.List;
@@ -9,16 +12,17 @@ public class Biblioteca {
     private int id;
     private String nome;
     private Indirizzo indirizzo;
-    private String collegamentoAnteprima;
+    private Blob immagineAnteprima;
     private RegolaPrenotazione regolePrenotazione;
     private EnumMap<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
 
+    public Biblioteca(){}
 
-    public Biblioteca(int id, String nome, Indirizzo indirizzo, String collegamentoAnteprima, RegolaPrenotazione regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public Biblioteca(int id, String nome, Indirizzo indirizzo, Blob immagineAnteprima, RegolaPrenotazione regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
-        this.collegamentoAnteprima = collegamentoAnteprima;
+        this.immagineAnteprima = immagineAnteprima;
         this.regolePrenotazione = regolePrenotazione;
         this.orarioSettimanale = orarioSettimanale;
     }
@@ -31,13 +35,6 @@ public class Biblioteca {
         this.id = id;
     }
 
-    public String getCollegamentoAnteprima() {
-        return collegamentoAnteprima;
-    }
-
-    public void setCollegamentoAnteprima(String collegamentoAnteprima) {
-        this.collegamentoAnteprima = collegamentoAnteprima;
-    }
 
     public String getNome() {
         return nome;
@@ -60,7 +57,7 @@ public class Biblioteca {
     }
 
     public void setRegolePrenotazione(RegolaPrenotazione regolaPrenotazione) {
-        this.regolePrenotazione = regolePrenotazione;
+        this.regolePrenotazione = regolaPrenotazione;
     }
 
     public EnumMap<DayOfWeek, IOrarioGiornaliero> getOrarioSettimanale() {
@@ -71,9 +68,4 @@ public class Biblioteca {
         this.orarioSettimanale = orarioSettimanale;
     }
 
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

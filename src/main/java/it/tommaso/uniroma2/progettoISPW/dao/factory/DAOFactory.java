@@ -32,7 +32,11 @@ public abstract class DAOFactory {
         private static  DAOFactory ISTANZA;
     }
 
-    public static DAOFactory inizializzaDAOFactory(TipoPersistenzaSistema tipoPersistenzaScelto){
+    public static DAOFactory ottieniDAOFactory(){
+        return ContenitoreFactory.ISTANZA;
+    }
+
+    public static void inizializzaDAOFactory(TipoPersistenzaSistema tipoPersistenzaScelto){
 
         if(ContenitoreFactory.ISTANZA == null){
 
@@ -50,6 +54,5 @@ public abstract class DAOFactory {
 
         }
 
-        return ContenitoreFactory.ISTANZA;
     }
 }

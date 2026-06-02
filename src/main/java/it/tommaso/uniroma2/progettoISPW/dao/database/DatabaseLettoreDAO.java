@@ -2,9 +2,13 @@ package it.tommaso.uniroma2.progettoISPW.dao.database;
 
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
-import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
-import it.tommaso.uniroma2.progettoISPW.model.Lettore;
+import it.tommaso.uniroma2.progettoISPW.model.*;
+import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class DatabaseLettoreDAO implements LettoreDAO {
@@ -30,7 +34,34 @@ public class DatabaseLettoreDAO implements LettoreDAO {
 
     @Override
     public Lettore ottieni(int id) throws DAOException {
-        return null;
+        Lettore lettore = null;
+        CallableStatement cs = null;
+        try {
+            Connection conn = FactoryConnessioneDatabase.getConnection();
+            cs = conn.prepareCall("{call ottieni_lettore(?)}");
+
+            cs.setInt(1,id);
+
+            boolean status = cs.execute();
+
+            if (status) {
+
+                ResultSet rs = cs.getResultSet();
+                rs.next();
+                lettore = new Lettore(  rs.getInt("id"),
+                                        rs.getString("nome"),
+                                        rs.getString("indirizzo_email"),
+                                        rs.getString("username")
+                );
+
+            }
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lettore;
     }
 
     @Override

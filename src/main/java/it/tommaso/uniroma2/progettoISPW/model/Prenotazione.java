@@ -1,6 +1,8 @@
 package it.tommaso.uniroma2.progettoISPW.model;
 
+
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 
 public class Prenotazione {
@@ -9,7 +11,7 @@ public class Prenotazione {
     private  Lettore lettore;
     private  Biblioteca biblioteca;
 
-    private LocalTime giornoPrenotazione;
+    private Date giornoPrenotazione;
     private FaseDiPrenotazione stato;
     private List<Libro> libri;
 
@@ -42,11 +44,11 @@ public class Prenotazione {
         this.biblioteca = biblioteca;
     }
 
-    public LocalTime getGiornoPrenotazione() {
+    public Date getGiornoPrenotazione() {
         return giornoPrenotazione;
     }
 
-    public void setGiornoPrenotazione(LocalTime giornoPrenotazione) {
+    public void setGiornoPrenotazione(Date giornoPrenotazione) {
         this.giornoPrenotazione = giornoPrenotazione;
     }
 

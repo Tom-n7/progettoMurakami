@@ -38,6 +38,8 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     @Override
     public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
 
+
+        //Provvisoriamente filtra il DAO, verrà sostituato da procedura db opportuna.
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
 

@@ -4,7 +4,10 @@ import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
+import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
+import java.sql.*;
+import java.util.Collection;
 import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
@@ -20,7 +23,24 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public int salva(Prenotazione oggetto) throws DAOException {
-        return 0;
+
+        int id;
+        try{
+
+            Connection con = FactoryConnessioneDatabase.getConnection();
+            CallableStatement cs = con.prepareCall("{call salva_prenotazione(?,?,?,?,?)}");
+            cs.setInt("arg_id_lettore", oggetto.getLettore().getId());
+            cs.setInt("arg_id_biblioteca", oggetto.getBiblioteca().getId());
+            cs.setDate("arg_data_creazione", new Date(oggetto.getGiornoPrenotazione().getTime()));
+            cs.setString("arg_fase_prenotazione", oggetto.getStatoPrenotazione().toString());
+            cs.registerOutParameter("id_prenotazione", Types.NUMERIC);
+            cs.executeQuery();
+            id = cs.getInt("id_prenotazione");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return id;
     }
 
     @Override

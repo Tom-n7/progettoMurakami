@@ -12,6 +12,11 @@ public class Sessione {
         private static Sessione ISTANZA;
     }
 
+    public static int ottieniId(){
+        return ContenitoreSessione.ISTANZA.idUtente;
+    }
+
+
     public static Sessione inizializzaSessione(int id){
         if(ContenitoreSessione.ISTANZA == null){
             ContenitoreSessione.ISTANZA = new Sessione(id);

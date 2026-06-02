@@ -14,7 +14,7 @@ public class DemoLettoreDAO implements LettoreDAO {
 
 
         //provvisorio
-        return new Lettore("Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
+        return new Lettore(1,"Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
 
 
 
