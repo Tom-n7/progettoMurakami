@@ -27,7 +27,6 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
         int id;
         try{
-
             Connection con = FactoryConnessioneDatabase.getConnection();
             CallableStatement cs = con.prepareCall("{call salva_prenotazione(?,?,?,?,?)}");
             cs.setInt("arg_id_lettore", oggetto.getLettore().getId());
@@ -37,18 +36,6 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             cs.registerOutParameter("id_prenotazione", Types.NUMERIC);
             cs.executeQuery();
             id = cs.getInt("id_prenotazione");
-
-
-            for(Libro l : oggetto.getLibri()){
-                CallableStatement cs2 = con.prepareCall("{call abbina_libro_a_prenotazione(?,?)}");
-                cs2.setInt("arg_id_libro", l.getId());
-                cs2.setInt("arg_id_prenotazione", oggetto.getId());
-                cs2.executeQuery();
-            }
-
-
-
-
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -61,9 +48,26 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     }
 
+    /*
+
+     */
     @Override
     public Prenotazione ottieni(int id) throws DAOException {
-        return null;
+
+        try{
+            Connection con = FactoryConnessioneDatabase.getConnection();
+            CallableStatement cs = con.prepareCall("{call ottieni_prenotazione(?)}");
+            cs.setInt("arg_id", id);
+            cs.executeQuery();
+
+
+
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -72,7 +76,16 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
     }
 
     @Override
-    public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) {
+    public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) throws DAOException {
 
+        try {
+            Connection con = FactoryConnessioneDatabase.getConnection();
+            CallableStatement cs2 = con.prepareCall("{call abbina_libro_a_prenotazione(?,?)}");
+            cs2.setInt("arg_id_libro", libro.getId());
+            cs2.setInt("arg_id_prenotazione", prenotazione.getId());
+            cs2.executeQuery();
+        }catch (SQLException e){
+            throw new DAOException("errore abbinamento libro a prenotazione!");
+        }
     }
 }

@@ -109,7 +109,7 @@ public class PrenotaLibroController {
         libro.setImmagineCopertina(nuovoLibroBean.getImmagineAnteprima());
 
         prenotazione.addLibro(libro);
-        (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).salva(prenotazione);
+        (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).aggiungiLibroAPrenotazione(prenotazione,libro);
 
     }
 
