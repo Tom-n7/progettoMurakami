@@ -2,28 +2,29 @@ package it.tommaso.uniroma2.progettoISPW.bean;
 
 import it.tommaso.uniroma2.progettoISPW.model.Libro;
 
-import java.util.Set;
+import java.sql.Blob;
+import java.util.List;
 
-public class LibroBean {
+public class LibroBean implements IBean<LibroBean> {
 
     private int id;
     private String titolo;
-    private Set<String> autori;
+    private List<String> autori;
     private String lingua;
     private String editore;
-    private String urlAnteprima;
+    private Blob immagineAnteprima;
     private String edizione;
     private String codiceISNB;
 
     public LibroBean(){}
 
-    public LibroBean(int id, String titolo, Set<String> autori, String lingua, String editore, String urlAnteprima, String edizione, String codiceISNB) {
+    public LibroBean(int id, String titolo, List<String> autori, String lingua, String editore, Blob immagineAnteprima, String edizione, String codiceISNB) {
         this.id = id;
         this.titolo = titolo;
         this.autori = autori;
         this.lingua = lingua;
         this.editore = editore;
-        this.urlAnteprima = urlAnteprima;
+        this.immagineAnteprima = immagineAnteprima;
         this.edizione = edizione;
         this.codiceISNB = codiceISNB;
     }
@@ -35,7 +36,7 @@ public class LibroBean {
         this.autori = libro.getAutori();
         this.lingua = libro.getLingua();
         this.editore = libro.getEditore();
-        this.urlAnteprima = libro.getUrlAnteprima();
+        this.immagineAnteprima = libro.getImmagineCopertina();
         this.edizione = libro.getEdizione();
         this.codiceISNB = libro.getCodiceISNB();
 
@@ -57,11 +58,11 @@ public class LibroBean {
         this.titolo = titolo;
     }
 
-    public Set<String> getAutori() {
+    public List<String> getAutori() {
         return autori;
     }
 
-    public void setAutori(Set<String> autori) {
+    public void setAutori(List<String> autori) {
         this.autori = autori;
     }
 
@@ -81,12 +82,12 @@ public class LibroBean {
         this.editore = editore;
     }
 
-    public String getUrlAnteprima() {
-        return urlAnteprima;
+    public Blob getImmagineAnteprima() {
+        return immagineAnteprima;
     }
 
-    public void setUrlAnteprima(String urlAnteprima) {
-        this.urlAnteprima = urlAnteprima;
+    public void setImmagineAnteprima(Blob immagineAnteprima) {
+        this.immagineAnteprima = immagineAnteprima;
     }
 
     public String getEdizione() {
@@ -103,5 +104,22 @@ public class LibroBean {
 
     public void setCodiceISNB(String codiceISNB) {
         this.codiceISNB = codiceISNB;
+    }
+
+
+    @Override
+    public String toString() {
+
+        String autori = "" ;
+        for(String s : this.autori){
+            if(autori.isEmpty()){
+                autori = s;
+            }else {
+                autori = autori + ", " + s;
+            }
+        }
+
+
+        return titolo + "\n" + autori +"\n" + lingua + "\n" + editore + "\n" + edizione + "\n" + codiceISNB + "\n";
     }
 }

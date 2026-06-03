@@ -12,6 +12,7 @@ per tutto la durata dell'esecuzione.
 
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
+import it.tommaso.uniroma2.progettoISPW.dao.LibroDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 
 public abstract class DAOFactory {
@@ -20,6 +21,7 @@ public abstract class DAOFactory {
     public abstract BibliotecaDAO creaBibliotecaDAO();
     public abstract LettoreDAO creaLettoreDAO();
     public abstract PrenotazioneDAO creaPrenotazioneDAO();
+    public abstract LibroDAO creaLibroDAO();
 
     //costruttore privato
     protected DAOFactory(){}

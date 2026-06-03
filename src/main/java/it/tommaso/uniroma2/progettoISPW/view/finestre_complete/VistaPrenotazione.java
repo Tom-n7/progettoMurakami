@@ -1,8 +1,11 @@
 package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.*;
+import it.tommaso.uniroma2.progettoISPW.control.ImportaMetadatiLibroController;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+import javafx.application.Platform;
+import javafx.beans.Observable;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,6 +18,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +30,7 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
     private final SimpleObjectProperty<ObservableList<LibroBean>> listaLibriPrenotazioneProperty;
     private final SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
+    private final SimpleObjectProperty<LibroBean> libroDaAggiungereProperty;
 
     public ListView<LibroBean> listaLibri;
 
@@ -75,6 +80,13 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
         listaLibriPrenotazioneProperty = new SimpleObjectProperty<>(FXCollections.observableArrayList());
 
+        /*
+        questa prorpietà contiene il libro che va aggiunto alla prenotazione, viene inizializzato il valore contenuto.
+         */
+        libroDaAggiungereProperty = new SimpleObjectProperty<>();
+        libroDaAggiungereProperty.setValue(new LibroBean());
+
+
     }
 
 
@@ -82,8 +94,8 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     Quando l'utente clicca su
      */
     public void clickSuAggiungi(ActionEvent actionEvent) {
-        this.controllerGrafico.lanciaVistaPopup("importa_metadati_libro", bozzaPrenotazioneProperty.get());
 
+        controllerGrafico.lanciaVistaPopup("importa_metadati_libro",libroDaAggiungereProperty);
 
 
     }
@@ -103,6 +115,21 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
         listaLibri.itemsProperty().bind(listaLibriPrenotazioneProperty);
 
+        //quando la vista importa metadati libro rinnova il valore della property, vuol dire che il lettore
+        //ha confermato il libro inserito, quindi questo va aggiunto alla prenotazione.
+        libroDaAggiungereProperty.addListener((obs,val,newval)->{
+            LibroBean nuovoLibro = newval;
+            PrenotazioneBean prenotazioneBean = bozzaPrenotazioneProperty.get();
+            bozzaPrenotazioneProperty.set(
+                   controllerApplicativo.aggiungiLibroAllaPrenotazione(prenotazioneBean,nuovoLibro)
+           );
+
+            //pulisco la lista libri e la aggiorno.
+            listaLibriPrenotazioneProperty.get().removeAll();
+            listaLibriPrenotazioneProperty.get().addAll(bozzaPrenotazioneProperty.get().getLibri());
+        });
+
+
         //inizializzazione avatar
         labelEmailLettore.setText("Email: " + bozzaPrenotazioneProperty.get().getLettore().getEmail());
         labelNomeLettore.setText(("Nome: "+ bozzaPrenotazioneProperty.get().getLettore().getNome()));
@@ -111,6 +138,8 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
         labelNomeBiblioteca.setText("Nome: " + bozzaPrenotazioneProperty.get().getBiblioteca().getNome());
         labelIndirizzoBiblioteca.setText("Indirizzo: " + bozzaPrenotazioneProperty.get().getBiblioteca().getIndirizzo());
         labelMaxLibriBiblioteca.setText("Max libri prenotazione: " + bozzaPrenotazioneProperty.get().getBiblioteca().getRegolePrenotazione());
+
+
 
     }
 }

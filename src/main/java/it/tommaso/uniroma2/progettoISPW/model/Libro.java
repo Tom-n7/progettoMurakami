@@ -1,28 +1,30 @@
 package it.tommaso.uniroma2.progettoISPW.model;
 
-import java.util.Set;
+import java.sql.Blob;
+import java.util.List;
 
 public class Libro {
 
     private int id;
     private String titolo;
-    private Set<String> autori;
+    private List<String> autori;
     private String lingua;
     private String editore;
-    private String urlAnteprima;
+    private Blob immagineCopertina;
     private String edizione;
     private String codiceISNB;
 
-    public Libro(int id, String lingua, Set<String> autori, String titolo, String editore, String urlAnteprima, String edizione, String codiceISNB) {
-        this.id = id;
+    public Libro(String lingua, List<String> autori, String titolo, String editore, Blob immagineCopertina, String edizione, String codiceISNB) {
         this.lingua = lingua;
         this.autori = autori;
         this.titolo = titolo;
         this.editore = editore;
-        this.urlAnteprima = urlAnteprima;
+        this.immagineCopertina = immagineCopertina;
         this.edizione = edizione;
         this.codiceISNB = codiceISNB;
     }
+
+    public Libro(){}
 
     public int getId() {
         return id;
@@ -40,11 +42,11 @@ public class Libro {
         this.titolo = titolo;
     }
 
-    public Set<String> getAutori() {
+    public List<String> getAutori() {
         return autori;
     }
 
-    public void setAutori(Set<String> autori) {
+    public void setAutori(List<String> autori) {
         this.autori = autori;
     }
 
@@ -64,12 +66,12 @@ public class Libro {
         this.editore = editore;
     }
 
-    public String getUrlAnteprima() {
-        return urlAnteprima;
+    public Blob getImmagineCopertina() {
+        return immagineCopertina;
     }
 
-    public void setUrlAnteprima(String urlAnteprima) {
-        this.urlAnteprima = urlAnteprima;
+    public void setImmagineCopertina(Blob immagineCopertina) {
+        this.immagineCopertina = immagineCopertina;
     }
 
     public String getEdizione() {

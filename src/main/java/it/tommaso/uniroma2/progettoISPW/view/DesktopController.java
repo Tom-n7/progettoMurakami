@@ -10,6 +10,7 @@ import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBibliot
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaImportaMetadatiLibro;
 import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
 import javafx.application.Application;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
@@ -39,6 +40,7 @@ public class DesktopController extends Application implements ControllerGrafico,
 
     //popup attivo
     private Popup stagePopup;
+    private VistaCompleta padrePopupController;
 
 
     public DesktopController(){
@@ -50,6 +52,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         NOMI_VISTE_CONTROLLER.put("importa_metadati_libro", VistaImportaMetadatiLibro.class);
 
     }
+
 
     @Override
     public void start(Stage stage) {
@@ -65,13 +68,17 @@ public class DesktopController extends Application implements ControllerGrafico,
         launch(args);
     }
 
-    public void lanciaVistaPopup(String nomeVista, IBean... args){
+    /*
+    A differenza delle viste complete, nelle viste popup è possibile passare delle properties che
+    possono essere osservate dalla vista completa che chiama
+     */
+    public void lanciaVistaPopup(String nomeVista, SimpleObjectProperty... properties){
 
 
         FXMLLoader loader = new FXMLLoader(VistaPopup.class.getResource(nomeVista+ ".fxml"));
         try{
             VistaPopup controllerVista =
-                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, IBean[].class).newInstance(this, args);
+                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, SimpleObjectProperty[].class).newInstance(this, properties);
             loader.setControllerFactory(c->
             {
                 return controllerVista;
@@ -96,10 +103,12 @@ public class DesktopController extends Application implements ControllerGrafico,
 
             radicePrimaryStage.getChildren().add(mascheraPopup);
 
+
             StackPane radicePopup = loader.load();
             stagePopup = (new Popup());
             stagePopup.getScene().setRoot(radicePopup);
             stagePopup.show(primaryStage);
+
 
         }catch (IOException e){
             throw new RuntimeException(e);

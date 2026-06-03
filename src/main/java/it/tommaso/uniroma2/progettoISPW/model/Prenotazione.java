@@ -74,4 +74,10 @@ public class Prenotazione {
         }
         return false;
     }
+
+    public void addLibro(Libro libro){
+        this.libri.add(libro);
+    }
+
+
 }

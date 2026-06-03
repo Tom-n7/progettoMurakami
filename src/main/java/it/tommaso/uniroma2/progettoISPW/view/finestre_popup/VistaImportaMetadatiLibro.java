@@ -1,19 +1,30 @@
 package it.tommaso.uniroma2.progettoISPW.view.finestre_popup;
 
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
+import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
+import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.ImportaMetadatiLibroController;
+import it.tommaso.uniroma2.progettoISPW.supporto.LibroImportatoEvent;
 import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Popup;
 
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
-public class VistaImportaMetadatiLibro implements VistaPopup, Initializable {
+public class VistaImportaMetadatiLibro extends Popup implements VistaPopup, Initializable {
 
+    @FXML
+    private Button bottoneConferma;
+    @FXML
+    private TextField fieldLingua;
     @FXML
     private TextField fieldTitolo;
     @FXML
@@ -25,15 +36,36 @@ public class VistaImportaMetadatiLibro implements VistaPopup, Initializable {
     @FXML
     private TextField fieldISNB;
 
+    private final SimpleObjectProperty<LibroBean> libroBeanProperty;
+
+
     private final OrchestratoreFinestre controllerGrafico;
-    private final ImportaMetadatiLibroController appController <;
-    public VistaImportaMetadatiLibro(OrchestratoreFinestre controller, IBean... beans){
+    private final ImportaMetadatiLibroController appController;
+
+    public VistaImportaMetadatiLibro(OrchestratoreFinestre controller, SimpleObjectProperty... properties){
         this.controllerGrafico = controller;
         this.appController = new ImportaMetadatiLibroController();
+
+        /*
+        Tutte le viste hanno la responsabilità di controllare che i dati necessari alla loro creazione siano forniti
+        nel formato corretto.
+         */
+        LibroBean libroBean;
+        try {
+            libroBeanProperty = (SimpleObjectProperty<LibroBean>) properties[0];
+        } catch (ClassCastException e) {
+            String nomeClasseSbagliata = properties[0].getClass().toString();
+            throw new IllegalArgumentException("La vista necessita di un'istanza di LibroBean, invece viene fornita classe " + nomeClasseSbagliata);
+        }
+        /*
+        Preparato il bean che viene popolato in fase di importazione matadaati.
+         */
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
 
     }
 
@@ -43,6 +75,33 @@ public class VistaImportaMetadatiLibro implements VistaPopup, Initializable {
 
     public void clickSuConferma(ActionEvent actionEvent) {
 
+        String titolo = fieldTitolo.getText();
+        String autore = fieldAutore.getText();
+        String editore = fieldEditore.getText();
+        String edizione = fieldEdizione.getText();
+        String codiceISNB = fieldISNB.getText();
+        String lingua = fieldLingua.getText();
+
+        //controllo se dati obbligatori inseriti
+        if(titolo != null && autore != null && editore != null && codiceISNB != null && lingua != null){
+
+            //Scrivo sul libroBean passato i dati acquisiti
+            LibroBean libroBean = new LibroBean();
+            libroBean.setTitolo(titolo);
+            libroBean.setAutori(List.of(autore));
+            libroBean.setEditore(editore);
+            libroBean.setEdizione(edizione);
+            libroBean.setCodiceISNB(codiceISNB);
+            libroBean.setLingua(lingua);
+
+            //salvo il libro acquisito
+            libroBean.setId(
+                    (appController.salvaLibro(libroBean)).getId()
+            );
+
+
+            libroBeanProperty.set(libroBean);
+        }
 
 
 

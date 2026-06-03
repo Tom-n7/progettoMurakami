@@ -89,4 +89,8 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
     public void setId(int id) {
         this.id = id;
     }
+
+    public void addLibro(LibroBean libroBean){
+        this.libri.add(libroBean);
+    }
 }

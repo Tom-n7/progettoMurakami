@@ -1,10 +1,7 @@
 package it.tommaso.uniroma2.progettoISPW.control;
 
 
-import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
-import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
-import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
-import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
+import it.tommaso.uniroma2.progettoISPW.bean.*;
 import it.tommaso.uniroma2.progettoISPW.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
@@ -83,6 +80,7 @@ public class PrenotaLibroController {
         bozzaPrenotazione.setLettore(lettore = t2.getLettore());
         bozzaPrenotazione.setGiornoPrenotazione(Date.from(Instant.now()));
         bozzaPrenotazione.setStatoPrenotazione(FaseDiPrenotazione.BOZZA);
+        bozzaPrenotazione.setLibri(new ArrayList<>());
         /*
         Quando salvo la prenotazione, viene restituito l'id univoco valido che assegno all'istanza.
          */
@@ -95,7 +93,25 @@ public class PrenotaLibroController {
         return  new PrenotazioneBean(bozzaPrenotazione);
     }
 
+    public PrenotazioneBean aggiungiLibroAllaPrenotazione(PrenotazioneBean prenotazioneBean, LibroBean nuovoLibroBean){
 
+
+        Prenotazione prenotazione = DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().ottieni(prenotazioneBean.getId());
+
+        Libro libro = new Libro();
+
+        libro.setId(nuovoLibroBean.getId());
+        libro.setLingua(nuovoLibroBean.getLingua());
+        libro.setAutori(nuovoLibroBean.getAutori());
+        libro.setEditore(nuovoLibroBean.getEditore());
+        libro.setEdizione(nuovoLibroBean.getEdizione());
+        libro.setTitolo(nuovoLibroBean.getTitolo());
+        libro.setImmagineCopertina(nuovoLibroBean.getImmagineAnteprima());
+
+        prenotazione.addLibro(libro);
+        (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).salva(prenotazione);
+
+    }
 
 }
 

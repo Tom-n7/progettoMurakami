@@ -3,6 +3,7 @@ package it.tommaso.uniroma2.progettoISPW.dao.database;
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
+import it.tommaso.uniroma2.progettoISPW.model.Libro;
 import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
 import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
@@ -37,6 +38,18 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             cs.executeQuery();
             id = cs.getInt("id_prenotazione");
 
+
+            for(Libro l : oggetto.getLibri()){
+                CallableStatement cs2 = con.prepareCall("{call abbina_libro_a_prenotazione(?,?)}");
+                cs2.setInt("arg_id_libro", l.getId());
+                cs2.setInt("arg_id_prenotazione", oggetto.getId());
+                cs2.executeQuery();
+            }
+
+
+
+
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -55,6 +68,11 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+
+    }
+
+    @Override
+    public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) {
 
     }
 }
