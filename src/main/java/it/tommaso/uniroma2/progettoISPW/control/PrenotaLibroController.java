@@ -111,6 +111,7 @@ public class PrenotaLibroController {
         prenotazione.addLibro(libro);
         (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).aggiungiLibroAPrenotazione(prenotazione,libro);
 
+        return prenotazioneBean;
     }
 
 }

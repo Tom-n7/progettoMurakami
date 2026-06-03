@@ -2,12 +2,11 @@ package it.tommaso.uniroma2.progettoISPW.dao.database;
 
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
-import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
-import it.tommaso.uniroma2.progettoISPW.model.Libro;
-import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
+import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -54,20 +53,85 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
     @Override
     public Prenotazione ottieni(int id) throws DAOException {
 
+        Prenotazione prenotazione = new Prenotazione();
         try{
             Connection con = FactoryConnessioneDatabase.getConnection();
             CallableStatement cs = con.prepareCall("{call ottieni_prenotazione(?)}");
             cs.setInt("arg_id", id);
-            cs.executeQuery();
+
+            boolean status = cs.execute();
 
 
+            Lettore lettore = new Lettore();
+            Biblioteca biblioteca = new Biblioteca();
+
+            List<Libro> libri = new ArrayList<>();
+
+            if(status){
+               ResultSet rs = cs.getResultSet();
+               rs.next();
 
 
+               lettore.setId(rs.getInt("id_lettore"));
+               lettore.setNome(rs.getString("nome_lettore"));
+               lettore.setUsername(rs.getString("username"));
+               lettore.setUsername(rs.getString("indirizzo_email"));
 
+               biblioteca.setId(rs.getInt("id_biblioteca"));
+               biblioteca.setRegolePrenotazione(new RegolaPrenotazione(rs.getInt("regola_prenotazione")));
+               biblioteca.setIndirizzo(new Indirizzo(rs.getString("via"),
+                               rs.getString("citta"),
+                               rs.getString("cap")));
+               biblioteca.setImmagineAnteprima(rs.getBlob("immagine_anteprima"));
+
+
+               prenotazione.setId(rs.getInt("id_prenotazione"));
+               prenotazione.setBiblioteca(biblioteca);
+               prenotazione.setLettore(lettore);
+               prenotazione.setGiornoPrenotazione(rs.getDate("data_creazione"));
+               prenotazione.setStatoPrenotazione(FaseDiPrenotazione.valueOf((rs.getString("fase_prenotazione")).toUpperCase()));
+
+            }
+
+            status = cs.getMoreResults();
+
+            if(status){
+                ResultSet rs = cs.getResultSet();
+
+                /*
+                Un libro può avere più autori, quando questo accade, vi sono diversi result set in cui i dati del libro
+                sono identici e solo il nome autore differisce. Fino a quando l'id del libro in un rs è uguale al precedente,
+                vuol dire che c'è un altro autore per lo stesso libro.
+                 */
+                Libro libro = new Libro();
+                int scorsoLibroID = 0;
+                while (rs.next()) {
+                    if(rs.getInt("id") != scorsoLibroID) {
+                        scorsoLibroID = rs.getInt("id");
+                        libro = new Libro();
+
+                        libro.setId(rs.getInt("id"));
+                        libro.setImmagineCopertina(rs.getBlob("immagine_copertina"));
+                        libro.setTitolo(rs.getString("titolo"));
+                        libro.setEdizione(rs.getString("edizione"));
+                        libro.setEditore(rs.getString("editore"));
+                        libro.setImmagineCopertina(rs.getBlob("immagine_copertina"));
+                        libro.setLingua(rs.getString("lingua"));
+                        libro.setCodiceISNB("codice_ISNB");
+                        libro.setAutori(new ArrayList<>());
+                        libro.addAutore(rs.getString("nome_autore"));
+                        libri.add(libro);
+                    }else {
+                        libro.addAutore(rs.getString("nome_autore"));
+                    }
+                }
+                prenotazione.setLibri(libri);
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return prenotazione;
     }
 
     @Override

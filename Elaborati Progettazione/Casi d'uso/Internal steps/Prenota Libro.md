@@ -11,7 +11,7 @@
  --si ripetono i passi 5,6 e 7 per ogni libro che il lettore desidera prenotare-- 
 8. Il lettore conferma i libri inseriti. 
 9. Il sistema verifica che la bozza rispetti le regole della biblioteca. 
-10. Il sistema salva la prenotazione.
+10. Il sistema rende accessibile la prenotazione alla biblioteca.
 11. Il sistema crea un riepilogo della prenotazione per il lettore ed uno per il bibliotecario.
 12. Il sistema richiede al servizio mail l'invio tramite messaggio del riepilogo di prenotazione all'indirizzo del bibliotecario e uno all'indirizzo del lettore.
 
@@ -34,8 +34,3 @@ Il caso d'uso termina.
 1. Il sistema comunica il numero di libri in eccesso.
 2. Il sistema impedisce la conferma.
    Il caso d'uso riprende dal passo 6.
-
-10a. Errore persistenza:
-1. Il sistema notifica il lettore del fallimento
-    1a. Il lettore richiede un nuovo tentativo: Il caso d'uso riprende dal passo 11.
-    1b. Il lettore rinuncia a prenotare: Il sistema elimina la bozza e termina il caso d'uso.

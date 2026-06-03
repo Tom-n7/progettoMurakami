@@ -68,4 +68,11 @@ public class Biblioteca {
         this.orarioSettimanale = orarioSettimanale;
     }
 
+    public Blob getImmagineAnteprima() {
+        return immagineAnteprima;
+    }
+
+    public void setImmagineAnteprima(Blob immagineAnteprima) {
+        this.immagineAnteprima = immagineAnteprima;
+    }
 }

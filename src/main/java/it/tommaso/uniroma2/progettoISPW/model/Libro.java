@@ -89,4 +89,8 @@ public class Libro {
     public void setCodiceISNB(String codiceISNB) {
         this.codiceISNB = codiceISNB;
     }
+
+    public void addAutore(String nomeAutore){
+        this.autori.add(nomeAutore);
+    }
 }

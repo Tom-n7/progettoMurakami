@@ -18,6 +18,14 @@ public class Prenotazione {
     public Prenotazione() {
     }
 
+    public Prenotazione(int id, Lettore lettore, Biblioteca biblioteca, Date giornoPrenotazione, FaseDiPrenotazione stato, List<Libro> libri) {
+        this.id = id;
+        this.lettore = lettore;
+        this.biblioteca = biblioteca;
+        this.giornoPrenotazione = giornoPrenotazione;
+        this.stato = stato;
+        this.libri = libri;
+    }
 
     public int getId() {
         return id;

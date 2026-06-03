@@ -120,6 +120,7 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
         libroDaAggiungereProperty.addListener((obs,val,newval)->{
             LibroBean nuovoLibro = newval;
             PrenotazioneBean prenotazioneBean = bozzaPrenotazioneProperty.get();
+            prenotazioneBean.addLibro(nuovoLibro);
             bozzaPrenotazioneProperty.set(
                    controllerApplicativo.aggiungiLibroAllaPrenotazione(prenotazioneBean,nuovoLibro)
            );
