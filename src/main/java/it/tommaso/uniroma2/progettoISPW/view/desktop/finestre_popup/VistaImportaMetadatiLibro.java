@@ -1,15 +1,10 @@
-package it.tommaso.uniroma2.progettoISPW.view.finestre_popup;
+package it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup;
 
-import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
-import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.ImportaMetadatiLibroController;
-import it.tommaso.uniroma2.progettoISPW.supporto.LibroImportatoEvent;
-import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -101,6 +96,7 @@ public class VistaImportaMetadatiLibro extends Popup implements VistaPopup, Init
 
 
             libroBeanProperty.set(libroBean);
+            controllerGrafico.chiudiFinestraPopup(this);
         }
 
 

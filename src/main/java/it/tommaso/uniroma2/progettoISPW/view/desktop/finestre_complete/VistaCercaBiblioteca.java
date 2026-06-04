@@ -1,4 +1,4 @@
-package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
+package it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
@@ -6,9 +6,8 @@ import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.model.TipoFiltroBiblioteca;
-import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 
-import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

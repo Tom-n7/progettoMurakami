@@ -1,11 +1,8 @@
-package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
+package it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete;
 
 import it.tommaso.uniroma2.progettoISPW.bean.*;
-import it.tommaso.uniroma2.progettoISPW.control.ImportaMetadatiLibroController;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
-import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
-import javafx.application.Platform;
-import javafx.beans.Observable;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +15,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,18 +28,26 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     private final SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
     private final SimpleObjectProperty<LibroBean> libroDaAggiungereProperty;
 
-    public ListView<LibroBean> listaLibri;
+    @FXML
+    private ListView<LibroBean> listaLibri;
 
     //dettagli biblioteca
-    public VBox infoBibliotecaVBox;
-    public Label labelNomeBiblioteca;
-    public Label labelIndirizzoBiblioteca;
-    public Label labelMaxLibriBiblioteca;
-    public Label labelOrarioSettimanaleBiblioteca;
+    @FXML
+    private VBox infoBibliotecaVBox;
+    @FXML
+    private Label labelNomeBiblioteca;
+    @FXML
+    private Label labelIndirizzoBiblioteca;
+    @FXML
+    private Label labelMaxLibriBiblioteca;
+    @FXML
+    private Label labelOrarioSettimanaleBiblioteca;
 
     //avatar
-    public Label labelNomeLettore;
-    public Label labelEmailLettore;
+    @FXML
+    private Label labelNomeLettore;
+    @FXML
+    private Label labelEmailLettore;
 
     @FXML
     private HBox listaLibriPrenotazione;
@@ -101,12 +105,16 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     }
 
     public void clickSuConferma(ActionEvent actionEvent) {
+        controllerApplicativo.validaPrenotazione(bozzaPrenotazioneProperty.get());
+
+
+
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {
-
-        controllerGrafico.lanciaVistaCompleta("menu_principale");
         controllerApplicativo.eliminaPrenotazione(bozzaPrenotazioneProperty.get());
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
+
 
     }
 
@@ -126,8 +134,10 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
            );
 
             //pulisco la lista libri e la aggiorno.
-            listaLibriPrenotazioneProperty.get().removeAll();
+            listaLibriPrenotazioneProperty.set(FXCollections.observableArrayList());
             listaLibriPrenotazioneProperty.get().addAll(bozzaPrenotazioneProperty.get().getLibri());
+
+
         });
 
 

@@ -2,10 +2,13 @@ package it.tommaso.uniroma2.progettoISPW.supporto;
 
 public class Sessione {
 
-    private int idUtente;
+    private final int idUtente;
+    private final String username;
 
-    private Sessione(int id){
+    private Sessione(int id, String username){
+
         idUtente = id;
+        this.username = username;
     };
 
     private class ContenitoreSessione{
@@ -16,10 +19,13 @@ public class Sessione {
         return ContenitoreSessione.ISTANZA.idUtente;
     }
 
+    public static String getUsername() {
+        return ContenitoreSessione.ISTANZA.username;
+    }
 
-    public static Sessione inizializzaSessione(int id){
+    public static Sessione inizializzaSessione(int id, String username){
         if(ContenitoreSessione.ISTANZA == null){
-            ContenitoreSessione.ISTANZA = new Sessione(id);
+            ContenitoreSessione.ISTANZA = new Sessione(id,username);
         }
 
          return ContenitoreSessione.ISTANZA;

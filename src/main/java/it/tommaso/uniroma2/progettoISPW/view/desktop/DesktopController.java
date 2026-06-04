@@ -1,14 +1,14 @@
-package it.tommaso.uniroma2.progettoISPW.view;
+package it.tommaso.uniroma2.progettoISPW.view.desktop;
 
-import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCercaBiblioteca;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaCompleta;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaMenuPrincipale;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_complete.VistaPrenotazione;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaDettagliBiblioteca;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaImportaMetadatiLibro;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
+import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCercaBiblioteca;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCompleta;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaMenuPrincipale;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaPrenotazione;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaDettagliBiblioteca;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaImportaMetadatiLibro;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaPopup;
 import javafx.application.Application;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
@@ -18,15 +18,12 @@ import javafx.scene.paint.Color;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class DesktopController extends Application implements ControllerGrafico, OrchestratoreFinestre{
+public class DesktopController extends Application implements ControllerGrafico, OrchestratoreFinestre {
 
     private final String NOME_VISTA_DI_ENTRATA = "menu_principale";
     private final double DEFAULT_WIDTH = 1280;

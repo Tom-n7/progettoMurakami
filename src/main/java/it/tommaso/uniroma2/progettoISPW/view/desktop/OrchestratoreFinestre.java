@@ -1,7 +1,7 @@
-package it.tommaso.uniroma2.progettoISPW.view;
+package it.tommaso.uniroma2.progettoISPW.view.desktop;
 
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
-import it.tommaso.uniroma2.progettoISPW.view.finestre_popup.VistaPopup;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaPopup;
 import javafx.beans.property.SimpleObjectProperty;
 
 public interface OrchestratoreFinestre {

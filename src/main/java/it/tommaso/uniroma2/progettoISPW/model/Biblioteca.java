@@ -5,7 +5,6 @@ package it.tommaso.uniroma2.progettoISPW.model;
 import java.sql.Blob;
 import java.time.DayOfWeek;
 import java.util.EnumMap;
-import java.util.List;
 
 public class Biblioteca {
 
@@ -13,17 +12,17 @@ public class Biblioteca {
     private String nome;
     private Indirizzo indirizzo;
     private Blob immagineAnteprima;
-    private RegolaPrenotazione regolePrenotazione;
+    private RegolaPrenotazione regolaPrenotazione;
     private EnumMap<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
 
     public Biblioteca(){}
 
-    public Biblioteca(int id, String nome, Indirizzo indirizzo, Blob immagineAnteprima, RegolaPrenotazione regolePrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public Biblioteca(int id, String nome, Indirizzo indirizzo, Blob immagineAnteprima, RegolaPrenotazione regolaPrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
         this.immagineAnteprima = immagineAnteprima;
-        this.regolePrenotazione = regolePrenotazione;
+        this.regolaPrenotazione = regolaPrenotazione;
         this.orarioSettimanale = orarioSettimanale;
     }
 
@@ -52,12 +51,12 @@ public class Biblioteca {
         this.indirizzo = indirizzo;
     }
 
-    public RegolaPrenotazione getRegolePrenotazione() {
-        return regolePrenotazione;
+    public RegolaPrenotazione getRegolaPrenotazione() {
+        return regolaPrenotazione;
     }
 
-    public void setRegolePrenotazione(RegolaPrenotazione regolaPrenotazione) {
-        this.regolePrenotazione = regolaPrenotazione;
+    public void setRegolaPrenotazione(RegolaPrenotazione regolaPrenotazione) {
+        this.regolaPrenotazione = regolaPrenotazione;
     }
 
     public EnumMap<DayOfWeek, IOrarioGiornaliero> getOrarioSettimanale() {

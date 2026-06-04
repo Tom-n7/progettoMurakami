@@ -2,6 +2,7 @@ package it.tommaso.uniroma2.progettoISPW.dao.file;
 
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
+import it.tommaso.uniroma2.progettoISPW.model.FaseDiPrenotazione;
 import it.tommaso.uniroma2.progettoISPW.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoISPW.model.Libro;
 import it.tommaso.uniroma2.progettoISPW.model.Prenotazione;
@@ -41,6 +42,11 @@ public class FilePrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) {
+
+    }
+
+    @Override
+    public void aggiornaStatoPrenotazione(FaseDiPrenotazione nuovoStato, int idPrenotazione) {
 
     }
 }

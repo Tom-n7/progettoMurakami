@@ -17,7 +17,7 @@
 
 ## Estensioni
 
-1-8a. Il lettore vuole interrompere l'operazione: Il sistema elimina la bozza ed i dati correlati.
+1-7a. Il lettore vuole interrompere l'operazione: Il sistema elimina la bozza ed i dati correlati.
 Il caso d'uso termina.
 
 6b. La prenotazione contiene almeno un libro ed il lettore vuole eliminarne uno:

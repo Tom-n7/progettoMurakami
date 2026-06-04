@@ -36,11 +36,11 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
         BibliotecaBean bibliotecaBean = new BibliotecaBean(prenotazione.getBiblioteca());
         LettoreBean lettoreBean = new LettoreBean(prenotazione.getLettore());
         List<LibroBean> libriBean = new ArrayList<>();
-        if(!prenotazione.isBozza()) {
-            for (Libro l : prenotazione.getLibri()) {
-                libriBean.add(new LibroBean(l));
-            }
+
+        for (Libro l : prenotazione.getLibri()) {
+            libriBean.add(new LibroBean(l));
         }
+
 
         this.faseDiPrenotazione = prenotazione.getStatoPrenotazione().toString();
         this.biblioteca = bibliotecaBean;
@@ -92,5 +92,23 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
 
     public void addLibro(LibroBean libroBean){
         this.libri.add(libroBean);
+    }
+
+    @Override
+    public String toString() {
+
+        String titoliLibri = "";
+        for(LibroBean l: this.libri){
+            if(l == this.libri.getLast()){
+                titoliLibri = titoliLibri + l.getTitolo();
+            }else {
+                titoliLibri = titoliLibri + l.getTitolo() + ", ";
+            }
+        }
+        
+        return "Libri: " + titoliLibri + "\n"
+                + "Biblioteca: " + biblioteca.getNome() + "\n" 
+                + "Stato Prenotazione: " + faseDiPrenotazione.toString();
+        
     }
 }

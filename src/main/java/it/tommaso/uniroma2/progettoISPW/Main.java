@@ -6,7 +6,8 @@ import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
-import it.tommaso.uniroma2.progettoISPW.view.DesktopController;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.DesktopController;
+import it.tommaso.uniroma2.progettoISPW.view.mobile.MobileController;
 
 /*
 Classe controller del sistema; lancia l'applicazione in modalità GUI o CLI a seconda dell'impostazione
@@ -31,7 +32,7 @@ public class Main{
 
 
         //poiché il login non è implementato.
-        Sessione.inizializzaSessione(1);
+        Sessione.inizializzaSessione(1, "ttesta99");
 
 
         //PROVVISORIAMENTE la factory è init. per restituire la versione "database" dei DAO
@@ -39,7 +40,7 @@ public class Main{
 
 
 
-        ControllerGrafico controllerGrafico = new DesktopController();
+        ControllerGrafico controllerGrafico = new MobileController();
         controllerGrafico.iniziaSessioneGrafica();
 
 

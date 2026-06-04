@@ -1,11 +1,8 @@
-package it.tommaso.uniroma2.progettoISPW.view.finestre_popup;
+package it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
-import it.tommaso.uniroma2.progettoISPW.model.Biblioteca;
-import it.tommaso.uniroma2.progettoISPW.model.Indirizzo;
-import it.tommaso.uniroma2.progettoISPW.model.RegolaPrenotazione;
-import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class VistaDettagliBiblioteca implements VistaPopup, Initializable {
