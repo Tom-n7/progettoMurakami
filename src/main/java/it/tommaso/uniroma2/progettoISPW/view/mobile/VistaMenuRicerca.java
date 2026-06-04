@@ -10,7 +10,4 @@ public class VistaMenuRicerca implements VistaMobilePopup{
 
     public void clickSuEsci(ActionEvent actionEvent) {
     }
-
-    public void clickSuConferma(ActionEvent actionEvent) {
-    }
 }
