@@ -7,8 +7,6 @@ import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
-import it.tommaso.uniroma2.progettoISPW.exception.NumeroLibriMassimoSuperatoException;
-import it.tommaso.uniroma2.progettoISPW.exception.RegoleBibliotecaException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
@@ -42,6 +40,7 @@ public class PrenotaLibroController {
 
 
         } catch (DAOException | RicercaException e){
+            System.out.println(e.getMessage());
             throw new RuntimeException(e);
         }
         return listaBeanBiblioteche;
@@ -145,7 +144,7 @@ public class PrenotaLibroController {
         }
 
         prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
-        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().aggiornaStatoPrenotazione(FaseDiPrenotazione.VERIFICATA,prenotazione.getId());
+        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().salva(prenotazione);
 
         generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
         generaRiepilogoLettore(lettoreRichiedente, prenotazione);

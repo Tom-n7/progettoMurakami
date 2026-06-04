@@ -1,13 +1,13 @@
 package it.tommaso.uniroma2.progettoISPW.dao.database;
 
 import it.tommaso.uniroma2.progettoISPW.dao.PrenotazioneDAO;
-import it.tommaso.uniroma2.progettoISPW.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
@@ -70,6 +70,9 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     }
 
+    /*
+
+     */
     @Override
     public Prenotazione ottieni(int id) throws DAOException {
 
