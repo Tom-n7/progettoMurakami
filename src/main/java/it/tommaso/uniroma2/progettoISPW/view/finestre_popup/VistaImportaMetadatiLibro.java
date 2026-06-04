@@ -101,6 +101,7 @@ public class VistaImportaMetadatiLibro extends Popup implements VistaPopup, Init
 
 
             libroBeanProperty.set(libroBean);
+            controllerGrafico.chiudiFinestraPopup(this);
         }
 
 

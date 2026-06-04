@@ -32,18 +32,26 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     private final SimpleObjectProperty<PrenotazioneBean> bozzaPrenotazioneProperty;
     private final SimpleObjectProperty<LibroBean> libroDaAggiungereProperty;
 
-    public ListView<LibroBean> listaLibri;
+    @FXML
+    private ListView<LibroBean> listaLibri;
 
     //dettagli biblioteca
-    public VBox infoBibliotecaVBox;
-    public Label labelNomeBiblioteca;
-    public Label labelIndirizzoBiblioteca;
-    public Label labelMaxLibriBiblioteca;
-    public Label labelOrarioSettimanaleBiblioteca;
+    @FXML
+    private VBox infoBibliotecaVBox;
+    @FXML
+    private Label labelNomeBiblioteca;
+    @FXML
+    private Label labelIndirizzoBiblioteca;
+    @FXML
+    private Label labelMaxLibriBiblioteca;
+    @FXML
+    private Label labelOrarioSettimanaleBiblioteca;
 
     //avatar
-    public Label labelNomeLettore;
-    public Label labelEmailLettore;
+    @FXML
+    private Label labelNomeLettore;
+    @FXML
+    private Label labelEmailLettore;
 
     @FXML
     private HBox listaLibriPrenotazione;
@@ -101,6 +109,10 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     }
 
     public void clickSuConferma(ActionEvent actionEvent) {
+        controllerApplicativo.validaPrenotazione(bozzaPrenotazioneProperty.get());
+
+
+
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {
@@ -126,8 +138,10 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
            );
 
             //pulisco la lista libri e la aggiorno.
-            listaLibriPrenotazioneProperty.get().removeAll();
+            listaLibriPrenotazioneProperty.set(FXCollections.observableArrayList());
             listaLibriPrenotazioneProperty.get().addAll(bozzaPrenotazioneProperty.get().getLibri());
+
+
         });
 
 

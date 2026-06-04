@@ -7,7 +7,6 @@ import it.tommaso.uniroma2.progettoISPW.supporto.FactoryConnessioneDatabase;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
@@ -18,7 +17,30 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public List<Prenotazione> ottieniListaFiltrata(IFiltroTestuale<Prenotazione> filtro) throws DAOException {
-        return List.of();
+        try {
+            Connection con = FactoryConnessioneDatabase.getConnection();
+            CallableStatement cs = con.prepareCall("{call ottieni_tutte_prenotazioni_utente(?)}");
+            cs.setString("arg_username_utente", filtro.ottieniTestoRicerca());
+
+            boolean status = cs.execute();
+
+            List<Prenotazione> listaPrenotazioni = new ArrayList<>();
+            if (status) {
+
+                int idPrenotazione;
+                ResultSet rs = cs.getResultSet();
+                while (rs.next()){
+
+                    idPrenotazione = rs.getInt("id");
+                    listaPrenotazioni.add(ottieni(idPrenotazione));
+
+                }
+
+            }
+            return listaPrenotazioni;
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -47,9 +69,6 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
     }
 
-    /*
-
-     */
     @Override
     public Prenotazione ottieni(int id) throws DAOException {
 
@@ -78,11 +97,12 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
                lettore.setUsername(rs.getString("indirizzo_email"));
 
                biblioteca.setId(rs.getInt("id_biblioteca"));
-               biblioteca.setRegolePrenotazione(new RegolaPrenotazione(rs.getInt("regola_prenotazione")));
+               biblioteca.setRegolaPrenotazione(new RegolaPrenotazione(rs.getInt("regola_prenotazione")));
                biblioteca.setIndirizzo(new Indirizzo(rs.getString("via"),
                                rs.getString("citta"),
                                rs.getString("cap")));
                biblioteca.setImmagineAnteprima(rs.getBlob("immagine_anteprima"));
+               biblioteca.setNome(rs.getString("nome_biblioteca"));
 
 
                prenotazione.setId(rs.getInt("id_prenotazione"));
@@ -152,4 +172,26 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             throw new DAOException("errore abbinamento libro a prenotazione!");
         }
     }
+
+
+
+    @Override
+    public void aggiornaStatoPrenotazione(FaseDiPrenotazione nuovoStato, int idPrenotazione) {
+
+        try{
+            Connection con = FactoryConnessioneDatabase.getConnection();
+            CallableStatement cs
+
+
+
+
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+    }
+
+
 }

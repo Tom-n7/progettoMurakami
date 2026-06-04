@@ -22,7 +22,7 @@ public class BibliotecaBean implements IBean<Biblioteca> {
          nome = biblioteca.getNome();
          indirizzo = biblioteca.getIndirizzo().getVia() + ", " + biblioteca.getIndirizzo().getCitta() +", " + biblioteca.getIndirizzo().getCAP();
          collegamentoAnteprima = null;
-         regolePrenotazione = biblioteca.getRegolePrenotazione().toString();
+         regolePrenotazione = biblioteca.getRegolaPrenotazione().toString();
 
          for (DayOfWeek day: DayOfWeek.values()){
              if( biblioteca.getOrarioSettimanale() != null) {

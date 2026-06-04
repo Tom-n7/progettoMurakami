@@ -7,6 +7,8 @@ import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
+import it.tommaso.uniroma2.progettoISPW.exception.NumeroLibriMassimoSuperatoException;
+import it.tommaso.uniroma2.progettoISPW.exception.RegoleBibliotecaException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
@@ -40,7 +42,6 @@ public class PrenotaLibroController {
 
 
         } catch (DAOException | RicercaException e){
-            System.out.println(e.getMessage());
             throw new RuntimeException(e);
         }
         return listaBeanBiblioteche;
@@ -113,6 +114,51 @@ public class PrenotaLibroController {
 
         return prenotazioneBean;
     }
+
+    /*
+    Questa operazione applica le (o la) regola di prenotazione della biblioteca alla bozza di prenotazione referenziata da prenotazioneBean.
+    Se questa risulta conforme, il sistema cambia lo stato della prenotazione (da bozza -> verif
+     */
+    public void validaPrenotazione(PrenotazioneBean prenotazioneBean) throws RegoleBibliotecaException{
+
+        RegolaPrenotazione regolaBiblioteca;
+        Biblioteca bibliotecaDestinazione;
+        Lettore lettoreRichiedente;
+
+        Prenotazione prenotazione;
+        try{
+            prenotazione = DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().ottieni(prenotazioneBean.getId());
+        } catch (DAOException e) {
+            throw new RuntimeException(e);
+        }
+
+        bibliotecaDestinazione = prenotazione.getBiblioteca();
+        regolaBiblioteca = bibliotecaDestinazione.getRegolaPrenotazione();
+        lettoreRichiedente = prenotazione.getLettore();
+
+        //se la prenotazione contravviene la regola, viene lanciata l'eccezione.
+        try {
+            regolaBiblioteca.passaPrenotazione(prenotazione.getLibri());
+        } catch (NumeroLibriMassimoSuperatoException e) {
+            String messaggio = "Hai superato limite libri stabilito dalla biblioteca: " + e.getNumeroLibriInEccesso() +" in eccesso!";
+            throw new RegoleBibliotecaException(messaggio);
+        }
+
+        prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
+        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().salva(prenotazione);
+
+        generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
+        generaRiepilogoLettore(lettoreRichiedente, prenotazione);
+
+
+    }
+
+
+    private void generaRiepilogoLettore(Lettore lettore, Prenotazione prenotazione){}
+    private void generaRiepilogoBiblioteca(Biblioteca biblioteca, Prenotazione prenotazione){}
+
+
+
 
 }
 

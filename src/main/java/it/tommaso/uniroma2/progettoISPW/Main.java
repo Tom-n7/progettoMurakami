@@ -31,7 +31,7 @@ public class Main{
 
 
         //poiché il login non è implementato.
-        Sessione.inizializzaSessione(1);
+        Sessione.inizializzaSessione(1, "ttesta99");
 
 
         //PROVVISORIAMENTE la factory è init. per restituire la versione "database" dei DAO

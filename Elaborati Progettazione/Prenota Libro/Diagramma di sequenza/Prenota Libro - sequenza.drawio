@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
   <diagram id="wZHOb5JrG-L5wtM9YdRI" name="Page-3">
-    <mxGraphModel dx="1768" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1664" dy="1046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -476,7 +476,7 @@
             <mxPoint x="560.0000000000002" y="1900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5y8l53Gz3hBXekAuQUyR-62" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="confermaLibri()" vertex="1">
+        <mxCell id="5y8l53Gz3hBXekAuQUyR-62" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="clickSuConferma()" vertex="1">
           <mxGeometry height="30" width="290" x="230" y="1870" as="geometry" />
         </mxCell>
         <mxCell id="5y8l53Gz3hBXekAuQUyR-64" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="5y8l53Gz3hBXekAuQUyR-65" value="">

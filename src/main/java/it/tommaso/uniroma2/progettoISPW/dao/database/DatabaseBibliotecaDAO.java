@@ -45,7 +45,7 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
 
                     biblioteca.setIndirizzo(indirizzoBiblioteca);
                     RegolaPrenotazione regola = new RegolaPrenotazione(rs.getInt("regola_prenotazione"));
-                    biblioteca.setRegolePrenotazione(regola);
+                    biblioteca.setRegolaPrenotazione(regola);
 
 
                     listaBiblioteche.add(biblioteca);
