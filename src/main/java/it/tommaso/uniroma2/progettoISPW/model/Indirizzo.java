@@ -37,4 +37,8 @@ public class Indirizzo {
         this.CAP = CAP;
     }
 
+    @Override
+    public String toString() {
+        return via + ", " + citta + ", " + CAP;
+    }
 }

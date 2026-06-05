@@ -4,10 +4,14 @@ import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
-public class VistaMenuPrincipale implements VistaMobile {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class VistaMenuPrincipale implements VistaMobile, Initializable {
     @FXML
     private Button bottoneNuovaPrenotazione;
     @FXML
@@ -32,4 +36,13 @@ public class VistaMenuPrincipale implements VistaMobile {
 
     public void clickSuEsci(ActionEvent actionEvent) {
     }
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+
 }

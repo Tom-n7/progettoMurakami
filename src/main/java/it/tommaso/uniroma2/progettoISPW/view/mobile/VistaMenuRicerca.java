@@ -5,6 +5,7 @@ import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
+import it.tommaso.uniroma2.progettoISPW.model.TipoFiltroBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -65,11 +66,13 @@ public class VistaMenuRicerca implements VistaMobilePopup, Initializable {
         filtroProvvisorio.setTestoRicerca(fieldRicerca.getText());
         //passo il filtro bean alla property condivisa con la vista CercaBiblioteca.
         propertyFiltroBiblioteca.set(filtroProvvisorio);
+        controllerGrafico.chiudiFinestraPopup(this);
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         //costruzione strumento selezione criterio ricerca.
         List<String> nomiCriteriRicercaEsistenti = new ArrayList<>(new FiltroBibliotecaBean().getTuttiTipi());
         for(String n: nomiCriteriRicercaEsistenti) {
@@ -87,5 +90,10 @@ public class VistaMenuRicerca implements VistaMobilePopup, Initializable {
                 VBoxBottoni.getChildren().add(bottoneCriterio);
             }
         }
+
+        //voglio che di base il tipo di filtro sia per nome
+        filtroProvvisorio.setTipoSelezionato(TipoFiltroBiblioteca.NOME.toString());
+        fieldRicerca.setPromptText("Cerca per: NOME");
+
     }
 }

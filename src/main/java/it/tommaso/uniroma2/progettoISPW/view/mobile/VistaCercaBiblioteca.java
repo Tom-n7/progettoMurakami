@@ -13,6 +13,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 
@@ -32,6 +33,10 @@ public class VistaCercaBiblioteca implements VistaMobile, Initializable {
         @Override
         public void changed(ObservableValue<? extends BibliotecaBean> observable, BibliotecaBean oldValue, BibliotecaBean newValue) {
             propertyBibliotecaScelta.setValue(listViewBiblioteche.getSelectionModel().getSelectedItem());
+
+            bottoneRicerca.setVisible(false);
+            bottoneConferma.setVisible(true);
+            bottoneDeselezione.setVisible(true);
         }
     };
 
@@ -40,6 +45,9 @@ public class VistaCercaBiblioteca implements VistaMobile, Initializable {
 
     public HBox HBoxAlta;
     public ListView<BibliotecaBean> listViewBiblioteche;
+    public Button bottoneDeselezione;
+    public Button bottoneRicerca;
+    public Button bottoneConferma;
 
     public VistaCercaBiblioteca(OrchestratoreFinestre controllerGrafico, IBean... beans) {
         this.controllerGrafico = controllerGrafico;
@@ -67,13 +75,40 @@ public class VistaCercaBiblioteca implements VistaMobile, Initializable {
         listViewBiblioteche.itemsProperty().bind(propertyBibliotecheCaricate);
         listViewBiblioteche.getSelectionModel().selectedItemProperty().addListener(handlerSelezioneBiblioteca);
 
+        //listener che, nel momento in cui il lettore conferma i criteri di ricerca, richiede al sistema di caricare le biblioteche
+        //e mostra i risultati.
         propertyFiltroBiblioteca.addListener((obs, old, newval)->{
-
             propertyBibliotecheCaricate.get().clear();
             propertyBibliotecheCaricate.get().addAll(
                     controllerApplicativo.caricaBibliotecheRegistrate(newval)
             );
+
         });
+
+        //quando non si è ancora selezionata una biblioteca, i bottoni sono nascosti.
+        bottoneConferma.setVisible(false);
+        bottoneDeselezione.setVisible(false);
+
+    }
+
+    public void tapSuDeselezione(ActionEvent actionEvent) {
+        propertyBibliotecaScelta.setValue(null);
+        bottoneDeselezione.setVisible(false);
+        bottoneConferma.setVisible(false);
+        bottoneRicerca.setVisible(true);
+    }
+
+    public void tapSuConferma(ActionEvent actionEvent) {
+
+        if(propertyBibliotecaScelta.get() != null){
+
+            controllerApplicativo.bozzaPrenotazione(propertyBibliotecaScelta.get());
+            this.controllerGrafico.lanciaVistaCompleta("dettagli_prenotazione", propertyBibliotecaScelta.get());
+
+        }else {
+            //questo meglio trasformarlo in eccezione.
+        }
+
 
     }
 }

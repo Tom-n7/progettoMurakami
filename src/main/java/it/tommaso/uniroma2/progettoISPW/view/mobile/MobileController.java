@@ -44,7 +44,7 @@ public class MobileController extends Application implements ControllerGrafico, 
         NOMI_VISTE_CONTROLLER.put("ricerca_biblioteca", VistaCercaBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("menu_ricerca", VistaMenuRicerca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_biblioteca", VistaDettagliBiblioteca.class);
-        NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaPrenotazione.class);
+        NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaDettagliPrenotazione.class);
         NOMI_VISTE_CONTROLLER.put("importa_metadati_libro", VistaImportaMetadatiLibro.class);
     }
 
