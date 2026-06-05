@@ -6,6 +6,7 @@ import it.tommaso.uniroma2.progettoispw.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoispw.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoispw.supporto.Sessione;
 import it.tommaso.uniroma2.progettoispw.view.ControllerGrafico;
+import it.tommaso.uniroma2.progettoispw.view.desktop.DesktopController;
 import it.tommaso.uniroma2.progettoispw.view.mobile.MobileController;
 
 /*
@@ -39,7 +40,7 @@ public class Main{
 
 
 
-        ControllerGrafico controllerGrafico = new MobileController();
+        ControllerGrafico controllerGrafico = new DesktopController();
         controllerGrafico.iniziaSessioneGrafica();
 
 

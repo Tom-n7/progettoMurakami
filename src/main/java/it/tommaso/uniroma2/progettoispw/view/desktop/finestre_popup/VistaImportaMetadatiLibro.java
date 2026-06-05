@@ -2,6 +2,7 @@ package it.tommaso.uniroma2.progettoispw.view.desktop.finestre_popup;
 
 import it.tommaso.uniroma2.progettoispw.bean.LibroBean;
 import it.tommaso.uniroma2.progettoispw.control.ImportaMetadatiLibroController;
+import it.tommaso.uniroma2.progettoispw.exception.DAOException;
 import it.tommaso.uniroma2.progettoispw.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
@@ -89,11 +90,14 @@ public class VistaImportaMetadatiLibro extends Popup implements VistaPopup, Init
             libroBean.setCodiceISNB(codiceISNB);
             libroBean.setLingua(lingua);
 
-            //salvo il libro acquisito
-            libroBean.setId(
-                    (appController.salvaLibro(libroBean)).getId()
-            );
-
+            try {
+                //salvo il libro acquisito
+                libroBean.setId(
+                        (appController.salvaLibro(libroBean)).getId()
+                );
+            } catch (DAOException e) {
+                controllerGrafico.chiudiFinestraPopup(this);
+            }
 
             libroBeanProperty.set(libroBean);
             controllerGrafico.chiudiFinestraPopup(this);

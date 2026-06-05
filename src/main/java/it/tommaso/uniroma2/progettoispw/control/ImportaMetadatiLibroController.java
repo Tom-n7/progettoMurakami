@@ -9,7 +9,7 @@ import it.tommaso.uniroma2.progettoispw.model.Libro;
 public class ImportaMetadatiLibroController {
 
 
-    public LibroBean salvaLibro(LibroBean libroBean){
+    public LibroBean salvaLibro(LibroBean libroBean) throws DAOException{
 
 
         LibroDAO libroDAO = DAOFactory.ottieniDAOFactory().creaLibroDAO();
@@ -25,7 +25,7 @@ public class ImportaMetadatiLibroController {
         try {
             libroBean.setId(libroDAO.salva(libro));
         } catch (DAOException e) {
-            throw new RuntimeException(e);
+            throw new DAOException("Errore salvataggio libro", e);
         }
         return libroBean;
     }

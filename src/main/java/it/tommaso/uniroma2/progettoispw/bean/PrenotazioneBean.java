@@ -25,7 +25,7 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
     }
 
 
-
+    public PrenotazioneBean(){}
 
 
 

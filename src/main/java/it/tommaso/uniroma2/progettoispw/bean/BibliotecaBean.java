@@ -15,6 +15,7 @@ public class BibliotecaBean implements IBean<Biblioteca> {
     private String regolePrenotazione;
     private Map<String, String> orarioSettimanale;
 
+    public BibliotecaBean(){}
 
     public BibliotecaBean(Biblioteca biblioteca){
 

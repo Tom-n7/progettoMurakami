@@ -35,7 +35,8 @@ public class PrenotaLibroController {
         BibliotecaDAO bdao = DAOFactory.ottieniDAOFactory().creaBibliotecaDAO();
         try {
 
-            listaBibliotecheOttenute.addAll(bdao.ottieniListaFiltrata(filtro));
+            listaBibliotecheOttenute.addAll(
+                    bdao.ottieniListaFiltrata(filtro));
             for (Biblioteca b : listaBibliotecheOttenute) {
                 listaBeanBiblioteche.add(new BibliotecaBean(b));
             }
@@ -140,17 +141,18 @@ public class PrenotaLibroController {
         //se la prenotazione contravviene la regola, viene lanciata l'eccezione.
         try {
             regolaBiblioteca.passaPrenotazione(prenotazione.getLibri());
+
+            prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
+            DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().aggiornaStatoPrenotazione(FaseDiPrenotazione.VERIFICATA,prenotazione.getId());
+
+            generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
+            generaRiepilogoLettore(lettoreRichiedente, prenotazione);
+
+
         } catch (NumeroLibriMassimoSuperatoException e) {
             String messaggio = "Hai superato limite libri stabilito dalla biblioteca: " + e.getNumeroLibriInEccesso() +" in eccesso!";
             throw new RegoleBibliotecaException(messaggio);
         }
-
-        prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
-        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().aggiornaStatoPrenotazione(FaseDiPrenotazione.VERIFICATA,prenotazione.getId());
-
-        generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
-        generaRiepilogoLettore(lettoreRichiedente, prenotazione);
-
 
     }
 
