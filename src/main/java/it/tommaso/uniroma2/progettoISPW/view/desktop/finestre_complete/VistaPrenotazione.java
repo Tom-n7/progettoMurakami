@@ -75,9 +75,9 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
         } catch (ClassCastException e) {
             String nomeClasseSbagliata = beans[0].getClass().toString();
             throw new IllegalArgumentException("La vista necessita di un'istanza di BibliotecaBean, invece viene fornita classe " + nomeClasseSbagliata);
-        }finally {
-            controllerGrafico.lanciaVistaCompleta("menu_principale");
         }
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
+
 
         bozzaPrenotazioneProperty = new SimpleObjectProperty<>();
         bozzaPrenotazioneProperty.setValue(prenotazione);
@@ -106,6 +106,7 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
 
     public void clickSuConferma(ActionEvent actionEvent) {
         controllerApplicativo.validaPrenotazione(bozzaPrenotazioneProperty.get());
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
 
 
 

@@ -7,6 +7,8 @@ import it.tommaso.uniroma2.progettoISPW.dao.IRicercabiliDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoISPW.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoISPW.exception.DAOException;
+import it.tommaso.uniroma2.progettoISPW.exception.NumeroLibriMassimoSuperatoException;
+import it.tommaso.uniroma2.progettoISPW.exception.RegoleBibliotecaException;
 import it.tommaso.uniroma2.progettoISPW.exception.RicercaException;
 import it.tommaso.uniroma2.progettoISPW.model.*;
 import it.tommaso.uniroma2.progettoISPW.supporto.Sessione;
@@ -118,7 +120,7 @@ public class PrenotaLibroController {
     Questa operazione applica le (o la) regola di prenotazione della biblioteca alla bozza di prenotazione referenziata da prenotazioneBean.
     Se questa risulta conforme, il sistema cambia lo stato della prenotazione (da bozza -> verif
      */
-    public void validaPrenotazione(PrenotazioneBean prenotazioneBean) throws RegoleBibliotecaException{
+    public void validaPrenotazione(PrenotazioneBean prenotazioneBean) throws RegoleBibliotecaException {
 
         RegolaPrenotazione regolaBiblioteca;
         Biblioteca bibliotecaDestinazione;
@@ -144,7 +146,7 @@ public class PrenotaLibroController {
         }
 
         prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
-        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().salva(prenotazione);
+        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().aggiornaStatoPrenotazione(FaseDiPrenotazione.VERIFICATA,prenotazione.getId());
 
         generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
         generaRiepilogoLettore(lettoreRichiedente, prenotazione);

@@ -4,7 +4,9 @@ package it.tommaso.uniroma2.progettoISPW.view.finestre_complete;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.MenuPrincipaleController;
-import it.tommaso.uniroma2.progettoISPW.view.OrchestratoreFinestre;
+
+import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
+import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCompleta;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

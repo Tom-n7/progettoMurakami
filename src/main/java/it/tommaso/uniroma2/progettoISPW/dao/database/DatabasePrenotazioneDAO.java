@@ -130,18 +130,18 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
                 Libro libro = new Libro();
                 int scorsoLibroID = 0;
                 while (rs.next()) {
-                    if(rs.getInt("id") != scorsoLibroID) {
-                        scorsoLibroID = rs.getInt("id");
+                    if(rs.getInt("id_libro") != scorsoLibroID) {
+                        scorsoLibroID = rs.getInt("id_libro");
                         libro = new Libro();
 
-                        libro.setId(rs.getInt("id"));
+                        libro.setId(rs.getInt("id_libro"));
                         libro.setImmagineCopertina(rs.getBlob("immagine_copertina"));
                         libro.setTitolo(rs.getString("titolo"));
                         libro.setEdizione(rs.getString("edizione"));
                         libro.setEditore(rs.getString("editore"));
                         libro.setImmagineCopertina(rs.getBlob("immagine_copertina"));
                         libro.setLingua(rs.getString("lingua"));
-                        libro.setCodiceISNB("codice_ISNB");
+                        libro.setCodiceISNB(rs.getString("codice_ISNB"));
                         libro.setAutori(new ArrayList<>());
                         libro.addAutore(rs.getString("nome_autore"));
                         libri.add(libro);
