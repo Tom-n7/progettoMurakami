@@ -5,6 +5,7 @@ import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
+import it.tommaso.uniroma2.progettoISPW.exception.RegoleBibliotecaException;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -80,5 +81,14 @@ public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
     }
 
     public void tapSuConferma(ActionEvent actionEvent) {
+
+        try {
+            if (!propertyLibriPrenotazione.get().isEmpty()) {
+                controllerApplicativo.validaPrenotazione(propertyPrenotazione.get());
+            }
+        } catch (RegoleBibliotecaException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
