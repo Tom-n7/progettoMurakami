@@ -2,15 +2,20 @@ package it.tommaso.uniroma2.progettoISPW.view.mobile;
 
 import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
+import it.tommaso.uniroma2.progettoISPW.bean.LibroBean;
 import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
@@ -20,26 +25,33 @@ public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
 
     private final SimpleObjectProperty<BibliotecaBean> propertyBibliotecaPrenotazione;
 
+    private final SimpleObjectProperty<ObservableList<LibroBean>> propertyLibriPrenotazione;
+    private final SimpleObjectProperty<PrenotazioneBean> propertyPrenotazione;
+
 
 
     public Label labelNomeBiblioteca;
     public Label labelIndirizzoBiblioteca;
     public Label labelMaxLibriBiblioteca;
     public Label labelOrarioSettimanaleBiblioteca;
+    public ListView<LibroBean> listViewLibri;
 
 
-    public VistaDettagliPrenotazione(OrchestratoreFinestre controllerGrafico, IBean... beans){
+    public VistaDettagliPrenotazione(OrchestratoreFinestre controllerGrafico, SimpleObjectProperty... properties){
         this.controllerGrafico = controllerGrafico;
         controllerApplicativo = new PrenotaLibroController();
 
         propertyBibliotecaPrenotazione = new SimpleObjectProperty<>();
 
         try {
-            propertyBibliotecaPrenotazione.setValue((BibliotecaBean) beans[0]);
+            propertyPrenotazione = properties[0];
+            propertyLibriPrenotazione = properties[1];
         } catch (ClassCastException e) {
-            String nomeClasseSbagliata = beans[0].getClass().toString();
+            String nomeClasseSbagliata = properties[0].getClass().toString();
             throw new IllegalArgumentException("La vista necessita di un'istanza di BibliotecaBean, invece viene fornita classe " + nomeClasseSbagliata);
         }
+
+        propertyBibliotecaPrenotazione.set(propertyPrenotazione.get().getBiblioteca());
 
     }
 
@@ -54,6 +66,8 @@ public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
         labelIndirizzoBiblioteca.setText(propertyBibliotecaPrenotazione.get().getIndirizzo());
         labelMaxLibriBiblioteca.setText(propertyBibliotecaPrenotazione.get().getRegolePrenotazione());
 
+        //bind listview ai libri della prenotazione.
+        listViewLibri.itemsProperty().bind(propertyLibriPrenotazione);
 
     }
 
@@ -62,6 +76,7 @@ public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
     }
 
     public void tapSuAggiungi(ActionEvent actionEvent) {
+        ((MobileController) controllerGrafico).lanciaVistaCompletaProperty("importa_metadati_libro", propertyPrenotazione, propertyLibriPrenotazione);
     }
 
     public void tapSuConferma(ActionEvent actionEvent) {

@@ -4,9 +4,7 @@ import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCompleta;
-import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaPrenotazione;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaDettagliBiblioteca;
-import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaImportaMetadatiLibro;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaPopup;
 import javafx.application.Application;
 import javafx.beans.property.SimpleObjectProperty;
@@ -100,6 +98,51 @@ public class MobileController extends Application implements ControllerGrafico, 
         }
 
     }
+
+
+    //provvisoria, sostituirà lanciaVistaCompleta.
+
+    public void lanciaVistaCompletaProperty(String nomeVista, SimpleObjectProperty... properties){
+
+        //Il loader costruisce ricostruisce la posizione della risorsa a partire dal suo nome e dalla posizione del
+        //pacchetto dell'inerfaccia, tutte le finestre che chiamano questo metodo si trovano nello stesso pacchetto
+        //dell'inerfaccia.
+        FXMLLoader loader = new FXMLLoader(VistaMobile.class.getResource(nomeVista + ".fxml"));
+        try {
+            VistaMobile controllerVista =
+                    (VistaMobile) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, SimpleObjectProperty[].class).newInstance(this, properties);
+            loader.setControllerFactory(c->{
+                return controllerVista;
+            });
+        }catch (NoSuchMethodException e){
+            throw new RuntimeException();
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            //ogni vista completa ha come radicePrimaryStage uno StackPane
+            radicePrimaryStage = loader.load();
+
+            //ogni vista completa uno stackpane "sopra" i figli che ospitano finestre.
+
+            Scene scene = new Scene(radicePrimaryStage);
+
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+
+
 
     @Override
     public void lanciaVistaPopup(String nomeVista, SimpleObjectProperty... properties){

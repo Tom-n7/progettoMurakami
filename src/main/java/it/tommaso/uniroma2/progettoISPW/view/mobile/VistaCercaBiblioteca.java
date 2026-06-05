@@ -1,9 +1,6 @@
 package it.tommaso.uniroma2.progettoISPW.view.mobile;
 
-import it.tommaso.uniroma2.progettoISPW.bean.BibliotecaBean;
-import it.tommaso.uniroma2.progettoISPW.bean.FiltroBibliotecaBean;
-import it.tommaso.uniroma2.progettoISPW.bean.IBean;
-import it.tommaso.uniroma2.progettoISPW.bean.PrenotazioneBean;
+import it.tommaso.uniroma2.progettoISPW.bean.*;
 import it.tommaso.uniroma2.progettoISPW.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
@@ -18,6 +15,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class VistaCercaBiblioteca implements VistaMobile, Initializable {
@@ -98,12 +97,18 @@ public class VistaCercaBiblioteca implements VistaMobile, Initializable {
         bottoneRicerca.setVisible(true);
     }
 
+
+    /*
+    Il lettore sceglie la biblioteca, la vista richiede quindi la creazione della bozza di prenotazione,
+     */
     public void tapSuConferma(ActionEvent actionEvent) {
 
         if(propertyBibliotecaScelta.get() != null){
 
-            controllerApplicativo.bozzaPrenotazione(propertyBibliotecaScelta.get());
-            this.controllerGrafico.lanciaVistaCompleta("dettagli_prenotazione", propertyBibliotecaScelta.get());
+            propertyBozzaPrenotazione.setValue(controllerApplicativo.bozzaPrenotazione(propertyBibliotecaScelta.get()));
+            ((MobileController)this.controllerGrafico).lanciaVistaCompletaProperty("dettagli_prenotazione", propertyBozzaPrenotazione,
+                    (new SimpleObjectProperty<>(FXCollections.observableArrayList()))
+            );
 
         }else {
             //questo meglio trasformarlo in eccezione.
