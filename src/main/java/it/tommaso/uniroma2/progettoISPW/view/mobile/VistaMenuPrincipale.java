@@ -19,9 +19,15 @@ public class VistaMenuPrincipale implements VistaMobile {
     @FXML
     private HBox HBoxBassa;
 
-    public VistaMenuPrincipale(OrchestratoreFinestre controllerGrafico, IBean... beans){}
+    private final OrchestratoreFinestre controllerGrafico;
+
+
+    public VistaMenuPrincipale(OrchestratoreFinestre controllerGrafico, IBean... beans){
+        this.controllerGrafico = controllerGrafico;
+    }
 
     public void clickSuPrenotazione(ActionEvent actionEvent) {
+        controllerGrafico.lanciaVistaCompleta("ricerca_biblioteca");
     }
 
     public void clickSuEsci(ActionEvent actionEvent) {

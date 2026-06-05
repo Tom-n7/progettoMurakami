@@ -3,7 +3,6 @@ package it.tommaso.uniroma2.progettoISPW.view.mobile;
 import it.tommaso.uniroma2.progettoISPW.bean.IBean;
 import it.tommaso.uniroma2.progettoISPW.view.ControllerGrafico;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.OrchestratoreFinestre;
-import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCercaBiblioteca;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaCompleta;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_complete.VistaPrenotazione;
 import it.tommaso.uniroma2.progettoISPW.view.desktop.finestre_popup.VistaDettagliBiblioteca;
@@ -13,7 +12,11 @@ import javafx.application.Application;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,10 +34,15 @@ public class MobileController extends Application implements ControllerGrafico, 
     private Stage primaryStage;
     private Pane radicePrimaryStage;
 
+    //popup attivo
+    private Popup stagePopup;
+    private VistaCompleta padrePopupController;
+
     public MobileController(){
 
         NOMI_VISTE_CONTROLLER.put("menu_principale", VistaMenuPrincipale.class);
         NOMI_VISTE_CONTROLLER.put("ricerca_biblioteca", VistaCercaBiblioteca.class);
+        NOMI_VISTE_CONTROLLER.put("menu_ricerca", VistaMenuRicerca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_biblioteca", VistaDettagliBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaPrenotazione.class);
         NOMI_VISTE_CONTROLLER.put("importa_metadati_libro", VistaImportaMetadatiLibro.class);
@@ -94,7 +102,47 @@ public class MobileController extends Application implements ControllerGrafico, 
     }
 
     @Override
-    public void lanciaVistaPopup(String nomeVista, SimpleObjectProperty... properties) {
+    public void lanciaVistaPopup(String nomeVista, SimpleObjectProperty... properties){
+
+
+        FXMLLoader loader = new FXMLLoader(VistaMobilePopup.class.getResource(nomeVista+ ".fxml"));
+        try{
+            VistaPopup controllerVista =
+                    (VistaPopup) NOMI_VISTE_CONTROLLER.get(nomeVista).getDeclaredConstructor(OrchestratoreFinestre.class, SimpleObjectProperty[].class).newInstance(this, properties);
+            loader.setControllerFactory(c->
+            {
+                return controllerVista;
+            });
+
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+
+            Pane mascheraPopup = new Pane();
+            mascheraPopup.setId("maschera_popup");
+            mascheraPopup.setBackground(Background.fill(Color.GREY));
+            mascheraPopup.setOpacity(.40);
+
+            radicePrimaryStage.getChildren().add(mascheraPopup);
+
+
+            StackPane radicePopup = loader.load();
+            stagePopup = (new Popup());
+            stagePopup.getScene().setRoot(radicePopup);
+            stagePopup.show(primaryStage);
+
+
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -106,7 +154,11 @@ public class MobileController extends Application implements ControllerGrafico, 
     @Override
     public void chiudiFinestraPopup(VistaPopup vistaPopup) {
 
+        stagePopup.hide();
+        radicePrimaryStage.getChildren().remove(radicePrimaryStage.lookup("#maschera_popup"));
+
     }
+
 
 
 }

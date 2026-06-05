@@ -40,7 +40,7 @@ public class Main{
 
 
 
-        ControllerGrafico controllerGrafico = new DesktopController();
+        ControllerGrafico controllerGrafico = new MobileController();
         controllerGrafico.iniziaSessioneGrafica();
 
 
