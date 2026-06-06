@@ -6,7 +6,7 @@ import it.tommaso.uniroma2.progettoispw.model.Prenotazione;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrenotazioneBean implements IBean<Prenotazione>{
+public class PrenotazioneBean implements IBean{
 
 
     private String faseDiPrenotazione;
@@ -96,18 +96,25 @@ public class PrenotazioneBean implements IBean<Prenotazione>{
     @Override
     public String toString() {
 
-        String titoliLibri = "";
+        StringBuilder sb = new StringBuilder("");
         for(LibroBean l: this.libri){
             if(l == this.libri.getLast()){
-                titoliLibri = titoliLibri + l.getTitolo();
+                sb.append( l.getTitolo());
             }else {
-                titoliLibri = titoliLibri + l.getTitolo() + ", ";
+                sb.append(", ");
+                sb.append( l.getTitolo());
             }
         }
-        
-        return "Libri: " + titoliLibri + "\n"
-                + "Biblioteca: " + biblioteca.getNome() + "\n" 
-                + "Stato Prenotazione: " + faseDiPrenotazione.toString();
-        
+
+        sb.insert(0,"Libri: ");
+        sb.append("\n");
+        sb.append("Biblioteca: ");
+        sb.append(biblioteca.getNome());
+        sb.append("\n");
+        sb.append("Stato Prenotazione: ");
+        sb.append(faseDiPrenotazione);
+
+
+        return sb.toString();
     }
 }

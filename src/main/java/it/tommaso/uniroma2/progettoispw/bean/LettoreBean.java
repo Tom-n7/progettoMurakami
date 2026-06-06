@@ -18,7 +18,7 @@ public class LettoreBean {
 
      }
 
-     public LettoreBean(){};
+     public LettoreBean(){}
 
     public int getId() {
         return id;
