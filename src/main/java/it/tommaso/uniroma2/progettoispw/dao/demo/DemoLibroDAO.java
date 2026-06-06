@@ -4,7 +4,7 @@ import it.tommaso.uniroma2.progettoispw.dao.LibroDAO;
 import it.tommaso.uniroma2.progettoispw.exception.DAOException;
 import it.tommaso.uniroma2.progettoispw.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoispw.model.Libro;
-import it.tommaso.uniroma2.progettoispw.supporto.GeneratoreID;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,7 +17,7 @@ public class DemoLibroDAO implements LibroDAO {
     private static int ultimoIdAssegnato = 1;
 
 
-    private int assegnaId(){
+    private static int assegnaId(){
         ultimoIdAssegnato++;
         return ultimoIdAssegnato;
     }

@@ -23,7 +23,7 @@ public class DemoPrenotazioneDAO implements PrenotazioneDAO {
 
 
 
-    private int assegnaId(){
+    private static int assegnaId(){
         ultimoIdPrenotazione++;
         return ultimoIdPrenotazione;
     }
@@ -78,7 +78,11 @@ public class DemoPrenotazioneDAO implements PrenotazioneDAO {
     @Override
     public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) {
 
-        return;
+                /*
+        Potrebbe essere utile implementarlo in futuro
+         */
+
+
     }
 
     @Override
