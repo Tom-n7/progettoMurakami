@@ -18,12 +18,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.sun.javafx.application.PlatformImpl.exit;
+
 /*
 Controller applicativo del caso d'uso prenota libro.
  */
 public class PrenotaLibroController {
 
-    public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean) throws RuntimeException {
+    public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean) {
 
         //lista di bean biblioteche da inviare allo strato view.
         List<BibliotecaBean> listaBeanBiblioteche = new ArrayList<>();
@@ -49,22 +51,17 @@ public class PrenotaLibroController {
         return listaBeanBiblioteche;
     }
 
-    //ATTENZIONE,  operazione non ancora implementata!
-    public void eliminaPrenotazione(PrenotazioneBean prenotazioneBean){
 
-        try {
-            DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().elimina(prenotazioneBean.getId());
-        } catch (DAOException e) {
-            throw new RuntimeException("Impossibile eliminare la prenotazione!",e);
-        }
+    public void eliminaPrenotazione(PrenotazioneBean prenotazioneBean) {
+
+        DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().elimina(prenotazioneBean.getId());
+
     }
     public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) {
 
         RecuperoBibliotecaThread t1 = new RecuperoBibliotecaThread(bibliotecaSelezionata);
         RecuperoLettoreThread t2 = new RecuperoLettoreThread();
 
-        Biblioteca biblioteca;
-        Lettore lettore;
         Prenotazione bozzaPrenotazione;
         IRicercabiliDAO<Prenotazione> pdao = DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO();
 
@@ -75,23 +72,21 @@ public class PrenotaLibroController {
             t1.join();
             t2.join();
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            exit();
         }
 
         bozzaPrenotazione = new Prenotazione();
-        bozzaPrenotazione.setBiblioteca(biblioteca = t1.getBibliotecaOttenuta());
-        bozzaPrenotazione.setLettore(lettore = t2.getLettore());
+        bozzaPrenotazione.setBiblioteca( t1.getBibliotecaOttenuta());
+        bozzaPrenotazione.setLettore( t2.getLettore());
         bozzaPrenotazione.setGiornoPrenotazione(Date.from(Instant.now()));
         bozzaPrenotazione.setStatoPrenotazione(FaseDiPrenotazione.BOZZA);
         bozzaPrenotazione.setLibri(new ArrayList<>());
         /*
         Quando salvo la prenotazione, viene restituito l'id univoco valido che assegno all'istanza.
          */
-        try {
-            bozzaPrenotazione.setId(pdao.salva(bozzaPrenotazione));
-        } catch (DAOException e) {
-            throw new RuntimeException("Impossibile salvare la prenotazione!",e);
-        }
+
+        bozzaPrenotazione.setId(pdao.salva(bozzaPrenotazione));
+
 
         return  new PrenotazioneBean(bozzaPrenotazione);
     }
@@ -128,11 +123,8 @@ public class PrenotaLibroController {
         Lettore lettoreRichiedente;
 
         Prenotazione prenotazione;
-        try{
-            prenotazione = DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().ottieni(prenotazioneBean.getId());
-        } catch (DAOException e) {
-            throw new RuntimeException(e);
-        }
+
+        prenotazione = DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().ottieni(prenotazioneBean.getId());
 
         bibliotecaDestinazione = prenotazione.getBiblioteca();
         regolaBiblioteca = bibliotecaDestinazione.getRegolaPrenotazione();
@@ -145,10 +137,6 @@ public class PrenotaLibroController {
             prenotazione.setStatoPrenotazione(FaseDiPrenotazione.VERIFICATA);
             DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().aggiornaStatoPrenotazione(FaseDiPrenotazione.VERIFICATA,prenotazione.getId());
 
-            generaRiepilogoBiblioteca(bibliotecaDestinazione, prenotazione);
-            generaRiepilogoLettore(lettoreRichiedente, prenotazione);
-
-
         } catch (NumeroLibriMassimoSuperatoException e) {
             String messaggio = "Hai superato limite libri stabilito dalla biblioteca: " + e.getNumeroLibriInEccesso() +" in eccesso!";
             throw new RegoleBibliotecaException(messaggio);
@@ -157,8 +145,6 @@ public class PrenotaLibroController {
     }
 
 
-    private void generaRiepilogoLettore(Lettore lettore, Prenotazione prenotazione){}
-    private void generaRiepilogoBiblioteca(Biblioteca biblioteca, Prenotazione prenotazione){}
 
 
 
@@ -170,6 +156,7 @@ class RecuperoLettoreThread extends Thread{
 
     Lettore lettore;
 
+    @Override
     public void run(){
 
         //provvisorio, deve usare interfaccia.
@@ -193,7 +180,7 @@ class RecuperoBibliotecaThread extends Thread{
 
     }
 
-
+    @Override
     public void run(){
 
         //provvisorio, deve usare interfaccia
