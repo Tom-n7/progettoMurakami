@@ -18,14 +18,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.sun.javafx.application.PlatformImpl.exit;
-
 /*
 Controller applicativo del caso d'uso prenota libro.
  */
 public class PrenotaLibroController {
 
-    public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean) {
+    public List<BibliotecaBean> caricaBibliotecheRegistrate(FiltroBibliotecaBean filtroBean) throws RicercaException {
 
         //lista di bean biblioteche da inviare allo strato view.
         List<BibliotecaBean> listaBeanBiblioteche = new ArrayList<>();
@@ -45,8 +43,7 @@ public class PrenotaLibroController {
 
 
         } catch (DAOException | RicercaException e){
-            System.out.println(e.getMessage());
-            throw new RuntimeException(e);
+            throw new RicercaException("Formato dati errato!",e);
         }
         return listaBeanBiblioteche;
     }
@@ -57,7 +54,7 @@ public class PrenotaLibroController {
         DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().elimina(prenotazioneBean.getId());
 
     }
-    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) {
+    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) throws InterruptedException {
 
         RecuperoBibliotecaThread t1 = new RecuperoBibliotecaThread(bibliotecaSelezionata);
         RecuperoLettoreThread t2 = new RecuperoLettoreThread();
@@ -71,8 +68,8 @@ public class PrenotaLibroController {
         try{
             t1.join();
             t2.join();
-        } catch (InterruptedException e) {
-            exit();
+        } catch (InterruptedException e ) {
+            throw new InterruptedException();
         }
 
         bozzaPrenotazione = new Prenotazione();
@@ -120,7 +117,7 @@ public class PrenotaLibroController {
 
         RegolaPrenotazione regolaBiblioteca;
         Biblioteca bibliotecaDestinazione;
-        Lettore lettoreRichiedente;
+
 
         Prenotazione prenotazione;
 
@@ -128,7 +125,6 @@ public class PrenotaLibroController {
 
         bibliotecaDestinazione = prenotazione.getBiblioteca();
         regolaBiblioteca = bibliotecaDestinazione.getRegolaPrenotazione();
-        lettoreRichiedente = prenotazione.getLettore();
 
         //se la prenotazione contravviene la regola, viene lanciata l'eccezione.
         try {
