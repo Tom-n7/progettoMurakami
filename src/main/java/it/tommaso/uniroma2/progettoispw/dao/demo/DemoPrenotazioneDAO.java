@@ -27,7 +27,11 @@ public class DemoPrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public void salvaTutti(List<Prenotazione> listaOggetti) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -37,16 +41,28 @@ public class DemoPrenotazioneDAO implements PrenotazioneDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void aggiungiLibroAPrenotazione(Prenotazione prenotazione, Libro libro) {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void aggiornaStatoPrenotazione(FaseDiPrenotazione nuovoStato ,int idPrenotazione) {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 }
