@@ -29,7 +29,11 @@ public class DatabaseLettoreDAO implements LettoreDAO {
 
     @Override
     public void salvaTutti(List<Lettore> listaOggetti) throws DAOException {
+        /*
+        Dovrebbe essere utile in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -59,13 +63,17 @@ public class DatabaseLettoreDAO implements LettoreDAO {
 
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new DAOException("Impossibile salvare uno o più di questi libri nel database",e);
         }
         return lettore;
     }
 
     @Override
     public void elimina(int id) throws DAOException {
+        /*
+        Dovrebbe essere utile in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 }
