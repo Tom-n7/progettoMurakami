@@ -66,7 +66,7 @@ public class VistaCercaBiblioteca implements VistaCompleta, Initializable {
                 controllerApplicativo.caricaBibliotecheRegistrate(propertyFiltroBiblioteca.get()));
     }
 
-    public void clickSuConfermaBiblioteca(ActionEvent actionEvent) {
+    public void clickSuConfermaBiblioteca(ActionEvent actionEvent) throws InterruptedException {
 
         /*
         A seguito della scelta del lettore, il sistema crea una bozza della prenotazione, che restituisce in

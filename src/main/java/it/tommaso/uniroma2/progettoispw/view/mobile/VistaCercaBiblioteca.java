@@ -99,7 +99,7 @@ public class VistaCercaBiblioteca implements VistaMobile, Initializable {
     /*
     Il lettore sceglie la biblioteca, la vista richiede quindi la creazione della bozza di prenotazione,
      */
-    public void tapSuConferma(ActionEvent actionEvent) {
+    public void tapSuConferma(ActionEvent actionEvent) throws InterruptedException {
 
         if(propertyBibliotecaScelta.get() != null){
 

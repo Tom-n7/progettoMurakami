@@ -43,19 +43,22 @@ public class DatabaseLibroDAO implements LibroDAO {
             cs2.setInt("arg_id_libro", id);
             for(String a: oggetto.getAutori()) {
                 cs2.setString("arg_nome_autore", a);
-                cs2.execute();
+                cs2.addBatch();
             }
-
+            cs2.execute();
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new DAOException("Impossibile salvare libro nel database!",e);
         }
         return id;
     }
 
     @Override
     public void salvaTutti(List<Libro> listaOggetti) throws DAOException {
-
+        /*
+        Potrebbe essere utile in futuro
+         */
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -65,6 +68,11 @@ public class DatabaseLibroDAO implements LibroDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+
+        /*
+        Potrebbe essere utile in futuro
+         */
+        throw new UnsupportedOperationException();
 
     }
 }
