@@ -58,31 +58,40 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
         return listaBiblioteche;
     }
 
+    private void filtraBiblioteca(IFiltroTestuale<Biblioteca> filtro, Biblioteca b, List<Biblioteca> listaBibliotecheFiltrata ){
+
+        switch (TipoFiltroBiblioteca.valueOf(filtro.ottieniNomeTipoFiltro())){
+            case NOME : {
+                if(b.getNome().contains(filtro.ottieniTestoRicerca())){
+                    listaBibliotecheFiltrata.add(b);
+                }
+            }; break;
+
+            case CITTA: {
+                if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
+                    listaBibliotecheFiltrata.add(b);
+                }; break;
+            }
+            case INDIRIZZO: {
+                if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
+                    listaBibliotecheFiltrata.add(b);
+                }; break;
+            }
+            default: {
+                break;
+            }
+        }
+
+    }
+
+
     @Override
     public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
 
-        String tipoFiltro = filtro.ottieniNomeTipoFiltro();
         for(Biblioteca b : this.ottieniTutti()){
-            switch (TipoFiltroBiblioteca.valueOf(tipoFiltro)){
-                case NOME: {
-                    if(b.getNome().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }
-                }; break;
-
-                case CITTA: {
-                    if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }; break;
-                }
-                case INDIRIZZO: {
-                    if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }; break;
-                }
-            }
+           filtraBiblioteca(filtro,b,listaBibliotecheFiltrata);
         };
 
         return listaBibliotecheFiltrata;
