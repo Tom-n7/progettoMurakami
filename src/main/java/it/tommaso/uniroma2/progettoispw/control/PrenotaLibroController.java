@@ -69,7 +69,7 @@ public class PrenotaLibroController {
             t1.join();
             t2.join();
         } catch (InterruptedException _) {
-            return null;
+            Thread.currentThread().interrupt();
         }
 
         bozzaPrenotazione = new Prenotazione();
