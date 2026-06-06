@@ -7,6 +7,7 @@ import it.tommaso.uniroma2.progettoispw.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoispw.supporto.Sessione;
 import it.tommaso.uniroma2.progettoispw.view.ControllerGrafico;
 import it.tommaso.uniroma2.progettoispw.view.desktop.DesktopController;
+import it.tommaso.uniroma2.progettoispw.view.mobile.MobileController;
 
 import java.io.*;
 
@@ -64,13 +65,17 @@ public class Main{
         Sessione.inizializzaSessione(Integer.valueOf(idUtente), usernameUtente);
 
 
-        //PROVVISORIAMENTE la factory è init. per restituire la versione "database" dei DAO
         DAOFactory.inizializzaDAOFactory(TipoPersistenzaSistema.valueOf(nomeModPersistenza));
 
 
 
-        ControllerGrafico controllerGrafico = new DesktopController();
-        controllerGrafico.iniziaSessioneGrafica();
+        if(nomeModEsecuzione.equals("DESKTOP")) {
+            ControllerGrafico controllerGrafico = new DesktopController();
+            controllerGrafico.iniziaSessioneGrafica();
+        }else {
+            ControllerGrafico controllerGrafico = new MobileController();
+            controllerGrafico.iniziaSessioneGrafica();
+        }
 
 
     }

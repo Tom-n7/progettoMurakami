@@ -101,7 +101,7 @@ public class LibroBean implements IBean {
 
         StringBuilder builder = new StringBuilder("");
         for(String s : this.autori){
-            if(builder.isEmpty()){
+            if(builder.toString().isBlank()){
                 builder.append(s);
             }else {
 

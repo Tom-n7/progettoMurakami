@@ -160,6 +160,7 @@ public class DesktopController extends Application implements ControllerGrafico,
             Scene scene = new Scene(radicePrimaryStage);
 
             primaryStage.setScene(scene);
+            primaryStage.setTitle("BiblioBuddy");
             primaryStage.show();
         }catch (IOException e){
             throw new RuntimeException(e);

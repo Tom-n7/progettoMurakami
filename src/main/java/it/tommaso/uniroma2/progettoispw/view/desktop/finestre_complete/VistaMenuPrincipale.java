@@ -38,7 +38,7 @@ public class VistaMenuPrincipale implements VistaCompleta, Initializable {
 
         propertyRichiestePrenotazioni = new SimpleObjectProperty<>(FXCollections.observableArrayList());
         propertyRichiestePrenotazioni.get().addAll(
-                controllerApplivativo.ottieniPrenotazioneUtente()
+                controllerApplivativo.ottieniPrenotazioniUtente()
         );
 
     }

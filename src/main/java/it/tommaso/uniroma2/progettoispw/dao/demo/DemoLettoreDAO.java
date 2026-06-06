@@ -11,13 +11,7 @@ public class DemoLettoreDAO implements LettoreDAO {
 
     //provvisorio
     public Lettore  ottieniLettore() {
-
-
-        //provvisorio
-        return new Lettore(1,"Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta");
-
-
-
+        return new Lettore(1,"Tommaso Testa", "tommaso.testa@students.uniroma2.eu", "ttesta99");
     }
 
 
@@ -47,7 +41,7 @@ public class DemoLettoreDAO implements LettoreDAO {
 
     @Override
     public Lettore ottieni(int id) throws DAOException {
-        return null;
+        return ottieniLettore();
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class DemoBibliotecaDAO implements BibliotecaDAO {
 
-    //provvisorio.
+
     private Collection<Biblioteca> dummyGenerazioneDatiBiblioteche(){
 
 
@@ -36,19 +36,17 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     }
 
 
+    //metodi che valutano la biblioteche fornita e la aggiungono alla lista se conforme al filtro fornito.
     private void valutaNome(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getNome().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
-
     private void valutaCitta(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
-
-
     private void valutaIndirizzo(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
@@ -96,7 +94,7 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     @Override
     public Biblioteca ottieni(int id) throws DAOException {
 
-        for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
+        for(Biblioteca b : ottieniTutti()){
             if(b.getId() == id){
                 return b;
             }

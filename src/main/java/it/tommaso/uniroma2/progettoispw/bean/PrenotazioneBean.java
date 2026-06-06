@@ -98,7 +98,7 @@ public class PrenotazioneBean implements IBean{
 
         StringBuilder sb = new StringBuilder("");
         for(LibroBean l: this.libri){
-            if(l == this.libri.getLast()){
+            if(l == this.libri.getFirst()){
                 sb.append( l.getTitolo());
             }else {
                 sb.append(", ");

@@ -26,7 +26,7 @@ public class DatabaseLibroDAO implements LibroDAO {
         try{
 
             Connection con = FactoryConnessioneDatabase.getConnection();
-            CallableStatement cs = con.prepareCall("{call salva_libro(?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call salva_libro(?,?,?,?,?,?)}");
             cs.setString("arg_titolo", oggetto.getTitolo());
             cs.setString("arg_lingua", oggetto.getLingua());
             cs.setString("arg_editore", oggetto.getEditore());

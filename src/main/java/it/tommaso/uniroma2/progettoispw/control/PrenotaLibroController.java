@@ -100,13 +100,14 @@ public class PrenotaLibroController {
 
         Libro libro = new Libro();
 
-        libro.setId(nuovoLibroBean.getId());
+
         libro.setLingua(nuovoLibroBean.getLingua());
         libro.setAutori(nuovoLibroBean.getAutori());
         libro.setEditore(nuovoLibroBean.getEditore());
         libro.setEdizione(nuovoLibroBean.getEdizione());
         libro.setTitolo(nuovoLibroBean.getTitolo());
 
+        libro.setId(nuovoLibroBean.getId());
 
         prenotazione.addLibro(libro);
         (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).aggiungiLibroAPrenotazione(prenotazione,libro);

@@ -4,10 +4,24 @@ import it.tommaso.uniroma2.progettoispw.dao.LibroDAO;
 import it.tommaso.uniroma2.progettoispw.exception.DAOException;
 import it.tommaso.uniroma2.progettoispw.model.IFiltroTestuale;
 import it.tommaso.uniroma2.progettoispw.model.Libro;
+import it.tommaso.uniroma2.progettoispw.supporto.GeneratoreID;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DemoLibroDAO implements LibroDAO {
+
+
+    private static final Map<Integer, Libro> archivioLibriSessione = new HashMap<Integer, Libro>();
+    private static int ultimoIdAssegnato = 1;
+
+
+    private int assegnaId(){
+        ultimoIdAssegnato++;
+        return ultimoIdAssegnato;
+    }
+
     @Override
     public List<Libro> ottieniTutti() throws DAOException {
         return List.of();
@@ -20,7 +34,10 @@ public class DemoLibroDAO implements LibroDAO {
 
     @Override
     public int salva(Libro oggetto) throws DAOException {
-        return 0;
+
+        oggetto.setId(assegnaId());
+        archivioLibriSessione.put(oggetto.getId(), oggetto);
+        return oggetto.getId();
     }
 
     @Override
@@ -34,15 +51,11 @@ public class DemoLibroDAO implements LibroDAO {
 
     @Override
     public Libro ottieni(int id) throws DAOException {
-        return null;
+        return archivioLibriSessione.get(id);
     }
 
     @Override
     public void elimina(int id) throws DAOException {
-        /*
-        Potrebbe essere utile implementarlo in futuro
-         */
-
-        throw new UnsupportedOperationException();
+        archivioLibriSessione.remove(id);
     }
 }

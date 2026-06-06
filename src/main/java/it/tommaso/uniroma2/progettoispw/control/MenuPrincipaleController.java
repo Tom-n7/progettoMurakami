@@ -12,7 +12,7 @@ import java.util.List;
 public class MenuPrincipaleController {
 
 
-    public List<PrenotazioneBean> ottieniPrenotazioneUtente(){
+    public List<PrenotazioneBean> ottieniPrenotazioniUtente(){
 
 
         FiltroPrenotazione filtroPrenotazione = new FiltroPrenotazione();
