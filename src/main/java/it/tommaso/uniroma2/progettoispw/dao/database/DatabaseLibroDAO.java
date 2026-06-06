@@ -39,10 +39,10 @@ public class DatabaseLibroDAO implements LibroDAO {
             id = cs.getInt("id_libro");
 
             CallableStatement cs2;
+            cs2 = con.prepareCall("{call salva_autore_libro(?,?)}");
+            cs2.setInt("arg_id_libro", id);
             for(String a: oggetto.getAutori()) {
-                cs2 = con.prepareCall("{call salva_autore_libro(?,?)}");
                 cs2.setString("arg_nome_autore", a);
-                cs2.setInt("arg_id_libro", id);
                 cs2.execute();
             }
 
