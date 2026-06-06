@@ -41,7 +41,7 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
 
                     indirizzoBiblioteca.setVia(rs.getString("via"));
                     indirizzoBiblioteca.setCitta(rs.getString("citta"));
-                    indirizzoBiblioteca.setCAP(rs.getString("CAP"));
+                    indirizzoBiblioteca.setCap(rs.getString("CAP"));
 
                     biblioteca.setIndirizzo(indirizzoBiblioteca);
                     RegolaPrenotazione regola = new RegolaPrenotazione(rs.getInt("regola_prenotazione"));

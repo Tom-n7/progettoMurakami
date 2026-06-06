@@ -21,7 +21,7 @@ public class BibliotecaBean implements IBean<Biblioteca> {
 
          id = biblioteca.getId();
          nome = biblioteca.getNome();
-         indirizzo = biblioteca.getIndirizzo().getVia() + ", " + biblioteca.getIndirizzo().getCitta() +", " + biblioteca.getIndirizzo().getCAP();
+         indirizzo = biblioteca.getIndirizzo().getVia() + ", " + biblioteca.getIndirizzo().getCitta() +", " + biblioteca.getIndirizzo().getCap();
          collegamentoAnteprima = null;
          regolePrenotazione = biblioteca.getRegolaPrenotazione().toString();
 

@@ -17,7 +17,7 @@ FR12. Il sistema deve mettere a disposizione un catalogo di libri completi di me
 
 FR13. Il sistema deve permettere ad ogni utente di accedere tramite un meccanismo di autenticazione al proprio account personale.
  
-FR16. Il sistema deve permettere ad un bibliotecario di registrare la propria biblioteca attraverso l'inserimento del nome del bibliotecario, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e CAP, orario settimanale ed altri contatti facoltativi.
+FR16. Il sistema deve permettere ad un bibliotecario di registrare la propria biblioteca attraverso l'inserimento del nome del bibliotecario, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e cap, orario settimanale ed altri contatti facoltativi.
 
 FR17. Il sistema deve permettere ai lettori di ricercare le biblioteche registrate nel sistema, attraverso il nome o un indirizzo, anche parziale, mostrando una lista di biblioteche che rientrano nei criteri specificati oppure avvisando il lettore se non ne esiste nessuna.
 

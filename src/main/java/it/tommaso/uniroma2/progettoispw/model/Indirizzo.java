@@ -4,12 +4,12 @@ public class Indirizzo {
 
     private String via;
     private String citta;
-    private String CAP;
+    private String cap;
 
-    public Indirizzo(String via, String citta, String CAP) {
+    public Indirizzo(String via, String citta, String cap) {
         this.via = via;
         this.citta = citta;
-        this.CAP = CAP;
+        this.cap = cap;
     }
 
     public Indirizzo(){}
@@ -29,16 +29,16 @@ public class Indirizzo {
         this.citta = citta;
     }
 
-    public String getCAP() {
-        return CAP;
+    public String getCap() {
+        return cap;
     }
 
-    public void setCAP(String CAP) {
-        this.CAP = CAP;
+    public void setCap(String cap) {
+        this.cap = cap;
     }
 
     @Override
     public String toString() {
-        return via + ", " + citta + ", " + CAP;
+        return via + ", " + citta + ", " + cap;
     }
 }
