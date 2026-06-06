@@ -18,7 +18,7 @@ public class Biblioteca {
 
     public Biblioteca(){}
 
-    public Biblioteca(int id, String nome, Indirizzo indirizzo, Blob immagineAnteprima, RegolaPrenotazione regolaPrenotazione, EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public Biblioteca(int id, String nome, Indirizzo indirizzo, Blob immagineAnteprima, RegolaPrenotazione regolaPrenotazione, Map<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
