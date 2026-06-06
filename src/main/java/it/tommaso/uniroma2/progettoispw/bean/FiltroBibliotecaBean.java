@@ -1,6 +1,6 @@
 package it.tommaso.uniroma2.progettoispw.bean;
 
-import it.tommaso.uniroma2.progettoispw.model.FiltroBiblioteca;
+
 import it.tommaso.uniroma2.progettoispw.model.TipoFiltroBiblioteca;
 
 import java.util.ArrayList;

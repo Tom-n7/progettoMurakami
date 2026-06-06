@@ -1,9 +1,8 @@
 package it.tommaso.uniroma2.progettoispw.model;
 
-import it.tommaso.uniroma2.progettoispw.bean.FiltroBibliotecaBean;
 import it.tommaso.uniroma2.progettoispw.exception.CriterioIllegaleException;
 import it.tommaso.uniroma2.progettoispw.exception.MaxCaratteriException;
-import it.tommaso.uniroma2.progettoispw.exception.RicercaException;
+
 
 import java.util.ArrayList;
 import java.util.List;
