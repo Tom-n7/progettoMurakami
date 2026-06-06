@@ -25,7 +25,11 @@ public class FileBibliotecaDAO implements BibliotecaDAO {
 
     @Override
     public void salvaTutti(List<Biblioteca> listaOggetti) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -35,6 +39,10 @@ public class FileBibliotecaDAO implements BibliotecaDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 }
