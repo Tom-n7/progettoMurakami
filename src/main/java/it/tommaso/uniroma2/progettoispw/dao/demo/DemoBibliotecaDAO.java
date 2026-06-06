@@ -15,7 +15,7 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     private Collection<Biblioteca> dummyGenerazioneDatiBiblioteche(){
 
 
-        List<Biblioteca> bibliotecheRegistrate = new ArrayList<>(Arrays.stream(new Biblioteca[]{new Biblioteca(1, "Biblioteca Casa della Memoria e della Storia", new Indirizzo("Via di San Francesco di Sales,5", "Roma", "00165"),
+         return new ArrayList<>(Arrays.stream(new Biblioteca[]{new Biblioteca(1, "Biblioteca Casa della Memoria e della Storia", new Indirizzo("Via di San Francesco di Sales,5", "Roma", "00165"),
                 null, new RegolaPrenotazione(5), null),
                 new Biblioteca(2, "Biblioteca Casa delle Letterature", new Indirizzo("Piazza dell'Orologio,3", "Roma", "00186"),
                         null, new RegolaPrenotazione(5), null),
@@ -27,7 +27,7 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
                         null, new RegolaPrenotazione(5), null)
 
         }).toList());
-        return bibliotecheRegistrate;
+
     }
 
     @Override
