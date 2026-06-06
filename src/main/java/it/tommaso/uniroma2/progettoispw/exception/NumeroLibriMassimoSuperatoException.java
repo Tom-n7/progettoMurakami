@@ -2,7 +2,7 @@ package it.tommaso.uniroma2.progettoispw.exception;
 
 public class NumeroLibriMassimoSuperatoException extends RegoleBibliotecaException {
 
-    private int numeroLibriInEccesso;
+    private final int numeroLibriInEccesso;
 
 
     public NumeroLibriMassimoSuperatoException(String message, int numeroLibriInEccesso){

@@ -8,9 +8,9 @@ import it.tommaso.uniroma2.progettoispw.exception.RicercaException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FiltroBiblioteca implements IFiltroTestuale<Biblioteca>{
+public class FiltroBiblioteca implements IFiltroTestuale{
 
-    private final int MAX_LUNGHEZZA_FILTRO = 100;
+    private static final int MAX_LUNGHEZZA_FILTRO = 100;
 
     private TipoFiltroBiblioteca tipo;
     private String testoRicerca;
@@ -47,7 +47,7 @@ public class FiltroBiblioteca implements IFiltroTestuale<Biblioteca>{
 
         try {
             this.tipo = TipoFiltroBiblioteca.valueOf(nomeTipo);
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException _) {
             //se il nome tipo non coincide con uno dei tipi consentiti, o è vuoto, oppure un nome non vialido.
             if(nomeTipo.isEmpty()){
                 this.tipo = TipoFiltroBiblioteca.NESSUNO;
