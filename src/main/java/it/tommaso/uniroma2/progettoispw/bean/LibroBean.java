@@ -5,7 +5,7 @@ import it.tommaso.uniroma2.progettoispw.model.Libro;
 import java.sql.Blob;
 import java.util.List;
 
-public class LibroBean implements IBean<LibroBean> {
+public class LibroBean implements IBean {
 
     private int id;
     private String titolo;
@@ -17,17 +17,6 @@ public class LibroBean implements IBean<LibroBean> {
     private String codiceISNB;
 
     public LibroBean(){}
-
-    public LibroBean(int id, String titolo, List<String> autori, String lingua, String editore, Blob immagineAnteprima, String edizione, String codiceISNB) {
-        this.id = id;
-        this.titolo = titolo;
-        this.autori = autori;
-        this.lingua = lingua;
-        this.editore = editore;
-        this.immagineAnteprima = immagineAnteprima;
-        this.edizione = edizione;
-        this.codiceISNB = codiceISNB;
-    }
 
     public LibroBean(Libro libro){
 
@@ -110,16 +99,31 @@ public class LibroBean implements IBean<LibroBean> {
     @Override
     public String toString() {
 
-        String autori = "" ;
+        StringBuilder builder = new StringBuilder("");
         for(String s : this.autori){
-            if(autori.isEmpty()){
-                autori = s;
+            if(builder.isEmpty()){
+                builder.append(s);
             }else {
-                autori = autori + ", " + s;
+
+                builder.append(", ");
+                builder.append(s);
+
             }
         }
 
+        builder.insert(0,"\n");
+        builder.insert(0,titolo);
+        builder.append("\n");
+        builder.append(lingua);
+        builder.append("\n");
+        builder.append(editore);
+        builder.append("\n");
+        builder.append(edizione);
+        builder.append("\n");
+        builder.append(codiceISNB);
+        builder.append("\n");
 
-        return titolo + "\n" + autori +"\n" + lingua + "\n" + editore + "\n" + edizione + "\n" + codiceISNB + "\n";
+
+        return builder.toString();
     }
 }
