@@ -38,7 +38,11 @@ public class DemoLettoreDAO implements LettoreDAO {
 
     @Override
     public void salvaTutti(List<Lettore> listaOggetti) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -48,6 +52,10 @@ public class DemoLettoreDAO implements LettoreDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
 
+        throw new UnsupportedOperationException();
     }
 }
