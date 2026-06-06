@@ -66,7 +66,7 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
 
             case INDIRIZZO -> valutaIndirizzo(b,filtro,listaBibliotecheFiltrata);
 
-            default -> valutaNome(b,filtro,listaBibliotecheFiltrata); ;
+            default -> valutaNome(b,filtro,listaBibliotecheFiltrata);
         }
 
     }
