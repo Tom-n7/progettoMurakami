@@ -35,6 +35,26 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
         return dummyGenerazioneDatiBiblioteche().stream().toList();
     }
 
+
+    private void valutaNome(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+        if(b.getNome().contains(filtro.ottieniTestoRicerca())){
+            listaBibliotecheFiltrata.add(b);
+        }
+    }
+
+    private void valutaCitta(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+        if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
+            listaBibliotecheFiltrata.add(b);
+        }
+    }
+
+
+    private void valutaIndirizzo(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+        if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
+            listaBibliotecheFiltrata.add(b);
+        }
+    }
+
     @Override
     public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
 
@@ -45,25 +65,16 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
 
         String tipoFiltro = filtro.ottieniNomeTipoFiltro();
         for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
-            switch (TipoFiltroBiblioteca.valueOf(tipoFiltro)){
-                case NOME: {
-                    if(b.getNome().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }
-                }; break;
 
-                case CITTA: {
-                    if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }; break;
-                }
-                case INDIRIZZO: {
-                    if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
-                        listaBibliotecheFiltrata.add(b);
-                    }; break;
-                }
+            switch (TipoFiltroBiblioteca.valueOf(filtro.ottieniNomeTipoFiltro())){
+
+                case CITTA -> valutaCitta(b,filtro,listaBibliotecheFiltrata);
+
+                case INDIRIZZO -> valutaIndirizzo(b,filtro,listaBibliotecheFiltrata);
+
+                default -> valutaNome(b,filtro,listaBibliotecheFiltrata);
             }
-        };
+        }
 
         return listaBibliotecheFiltrata;
     }
