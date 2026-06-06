@@ -11,9 +11,9 @@ import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
-   private final String nomeColonnaIdPrenotazione = "id_prenotazione";
-   private final String nomeColonnaIdLibro = "id_libro";
-   private final String nomeParametroArgomentoIdPrenotazione = "arg_id_prenotazione";
+   private final static String NOME_COLONNA_ID_PRENOTAZIONE = "id_prenotazione";
+   private final static String NOME_COLONNA_ID_LIBRO = "id_libro";
+   private final static String NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE = "arg_id_prenotazione";
 
     @Override
     public List<Prenotazione> ottieniTutti() throws DAOException {
@@ -59,9 +59,9 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             cs.setInt("arg_id_biblioteca", oggetto.getBiblioteca().getId());
             cs.setDate("arg_data_creazione", new Date(oggetto.getGiornoPrenotazione().getTime()));
             cs.setString("arg_fase_prenotazione", oggetto.getStatoPrenotazione().toString());
-            cs.registerOutParameter(nomeColonnaIdPrenotazione, Types.NUMERIC);
+            cs.registerOutParameter(NOME_COLONNA_ID_PRENOTAZIONE, Types.NUMERIC);
             cs.executeQuery();
-            id = cs.getInt(nomeColonnaIdPrenotazione);
+            id = cs.getInt(NOME_COLONNA_ID_PRENOTAZIONE);
 
         } catch (SQLException e) {
             throw new DAOException("Impossibile salvare la prenotazione nel database",e);
@@ -116,7 +116,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
                biblioteca.setNome(rs.getString("nome_biblioteca"));
 
 
-               prenotazione.setId(rs.getInt(nomeColonnaIdPrenotazione));
+               prenotazione.setId(rs.getInt(NOME_COLONNA_ID_PRENOTAZIONE));
                prenotazione.setBiblioteca(biblioteca);
                prenotazione.setLettore(lettore);
                prenotazione.setGiornoPrenotazione(rs.getDate("data_creazione"));
@@ -137,11 +137,11 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
                 Libro libro = new Libro();
                 int scorsoLibroID = 0;
                 while (rs.next()) {
-                    if(rs.getInt(nomeColonnaIdLibro) != scorsoLibroID) {
-                        scorsoLibroID = rs.getInt(nomeColonnaIdLibro);
+                    if(rs.getInt(NOME_COLONNA_ID_LIBRO) != scorsoLibroID) {
+                        scorsoLibroID = rs.getInt(NOME_COLONNA_ID_LIBRO);
                         libro = new Libro();
 
-                        libro.setId(rs.getInt(nomeColonnaIdLibro));
+                        libro.setId(rs.getInt(NOME_COLONNA_ID_LIBRO));
                         libro.setImmagineCopertina(rs.getBlob("immagine_copertina"));
                         libro.setTitolo(rs.getString("titolo"));
                         libro.setEdizione(rs.getString("edizione"));
@@ -172,7 +172,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
         try{
             Connection con = FactoryConnessioneDatabase.getConnection();
             CallableStatement cs = con.prepareCall("{call elimina_prenotazione(?)}");
-            cs.setInt(nomeParametroArgomentoIdPrenotazione,id);
+            cs.setInt(NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE,id);
             cs.execute();
 
         }catch (SQLException e) {
@@ -190,7 +190,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             Connection con = FactoryConnessioneDatabase.getConnection();
             CallableStatement cs2 = con.prepareCall("{call abbina_libro_a_prenotazione(?,?)}");
             cs2.setInt("arg_id_libro", libro.getId());
-            cs2.setInt(nomeParametroArgomentoIdPrenotazione, prenotazione.getId());
+            cs2.setInt(NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE, prenotazione.getId());
             cs2.executeQuery();
         }catch (SQLException e){
             throw new DAOException("errore abbinamento libro a prenotazione!");
@@ -206,7 +206,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             Connection con = FactoryConnessioneDatabase.getConnection();
             CallableStatement cs = con.prepareCall("{call cambia_stato_prenotazione(?,?)}");
             cs.setString("arg_stato",nuovoStato.toString());
-            cs.setInt(nomeParametroArgomentoIdPrenotazione,idPrenotazione);
+            cs.setInt(NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE,idPrenotazione);
             cs.execute();
 
         }catch (SQLException e) {
