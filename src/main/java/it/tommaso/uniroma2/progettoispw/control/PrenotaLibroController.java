@@ -68,7 +68,7 @@ public class PrenotaLibroController {
         try{
             t1.join();
             t2.join();
-        } catch (InterruptedException e ) {
+        } catch (InterruptedException _) {
             throw new InterruptedException();
         }
 
