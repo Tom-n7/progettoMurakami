@@ -1,9 +1,10 @@
 package it.tommaso.uniroma2.progettoispw.model;
 
+import java.io.Serializable;
 import java.sql.Blob;
 import java.util.List;
 
-public class Libro {
+public class Libro implements Serializable {
 
     private int id;
     private String titolo;
