@@ -11,9 +11,9 @@ import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
-   private final static String NOME_COLONNA_ID_PRENOTAZIONE = "id_prenotazione";
-   private final static String NOME_COLONNA_ID_LIBRO = "id_libro";
-   private final static String NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE = "arg_id_prenotazione";
+   static private final  String NOME_COLONNA_ID_PRENOTAZIONE = "id_prenotazione";
+   static private final  String NOME_COLONNA_ID_LIBRO = "id_libro";
+   static private final  String NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE = "arg_id_prenotazione";
 
     @Override
     public List<Prenotazione> ottieniTutti() throws DAOException {
@@ -44,7 +44,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             }
             return listaPrenotazioni;
         }catch(SQLException e){
-            throw new RuntimeException(e);
+            throw new DAOException("Impossibile ottenere la lista delle prenotazioni dal database!",e);
         }
     }
 
@@ -193,7 +193,7 @@ public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
             cs2.setInt(NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE, prenotazione.getId());
             cs2.executeQuery();
         }catch (SQLException e){
-            throw new DAOException("errore abbinamento libro a prenotazione!");
+            throw new DAOException("errore abbinamento libro a prenotazione!", e);
         }
     }
 
