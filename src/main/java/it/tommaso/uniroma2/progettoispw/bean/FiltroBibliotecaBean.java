@@ -6,7 +6,7 @@ import it.tommaso.uniroma2.progettoispw.model.TipoFiltroBiblioteca;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FiltroBibliotecaBean implements IBean<FiltroBiblioteca> {
+public class FiltroBibliotecaBean implements IBean {
     private String tipoSelezionato;
     private String testoRicerca;
 

@@ -18,7 +18,7 @@ public class DatabaseLettoreDAO implements LettoreDAO {
     }
 
     @Override
-    public List<Lettore> ottieniListaFiltrata(IFiltroTestuale<Lettore> filtro) throws DAOException {
+    public List<Lettore> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
         return List.of();
     }
 

@@ -36,27 +36,27 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     }
 
 
-    private void valutaNome(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaNome(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getNome().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
-    private void valutaCitta(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaCitta(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
 
-    private void valutaIndirizzo(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaIndirizzo(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
     @Override
-    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
+    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
 
 
         //Provvisoriamente filtra il DAO, verrà sostituato da procedura db opportuna.

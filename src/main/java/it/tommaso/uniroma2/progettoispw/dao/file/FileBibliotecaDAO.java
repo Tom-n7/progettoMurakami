@@ -14,7 +14,7 @@ public class FileBibliotecaDAO implements BibliotecaDAO {
     }
 
     @Override
-    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
+    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
         return List.of();
     }
 

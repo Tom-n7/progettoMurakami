@@ -8,7 +8,7 @@ import java.util.List;
 public interface IRicercabiliDAO<T>{
 
     public List<T> ottieniTutti() throws DAOException;
-    public List<T> ottieniListaFiltrata(IFiltroTestuale<T> filtro) throws DAOException;
+    public List<T> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException;
     public int salva(T oggetto) throws DAOException;
     public void salvaTutti(List<T> listaOggetti) throws DAOException;
     public T ottieni(int id) throws DAOException;

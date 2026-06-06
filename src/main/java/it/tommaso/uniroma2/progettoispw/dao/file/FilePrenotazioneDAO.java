@@ -16,7 +16,7 @@ public class FilePrenotazioneDAO implements PrenotazioneDAO {
     }
 
     @Override
-    public List<Prenotazione> ottieniListaFiltrata(IFiltroTestuale<Prenotazione> filtro) throws DAOException {
+    public List<Prenotazione> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
         return List.of();
     }
 

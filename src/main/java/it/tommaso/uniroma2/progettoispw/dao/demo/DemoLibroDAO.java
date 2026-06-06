@@ -14,7 +14,7 @@ public class DemoLibroDAO implements LibroDAO {
     }
 
     @Override
-    public List<Libro> ottieniListaFiltrata(IFiltroTestuale<Libro> filtro) throws DAOException {
+    public List<Libro> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
         return List.of();
     }
 

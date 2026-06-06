@@ -58,7 +58,7 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
         return listaBiblioteche;
     }
 
-    private void filtraBiblioteca(IFiltroTestuale<Biblioteca> filtro, Biblioteca b, List<Biblioteca> listaBibliotecheFiltrata ){
+    private void filtraBiblioteca(IFiltroTestuale filtro, Biblioteca b, List<Biblioteca> listaBibliotecheFiltrata ){
 
         switch (TipoFiltroBiblioteca.valueOf(filtro.ottieniNomeTipoFiltro())){
 
@@ -72,27 +72,27 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
     }
 
 
-    private void valutaNome(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaNome(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getNome().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
-    private void valutaCitta(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaCitta(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().getCitta().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
 
-    private void valutaIndirizzo(Biblioteca b, IFiltroTestuale<Biblioteca> filtro, List<Biblioteca> listaBibliotecheFiltrata){
+    private void valutaIndirizzo(Biblioteca b, IFiltroTestuale filtro, List<Biblioteca> listaBibliotecheFiltrata){
         if(b.getIndirizzo().toString().contains(filtro.ottieniTestoRicerca())){
             listaBibliotecheFiltrata.add(b);
         }
     }
 
     @Override
-    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
+    public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale filtro) throws DAOException {
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
         for(Biblioteca b : this.ottieniTutti()){

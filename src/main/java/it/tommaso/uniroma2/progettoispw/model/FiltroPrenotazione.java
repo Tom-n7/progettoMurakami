@@ -2,7 +2,7 @@ package it.tommaso.uniroma2.progettoispw.model;
 
 import java.util.List;
 
-public class FiltroPrenotazione implements IFiltroTestuale<Prenotazione> {
+public class FiltroPrenotazione implements IFiltroTestuale{
 
     private String username;
 
