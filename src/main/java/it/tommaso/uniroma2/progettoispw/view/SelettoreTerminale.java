@@ -1,4 +1,4 @@
-package it.tommaso.uniroma2.progettoispw.supporto;
+package it.tommaso.uniroma2.progettoispw.view;
 
 import java.util.Scanner;
 

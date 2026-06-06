@@ -32,24 +32,24 @@ public abstract class DAOFactory {
      Ciò rende l'implementazione del sigleton thread-safe.
      */
     private static class ContenitoreFactory{
-        private static   DAOFactory Istanza;
+        private static   DAOFactory istanza;
     }
 
     public static DAOFactory ottieniDAOFactory(){
-        return ContenitoreFactory.Istanza;
+        return ContenitoreFactory.istanza;
     }
 
     public static void inizializzaDAOFactory(TipoPersistenzaSistema tipoPersistenzaScelto){
 
-        if(ContenitoreFactory.Istanza == null){
+        if(ContenitoreFactory.istanza == null){
 
             switch (tipoPersistenzaScelto){
 
-                case DEMO : ContenitoreFactory.Istanza = new DemoDAOFactory();
+                case DEMO : ContenitoreFactory.istanza = new DemoDAOFactory();
                 break;
-                case DATABASE : ContenitoreFactory.Istanza = new DatabaseDAOFactory();
+                case DATABASE : ContenitoreFactory.istanza = new DatabaseDAOFactory();
                 break;
-                case FILESYSTEM : ContenitoreFactory.Istanza = new FileDAOFactory();
+                case FILESYSTEM : ContenitoreFactory.istanza = new FileDAOFactory();
                 break;
                 case null, default : throw new DAOException("Tipo persistenza non supportato!");
 

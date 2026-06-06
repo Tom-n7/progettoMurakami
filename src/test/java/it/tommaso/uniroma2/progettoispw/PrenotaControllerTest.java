@@ -25,26 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class PrenotaControllerTest {
 
-/*
- @Test void testBozzaPrenotazione(){
-
-     PrenotaLibroController appController = new PrenotaLibroController();
-
-
-     LettoreBean lettoreBean = new LettoreBean();
-     lettoreBean.setId(1);
-     lettoreBean.setNome("Tommaso Testa");
-     lettoreBean.setEmail("tommaso.testa@students.uniroma2.eu");
-     lettoreBean.setUsername("ttesta99");
-
-
-     PrenotazioneBean prenotazioneBean = new PrenotazioneBean();
-
-
-
- }
-
- */
 
  @Test void testCaricamentoBibliotecheRegistrate() {
 
