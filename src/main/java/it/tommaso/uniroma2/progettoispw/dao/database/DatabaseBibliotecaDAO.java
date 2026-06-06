@@ -95,10 +95,9 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
     public List<Biblioteca> ottieniListaFiltrata(IFiltroTestuale<Biblioteca> filtro) throws DAOException {
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
-
         for(Biblioteca b : this.ottieniTutti()){
            filtraBiblioteca(filtro,b,listaBibliotecheFiltrata);
-        };
+        }
 
         return listaBibliotecheFiltrata;
     }
@@ -111,6 +110,10 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
     @Override
     public void salvaTutti(List<Biblioteca> listaOggetti) throws DAOException {
 
+        /*
+        Ancora da implementare.
+         */
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -144,13 +147,17 @@ public class DatabaseBibliotecaDAO implements BibliotecaDAO {
 
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new DAOException("Errore recupero biblioteca dal database",e);
         }
         return biblioteca;
     }
 
     @Override
     public void elimina(int id) throws DAOException {
+        /*
+        Operazione che potrebbe rivelarsi necessaria ancora non implementata.
+         */
 
+        throw new UnsupportedOperationException();
     }
 }
