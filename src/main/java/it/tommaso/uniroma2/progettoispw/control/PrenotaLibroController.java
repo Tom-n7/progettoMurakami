@@ -54,7 +54,7 @@ public class PrenotaLibroController {
         DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO().elimina(prenotazioneBean.getId());
 
     }
-    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) throws InterruptedException {
+    public PrenotazioneBean bozzaPrenotazione(BibliotecaBean bibliotecaSelezionata) {
 
         RecuperoBibliotecaThread t1 = new RecuperoBibliotecaThread(bibliotecaSelezionata);
         RecuperoLettoreThread t2 = new RecuperoLettoreThread();
