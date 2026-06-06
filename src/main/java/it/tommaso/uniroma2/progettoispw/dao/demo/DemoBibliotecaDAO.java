@@ -62,8 +62,6 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
         //Provvisoriamente filtra il DAO, verrà sostituato da procedura db opportuna.
         List<Biblioteca> listaBibliotecheFiltrata = new ArrayList<>();
 
-
-        String tipoFiltro = filtro.ottieniNomeTipoFiltro();
         for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
 
             switch (TipoFiltroBiblioteca.valueOf(filtro.ottieniNomeTipoFiltro())){
@@ -87,13 +85,17 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
     @Override
     public void salvaTutti(List<Biblioteca> listaOggetti) throws DAOException {
 
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
+
+        throw new UnsupportedOperationException();
+
     }
 
     @Override
     public Biblioteca ottieni(int id) throws DAOException {
 
-        //provvisorio
-        Biblioteca bibliotecaOttenuta;
         for(Biblioteca b : dummyGenerazioneDatiBiblioteche()){
             if(b.getId() == id){
                 return b;
@@ -104,6 +106,12 @@ public class DemoBibliotecaDAO implements BibliotecaDAO {
 
     @Override
     public void elimina(int id) throws DAOException {
+
+        /*
+        Potrebbe essere utile implementarlo in futuro
+         */
+
+        throw new UnsupportedOperationException();
 
     }
 }
