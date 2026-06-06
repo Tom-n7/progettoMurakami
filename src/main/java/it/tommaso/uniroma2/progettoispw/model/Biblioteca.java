@@ -5,6 +5,7 @@ package it.tommaso.uniroma2.progettoispw.model;
 import java.sql.Blob;
 import java.time.DayOfWeek;
 import java.util.EnumMap;
+import java.util.Map;
 
 public class Biblioteca {
 
@@ -13,7 +14,7 @@ public class Biblioteca {
     private Indirizzo indirizzo;
     private Blob immagineAnteprima;
     private RegolaPrenotazione regolaPrenotazione;
-    private EnumMap<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
+    private Map<DayOfWeek,IOrarioGiornaliero> orarioSettimanale;
 
     public Biblioteca(){}
 
@@ -59,11 +60,11 @@ public class Biblioteca {
         this.regolaPrenotazione = regolaPrenotazione;
     }
 
-    public EnumMap<DayOfWeek, IOrarioGiornaliero> getOrarioSettimanale() {
+    public Map<DayOfWeek, IOrarioGiornaliero> getOrarioSettimanale() {
         return orarioSettimanale;
     }
 
-    public void setOrarioSettimanale(EnumMap<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
+    public void setOrarioSettimanale(Map<DayOfWeek, IOrarioGiornaliero> orarioSettimanale) {
         this.orarioSettimanale = orarioSettimanale;
     }
 
