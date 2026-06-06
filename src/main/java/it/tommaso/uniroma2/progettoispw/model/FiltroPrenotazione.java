@@ -21,7 +21,11 @@ public class FiltroPrenotazione implements IFiltroTestuale<Prenotazione> {
 
     @Override
     public void impostaTipoDaNome(String nomeTipo) {
+        /*
+        Per ora non ci sono tipi filtri prenotazione.
+         */
 
+        throw new UnsupportedOperationException();
     }
 
     @Override
