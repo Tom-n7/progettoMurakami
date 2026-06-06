@@ -11,9 +11,9 @@ import java.util.List;
 
 public class DatabasePrenotazioneDAO implements PrenotazioneDAO {
 
-   static private final  String NOME_COLONNA_ID_PRENOTAZIONE = "id_prenotazione";
-   static private final  String NOME_COLONNA_ID_LIBRO = "id_libro";
-   static private final  String NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE = "arg_id_prenotazione";
+   private static final  String NOME_COLONNA_ID_PRENOTAZIONE = "id_prenotazione";
+   private static final  String NOME_COLONNA_ID_LIBRO = "id_libro";
+   private static final  String NOME_PARAMETRO_ARGOMENTO_ID_PRENOTAZIONE = "arg_id_prenotazione";
 
     @Override
     public List<Prenotazione> ottieniTutti() throws DAOException {
