@@ -20,18 +20,6 @@ public class FiltroBiblioteca implements IFiltroTestuale{
         this.testoRicerca = testoRicerca;
     }
 
-    public FiltroBiblioteca(FiltroBibliotecaBean filtroBibliotecaBean) throws RicercaException {
-
-        try{
-            this.impostaTipoDaNome(filtroBibliotecaBean.getTipoSelezionato());
-            impostaTestoRicerca(filtroBibliotecaBean.getTestoRicerca());
-        } catch (CriterioIllegaleException e) {
-            throw new RicercaException("Errore criterio nella creazione del filtro",e);
-        }catch (MaxCaratteriException e){
-            throw new RicercaException("Errore testo ricerca nella creazione del fitro",e);
-        }
-
-    }
 
     @Override
     public void impostaTestoRicerca(String testoRicerca) throws MaxCaratteriException{
