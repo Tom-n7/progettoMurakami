@@ -87,5 +87,6 @@ public class VistaDettagliPrenotazione implements VistaMobile, Initializable {
             throw new RuntimeException(e);
         }
 
+        controllerGrafico.lanciaVistaCompleta("menu_principale");
     }
 }
