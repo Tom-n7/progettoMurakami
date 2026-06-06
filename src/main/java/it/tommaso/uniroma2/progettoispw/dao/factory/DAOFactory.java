@@ -14,6 +14,7 @@ import it.tommaso.uniroma2.progettoispw.dao.BibliotecaDAO;
 import it.tommaso.uniroma2.progettoispw.dao.LettoreDAO;
 import it.tommaso.uniroma2.progettoispw.dao.LibroDAO;
 import it.tommaso.uniroma2.progettoispw.dao.PrenotazioneDAO;
+import it.tommaso.uniroma2.progettoispw.exception.DAOException;
 
 public abstract class DAOFactory {
 
@@ -31,26 +32,26 @@ public abstract class DAOFactory {
      Ciò rende l'implementazione del sigleton thread-safe.
      */
     private static class ContenitoreFactory{
-        private static  DAOFactory ISTANZA;
+        private static   DAOFactory Istanza;
     }
 
     public static DAOFactory ottieniDAOFactory(){
-        return ContenitoreFactory.ISTANZA;
+        return ContenitoreFactory.Istanza;
     }
 
     public static void inizializzaDAOFactory(TipoPersistenzaSistema tipoPersistenzaScelto){
 
-        if(ContenitoreFactory.ISTANZA == null){
+        if(ContenitoreFactory.Istanza == null){
 
             switch (tipoPersistenzaScelto){
 
-                case DEMO : ContenitoreFactory.ISTANZA = new DemoDAOFactory();
+                case DEMO : ContenitoreFactory.Istanza = new DemoDAOFactory();
                 break;
-                case DATABASE : ContenitoreFactory.ISTANZA = new DatabaseDAOFactory();
+                case DATABASE : ContenitoreFactory.Istanza = new DatabaseDAOFactory();
                 break;
-                case FILESYSTEM : ContenitoreFactory.ISTANZA = new FileDAOFactory();
+                case FILESYSTEM : ContenitoreFactory.Istanza = new FileDAOFactory();
                 break;
-                case null, default : throw new RuntimeException();
+                case null, default : throw new DAOException("Tipo persistenza non supportato!");
 
             }
 
