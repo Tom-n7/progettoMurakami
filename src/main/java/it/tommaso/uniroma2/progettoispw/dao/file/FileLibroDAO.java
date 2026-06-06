@@ -26,7 +26,7 @@ public class FileLibroDAO implements LibroDAO {
     @Override
     public int salva(Libro oggetto) throws DAOException {
         try {
-            int idLibro = GeneratoreID.generaId();
+            int idLibro = GeneratoreID.ottieniGeneratore().generaId();
             oggetto.setId(idLibro);
 
             ObjectOutputStream streamOutputLibro = new ObjectOutputStream(new FileOutputStream(FILE_LIBRI,true));

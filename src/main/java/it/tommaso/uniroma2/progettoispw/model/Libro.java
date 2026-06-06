@@ -1,7 +1,6 @@
 package it.tommaso.uniroma2.progettoispw.model;
 
 import java.io.Serializable;
-import java.sql.Blob;
 import java.util.List;
 
 public class Libro implements Serializable {
@@ -15,7 +14,7 @@ public class Libro implements Serializable {
     private String edizione;
     private String codiceISNB;
 
-    public Libro(String lingua, List<String> autori, String titolo, String editore, Blob immagineCopertina, String edizione, String codiceISNB) {
+    public Libro(String lingua, List<String> autori, String titolo, String editore, String edizione, String codiceISNB) {
         this.lingua = lingua;
         this.autori = autori;
         this.titolo = titolo;
