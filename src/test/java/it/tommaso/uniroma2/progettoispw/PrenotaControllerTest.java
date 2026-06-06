@@ -6,24 +6,20 @@ import it.tommaso.uniroma2.progettoispw.control.PrenotaLibroController;
 import it.tommaso.uniroma2.progettoispw.dao.factory.DAOFactory;
 import it.tommaso.uniroma2.progettoispw.dao.factory.TipoPersistenzaSistema;
 import it.tommaso.uniroma2.progettoispw.model.FaseDiPrenotazione;
-import it.tommaso.uniroma2.progettoispw.model.Libro;
+
 import it.tommaso.uniroma2.progettoispw.model.Prenotazione;
 import it.tommaso.uniroma2.progettoispw.model.TipoFiltroBiblioteca;
-import it.tommaso.uniroma2.progettoispw.supporto.FactoryConnessioneDatabase;
+
 import it.tommaso.uniroma2.progettoispw.supporto.Sessione;
 import org.junit.jupiter.api.Test;
 
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class PrenotaControllerTest {
+
+class PrenotaControllerTest {
 
 
  @Test void testCaricamentoBibliotecheRegistrate() {

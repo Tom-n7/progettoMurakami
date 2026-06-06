@@ -76,10 +76,7 @@ public class Prenotazione {
     }
 
     public boolean isBozza(){
-        if(stato == FaseDiPrenotazione.BOZZA){
-            return true;
-        }
-        return false;
+        return (stato == FaseDiPrenotazione.BOZZA);
     }
 
     public void addLibro(Libro libro){

@@ -9,25 +9,25 @@ public class Sessione {
 
         idUtente = id;
         this.username = username;
-    };
+    }
 
     private class ContenitoreSessione{
-        private static Sessione ISTANZA;
+        private static Sessione istanza;
     }
 
     public static int ottieniId(){
-        return ContenitoreSessione.ISTANZA.idUtente;
+        return ContenitoreSessione.istanza.idUtente;
     }
 
     public static String getUsername() {
-        return ContenitoreSessione.ISTANZA.username;
+        return ContenitoreSessione.istanza.username;
     }
 
     public static Sessione inizializzaSessione(int id, String username){
-        if(ContenitoreSessione.ISTANZA == null){
-            ContenitoreSessione.ISTANZA = new Sessione(id,username);
+        if(ContenitoreSessione.istanza == null){
+            ContenitoreSessione.istanza = new Sessione(id,username);
         }
 
-         return ContenitoreSessione.ISTANZA;
+         return ContenitoreSessione.istanza;
     }
 }
