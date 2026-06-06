@@ -25,7 +25,7 @@ public class LibroBean implements IBean {
         this.autori = libro.getAutori();
         this.lingua = libro.getLingua();
         this.editore = libro.getEditore();
-        this.immagineAnteprima = libro.getImmagineCopertina();
+
         this.edizione = libro.getEdizione();
         this.codiceISNB = libro.getCodiceISNB();
 

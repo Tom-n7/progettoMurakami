@@ -30,7 +30,6 @@ public class DatabaseLibroDAO implements LibroDAO {
             cs.setString("arg_titolo", oggetto.getTitolo());
             cs.setString("arg_lingua", oggetto.getLingua());
             cs.setString("arg_editore", oggetto.getEditore());
-            cs.setBlob("arg_immagine_copertina", oggetto.getImmagineCopertina());
             cs.setString("arg_edizione", oggetto.getEdizione());
             cs.setString("arg_codice_ISNB", oggetto.getCodiceISNB());
 

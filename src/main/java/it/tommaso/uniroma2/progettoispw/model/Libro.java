@@ -11,7 +11,7 @@ public class Libro implements Serializable {
     private List<String> autori;
     private String lingua;
     private String editore;
-    private Blob immagineCopertina;
+
     private String edizione;
     private String codiceISNB;
 
@@ -20,7 +20,7 @@ public class Libro implements Serializable {
         this.autori = autori;
         this.titolo = titolo;
         this.editore = editore;
-        this.immagineCopertina = immagineCopertina;
+
         this.edizione = edizione;
         this.codiceISNB = codiceISNB;
     }
@@ -65,14 +65,6 @@ public class Libro implements Serializable {
 
     public void setEditore(String editore) {
         this.editore = editore;
-    }
-
-    public Blob getImmagineCopertina() {
-        return immagineCopertina;
-    }
-
-    public void setImmagineCopertina(Blob immagineCopertina) {
-        this.immagineCopertina = immagineCopertina;
     }
 
     public String getEdizione() {

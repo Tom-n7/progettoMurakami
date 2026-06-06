@@ -106,7 +106,7 @@ public class PrenotaLibroController {
         libro.setEditore(nuovoLibroBean.getEditore());
         libro.setEdizione(nuovoLibroBean.getEdizione());
         libro.setTitolo(nuovoLibroBean.getTitolo());
-        libro.setImmagineCopertina(nuovoLibroBean.getImmagineAnteprima());
+
 
         prenotazione.addLibro(libro);
         (DAOFactory.ottieniDAOFactory().creaPrenotazioneDAO()).aggiungiLibroAPrenotazione(prenotazione,libro);
