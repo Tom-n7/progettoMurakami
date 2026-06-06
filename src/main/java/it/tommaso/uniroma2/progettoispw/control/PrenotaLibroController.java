@@ -31,7 +31,12 @@ public class PrenotaLibroController {
         List<Biblioteca> listaBibliotecheOttenute = new ArrayList<>();
         //filtro che viene valutato ed eventualmente usato per ottenere una lista di biblioteche filtrata
         //secondo i criteri scelti.
-        FiltroBiblioteca filtro = new FiltroBiblioteca(filtroBean);
+        FiltroBiblioteca filtro = new FiltroBiblioteca();
+        filtro.impostaTestoRicerca(filtroBean.getTestoRicerca());
+        filtro.impostaTipoDaNome(filtroBean.getTipoSelezionato());
+
+
+
         BibliotecaDAO bdao = DAOFactory.ottieniDAOFactory().creaBibliotecaDAO();
         try {
 

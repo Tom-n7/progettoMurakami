@@ -20,6 +20,25 @@ public class FiltroBiblioteca implements IFiltroTestuale{
         this.testoRicerca = testoRicerca;
     }
 
+    public FiltroBiblioteca() {
+
+    }
+
+    public TipoFiltroBiblioteca getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoFiltroBiblioteca tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getTestoRicerca() {
+        return testoRicerca;
+    }
+
+    public void setTestoRicerca(String testoRicerca) {
+        this.testoRicerca = testoRicerca;
+    }
 
     @Override
     public void impostaTestoRicerca(String testoRicerca) throws MaxCaratteriException{
