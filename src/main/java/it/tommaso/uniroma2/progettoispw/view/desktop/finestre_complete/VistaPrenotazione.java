@@ -2,6 +2,7 @@ package it.tommaso.uniroma2.progettoispw.view.desktop.finestre_complete;
 
 import it.tommaso.uniroma2.progettoispw.bean.*;
 import it.tommaso.uniroma2.progettoispw.control.PrenotaLibroController;
+import it.tommaso.uniroma2.progettoispw.exception.RegoleBibliotecaException;
 import it.tommaso.uniroma2.progettoispw.view.desktop.OrchestratoreFinestre;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -105,7 +106,13 @@ public class VistaPrenotazione implements VistaCompleta, Initializable {
     }
 
     public void clickSuConferma(ActionEvent actionEvent) {
-        controllerApplicativo.validaPrenotazione(bozzaPrenotazioneProperty.get());
+        try {
+            controllerApplicativo.validaPrenotazione(bozzaPrenotazioneProperty.get());
+        } catch (RegoleBibliotecaException e) {
+            SimpleObjectProperty<String> propertyMessaggioErrore = new SimpleObjectProperty<>();
+            propertyMessaggioErrore.set(e.getMessage());
+            controllerGrafico.lanciaVistaPopup("finestra_errore", propertyMessaggioErrore);
+        }
         controllerGrafico.lanciaVistaCompleta("menu_principale");
 
 

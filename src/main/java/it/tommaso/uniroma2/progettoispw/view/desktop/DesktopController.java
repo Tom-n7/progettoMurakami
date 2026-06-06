@@ -7,6 +7,7 @@ import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_complete.VistaComp
 import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_complete.VistaMenuPrincipale;
 import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_complete.VistaPrenotazione;
 import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_popup.VistaDettagliBiblioteca;
+import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_popup.VistaErrore;
 import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_popup.VistaImportaMetadatiLibro;
 import it.tommaso.uniroma2.progettoispw.view.desktop.finestre_popup.VistaPopup;
 import javafx.application.Application;
@@ -47,6 +48,7 @@ public class DesktopController extends Application implements ControllerGrafico,
         NOMI_VISTE_CONTROLLER.put("dettagli_biblioteca", VistaDettagliBiblioteca.class);
         NOMI_VISTE_CONTROLLER.put("dettagli_prenotazione", VistaPrenotazione.class);
         NOMI_VISTE_CONTROLLER.put("importa_metadati_libro", VistaImportaMetadatiLibro.class);
+        NOMI_VISTE_CONTROLLER.put("finestra_errore", VistaErrore.class);
 
     }
 

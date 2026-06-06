@@ -27,6 +27,7 @@ public class BibliotecaBean implements IBean<Biblioteca> {
 
          for (DayOfWeek day: DayOfWeek.values()){
              if( biblioteca.getOrarioSettimanale() != null) {
+
                  orarioSettimanale.put(day.toString(), biblioteca.getOrarioSettimanale().get(day).toString());
              }
          }
@@ -65,13 +66,9 @@ public class BibliotecaBean implements IBean<Biblioteca> {
         this.regolePrenotazione = regolePrenotazione;
     }
 
-    public Map<String, String> getOrarioSettimanale() {
-        return orarioSettimanale;
-    }
 
-    public void setOrarioSettimanale(Map<String, String> orarioSettimanale) {
-        this.orarioSettimanale = orarioSettimanale;
-    }
+
+
 
     public String getCollegamentoAnteprima() {
         return collegamentoAnteprima;
