@@ -1,61 +1,56 @@
 # Functional Requirements
 
-1. Il sistema deve permettere al lettore di visualizzare la libreria personale.
+1. Il sistema deve fornire i dati bibliogrfici dei libri contenuti nella libreria personale quando il lettore lo richiede.
 
-2. Il sistema deve permettere al lettore di organizzare la libreria in gruppi di libri detti scaffali.
+2. Il sistema deve dividere i libri contenuti nella libreria personale di un lettore, in gruppi detti, secondo le indicazioni del lettore.
 
-2. Il sistema, deve permettere al lettore di selezionare libri all'interno della libreria personale.
+3. Il sistema, deve fornire tutti i dati bibliografici del libro selezionato dal lettore.
 
-3. Il sistema, quando un lettore seleziona un libro della libreria personale, deve mostrare tutte le informazioni che ha registrato su quel libro.
-
-3. Il sistema, deve permettere al lettore di aggiungere ed eliminare libri nella libreria personale.
+3. Il sistema deve aggiungere alla lista amici del lettore, ogni altro lettore registrato nel sistema da lui designato
 
 4. Il sistema deve permettere al lettore di cercare e aggiungere un altro lettore registrato nel sistema alla propria lista amici.
 
-5. Il sistema permettere al lettore di mettere a disposizione libri della libreria personale per il prestito ad altri lettori.
+6. Il sistema deve mostrare tutti i libri che un lettore segnala come "in regalo" tra quelli della propria libreria personale, agli altri lettori contenuti nella propria lista amici.
 
-6. Il sistema deve permettere al lettore di mettere a disposizione libri della libreria personale come regalo ad altri lettori.
+7. Il sistema deve mostrare tutti i libri che un lettore segnala come "disponibili al prestito" tra quelli della propria libreria personale, agli altri lettori.
 
-7. Il sistema deve permettere al lettore di mettere a disposizione libri della libreria personale per lo scambio con altri lettori.
+12. Il sistema deve fornire al lettore un catalogo consultabile di libri completi di metadati*.
 
-12. Il sistema deve mettere a disposizione un catalogo di libri completi di metadati che l'utente può consultare.
+13. Il sistema deve garantire l'accesso ad ogni utente registrato che fornisce le prorie credenziali.
 
-13. Il sistema deve permettere ad ogni utente di accedere tramite un meccanismo di autenticazione al proprio account personale.
+14. Il sistema deve avvisare il lettore quando un altro lettore facente parte della sua lista amici mette in regalo, in prestito o scambiabile un libro presente nella propria lista dei desideri.
 
-14. Il sistema deve avvisare il lettore quando un lettore facente parte della sua lista amici mette in regalo, in prestito o scambiabile un libro presente nella propria lista dei desideri.
-
-15. Selzionato un libro all'interno della librearia personale, il sistema deve permettere al Lettore di aggiungere annotazioni testuali e mostrare le annotazioni da lui aggiunte precedentemente.
-
-16. Il sistema deve permettere ad un bibliotecario di registrare la propria biblioteca attraverso l'inserimento del nome del bibliotecario, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e cap, orario settimanale ed altri contatti facoltativi.
+15. Selezionato un libro all'interno della propria librearia personale, il sistema deve:
+    - aggiungere annotazioni testuali fornite dal lettore 
+    - mostrare le annotazioni precedentemente aggiunte.
     
-17. Il sistema deve permettere ai lettori di ricercare le biblioteche registrate nel sistema, attraverso il nome o un indirizzo, anche parziale, mostrando una lista di biblioteche che rientrano nei criteri specificati oppure avvisando il lettore se non ne esiste nessuna.
+
+16. Il sistema registra una nuova biblioteca previo inserimento del bibliotecario del prorpio nome, nome della biblioteca, contatto principale della biblioteca, costituito da una email o da un numero di telefono, indirizzo della biblioteca composto da via, città e cap, orario settimanale.
     
-18. Il sistema deve permettere al bibliotecario di pubblicare annunci di eventi ospitati dalla sua biblioteca, composti da:
+17. Il sistema deve fornire a tutti i lettori un catalogo consultabile composto da tutte le biblioteche registrate nel sistema.
+    
+18. Il sistema permette al bibliotecario di pubblicare annunci di eventi ospitati dalla sua biblioteca, composti da:
     -  una descrizione, 
     -  la data o intervallo di tempo di tale evento 
     -  l'indirizzo del luogo dove si svolge.
   
-19. Il sistema deve permette al bibliotecario di pubblicare annunci di mutamenti dell'orario o interruzione del servizio composti da: 
+19. Il sistema permette al bibliotecario di pubblicare annunci di mutamenti dell'orario o interruzione del servizio composti da: 
   
     - una descrizione
     - l'orario provvisorio 
     - l'intervallo di tempo previsto di tale mutamento.
 
-20. Il sistema deve mostrare a ciascun lettore tutti gli annunci pubblici pubblicati dalle biblioteche che il lettore segue, organizzandoli come segue:
-    - distinzione tra annunci visualizzati e non visualizzati, dove un annuncio è considerato visualizzato dopo l’apertura da parte del lettore;
+20. Il sistema mostra a ciascun lettore tutti gli annunci pubblici di ciascuna biblioteca che il lettore segue, organizzandoli come segue:
+    - distinzione tra annunci nuovi e annunci già letti.
     - raggruppamento degli annunci per biblioteca di provenienza;
     - ordinamento cronologico per data di pubblicazione all’interno di ciascun gruppo.
 
-21. Il sistema deve permettere al lettore di contattare una biblioteca registrata per richiedere la disponibilità di un libro che sta ricercando.
+22. Il sistema, deve inviare un avviso al lettore richiedente, quando una biblioteca accetta o rifiuta una richiesta di prestito.
 
-22. Il sistema deve permettre al bibliotecario digestire le richieste di prestito inviate dai lettori registrati.
+24. Il sistema genera un appuntamento associato ad una richiesta di prestito, previa accettazione di tale richiesta della bibloteca ricevente.
 
-23. Il sistema deve permettere al bibliotecario di stabilire un intervallo di tempo entro il quale è possibile prendere in prestito un libro richiesto e comunicarlo al lettore.
+25. Quando viene inserito il codice di un appuntamento, il sistema deve mostrare tutti i dati bibliografici del libro richiesto dal lettore.
 
-24. Il sistema deve generare un appuntamento per il ritito del libro una volta che il bibliotecario stabilisce l'intervallo di tempo per il ritiro identificato da un codice univoco.
-
-25. Quando viene inserito il codice di un appuntamento, il sistema deve mostrare tutti i metadati del libro richiesto dal lettore.
-
-*metadati =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
+*dati bibliografici =: Una serie di dati associati al libro, nella fattispecie sono: titolo, sottotitolo, descrizione, autore, editore, lista delle categorie, immagine di copertina e codice ISBN.
 
 
